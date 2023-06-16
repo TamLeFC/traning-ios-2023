@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Course1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Device" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9w6-Dp-5V3">
+                                <rect key="frame" x="134" y="69" width="125" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" red="0.1764705882352941" green="0.20784313725490194" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoDevice" translatesAutoresizingMaskIntoConstraints="NO" id="Krn-jI-Wza">
+                                <rect key="frame" x="81" y="129" width="231" height="231"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No receive found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTc-K1-J76">
+                                <rect key="frame" x="117.33333333333333" y="384" width="158.66666666666669" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.1764705882352941" green="0.20784313725490194" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Please make sure your internet is well connected" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ftj-Au-3Ru">
+                                <rect key="frame" x="33" y="416" width="327" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="rn9-qj-Bun"/>
+                                </constraints>
+                                <color key="textColor" red="0.52941176470588236" green="0.55686274509803924" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byb-Qy-qeM">
+                                <rect key="frame" x="162" y="489" width="69.333333333333314" height="31"/>
+                                <color key="tintColor" red="0.25098039215686274" green="0.29411764705882354" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="RETRY">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.92549020049999997" green="0.92941176889999999" blue="0.94901967050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="ftj-Au-3Ru" firstAttribute="top" secondItem="aTc-K1-J76" secondAttribute="bottom" constant="8" id="4yo-hw-XhM"/>
+                            <constraint firstItem="byb-Qy-qeM" firstAttribute="top" secondItem="ftj-Au-3Ru" secondAttribute="bottom" constant="24" id="5fA-U1-Vim"/>
+                            <constraint firstItem="Krn-jI-Wza" firstAttribute="top" secondItem="9w6-Dp-5V3" secondAttribute="bottom" constant="36" id="6zw-YO-hpa"/>
+                            <constraint firstItem="9w6-Dp-5V3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="786-fd-0d1"/>
+                            <constraint firstItem="9w6-Dp-5V3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Cy5-NW-x3n"/>
+                            <constraint firstItem="Krn-jI-Wza" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bp4-b1-awl"/>
+                            <constraint firstItem="ftj-Au-3Ru" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gFq-da-FX9"/>
+                            <constraint firstItem="aTc-K1-J76" firstAttribute="top" secondItem="Krn-jI-Wza" secondAttribute="bottom" constant="24" id="hoL-4M-zzY"/>
+                            <constraint firstItem="aTc-K1-J76" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lQe-Z8-2MC"/>
+                            <constraint firstItem="ftj-Au-3Ru" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="ndr-Rs-1XS"/>
+                            <constraint firstItem="byb-Qy-qeM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w9L-pM-0R2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="retryButton" destination="byb-Qy-qeM" id="dS7-43-jG3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-11.450381679389313" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NoDevice" width="231" height="231"/>
+    </resources>
+</document>
