@@ -9,11 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var retryBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        retryBtn.layer.cornerRadius = 12
+        retryBtn.layer.borderWidth = 1
+        retryBtn.layer.borderColor = UIColor(named: "btnNotFondColor")?.cgColor
     }
-
-
 }
 
