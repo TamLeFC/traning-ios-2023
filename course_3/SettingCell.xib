@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="SettingCell" customModule="course_3" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="47"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="47"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f1X-ra-c1o">
+                        <rect key="frame" x="13" y="11.666666666666664" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="3kd-N2-9c2"/>
+                            <constraint firstAttribute="width" constant="24" id="l3M-d2-H0p"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8JQ-hA-V0J">
+                        <rect key="frame" x="53" y="11.666666666666664" width="42" height="24"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_right" translatesAutoresizingMaskIntoConstraints="NO" id="sg5-Rv-Mwu">
+                        <rect key="frame" x="286.33333333333331" y="0.0" width="20.666666666666686" height="47"/>
+                    </imageView>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hSx-dB-z06">
+                        <rect key="frame" x="258" y="8" width="51" height="31"/>
+                    </switch>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="f1X-ra-c1o" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11.5" id="275-Fn-iht"/>
+                    <constraint firstAttribute="bottom" secondItem="8JQ-hA-V0J" secondAttribute="bottom" constant="11.5" id="2ZL-pj-FUh"/>
+                    <constraint firstItem="f1X-ra-c1o" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="8UH-Us-ZR4"/>
+                    <constraint firstItem="8JQ-hA-V0J" firstAttribute="leading" secondItem="f1X-ra-c1o" secondAttribute="trailing" constant="16" id="9R5-gQ-19g"/>
+                    <constraint firstAttribute="trailing" secondItem="sg5-Rv-Mwu" secondAttribute="trailing" constant="13" id="LkY-92-BCc"/>
+                    <constraint firstAttribute="bottom" secondItem="sg5-Rv-Mwu" secondAttribute="bottom" id="Y4X-pW-xQr"/>
+                    <constraint firstItem="hSx-dB-z06" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Yc5-rI-Ocu"/>
+                    <constraint firstItem="8JQ-hA-V0J" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11.5" id="Yf7-Me-9cy"/>
+                    <constraint firstItem="sg5-Rv-Mwu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="aKq-yb-n7B"/>
+                    <constraint firstAttribute="bottom" secondItem="f1X-ra-c1o" secondAttribute="bottom" constant="11.5" id="mXY-rH-G4E"/>
+                    <constraint firstAttribute="trailing" secondItem="hSx-dB-z06" secondAttribute="trailing" constant="13" id="oPp-hg-qNU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="iconImageView" destination="f1X-ra-c1o" id="Vim-Vg-CAb"/>
+                <outlet property="iconRightImageView" destination="sg5-Rv-Mwu" id="LHs-Cr-TpT"/>
+                <outlet property="settingSwitch" destination="hSx-dB-z06" id="2Of-F1-OQf"/>
+                <outlet property="titleLabel" destination="8JQ-hA-V0J" id="rEG-fO-SgG"/>
+            </connections>
+            <point key="canvasLocation" x="176" y="-7"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_right" width="20.666666030883789" height="20"/>
+    </resources>
+</document>
