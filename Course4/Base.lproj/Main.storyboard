@@ -182,10 +182,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jdx-z1-TjV">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="768.99999999999977"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYs-Ry-meO">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1528"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1637.6666666666667"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mMg-UD-7ES">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
@@ -579,7 +579,7 @@ Theater</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U8w-jk-Tmm">
-                                                <rect key="frame" x="0.0" y="854" width="414" height="674"/>
+                                                <rect key="frame" x="0.0" y="854" width="414" height="783.66666666666652"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2QU-EA-gci">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
@@ -606,22 +606,25 @@ Theater</string>
                                                         </constraints>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="UFG-kJ-RnR">
-                                                        <rect key="frame" x="24" y="46" width="366" height="532"/>
+                                                        <rect key="frame" x="24" y="46" width="366" height="639.66666666666663"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="D20-d4-gO4">
-                                                                <rect key="frame" x="0.0" y="0.0" width="366" height="254"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="366" height="307.66666666666669"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lw1-qS-wC6">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="171" height="254"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="171" height="307.66666666666669"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of movie is longer..." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qk-uz-2qv">
-                                                                                <rect key="frame" x="0.0" y="209" width="171" height="45"/>
+                                                                                <rect key="frame" x="0.0" y="262.66666666666674" width="171" height="45"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="45" id="aJP-LY-mkO"/>
+                                                                                </constraints>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="img_discoverTopLeft" translatesAutoresizingMaskIntoConstraints="NO" id="ZKh-Hf-R1R">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="197"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="250.66666666666666"/>
                                                                                 <userDefinedRuntimeAttributes>
                                                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                                         <integer key="value" value="8"/>
@@ -630,6 +633,7 @@ Theater</string>
                                                                             </imageView>
                                                                         </subviews>
                                                                         <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="Lw1-qS-wC6" secondAttribute="height" multiplier="1:1.8" id="3lg-i9-Ped"/>
                                                                             <constraint firstAttribute="trailing" secondItem="8qk-uz-2qv" secondAttribute="trailing" id="6Rl-T3-h6N"/>
                                                                             <constraint firstItem="8qk-uz-2qv" firstAttribute="top" secondItem="ZKh-Hf-R1R" secondAttribute="bottom" constant="12" id="GCY-Bx-LCn"/>
                                                                             <constraint firstAttribute="bottom" secondItem="8qk-uz-2qv" secondAttribute="bottom" id="Jat-41-Fb2"/>
@@ -640,16 +644,19 @@ Theater</string>
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m0b-fy-sfy">
-                                                                        <rect key="frame" x="195" y="0.0" width="171" height="254"/>
+                                                                        <rect key="frame" x="195" y="0.0" width="171" height="307.66666666666669"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of movie is longer..." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJU-xZ-onF">
-                                                                                <rect key="frame" x="0.0" y="209" width="171" height="45"/>
+                                                                                <rect key="frame" x="0.0" y="262.66666666666674" width="171" height="45"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="45" id="Qn8-tw-kn0"/>
+                                                                                </constraints>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="img_dicoverTopRight" translatesAutoresizingMaskIntoConstraints="NO" id="Mej-p0-lrU">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="197"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="250.66666666666666"/>
                                                                             </imageView>
                                                                         </subviews>
                                                                         <constraints>
@@ -665,19 +672,22 @@ Theater</string>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="BhS-QH-X7j">
-                                                                <rect key="frame" x="0.0" y="278" width="366" height="254"/>
+                                                                <rect key="frame" x="0.0" y="331.66666666666674" width="366" height="308"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kFx-gn-Hzh">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="171" height="254"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="171" height="308"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of movie is longer..." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Seg-vN-4f4">
-                                                                                <rect key="frame" x="0.0" y="209" width="171" height="45"/>
+                                                                                <rect key="frame" x="0.0" y="263" width="171" height="45"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="45" id="C2t-hK-HSk"/>
+                                                                                </constraints>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="img_discoverBottomLeft" translatesAutoresizingMaskIntoConstraints="NO" id="gJi-Kt-ixN">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="197"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="251"/>
                                                                             </imageView>
                                                                         </subviews>
                                                                         <constraints>
@@ -691,16 +701,19 @@ Theater</string>
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dNL-K7-e9N">
-                                                                        <rect key="frame" x="195" y="0.0" width="171" height="254"/>
+                                                                        <rect key="frame" x="195" y="0.0" width="171" height="308"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of movie is longer..." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2q-u6-GqS">
-                                                                                <rect key="frame" x="0.0" y="209" width="171" height="45"/>
+                                                                                <rect key="frame" x="0.0" y="263" width="171" height="45"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="45" id="P3i-eH-UC7"/>
+                                                                                </constraints>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="img_discoverBottomRight" translatesAutoresizingMaskIntoConstraints="NO" id="IQn-Ox-Vhs">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="197"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="251"/>
                                                                             </imageView>
                                                                         </subviews>
                                                                         <constraints>
@@ -716,27 +729,24 @@ Theater</string>
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="532" id="Tfs-Qv-jJn"/>
-                                                        </constraints>
                                                     </stackView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_ads" translatesAutoresizingMaskIntoConstraints="NO" id="JAu-ci-S7d">
-                                                        <rect key="frame" x="0.0" y="602" width="414" height="72"/>
+                                                        <rect key="frame" x="0.0" y="709.66666666666674" width="414" height="74"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="72" id="x7X-cq-7np"/>
+                                                            <constraint firstAttribute="height" constant="74" id="HUW-WT-UzG"/>
                                                         </constraints>
                                                     </imageView>
                                                 </subviews>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="JAu-ci-S7d" secondAttribute="trailing" id="2kV-JI-rv9"/>
                                                     <constraint firstAttribute="trailing" secondItem="2QU-EA-gci" secondAttribute="trailing" id="4Jo-7h-fVf"/>
+                                                    <constraint firstItem="UFG-kJ-RnR" firstAttribute="baseline" secondItem="JAu-ci-S7d" secondAttribute="firstBaseline" constant="-24" id="8Sm-7a-KjA"/>
                                                     <constraint firstItem="UFG-kJ-RnR" firstAttribute="top" secondItem="2QU-EA-gci" secondAttribute="bottom" constant="16" id="AUH-xX-dnQ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="JAu-ci-S7d" secondAttribute="bottom" id="CvA-gJ-ZNn"/>
                                                     <constraint firstItem="2QU-EA-gci" firstAttribute="top" secondItem="U8w-jk-Tmm" secondAttribute="top" id="F5d-gp-giN"/>
                                                     <constraint firstItem="2QU-EA-gci" firstAttribute="leading" secondItem="U8w-jk-Tmm" secondAttribute="leading" id="HQJ-er-7yp"/>
-                                                    <constraint firstAttribute="trailing" secondItem="JAu-ci-S7d" secondAttribute="trailing" id="PGU-eK-ifF"/>
-                                                    <constraint firstAttribute="height" constant="674" id="RiA-4H-FXZ"/>
                                                     <constraint firstItem="UFG-kJ-RnR" firstAttribute="leading" secondItem="U8w-jk-Tmm" secondAttribute="leading" constant="24" id="SNQ-WO-ZzQ"/>
-                                                    <constraint firstItem="JAu-ci-S7d" firstAttribute="leading" secondItem="U8w-jk-Tmm" secondAttribute="leading" id="Vkh-BT-Qn2"/>
-                                                    <constraint firstAttribute="bottom" secondItem="JAu-ci-S7d" secondAttribute="bottom" id="hMg-Hg-P4v"/>
+                                                    <constraint firstItem="JAu-ci-S7d" firstAttribute="leading" secondItem="U8w-jk-Tmm" secondAttribute="leading" id="kfN-1Z-7Mq"/>
                                                     <constraint firstAttribute="trailing" secondItem="UFG-kJ-RnR" secondAttribute="trailing" constant="24" id="xem-Gz-l1f"/>
                                                 </constraints>
                                             </view>
