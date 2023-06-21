@@ -7,11 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        tabBar.tintColor = UIColor(named: "color_primary")
+        tabBar.unselectedItemTintColor = UIColor(named: "color_unselected")
     }
 
 
