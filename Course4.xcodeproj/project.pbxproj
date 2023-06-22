@@ -12,6 +12,9 @@
 		800AA31E2A4140A300B46598 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 800AA31C2A4140A300B46598 /* Main.storyboard */; };
 		800AA3202A4140A400B46598 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 800AA31F2A4140A400B46598 /* Assets.xcassets */; };
 		800AA3232A4140A400B46598 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 800AA3212A4140A400B46598 /* LaunchScreen.storyboard */; };
+		805B77302A42D98000D16536 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B772F2A42D98000D16536 /* AccountVC.swift */; };
+		80F006652A42E3AD00CC5B91 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F006642A42E3AD00CC5B91 /* GradientView.swift */; };
+		80F006672A42FA5D00CC5B91 /* MoviesTVVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F006662A42FA5D00CC5B91 /* MoviesTVVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		800AA31F2A4140A400B46598 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		800AA3222A4140A400B46598 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		800AA3242A4140A400B46598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		805B772F2A42D98000D16536 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
+		80F006642A42E3AD00CC5B91 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientView.swift; path = "../../../../Downloads/Telegram Desktop/GradientView.swift"; sourceTree = "<group>"; };
+		80F006662A42FA5D00CC5B91 /* MoviesTVVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTVVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +62,12 @@
 			children = (
 				800AA3162A4140A300B46598 /* AppDelegate.swift */,
 				800AA31A2A4140A300B46598 /* ViewController.swift */,
+				80F006662A42FA5D00CC5B91 /* MoviesTVVC.swift */,
+				805B772F2A42D98000D16536 /* AccountVC.swift */,
 				800AA31C2A4140A300B46598 /* Main.storyboard */,
 				800AA31F2A4140A400B46598 /* Assets.xcassets */,
 				800AA3212A4140A400B46598 /* LaunchScreen.storyboard */,
+				80F006642A42E3AD00CC5B91 /* GradientView.swift */,
 				800AA3242A4140A400B46598 /* Info.plist */,
 			);
 			path = Course4;
@@ -136,7 +145,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				800AA31B2A4140A300B46598 /* ViewController.swift in Sources */,
+				80F006672A42FA5D00CC5B91 /* MoviesTVVC.swift in Sources */,
 				800AA3172A4140A300B46598 /* AppDelegate.swift in Sources */,
+				80F006652A42E3AD00CC5B91 /* GradientView.swift in Sources */,
+				805B77302A42D98000D16536 /* AccountVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
