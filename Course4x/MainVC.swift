@@ -12,8 +12,6 @@ class MainVc: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBar()
-        self.tabBar.barTintColor = UIColor(named: "background")
-        self.tabBar.backgroundColor = UIColor(named: "background")
     }
     
     private func setupTabBar() {
@@ -23,7 +21,8 @@ class MainVc: UITabBarController {
         homeVC.tabBarItem = UITabBarItem(title: nil, image: "ic_tv".toUIImage, selectedImage: "ic_tvSelected".toUIImage)
         
         accountVC.tabBarItem = UITabBarItem(title: nil, image: "ic_account".toUIImage, selectedImage: "ic_accountSelected".toUIImage)
-        
+        self.tabBar.barTintColor = UIColor(named: "background")
+        self.tabBar.backgroundColor = UIColor(named: "background")
         viewControllers = [homeVC, accountVC]
     }
 }

@@ -29,6 +29,7 @@ class HomeVC: UIViewController {
         searchTextField.layer.borderColor = UIColor(named: "border")?.cgColor
         searchTextField.layer.masksToBounds = true
         searchTextField.setLeftView(image: UIImage(named: "ic_search")!)
+        searchTextField.addPaddingToTextField(.right, width: 60)
     }
 
 }
