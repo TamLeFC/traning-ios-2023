@@ -18,9 +18,20 @@
 		808234902A43F8480026B58E /* MoviesTVVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8082348E2A43F8480026B58E /* MoviesTVVC.xib */; };
 		808234932A43F8DB0026B58E /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808234912A43F8DB0026B58E /* AccountVC.swift */; };
 		808234942A43F8DB0026B58E /* AccountVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 808234922A43F8DB0026B58E /* AccountVC.xib */; };
+		80B78BBA2A454CF900C11F6D /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80B78BB62A454CF900C11F6D /* Poppins-Bold.ttf */; };
+		80B78BBB2A454CF900C11F6D /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80B78BB72A454CF900C11F6D /* Poppins-Medium.ttf */; };
+		80B78BBC2A454CF900C11F6D /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80B78BB82A454CF900C11F6D /* Poppins-Regular.ttf */; };
+		80B78BBD2A454CF900C11F6D /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80B78BB92A454CF900C11F6D /* Poppins-Light.ttf */; };
+		80B78BC12A454F3C00C11F6D /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B78BC02A454F3C00C11F6D /* UILabel.swift */; };
+		80B78BC52A45758700C11F6D /* DetailMovieVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B78BC32A45758700C11F6D /* DetailMovieVC.swift */; };
+		80B78BC62A45758700C11F6D /* DetailMovieVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80B78BC42A45758700C11F6D /* DetailMovieVC.xib */; };
+		C8D052F94E0E69DB4AA580EC /* Pods_Course4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BFC75C5BC9DBF53C15309F7 /* Pods_Course4.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		51304664817FD22DB64D2D61 /* Pods-Course4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Course4.debug.xcconfig"; path = "Target Support Files/Pods-Course4/Pods-Course4.debug.xcconfig"; sourceTree = "<group>"; };
+		5BFC75C5BC9DBF53C15309F7 /* Pods_Course4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Course4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		798FC4B3C90FF50CB40788D5 /* Pods-Course4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Course4.release.xcconfig"; path = "Target Support Files/Pods-Course4/Pods-Course4.release.xcconfig"; sourceTree = "<group>"; };
 		800AA3132A4140A300B46598 /* Course4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Course4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		800AA3162A4140A300B46598 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		800AA31A2A4140A300B46598 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -34,6 +45,13 @@
 		8082348E2A43F8480026B58E /* MoviesTVVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesTVVC.xib; sourceTree = "<group>"; };
 		808234912A43F8DB0026B58E /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
 		808234922A43F8DB0026B58E /* AccountVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountVC.xib; sourceTree = "<group>"; };
+		80B78BB62A454CF900C11F6D /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		80B78BB72A454CF900C11F6D /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		80B78BB82A454CF900C11F6D /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		80B78BB92A454CF900C11F6D /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		80B78BC02A454F3C00C11F6D /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		80B78BC32A45758700C11F6D /* DetailMovieVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieVC.swift; sourceTree = "<group>"; };
+		80B78BC42A45758700C11F6D /* DetailMovieVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailMovieVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +59,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8D052F94E0E69DB4AA580EC /* Pods_Course4.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CAB9F3FC1FA2E4EDA824699 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BFC75C5BC9DBF53C15309F7 /* Pods_Course4.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		800AA30A2A4140A300B46598 = {
 			isa = PBXGroup;
 			children = (
 				800AA3152A4140A300B46598 /* Course4 */,
 				800AA3142A4140A300B46598 /* Products */,
+				D88275AC5BDE6497FE4C0398 /* Pods */,
+				2CAB9F3FC1FA2E4EDA824699 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,17 +95,12 @@
 		800AA3152A4140A300B46598 /* Course4 */ = {
 			isa = PBXGroup;
 			children = (
-				800AA3162A4140A300B46598 /* AppDelegate.swift */,
-				800AA31A2A4140A300B46598 /* MainVC.swift */,
-				808234912A43F8DB0026B58E /* AccountVC.swift */,
-				808234922A43F8DB0026B58E /* AccountVC.xib */,
-				8082348D2A43F8480026B58E /* MoviesTVVC.swift */,
-				8082348E2A43F8480026B58E /* MoviesTVVC.xib */,
-				800AA31F2A4140A400B46598 /* Assets.xcassets */,
-				800AA3212A4140A400B46598 /* LaunchScreen.storyboard */,
-				8082348A2A43F7190026B58E /* Utils */,
+				80B78BAF2A45454800C11F6D /* GlobalDefine */,
+				80B78BB12A4547BA00C11F6D /* Application */,
+				80B78BB02A4545C400C11F6D /* Presentation */,
 				808234872A43F3700026B58E /* Extension */,
-				800AA3242A4140A400B46598 /* Info.plist */,
+				80B78BAE2A4543A300C11F6D /* Resources */,
+				800AA3212A4140A400B46598 /* LaunchScreen.storyboard */,
 			);
 			path = Course4;
 			sourceTree = "<group>";
@@ -84,18 +108,103 @@
 		808234872A43F3700026B58E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				8082348B2A43F7190026B58E /* GradientView.swift */,
+				8038EA9C2A442BF20001D4DA /* UIImage.swift */,
 				808234882A43F38A0026B58E /* String.swift */,
+				80B78BC02A454F3C00C11F6D /* UILabel.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		8082348A2A43F7190026B58E /* Utils */ = {
+		80B78BAE2A4543A300C11F6D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8082348B2A43F7190026B58E /* GradientView.swift */,
-				8038EA9C2A442BF20001D4DA /* UIImage.swift */,
+				80B78BB52A454CE700C11F6D /* Font */,
+				800AA31F2A4140A400B46598 /* Assets.xcassets */,
 			);
-			path = Utils;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		80B78BAF2A45454800C11F6D /* GlobalDefine */ = {
+			isa = PBXGroup;
+			children = (
+				800AA3242A4140A400B46598 /* Info.plist */,
+			);
+			path = GlobalDefine;
+			sourceTree = "<group>";
+		};
+		80B78BB02A4545C400C11F6D /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				80B78BB22A4547CA00C11F6D /* MainVC */,
+				80B78BB32A4547D500C11F6D /* MoviesTVVC */,
+				80B78BB42A4547F300C11F6D /* AccountVC */,
+				80B78BC22A45756400C11F6D /* DetailMovieVC */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		80B78BB12A4547BA00C11F6D /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				800AA3162A4140A300B46598 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		80B78BB22A4547CA00C11F6D /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				800AA31A2A4140A300B46598 /* MainVC.swift */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
+		80B78BB32A4547D500C11F6D /* MoviesTVVC */ = {
+			isa = PBXGroup;
+			children = (
+				8082348D2A43F8480026B58E /* MoviesTVVC.swift */,
+				8082348E2A43F8480026B58E /* MoviesTVVC.xib */,
+			);
+			path = MoviesTVVC;
+			sourceTree = "<group>";
+		};
+		80B78BB42A4547F300C11F6D /* AccountVC */ = {
+			isa = PBXGroup;
+			children = (
+				808234912A43F8DB0026B58E /* AccountVC.swift */,
+				808234922A43F8DB0026B58E /* AccountVC.xib */,
+			);
+			path = AccountVC;
+			sourceTree = "<group>";
+		};
+		80B78BB52A454CE700C11F6D /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				80B78BB62A454CF900C11F6D /* Poppins-Bold.ttf */,
+				80B78BB92A454CF900C11F6D /* Poppins-Light.ttf */,
+				80B78BB72A454CF900C11F6D /* Poppins-Medium.ttf */,
+				80B78BB82A454CF900C11F6D /* Poppins-Regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		80B78BC22A45756400C11F6D /* DetailMovieVC */ = {
+			isa = PBXGroup;
+			children = (
+				80B78BC32A45758700C11F6D /* DetailMovieVC.swift */,
+				80B78BC42A45758700C11F6D /* DetailMovieVC.xib */,
+			);
+			path = DetailMovieVC;
+			sourceTree = "<group>";
+		};
+		D88275AC5BDE6497FE4C0398 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51304664817FD22DB64D2D61 /* Pods-Course4.debug.xcconfig */,
+				798FC4B3C90FF50CB40788D5 /* Pods-Course4.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -105,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 800AA3272A4140A400B46598 /* Build configuration list for PBXNativeTarget "Course4" */;
 			buildPhases = (
+				FEE00C97D742D7EC914F2F97 /* [CP] Check Pods Manifest.lock */,
 				800AA30F2A4140A300B46598 /* Sources */,
 				800AA3102A4140A300B46598 /* Frameworks */,
 				800AA3112A4140A300B46598 /* Resources */,
+				0BC635401650209BF90E19F6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -158,12 +269,59 @@
 			files = (
 				800AA3232A4140A400B46598 /* LaunchScreen.storyboard in Resources */,
 				808234902A43F8480026B58E /* MoviesTVVC.xib in Resources */,
+				80B78BBC2A454CF900C11F6D /* Poppins-Regular.ttf in Resources */,
+				80B78BBD2A454CF900C11F6D /* Poppins-Light.ttf in Resources */,
+				80B78BBA2A454CF900C11F6D /* Poppins-Bold.ttf in Resources */,
+				80B78BBB2A454CF900C11F6D /* Poppins-Medium.ttf in Resources */,
 				800AA3202A4140A400B46598 /* Assets.xcassets in Resources */,
 				808234942A43F8DB0026B58E /* AccountVC.xib in Resources */,
+				80B78BC62A45758700C11F6D /* DetailMovieVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BC635401650209BF90E19F6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Course4/Pods-Course4-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Course4/Pods-Course4-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Course4/Pods-Course4-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEE00C97D742D7EC914F2F97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Course4-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		800AA30F2A4140A300B46598 /* Sources */ = {
@@ -173,9 +331,11 @@
 				808234892A43F38A0026B58E /* String.swift in Sources */,
 				8082348F2A43F8480026B58E /* MoviesTVVC.swift in Sources */,
 				808234932A43F8DB0026B58E /* AccountVC.swift in Sources */,
+				80B78BC52A45758700C11F6D /* DetailMovieVC.swift in Sources */,
 				800AA31B2A4140A300B46598 /* MainVC.swift in Sources */,
 				8082348C2A43F80A0026B58E /* GradientView.swift in Sources */,
 				800AA3172A4140A300B46598 /* AppDelegate.swift in Sources */,
+				80B78BC12A454F3C00C11F6D /* UILabel.swift in Sources */,
 				8038EA9D2A442BF20001D4DA /* UIImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,16 +470,18 @@
 		};
 		800AA3282A4140A400B46598 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51304664817FD22DB64D2D61 /* Pods-Course4.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Course4/Info.plist;
+				INFOPLIST_FILE = Course4/GlobalDefine/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -338,16 +500,18 @@
 		};
 		800AA3292A4140A400B46598 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 798FC4B3C90FF50CB40788D5 /* Pods-Course4.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Course4/Info.plist;
+				INFOPLIST_FILE = Course4/GlobalDefine/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
