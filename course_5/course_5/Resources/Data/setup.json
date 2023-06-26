@@ -1,0 +1,145 @@
+{
+    "data" : [
+        {
+           "type":"echo_show",
+           "title": "Echo",
+           "icon": "img_echo",
+           "background": "bg_setup_echo.png",
+           "steps":"This is the first step to start using your devices. By setting up, it allows you to connect your device to Wi-Fi. Please follow this guide and enjoy.\n \n Step 1. Turn on Amazon Echo:\n - Plug the included power adapter into Amazon Echo and then into a power outlet. Press & hold the Power button to move Echo into Set up mode. Alexa will announce it to you when it is ready.\n \n Step 2. On your phone\n - Go to Play Store. Find & download the \"Amazon Alexa\" app.\n \n Step 3. Open the Alexa Amazon App\n - After installation, launch the app & sign in to your Amazon account. \n - Click onto Devices tab\n - On the top right corner, click on (+) sign to set up device\n - Choose Add Device\n - On the first row, tap on Amazon Echo then Echo, Echo Dot, Echo Plus, and more\n - Next, make sure your Echo device is in Set up mode and tap Yes\n - Now, turn on Bluetooth and let your phone connect to your Echo device. When finished, Alexa will give you a short announcement. \n \n Step 4. Finish setting up & enjoy using Alexa\n - Following up to connect your phone with Wi-Fi. Then your Echo will be automatically connected also.\n - Before finishing your setup, fill in some information to customize Alexa best-suited with your using purpose. You can also skip if inconvenient.\n \n Step 5. ALL IS SET! TIME TO ENJOY\n - It's time to get back to FLEX FOR ALEXA\n - Now, you can enjoy various commands by either tap on the \"Start Now\" button or discover in the \"Commands\" tab\n - Besides, Premium Translation Service is always ready for you to either give voice commands or translate into English from your mother tongue. \n \n Tip: If your Amazon Echo doesn't connect to your Wi-Fi network, unplug and then plug the device into a power outlet to restart it and start over the process if needed."
+        },
+        {
+           "type":"echo_show",
+           "title": "Echo Dot",
+           "icon": "img_echo_dot",
+           "background": "bg_setup_echo.png",
+           "steps":"This is the first step to start using your devices. By setting up, it allows you to connect your device to Wi-Fi. Please follow this guide and enjoy.\n \n 1. Turn on Amazon Echo:\n - Plug the included power adapter into Amazon Echo and then into a power outlet. Press & hold the Power button to move Echo into Set up mode. Alexa will announce it to you when it is ready.\n \n Step 2. On your phone\n - Go to Play Store. Find & download the \"Amazon Alexa\" app.\n \n 3. Open Alexa Amazon App\n - Click onto Devices tab\n - On the top right corner, click on the (+) sign to set up device\n - Choose Add Device\n - On the first row, tap on Amazon Echo then Echo, Echo Dot, Echo Plus, and more\n - Next, make sure your Echo device is in Set up mode and tap Yes\n - Now, turn on Bluetooth and let your phone connect to your Echo device. When finished, Alexa will give you a short announcement. \n \n 4. Finish setting up & enjoy using Alexa\n - Following up to connect your phone with Wi-Fi. Then your Echo will be automatically connected also.\n - Before finishing your setup, fill in some information to customize Alexa best-suited with your using purpose. You can also skip if inconvenient.\n \n Step 5. ALL IS SET! TIME TO ENJOY\n - It's time to get back to FLEX FOR ALEXA\n - Now, you can enjoy various commands by either tap on the \"Start Now\" button or discover in the \"Commands\" tab\n - Besides, Premium Translation Service is always ready for you to either give voice commands or translate into English from your mother tongue. \n \n Tip: If your Amazon Echo doesn't connect to your Wi-Fi network, unplug and then plug the device into a power outlet to restart it and start over the process if needed."
+        },
+        {
+           "type":"echo_show",
+           "title": "Echo Plus",
+           "icon": "img_echo_plus",
+           "background": "bg_setup_echo.png",
+           "steps":"This is the first step to start using your devices. By setting up, it allows you to connect your device to Wi-Fi. Please follow this guide and enjoy.\n \n 1. Turn on Amazon Echo:\n - Plug the included power adapter into Amazon Echo and then into a power outlet. Press & hold the Power button to move Echo into Set up mode. Alexa will announce it to you when it is ready.\n \n Step 2. On your phone\n - Go to Play Store. Find & download the \"Amazon Alexa\" app.\n \n 3. Open Alexa Amazon App\n - Click onto Devices tab\n - On the top right corner, click on (+) sign to set up device\n - Choose Add Device\n - On the first row, tap on Amazon Echo then Echo, Echo Dot, Echo Plus, and more\n - Next, make sure your Echo device is in Set up mode and tap Yes\n - Now, turn on Bluetooth and let your phone connect to your Echo device. When finished, Alexa will give you a short announcement. \n \n 4. Finish setting up & enjoy using Alexa\n - Following up to connect your phone with Wi-Fi. Then your Echo will be automatically connected also.\n - Before finishing your setup, fill in some information to customize Alexa best-suited with your using purpose. You can also skip if inconvenient.\n \n Step 5. ALL IS SET! TIME TO ENJOY\n - It's time to get back to FLEX FOR ALEXA\n - Now, you can enjoy various commands by either tap on the \"Start Now\" button or discover in the \"Commands\" tab\n - Besides, Premium Translation Service is always ready for you to either give voice commands or translate into English from your mother tongue. \n \n Tip: If your Amazon Echo doesn't connect to your Wi-Fi network, unplug and then plug the device into a power outlet to restart it and start over the process if needed."
+        },
+        {
+           "type":"echo_show",
+           "title": "Tap",
+           "icon": "img_tap",
+           "background": "bg_setup_echo.png",
+           "steps":"This is the first step to start using your devices. By setting up, it allows you to connect your device to Wi-Fi. Please follow this guide and enjoy.\n \n 1. Turn on Amazon Echo:\n - Plug the included power adapter into Amazon Echo and then into a power outlet. Press and hold the Wi-Fi/Bluetooth button and the Previous button to move Echo into Set up mode. Alexa will announce it to you when it is ready.\n \n Step 2. On your phone\n - Go to Play Store. Find & download the \"Amazon Alexa\" app.\n \n 3. Open Alexa Amazon App\n - Click onto Devices tab\n - On the top right corner, click on (+) sign to set up device\n - Choose Add Device\n - On the first row, tap on Amazon Echo then Echo, Echo Dot, Echo Plus, and more\n - Next, make sure your Echo device is in Set up mode and tap Yes\n - Now, turn on Bluetooth and let your phone connect to your Echo device. When finished, Alexa will give you a short announcement. \n \n 4. Finish setting up & enjoy using Alexa\n - Following up to connect your phone with Wi-Fi. Then your Echo will be automatically connected also.\n - Before finishing your setup, fill in some information to customize Alexa best-suited with your using purpose. You can also skip if inconvenient.\n \n Step 5. ALL IS SET! TIME TO ENJOY\n - It's time to get back to FLEX FOR ALEXA\n - Now, you can enjoy various commands by either tap on the \"Start Now\" button or discover in the \"Commands\" tab\n - Besides, Premium Translation Service is always ready for you to either give voice commands or translate into English from your mother tongue. \n \n Tip: If your Amazon Echo doesn't connect to your Wi-Fi network, unplug and then plug the device into a power outlet to restart it and start over the process if needed."
+        },
+        {
+           "type":"musics",
+           "title": "Music Account",
+           "icon": "banner_music_account.png",
+           "background": "bg_setup.png",
+           "steps":"Life without music is never an easy life at all. By setting up, it allows you to connect your device to your current using music account and bring you to live with your favorite music genre. \n \n Step 1. Set up your device\n - Follow the \"Setup Device\" instruction to connect your device with Wi-Fi & Phone. \n - Skip this step if your Echo device is ready.\n \n Step 2. Choose Music or Podcast provider:\n - Now, switch back to Flex for Alexa and click on Start Now. You will get directly to the Music, Book & Podcast section for set up.\n - On this section, choose your music provider among Amazon, Apple, or other (added by yourself)\n \n Step 3. ALL IS SET! TIME TO ENJOY\n - It's time to get back to FLEX FOR ALEXA\n - Now, you can enjoy various commands by either tap on the \"Start Now\" button or discover in the \"Commands\" tab\n - Besides, Premium Translation Service is always ready for you to either give voice commands or translate into English from your mother tongue. \n \n In case you have a problem with the setup of the app. Please go to alexa.amazon.com on your desktop or laptop and follow the following steps:\n 1. Log in to your Amazon Account \n 2. Go to Music, Video, and Books on the left\n 3. Choose Spotify \n 4. Connect to Spotify"
+        },
+        {
+           "type":"local_and_traffic",
+           "title": "Location",
+           "icon": "banner_location.png",
+           "background": "bg_setup.png",
+           "steps":"Setting up a Location may help you to get better Weather, News & Time of day updates when using. To set up follow the steps below. \n \n Step 1. Set up your device\n - Follow the \"Setup Device\" instruction to connect your device with Wi-Fi & Phone. \n - Skip this step if your Echo device is ready.\n \n Step 2. Set up your location\n - Now, switch back to FLEX FOR ALEXA and click on Start Now. You will get directly to the Settings section.\n - In this section, choose Location and fill in the information.\n \n Step 3. ALL IS SET! TIME TO ENJOY\n - It's time to get back to FLEX FOR ALEXA\n - Now, you can enjoy various commands by either tap on the \"Start Now\" button or discover in the \"Commands\" tab\n - Besides, Premium Translation Service is always ready for you to either give voice commands or translate into English from your mother tongue.\n \n In case you have a problem with the setup of the app. Please go to alexa.amazon.com on your desktop or laptop and follow the following steps:\n 1. Log in to your Amazon Account \n 2. Go to Traffic in Setting \n 3. Choose to change the address"
+        },
+        {
+           "type":"calendar",
+           "title": "Calendar",
+           "icon": "banner_calendar.png",
+           "background": "bg_setup.png",
+           "steps":"The calendar allows users to check and update the calendar by simply connect the user's Calendar of Google, Microsoft, and Apple. Start to connect with your appointment checklists with the following steps below: \n \n Step 1. Set up your device\n - Follow the \"Setup Device\" instruction to connect your device with Wi-Fi & Phone. \n - Skip this step if your Echo device is ready.\n \n Step 2. Get your calendar connected in a few more steps\n - Now, switch back to FLEX FOR ALEXA and click on Start Now. You will get direct to Calendar & Email section.\n - In this section, choose your preferred account among Google, Microsoft, Apple, or Microsoft \n - Sign in to accounts chosen above and get connected\n \n Step 3. ALL IS SET! TIME TO ENJOY\n - It's time to get back to FLEX FOR ALEXA\n - Now, you can enjoy various commands by either tap on the \"Start Now\" button or discover in the \"Commands\" tab\n - Besides, Premium Translation Service is always ready for you to either give voice commands or translate into English from your mother tongue. \n \n In case you have a problem with the setup of the app. Please go to alexa.amazon.com on your desktop or laptop and follow the following steps:\n 1. Log in to your Amazon Account \n 2. Go to Lists in Setting \n 3. Update your Calendar"
+        },
+        {
+           "type":"routine",
+           "title": "Create Routine",
+           "icon": "banner_create_routine.png",
+           "background": "bg_setup.png",
+           "steps":"Create your daily routine with Alexa, it could be morning routine or bed routine. \nStep 1. Set up your device\n- Follow \"Setup Device\" instruction to connect your device with Wifi & Phone. \n- Skip this step if your Echo device is ready.\nStep 2. Choose Create Routine\n- Pick Name & When you say as a sentence to activate the routine\nStep 3. Choose actions Alexa will do in your routine\nStep 4. ALL IS SET! TIME TO ENJOY\n- It' s time to get back to FLEX FOR ALEXA\n- Now, you can enjoy various of commands by either tap on \"Start Now\" button or discover in the \"Commands\" tab\n- Besides, Premium Translastion Service is always ready for you to either give voice commands or translate into English from your mother tongue."
+        },
+        {
+           "type":"shopping",
+           "title": "Shopping List",
+           "icon": "banner_shopping_list.png",
+           "background": "bg_setup.png",
+           "steps":"Never forget your shopping item again. Set a shopping list with Alexa \n \n Step 1. Set up your device\n - Follow the \"Setup Device\" instruction to connect your device with Wi-Fi & Phone. \n - Skip this step if your Echo device is ready.\n \n Step 2. Choose Start a list\n - Tell Alexa the item you want to add\n \n Step 3. ALL IS SET! TIME TO ENJOY\n - It's time to get back to FLEX FOR ALEXA\n - Now, you can enjoy various commands by either tap on the \"Start Now\" button or discover in the \"Commands\" tab\n - Besides, Premium Translation Service is always ready for you to either give voice commands or translate into English from your mother tongue. \n"
+        },
+        {
+           "type":"ring",
+           "title": "Ring Device",
+           "icon": "banner_ring_device.png",
+           "background": "bg_setup.png",
+           "steps":"Get yourselves connect with Ring devices right now to extensively manage your home with a few simply while maintaining current security.\n \n Step 1. Set up your device\n - Follow the \"Setup Device\" instruction to connect your device with Wi-Fi & Phone. \n - Skip this step if your Echo device is ready.\n \n Step 2. In the upper lefthand corner, you'll see three horizontal bars More. Tap them.\n - In the menu that appears, tap Skills & Games.\n - On the next screen, search for Ring in the search box. \n - After you've found Ring, tap the Enable button.\n \n Step 3. Alexa will ask you to sign in to your Ring account. Doing so will link your Ring account to your Alexa account.\n After signing in, you'll be asked to discover devices. Tap the Discover Devices button. All of your Ring devices should appear and be connected to Alexa automatically. If you don't want Alexa to integrate with a particular Ring device, simply tap Forget on the right side. \n \n Step 4. ALL IS SET! TIME TO ENJOY\n - It's time to get back to FLEX FOR ALEXA\n - Now, you can enjoy various commands by either tap on the \"Start Now\" button or discover commands for Ring in the \"Commands\" tab\n - Besides, Premium Translation Service is always ready for you to either give voice commands or translate into English from your mother tongue."
+        },
+        {
+           "type":"irobot",
+           "title": "iRobot Device",
+           "icon": "banner_irobot.png",
+           "background": "bg_setup.png",
+           "steps":"Manage your iRobot devices & keep your house spotless clean in just a few following steps.\n \n Step 1: Install iRobot app \n - Go to Play Store. Find & download \"iRobot Home\" app.\n \n Step 2: Open the iRobot app & connect your robot to with Wifi\n \n Step 3: Start to connect with Alexa \n - Begin the setup by navigating through Menu &#10132; Smart Home &#10132;Connected Accounts & Devices &#10132; Amazon Alexa.\n - If you have it installed, the Alexa app will open. Otherwise, a browser window will open and ask you to log in to your Amazon account.\n - Confirm the linking process by selecting Link.\n - A confirmation page on whether or not the linking was successful should be displayed in the iRobot HOME app.\n \n Step 4: ALL IS SET! TIME TO ENJOY\n - It's time to get back to FLEX FOR ALEXA\n - Now, you can enjoy various commands by either tap on the \"Start Now\" button or discover commands for iRobot in the \"Commands\" tab\n - Besides, Premium Translation Service is always ready for you to either give voice commands or translate into English from your mother tongue."
+        },
+        {
+           "type":"skype",
+           "title": "Skype",
+           "icon": "banner_skype.png",
+           "background": "bg_setup.png",
+           "steps":"Skype is always the best and free way to hold a meeting or regular call with family members. Ask your smart speaker to call your Skype contact easily no matter which device your partners are using.\n \n Step 1. Set up your device\n - Follow the \"Setup Device\" instruction to connect your device with Wi-Fi & Phone. \n - Skip this step if your Echo device is ready.\n \n Step 2. Sign in to Skype\n - Now, switch back to FLEX FOR ALEXA and click on Start Now. You will get directly to the Skype section.\n - On your phone, tap on the Sign In button to visit the Microsoft login site where you will log in using Microsoft accounts.\n \n Step 3. ALL IS SET! TIME TO ENJOY\n - It's time to get back to FLEX FOR ALEXA\n - Now, you can enjoy commands that are already listed in the Commands tab or Premium Translate Service to easily give commands in your mother tongue.\n \n In case you have a problem with the setup of the app. Please go to alexa.amazon.com on your desktop or laptop and follow the following steps:\n 1.Log into your Amazon Account\n 2.Go to Setting, choose Skype in Communication\n 3.Follow the instruction to set up"
+        },
+        {
+           "type":"smart_home",
+           "title": "Smart Home",
+           "icon": "banner_smart_home.png",
+           "background": "bg_setup.png",
+           "steps":"Smart Home feature allows you to manage multiple smart devices around you in a touch. Get all of your devices connected by following these steps.\n \n 1. On your phone\n - Go to Play Store. Find & download the \"Amazon Alexa\" app.\n \n 2. Open Alexa Amazon App\n - Click onto Devices tab\n - On the top right corner, click on (+) sign to set up the device\n - Choose Add Device\n - Search for the name of the smart device you are setting up\n - Next is to provide Alexa with your Manufacturer's name.\n - In the following steps, connect Alexa with your manufacturer's account to gain full access to your device.\n \n 3. ALL IS SET! TIME TO ENJOY\n - It's time to get back to FLEX FOR ALEXA\n - Now, you can enjoy commands that are already listed in the Commands tab or Premium Translate Service to easily give commands in your mother tongue.\n \n In case you have a problem with the setup of the app. Please go to alexa.amazon.com on your desktop or laptop and follow the following steps:\n 1.Tap the button to access your Amazon Account\n 2. Choose Devices to add new smart devices or choose Smart Home Skills to connect the skills of smart devices that you want to use. \n"
+        },
+        {
+           "type":"skills",
+           "title": "Skills",
+           "icon": "banner_skills.png",
+           "background": "bg_setup.png",
+           "steps":"Skills allow you to get full access to Amazon Skill sets. By applying these skills, you will be able to expand your commands to no limitation. Get connected and try new commands every day with the following steps.\n \n Step 1. Set up your device\n - Follow the \"Setup Device\" instruction to connect your device with Wi-Fi & Phone. \n - Skip this step if your Echo device is ready. \n \n Step 2. Access to the heaven of commands.\n - Now, switch back to FLEX FOR ALEXA and click on Start Now. You will get directly to the Skill section.\n - Choose between Featured and Categories for the most suitable commands for your needs. Categories tab would offer a wider range of commands sort by common topics in daily life.\n \n Step 3. ALL IS SET! TIME TO ENJOY\n - It's time to get back to FLEX FOR ALEXA\n - Now, you can enjoy commands that are already listed in the Commands tab or Premium Translate Service to easily give commands in your mother tongue.\n \n In case you have a problem with the app version. Please go to blueprints.amazon.com and start with the same instruction above."
+        },
+        {
+           "type":"skills",
+           "title": "Skill Blueprints",
+           "icon": "banner_skill_blueprint.png",
+           "background": "bg_setup.png",
+           "steps":"Skill Blueprints enable anyone to create and share customized your device's skills by filling the blank of easy-to-use templates. Let's start to make your first own personal skill. \n \n Step 1. Set up your device\n - Follow the \"Setup Device\" instruction to connect your device with Wi-Fi & Phone. \n - Skip this step if your Echo device is ready.\n \n Step 2. Get yourself customized commands\n - Now, switch back to FLEX FOR ALEXA and click on Start Now. You will get directly to the Amazon website.\n - Choose the Blueprint category\n - Click on the button Make your own to begin.\n \n Step 3. ALL IS SET! TIME TO ENJOY\n - It's time to get back to FLEX FOR ALEXA\n - Now, you can enjoy various commands by either tap on the \"Start Now\" button or discover in the \"Commands\" tab\n - Besides, Premium Translation Service is always ready for you to either give voice commands or translate into English from your mother tongue. \n \n \n In case you have a problem with the app version. Please go to blueprints.amazon.com and start with the same instruction above."
+        },
+        {
+           "type":"musics",
+           "title": "Music, Video & Book",
+           "icon": "banner_music_book.png",
+           "background": "bg_setup.png",
+           "steps":"Let's fill up free time with some books or videos. Start to connect with your reading book with the following steps below: \n \n Step 1. Set up your device\n - Follow the \"Setup Device\" instruction to connect your device with Wi-Fi & Phone. \n - Skip this step if your Echo device is ready.\n \n Step 2. Choose your trusted provider:\n - Now, switch back to Flex for Alexa and click on Start Now. You will get direct to Music & books section for set up.\n - In this section, choose your provider among Tune in or Spotify.\n \n Step 3. ALL IS SET! TIME TO ENJOY\n - It's time to get back to FLEX FOR ALEXA\n - Now, you can enjoy commands that are already listed in the Commands tab or Premium Translate Service to easily give commands in your mother tongue. \n \n In case you have a problem with the setup of the app. Please go to alexa.amazon.com on your desktop or laptop and follow the following steps:\n 1. Log in to your Amazon Account \n 2. Go to Music, Video, and Books on the left"
+        },
+        {
+           "type":"musics",
+           "title": "Now Playing",
+           "icon": "banner_now_playing.png",
+           "background": "bg_setup.png",
+           "steps":"With the Now Playing function, you can play any music, radio station, or show you like. What else, showing a list of song names in your music accounts.\n \n Step 1. Set up your device\n - Follow the \"Setup Device\" instruction to connect your device with Wi-Fi & Phone. \n - Skip this step if your Echo device is ready.\n \n Step 2. Choose your trusted provider:\n - Now, switch back to Flex for Alexa and click on Start Now. You will get direct to Music & books section for set up.\n - In this section, you can see the playing song or giving commands to play music. This function usually works best after connecting the Music account in advance.\n \n Step 3. ALL IS SET! TIME TO ENJOY\n - It's time to get back to FLEX FOR ALEXA\n - Now, you can enjoy commands that are already listed in the Commands tab or Premium Translate Service to easily give commands in your mother tongue.\n \n In case you have a problem with the setup of the app. Please go to alexa.amazon.com on your desktop or laptop and follow the following steps:\n 1. Log in to your Amazon Account\n 2. Go to Now Playing"
+        },
+        {
+           "type":"sport",
+           "title": "Sport Update",
+           "icon": "banner_sport.png",
+           "background": "bg_setup.png",
+           "steps":"Never let yourself miss any latest news about your favorite sports team. No newspaper, no laptop, no TV needed. Just stay connected in the following steps, Alexa will carry the rest.\n \n Step 1. Set up your device\n - Follow the \"Setup Device\" instruction to connect your device with Wi-Fi & Phone. \n - Skip this step if your Echo device is ready.\n \n Step 2. Choose your trusted provider:\n - Now, switch back to Flex for Alexa and click on Start Now. You will get directly to the Sports section for set up.\n - Select your team to get an update.\n \n Step 3. ALL IS SET! TIME TO ENJOY\n - It's time to get back to FLEX FOR ALEXA\n - Now, you can enjoy commands that are already listed in the Commands tab or Premium Translate Service to easily give commands in your mother tongue.\n \n In case you have a problem with the setup of the app. Please go to alexa.amazon.com on your desktop or laptop and follow the following steps:\n 1. Log in to your Amazon Account \n 2. Go to Sports Updates in Setting \n 3. Select your favorite team\n \n"
+        },
+        {
+           "type":"photos",
+           "title": "Photo",
+           "icon": "banner_photo.png",
+           "background": "bg_setup.png",
+           "steps":"View, share, control your photo slideshow on screen is just about to happen after linking accounts or connection:\n \n Step 1. Set up your device\n - Follow the \"Setup Device\" instruction to connect your device with Wi-Fi & Phone. \n - Skip this step if your Echo device is ready.\n \n Step 2. Choose your trusted provider:\n - Now, switch back to Flex for Alexa and click on Start Now. You will get directly to the Photo section for set up.\n - Upload your photo or link your Facebook Account\n \n Step 3. ALL IS SET! TIME TO ENJOY\n - It's time to get back to FLEX FOR ALEXA\n - Now, you can enjoy commands that are already listed in the Commands tab or Premium Translate Service to easily give commands in your mother tongue.\n \n In case you have a problem with the setup of the app. Please go to alexa.amazon.com on your desktop or laptop and follow the following steps:\n 1. Log in to your Amazon Account \n 2. Go to Photo in Setting \n 3. Upload your photo or link your Facebook account."
+        },
+        {
+           "type":"local_and_traffic",
+           "title": "Traffic",
+           "icon": "banner_traffic.png",
+           "background": "bg_setup.png",
+           "steps":"Setting up Traffic may help you to get Traffic updates when using. To set up follow the steps below. \n \n Step 1. Set up your device\n - Follow the \"Setup Device\" instruction to connect your device with Wi-Fi & Phone. \n - Skip this step if your Echo device is ready.\n \n Step 2. Set up your location\n - Now, switch back to FLEX FOR ALEXA and click on Start Now. You will get directly to the Settings section.\n - In this section, choose Location and fill in the information.\n \n Step 3. ALL IS SET! TIME TO ENJOY\n - It's time to get back to FLEX FOR ALEXA\n - Now, you can enjoy commands that are already listed in the Commands tab or Premium Translate Service to easily give commands in your mother tongue. \n \n In case you have a problem with the setup of the app. Please go to alexa.amazon.com on your desktop or laptop and follow the following steps:\n 1. Log in to your Amazon Account \n 2. Go to Traffic in Setting \n 3. Choose to change the address"
+        }
+     ]
+
+}

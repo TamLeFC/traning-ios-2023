@@ -1,0 +1,847 @@
+{
+    "data": [
+        {
+            "name":"favorite",
+            "display_name":"Favorite",
+            "image":"ic_favorite",
+            "commands":[
+            ]
+        },
+        {
+            "name":"basic",
+            "display_name":"Basic",
+            "image":"ic_basic",
+            "commands":[
+                {
+                    "text":"Help"
+                },
+                {
+                    "text":"Mute"
+                },
+                {
+                    "text":"Unmute"
+                },
+                {
+                    "text":"Stop"
+                },
+                {
+                    "text":"Volume up"
+                },
+                {
+                    "text":"Volume down"
+                },
+                {
+                    "text":"Set volume to 5"
+                },
+                {
+                    "text":"Go to sleep"
+                }
+            ]
+        },
+        {
+            "name":"musics",
+            "display_name":"Musics",
+            "image":"ic_music",
+            "commands":[
+                {
+                    "text":"Play music"
+                },
+                {
+                    "text":"Sing Auld Lang Syne"
+                },
+                {
+                    "text":"Sing your new Christmas song"
+                },
+                {
+                    "text":"Sing a Christmas carol"
+                },
+                {
+                    "text":"Sing Jingle Bells"
+                },
+                {
+                    "text":"Play music for a Christmas party"
+                },
+                {
+                    "text":"Play family-friendly Christmas music"
+                },
+                {
+                    "text":"Create a new playlist."
+                },
+                {
+                    "text":"Mute"
+                },
+                {
+                    "text":"Unmute"
+                },
+                {
+                    "text":"Skip this song"
+                },
+                {
+                    "text":"Restart this song"
+                },
+                {
+                    "text":"Turn shuffle on"
+                },
+                {
+                    "text":"Turn repeat on"
+                },
+                {
+                    "text":"Loop this playlist"
+                },
+                {
+                    "text":"Turn shuffle off"
+                },
+                {
+                    "text":"Turn repeat off"
+                }
+            ]
+        },
+        {
+            "name":"spotify",
+            "display_name":"Spotify",
+            "image":"ic_spotify",
+            "commands":[
+                {
+                    "text":"Volume up"
+                },
+                {
+                    "text":"Volume down"
+                },
+                {
+                    "text":"Stop"
+                },
+                {
+                    "text":"Resume"
+                },
+                {
+                    "text":"Next"
+                },
+                {
+                    "text":"Play last song"
+                },
+                {
+                    "text":"Play favorite playlist on Spotify"
+                },
+                {
+                    "text":"What song is this?"
+                },
+                {
+                    "text":"What was the last song called?"
+                },
+                {
+                    "text":"Tell me more about this artist"
+                },
+                {
+                    "text":"Add this song to my playlist"
+                },
+                {
+                    "text":"Play some romantic music on Spotify"
+                },
+                {
+                    "text":"Play some happy music on Spotify"
+                },
+                {
+                    "text":"Play some sad music on Spotify"
+                },
+                {
+                    "text":"Play some cooking music on Spotify"
+                },
+                {
+                    "text":"Play my music from Eminem on Spotify"
+                },
+                {
+                    "text":"Play my music from Alan Walker on Spotify"
+                },
+                {
+                    "text":"Play my music from Rihanna on Spotify"
+                },
+                {
+                    "text":"Play my music from Taylor Swift on Spotify"
+                },
+                {
+                    "text":"Play my music from Beyonce on Spotify"
+                },
+                {
+                    "text":"Play Christmas music on Spotify"
+                },
+                {
+                    "text":"Play music for Thanksgiving on Spotify"
+                },
+                {
+                    "text":"Play music for holiday on Spotify"
+                }
+            ]
+        },
+        {
+            "name":"alarms",
+            "display_name":"Alarms",
+            "image":"ic_alarm",
+            "commands":[
+                {
+                    "text":"Snooze"
+                },
+                {
+                    "text":"When's my next alarm?"
+                },
+                {
+                    "text":"What are my timers?"
+                },
+                {
+                    "text":"Cancel all alarms"
+                },
+                {
+                    "text":"Cancel my alarm"
+                },
+                {
+                    "text":"Set a timer for 30 minutes"
+                },
+                {
+                    "text":"Set an alarm for 7 A.M"
+                },
+                {
+                    "text":"Set a second timer for 10 minutes"
+                }
+            ]
+        },
+        {
+            "name":"calendar",
+            "display_name":"Calendar",
+            "image":"ic_calendar",
+            "commands":[
+                {
+                    "text":"What time is it?"
+                },
+                {
+                    "text":"What's the date?"
+                },
+                {
+                    "text":"Add an event to my calendar"
+                },
+                {
+                    "text":"What's on my calendar for today?"
+                }
+            ]
+        },
+        {
+            "name":"local_and_traffic",
+            "display_name":"Local",
+            "display_name":"Local",
+            "image":"ic_location",
+            "commands":[
+                {
+                    "text":"What's the weather like?"
+                },
+                {
+                    "text":"Will it rain today?"
+                },
+                {
+                    "text":"What will the weather be like tomorrow?"
+                },
+                {
+                    "text":"What's in the news?"
+                },
+                {
+                    "text":"What's the traffic like?"
+                },
+                {
+                    "text":"What time is it?"
+                },
+                {
+                    "text":"What will the weather be like this weekend?"
+                }
+            ]
+        },
+        {
+            "name":"bluetooth",
+            "display_name":"Bluetooth",
+            "image":"ic_bluetooth",
+            "commands":[
+                {
+                    "text":"Connect to my phone"
+                },
+                {
+                    "text":"Disconnect from my phone"
+                },
+                {
+                    "text":"Connect to my speaker"
+                },
+                {
+                    "text":"Disconnect from my speaker"
+                }
+            ]
+        },
+        {
+            "name":"smart_home",
+            "display_name":"Smart Home",
+            "image":"ic_smart_home",
+            "commands":[
+                {
+                    "text":"Bedtime"
+                },
+                {
+                    "text":"Discover my devices"
+                },
+                {
+                    "text":"Dim the lights to 50%"
+                },
+                {
+                    "text":"Set the temperature to 21 degrees"
+                },
+                {
+                    "text":"Turn off the living room lights."
+                },
+                {
+                    "text":"Turn the lights to soft white."
+                },
+                {
+                    "text":"Make the kitchen lights a little warmer"
+                },
+                {
+                    "text":"Raise the temperature 1 degree."
+                },
+                {
+                    "text":"Lock my back door."
+                },
+                {
+                    "text":"Discover my devices"
+                },
+                {
+                    "text":"Turn on Netflix"
+                },
+                {
+                    "text":"Runaway mode"
+                },
+                {
+                    "text":"Turn lights off"
+                },
+                {
+                    "text":"Turn lights out"
+                },
+                {
+                    "text":"Lock the front door"
+                },
+                {
+                    "text":"Turn on the tv"
+                },
+                {
+                    "text":"Turn off the tv"
+                },
+                {
+                    "text":"Show me camera"
+                }
+            ]
+        },
+        {
+            "name":"eq_control",
+            "display_name":"EQ Control",
+            "image":"ic_eq_control",
+            "commands":[
+                {
+                    "text":"Set the treble to three"
+                },
+                {
+                    "text":"Set night mode"
+                },
+                {
+                    "text":"Increase bass"
+                },
+                {
+                    "text":"Decrease treble"
+                },
+                {
+                    "text":"Increase bass in the living room"
+                },
+                {
+                    "text":"Set night mode on bedroom tv"
+                },
+                {
+                    "text":"Set movie mode"
+                },
+                {
+                    "text":"Set bass to two on the soundbar"
+                }
+            ]
+        },
+        {
+            "name":"family",
+            "display_name":"Family",
+            "image":"ic_family_friends",
+            "commands":[
+                {
+                    "text":"Send a hug"
+                },
+                {
+                    "text":"Call my dad"
+                },
+                {
+                    "text":"Call my mom"
+                },
+                {
+                    "text":"Call my brother"
+                },
+                {
+                    "text":"Call my sister"
+                },
+                {
+                    "text":"Call my husband"
+                },
+                {
+                    "text":"Call my wife"
+                },
+                {
+                    "text":"Call my son"
+                },
+                {
+                    "text":"Call my daughter"
+                },
+                {
+                    "text":"Call my boyfriend"
+                },
+                {
+                    "text":"Call my girlfriend"
+                },
+                {
+                    "text":"Call my grandpa"
+                },
+                {
+                    "text":"Call my grandma"
+                },
+                {
+                    "text":"call emergency."
+                }
+            ]
+        },
+        {
+            "name":"recipe",
+            "display_name":"Recipe",
+            "image":"ic_nutrition",
+            "commands":[
+                {
+                    "text":"Give me nutrition tip"
+                },
+                {
+                    "text":"Show me recipes"
+                }
+            ]
+        },
+        {
+            "name":"donation",
+            "display_name":"Make a donation",
+            "image":"ic_donation",
+            "commands":[
+                {
+                    "text":"Make a donation"
+                },
+                {
+                    "text":"Make a donation to the American childhood cancer organization"
+                },
+                {
+                    "text":"Make a donation to anime for humanity"
+                },
+                {
+                    "text":"Make a donation to cancer research institute inc."
+                },
+                {
+                    "text":"Make a donation to love justice international"
+                },
+                {
+                    "text":"Make a donation to the 1,000 dreams fund"
+                },
+                {
+                    "text":"Make a donation to 1 up on cancer"
+                },
+                {
+                    "text":"Make a donation to 30 for the kids inc."
+                },
+                {
+                    "text":"Make a donation to 93 q cure kids cancer radiothon at children's miracle network"
+                },
+                {
+                    "text":"Make a donation to a kid again"
+                },
+                {
+                    "text":"Make a donation to a stage reborn"
+                },
+                {
+                    "text":"Make a donation to the aids foundation of Chicago"
+                },
+                {
+                    "text":"Make a donation to action against hunger USA"
+                },
+                {
+                    "text":"Make a donation to the African wildlife foundation"
+                },
+                {
+                    "text":"Lemonade stand foundation Alexa, make a donation to Alex's lemonade stand foundation"
+                },
+                {
+                    "text":"Make a donation to all in Washington"
+                },
+                {
+                    "text":"Make a donation to almond tv"
+                },
+                {
+                    "text":"Make a donation to amazon home town heroes and why not your foundation"
+                },
+                {
+                    "text":"Make a donation to the American cancer society"
+                },
+                {
+                    "text":"Make a donation to the American Foundation for Surgery of the hand"
+                },
+                {
+                    "text":"Make a donation to the American heart association"
+                }
+            ]
+        },
+        {
+            "name":"shopping",
+            "display_name":"Shopping",
+            "image":"ic_shopping",
+            "commands":[
+                {
+                    "text":"What's on my shopping list?"
+                },
+                {
+                    "text":"Where's my stuff?"
+                },
+                {
+                    "text":"order Organic Limes from Prime Now."
+                },
+                {
+                    "text":"cancel an order."
+                },
+                {
+                    "text":"reorder Organic Baby Carrots."
+                }
+            ]
+        },
+        {
+            "name":"christmas",
+            "display_name":"Christmas",
+            "image":"ic_christmas",
+            "commands":[
+                {
+                    "text":"What's today's Christmas treat?"
+                },
+                {
+                    "text":"Do you want to build a snowman?"
+                },
+                {
+                    "text":"Open the advent calendar"
+                },
+                {
+                    "text":"Sing a Christmas carol"
+                },
+                {
+                    "text":"Sing your new Christmas song"
+                },
+                {
+                    "text":"What is the true meaning of Christmas?"
+                },
+                {
+                    "text":"Who is your favorite reindeer?"
+                },
+                {
+                    "text":"Is Santa Claus real?"
+                },
+                {
+                    "text":"Where does Father Christmas live?"
+                }
+            ]
+        },
+        {
+            "name":"echo_show",
+            "display_name":"Echo",
+            "image":"ic_echo_dot",
+            "commands":[
+                {
+                    "text":"What can you show me?"
+                },
+                {
+                    "text":"Show my calendar"
+                },
+                {
+                    "text":"Show my photos"
+                },
+                {
+                    "text":"Show the living room camera"
+                },
+                {
+                    "text":"Show me a movie showtimes."
+                },
+                {
+                    "text":"Show me the weekend forecast"
+                },
+                {
+                    "text":"Show me travel videos on Youtube"
+                },
+                {
+                    "text":"Show me a recipe from Allrecipes"
+                },
+                {
+                    "text":"Play my video"
+                },
+                {
+                    "text":"Show me my timers"
+                },
+                {
+                    "text":"Open Uber."
+                }
+            ]
+        },
+        {
+            "name":"remote",
+            "display_name":"Remote",
+            "image":"ic_remote",
+            "commands":[
+                {
+                    "text":"Turn on Fire TV"
+                },
+                {
+                    "text":"Turn off Fire TV."
+                },
+                {
+                    "text":"Pause on Fire TV"
+                },
+                {
+                    "text":"Play on Fire TV"
+                },
+                {
+                    "text":"Resume on Fire TV"
+                },
+                {
+                    "text":"Stop on Fire TV"
+                },
+                {
+                    "text":"Fast-forward to Fire TV"
+                },
+                {
+                    "text":"Rewind on Fire TV"
+                },
+                {
+                    "text":"Switch to PlayStation on Fire TV"
+                },
+                {
+                    "text":"Switch to HDMI 1 on Fire TV"
+                },
+                {
+                    "text":"Open TV guide on Fire TV"
+                }
+            ]
+        },
+        {
+            "name":"food",
+            "display_name":"Food",
+            "image":"ic_food",
+            "commands":[
+                {
+                    "text":"How do you make chocolate chip cookies?"
+                },
+                {
+                    "text":"Find me a nearby pizza restaurant Alexa, what's the nearest coffee shop?"
+                },
+                {
+                    "text":"What's the nearest coffee shop?"
+                }
+            ]
+        },
+        {
+            "name":"settle",
+            "display_name":"Settle",
+            "image":"ic_settle",
+            "commands":[
+                {
+                    "text":"Roll a die"
+                },
+                {
+                    "text":"Roll a 26 sided die"
+                },
+                {
+                    "text":"Flip a coin"
+                },
+                {
+                    "text":"Pick a number between 1 and 50."
+                }
+            ]
+        },
+        {
+            "name":"skills",
+            "display_name":"Skills",
+            "image":"ic_skills",
+            "commands":[
+                {
+                    "text":"Open airplay."
+                },
+                {
+                    "text":"What kid's skills do you have?"
+                },
+                {
+                    "text":"Enable jeopardy!"
+                },
+                {
+                    "text":"Disable dominoes."
+                },
+                {
+                    "text":"Open the bartender."
+                }
+            ]
+        },
+        {
+            "name":"ring",
+            "display_name":"Ring",
+            "image":"ic_ring",
+            "commands":[
+                {
+                    "text":"call Mom."
+                },
+                {
+                    "text":"text Dmitry I'm on my way."
+                },
+                {
+                    "text":"сall brother on speaker."
+                },
+                {
+                    "text":"call Dad at work."
+                },
+                {
+                    "text":"FaceTime to Mom."
+                },
+                {
+                    "text":"call Viktor via WhatsApp."
+                },
+                {
+                    "text":"call Maria via Skype."
+                },
+                {
+                    "text":"tell Viktor I'm on my way."
+                },
+                {
+                    "text":"reply this is great news."
+                },
+                {
+                    "text":"tell Mom via WhatsApp dinner on Saturday sounds good."
+                },
+                {
+                    "text":"dial last number."
+                },
+                {
+                    "text":"show me Viktor information."
+                },
+                {
+                    "text":"any mail from Maria?”"
+                },
+                {
+                    "text":"when did Mom call me?"
+                },
+                {
+                    "text":"check email."
+                },
+                {
+                    "text":"do I have any emails about Apple?"
+                },
+                {
+                    "text":"read my last message from Maria"
+                },
+                {
+                    "text":"call emergency."
+                }
+            ]
+        },
+        {
+            "name":"irobot",
+            "display_name":"IRobot",
+            "image":"ic_irobot",
+            "commands":[
+                {
+                    "text":"Ask Roomba to start vacuuming"
+                },
+                {
+                    "text":"Ask Braava to start mopping"
+                },
+                {
+                    "text":"Ask Roomba to clean"
+                },
+                {
+                    "text":"Ask Roomba to start vacuuming"
+                },
+                {
+                    "text":"Tell Braava to stop sweeping"
+                },
+                {
+                    "text":"Tell Roomba to pause vacuuming"
+                },
+                {
+                    "text":"Ask Braava to resume mopping"
+                },
+                {
+                    "text":"Tell Roomba to go home"
+                },
+                {
+                    "text":"Tell Roomba to go recharge"
+                },
+                {
+                    "text":"Tell iRobot to return to its dock"
+                },
+                {
+                    "text":"Ask Roomba where it is"
+                },
+                {
+                    "text":"Ask Braava to sing for me"
+                },
+                {
+                    "text":"Tell Roomba I found it"
+                },
+                {
+                    "text":"Tell Roomba to be quiet"
+                },
+                {
+                    "text":"Ask Roomba what it's doing"
+                },
+                {
+                    "text":"Ask Braava if it's done yet"
+                },
+                {
+                    "text":"Ask Roomba to schedule vacuuming"
+                },
+                {
+                    "text":"Tell Roomba to schedule cleaning on Monday at 10 AM"
+                },
+                {
+                    "text":"Ask Braava to schedule mopping in the morning"
+                },
+                {
+                    "text":"Tell Roomba to list my cleaning schedule"
+                },
+                {
+                    "text":"Tell Roomba to cancel vacuuming on Tuesdays"
+                },
+                {
+                    "text":"Ask Roomba to vacuum the master bedroom"
+                },
+                {
+                    "text":"Ask Braava to mop my kitchen"
+                },
+                {
+                    "text":"Tell Roomba there is a mess in the kitchen and living room"
+                },
+                {
+                    "text":"Tell Roomba to vacuum and Braava to mop the kitchen"
+                },
+                {
+                    "text":"Tell Roomba to start Rosie in the living room and Bob in the kitchen"
+                },
+                {
+                    "text":"Tell Roomba to vacuum in front of the couch"
+                },
+                {
+                    "text":"Tell iRobot to clean the dinnertime favorite"
+                },
+                {
+                    "text":"Ask Roomba to schedule vacuuming in the dining room on Tuesdays"
+                }
+            ]
+        }
+    ]
+    
+}
