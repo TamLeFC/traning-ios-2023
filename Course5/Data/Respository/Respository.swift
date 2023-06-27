@@ -9,29 +9,28 @@ import Foundation
 import ObjectMapper
 
 class Respository {
-    func getCommands() -> [Category] {
-        if let filePath = Bundle.main.path(forResource: "commands", ofType: "json") {
+    func getJsonData<U: Mappable>(fileName: String) -> U? {
+        if let filePath = Bundle.main.path(forResource: fileName, ofType: "json") {
             do {
                 let jsonString = try String(contentsOfFile: filePath, encoding: .utf8)
-                if let categoryResponse = Mapper<CategoryResponse>().map(JSONString: jsonString) {
-                    return categoryResponse.data ?? []
+                if let response = Mapper<U>().map(JSONString: jsonString) {
+                    return response
                 }
             } catch {
                 print("error:\(error)")
             }
         }
+        return nil
+    }
+    func getCommands() -> [Category] {
+        if let response: CategoryResponse = getJsonData(fileName: "commands") {
+            return response.data
+        }
         return []
     }
     func getSetups() -> [Setup] {
-        if let filePath = Bundle.main.path(forResource: "setup", ofType: "json") {
-            do {
-                let jsonString = try String(contentsOfFile: filePath, encoding: .utf8)
-                if let categoryResponse = Mapper<SetupResponse>().map(JSONString: jsonString) {
-                    return categoryResponse.data ?? []
-                }
-            } catch {
-                print("error:\(error)")
-            }
+        if let response: SetupResponse = getJsonData(fileName: "setup") {
+            return response.data
         }
         return []
     }
