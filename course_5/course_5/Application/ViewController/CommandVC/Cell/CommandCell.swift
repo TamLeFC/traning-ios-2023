@@ -9,6 +9,7 @@ import UIKit
 
 class CommandCell: UICollectionViewCell {
 
+    @IBOutlet weak var parentView: GradientView!
     @IBOutlet weak var commandCellView: GradientView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -18,9 +19,9 @@ class CommandCell: UICollectionViewCell {
         imageView.image = UIImage(named: item.image)
         nameLabel.text = item.displayName
         nameLabel.font = UIFont(name: "Poppins-Medium", size: 12)
+        
+        parentView.layer.cornerRadius = 16
         commandCellView.layer.cornerRadius = 16
-        commandCellView.borderColor = .white
-        commandCellView.borderWidth = 2
     }
 
 }

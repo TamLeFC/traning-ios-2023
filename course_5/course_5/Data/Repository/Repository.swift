@@ -5,25 +5,37 @@
 //  Created by Mobile Dev on 26/06/2023.
 //
 
-import Foundation
+import ObjectMapper
 
 class Repository {
-    
     func getCommands() -> [Category] {
         if let path = Bundle.main.url(forResource: "commands", withExtension: "json") {
-            if let data = try? Data(contentsOf: path) {
-                let response = try? JSONDecoder().decode(CateogryResponse.self, from: data)
+            do {
+                let data = try Data(contentsOf: path)
+                let jsonString = String(data: data, encoding: .utf8)
+                if let jsonString = jsonString {
+                let response = Mapper<CategoryResponse>().map(JSONString: jsonString)
                 return response?.data ?? []
+                }
+            } catch {
+                print("Error loading JSON data: \(error)")
             }
         }
         return []
     }
-    
-    func getSetups() -> [Setup] {
+  
+    func getSetups() -> [Setup]
+    {
         if let path = Bundle.main.url(forResource: "setup", withExtension: "json") {
-            if let data = try? Data(contentsOf: path) {
-                let response = try? JSONDecoder().decode(SetupResponse.self, from: data)
+            do {
+                let data = try Data(contentsOf: path)
+                let jsonString = String(data: data, encoding: .utf8)
+                if let jsonString = jsonString {
+                let response = Mapper<SetupResponse>().map(JSONString: jsonString)
                 return response?.data ?? []
+                }
+            } catch {
+                print("Error loading JSON data: \(error)")
             }
         }
         return []

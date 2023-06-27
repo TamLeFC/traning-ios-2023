@@ -5,26 +5,21 @@
 //  Created by Mobile Dev on 26/06/2023.
 //
 
-import Foundation
+import ObjectMapper
 
-struct Category: Codable {
+struct Category: Mappable {
     var name: String = ""
     var displayName: String = ""
     var image: String = ""
     var commands: [Command] = []
 
-    enum Keys: String, CodingKey {
-        case name
-        case displayName = "display_name"
-        case image
-        case commands
-    }
+    init?(map: Map) {}
 
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: Keys.self)
-        name = try container.decode(String.self, forKey: .name)
-        displayName = try container.decode(String.self, forKey: .displayName)
-        image = try container.decode(String.self, forKey: .image)
-        commands = try container.decode([Command].self, forKey: .commands)
+    mutating func mapping(map: Map) {
+        name <- map["name"]
+        displayName <- map["display_name"]
+        image <- map["image"]
+        commands <- map["commands"]
     }
 }
+

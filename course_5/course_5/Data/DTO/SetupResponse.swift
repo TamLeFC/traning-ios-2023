@@ -5,17 +5,14 @@
 //  Created by Mobile Dev on 26/06/2023.
 //
 
-import Foundation
+import ObjectMapper
 
-struct SetupResponse: Codable {
+struct SetupResponse: Mappable {
     var data: [Setup] = []
 
-    enum Keys: String, CodingKey {
-        case data = "data"
-    }
-
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: Keys.self)
-        data = try container.decode([Setup].self, forKey: .data)
+    init?(map: Map){}
+    
+    mutating func mapping(map: Map) {
+        data <- map["data"]
     }
 }

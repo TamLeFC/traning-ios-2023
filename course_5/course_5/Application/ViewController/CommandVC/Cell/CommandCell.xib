@@ -21,11 +21,26 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KND-Ae-JZr">
                         <rect key="frame" x="0.0" y="0.0" width="61" height="86"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0l-gM-NNe" customClass="GradientView" customModule="course_5" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PUY-0r-VYp" customClass="GradientView" customModule="course_5" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="61" height="61"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PUY-0r-VYp" secondAttribute="height" id="099-uL-YRc"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" red="0.88235294117647056" green="0.92941176470588238" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0l-gM-NNe" customClass="GradientView" customModule="course_5" customModuleProvider="target">
+                                <rect key="frame" x="2" y="2" width="57" height="57"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HLQ-HG-iHD">
-                                        <rect key="frame" x="15.333333333333334" y="15.333333333333334" width="30.333333333333329" height="30.333333333333329"/>
+                                        <rect key="frame" x="14.333333333333334" y="14.333333333333334" width="28.333333333333329" height="28.333333333333329"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="HLQ-HG-iHD" secondAttribute="height" multiplier="1:1" id="B9R-t0-Lh7"/>
                                         </constraints>
@@ -48,7 +63,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TfN-H3-pth">
-                                <rect key="frame" x="14.666666666666664" y="69" width="32" height="17"/>
+                                <rect key="frame" x="14.666666666666664" y="61" width="32" height="25"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                 <color key="textColor" name="color_text"/>
                                 <nil key="highlightedColor"/>
@@ -56,12 +71,15 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="TfN-H3-pth" firstAttribute="top" secondItem="D0l-gM-NNe" secondAttribute="bottom" constant="2" id="1W3-md-WYj"/>
                             <constraint firstAttribute="bottom" secondItem="TfN-H3-pth" secondAttribute="bottom" id="2AY-14-HMD"/>
-                            <constraint firstAttribute="trailing" secondItem="D0l-gM-NNe" secondAttribute="trailing" id="JSc-CD-IUa"/>
-                            <constraint firstItem="D0l-gM-NNe" firstAttribute="top" secondItem="KND-Ae-JZr" secondAttribute="top" id="UrX-D7-iH3"/>
+                            <constraint firstAttribute="trailing" secondItem="D0l-gM-NNe" secondAttribute="trailing" constant="2" id="F3q-ws-nY7"/>
+                            <constraint firstItem="D0l-gM-NNe" firstAttribute="leading" secondItem="KND-Ae-JZr" secondAttribute="leading" constant="2" id="GJx-ml-qwe"/>
+                            <constraint firstItem="PUY-0r-VYp" firstAttribute="top" secondItem="KND-Ae-JZr" secondAttribute="top" id="HQz-w6-fig"/>
+                            <constraint firstAttribute="trailing" secondItem="PUY-0r-VYp" secondAttribute="trailing" id="Xuv-YH-TwM"/>
+                            <constraint firstItem="D0l-gM-NNe" firstAttribute="top" secondItem="KND-Ae-JZr" secondAttribute="top" constant="2" id="aTf-AO-dsh"/>
                             <constraint firstItem="TfN-H3-pth" firstAttribute="centerX" secondItem="KND-Ae-JZr" secondAttribute="centerX" id="eO0-99-4tT"/>
-                            <constraint firstItem="TfN-H3-pth" firstAttribute="top" secondItem="D0l-gM-NNe" secondAttribute="bottom" constant="8" id="rIJ-Hh-rI0"/>
-                            <constraint firstItem="D0l-gM-NNe" firstAttribute="leading" secondItem="KND-Ae-JZr" secondAttribute="leading" id="uTU-er-6uS"/>
+                            <constraint firstItem="PUY-0r-VYp" firstAttribute="leading" secondItem="KND-Ae-JZr" secondAttribute="leading" id="xpZ-YG-wdi"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -78,6 +96,7 @@
                 <outlet property="commandCellView" destination="D0l-gM-NNe" id="JJD-5W-GpO"/>
                 <outlet property="imageView" destination="HLQ-HG-iHD" id="pMd-Ck-kQ5"/>
                 <outlet property="nameLabel" destination="TfN-H3-pth" id="cL8-6k-OUb"/>
+                <outlet property="parentView" destination="PUY-0r-VYp" id="xCM-n4-OTS"/>
             </connections>
             <point key="canvasLocation" x="48.091603053435115" y="1.4084507042253522"/>
         </collectionViewCell>

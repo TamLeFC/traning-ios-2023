@@ -5,22 +5,17 @@
 //  Created by Mobile Dev on 26/06/2023.
 //
 
-import Foundation
+import ObjectMapper
 
-import Foundation
-
-struct Command: Codable {
+struct Command: Mappable {
     var text: String
     
-    var isFavorated: Bool = false
-    var isSelect: Bool = false
+    init?(map: Map) {
+        text = ""
+    }
     
-    enum Keys: String, CodingKey {
-        case text
+    mutating func mapping(map: Map) {
+        text <- map["text"]
     }
-
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: Keys.self)
-        text = try container.decode(String.self, forKey: .text)
-    }
+   
 }

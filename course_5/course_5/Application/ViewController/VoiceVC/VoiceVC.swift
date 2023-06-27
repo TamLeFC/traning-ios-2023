@@ -66,6 +66,7 @@ extension VoiceVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VoiceCell", for: indexPath) as! VoiceCell
         cell.configure(viewModel.commands[indexPath.row])
+   
         return cell
     }
 }

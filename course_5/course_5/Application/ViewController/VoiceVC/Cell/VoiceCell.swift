@@ -11,26 +11,23 @@ class VoiceCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet weak var cellView: UIView!
     
     private var isFavorite: Bool = false
 
     func configure(_ item: Command) {
         titleLabel.text = item.text
         
-        let favoriteImage = item.isFavorated ? UIImage(named: "ic_hear_gray") : UIImage(named: "ic_hear_red")
-        isFavorite = item.isFavorated
-        favoriteButton.setImage(favoriteImage, for: .normal)
+        favoriteButton.setImage(UIImage(named: "ic_heart_gray"), for: .normal)
+    }
+    @IBAction func favoriteButtonTapped(_ sender: Any) {
+        isFavorite.toggle()
+        updateFavoriteButtonImage()
     }
     
-    @IBAction func favoriteButtonTapped(_ sender: Any) {
-        if isFavorite {
-            favoriteButton.setImage(UIImage(named: "ic_heart_red"), for: .normal)
-        }
-        else {
-            favoriteButton.setImage(UIImage(named: "ic_heart_gray"), for: .normal)
-        }
-        isFavorite.toggle()
-        
+    private func updateFavoriteButtonImage() {
+        let imageName = isFavorite ? "ic_heart_red" : "ic_heart_gray"
+        favoriteButton.setImage(UIImage(named: imageName), for: .normal)
     }
     
 }

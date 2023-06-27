@@ -61,15 +61,10 @@ class SetupVC: UIViewController {
 
 extension SetupVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let categoryCellSpacing: CGFloat = 16
-        let width = (collectionView.frame.width - (categoryCellSpacing * 3) ) / 4
-        let height = width + 30
+        let groupCellSpacing: CGFloat = 16
+        let width = (collectionView.frame.width - groupCellSpacing) / 2
+        let height = width / 2
         return CGSize(width: width, height: height)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let vc = VoiceVC(viewModel.categories[indexPath.row])
-//        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

@@ -16,6 +16,12 @@ class SetupVM {
     
     init() {
         allSetups = repository.getSetups()
-        setups = Array(allSetups[4..<allSetups.count])
+        
+        if allSetups.count > 4 {
+            setups = Array(allSetups[4..<allSetups.count])
+        } else {
+            setups = []
+        }
     }
 }
+
