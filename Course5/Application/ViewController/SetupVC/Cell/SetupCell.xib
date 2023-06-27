@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Bold.ttf">
+            <string>Poppins-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SetupCell" customModule="Course5" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="160" height="80"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h77-hu-Ob6">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="80"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_bg_calendar" translatesAutoresizingMaskIntoConstraints="NO" id="7dm-8S-wj0">
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="80"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_calendar_setup" translatesAutoresizingMaskIntoConstraints="NO" id="xgh-Y7-2LS">
+                                <rect key="frame" x="96" y="12" width="52" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Lgm-6D-bqS"/>
+                                    <constraint firstAttribute="width" constant="52" id="aJL-mO-Mfq"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music Account" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0SI-dJ-H3C">
+                                <rect key="frame" x="12" y="28.666666666666668" width="80" height="39.333333333333329"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="UQp-v5-sXM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="0SI-dJ-H3C" secondAttribute="bottom" constant="12" id="2Is-hQ-kzd"/>
+                            <constraint firstItem="xgh-Y7-2LS" firstAttribute="top" secondItem="h77-hu-Ob6" secondAttribute="top" constant="12" id="Jzz-DV-HUn"/>
+                            <constraint firstAttribute="trailing" secondItem="xgh-Y7-2LS" secondAttribute="trailing" constant="12" id="MFw-6d-i1I"/>
+                            <constraint firstItem="0SI-dJ-H3C" firstAttribute="leading" secondItem="h77-hu-Ob6" secondAttribute="leading" constant="12" id="OwS-XV-at5"/>
+                            <constraint firstItem="7dm-8S-wj0" firstAttribute="leading" secondItem="h77-hu-Ob6" secondAttribute="leading" id="PLm-w4-o62"/>
+                            <constraint firstAttribute="bottom" secondItem="7dm-8S-wj0" secondAttribute="bottom" id="hpa-I9-wnG"/>
+                            <constraint firstItem="7dm-8S-wj0" firstAttribute="top" secondItem="h77-hu-Ob6" secondAttribute="top" id="sxY-e5-l4i"/>
+                            <constraint firstAttribute="trailing" secondItem="7dm-8S-wj0" secondAttribute="trailing" id="yrK-Pu-uLw"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="h77-hu-Ob6" secondAttribute="bottom" id="1cA-ar-KDS"/>
+                <constraint firstItem="h77-hu-Ob6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="agl-rh-EXW"/>
+                <constraint firstAttribute="trailing" secondItem="h77-hu-Ob6" secondAttribute="trailing" id="fIc-St-jiu"/>
+                <constraint firstItem="h77-hu-Ob6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="mSq-2a-9pH"/>
+            </constraints>
+            <connections>
+                <outlet property="backgroundImageView" destination="7dm-8S-wj0" id="1Il-YY-0R3"/>
+                <outlet property="iconImageView" destination="xgh-Y7-2LS" id="snh-na-pBW"/>
+                <outlet property="textLabel" destination="0SI-dJ-H3C" id="ePI-pe-KxT"/>
+            </connections>
+            <point key="canvasLocation" x="-15" y="20"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_calendar_setup" width="64" height="64"/>
+        <image name="img_bg_calendar" width="160" height="80"/>
+    </resources>
+</document>
