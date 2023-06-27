@@ -1,21 +1,18 @@
 //
-//  CategoryResponse.swift
+//  CategoryResponse_OM.swift
 //  Course5
 //
-//  Created by KietKoy on 26/06/2023.
+//  Created by KietKoy on 27/06/2023.
 //
 
 import Foundation
-struct CategoryResponse: Codable {
+import ObjectMapper
+struct CategoryResponse: Mappable {
     var data: [Category] = []
-    
-    enum Keys: String, CodingKey {
-        case data = "data"
+    init?(map: Map) {
+        
     }
-
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: Keys.self)
-        data = try container.decode([Category].self, forKey: .data)
+    mutating func mapping(map: Map) {
+        data <- map["data"]
     }
 }
-

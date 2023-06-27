@@ -6,15 +6,16 @@
 //
 
 import Foundation
+import ObjectMapper
 
 class Respository {
     func getCommands() -> [Category] {
-        if let url = Bundle.main.url(forResource: "commands", withExtension: "json") {
+        if let filePath = Bundle.main.path(forResource: "commands", ofType: "json") {
             do {
-                let data = try Data(contentsOf: url)
-                let decoder = JSONDecoder()
-                let jsonData = try decoder.decode(CategoryResponse.self, from: data)
-                return jsonData.data
+                let jsonString = try String(contentsOfFile: filePath, encoding: .utf8)
+                if let categoryResponse = Mapper<CategoryResponse>().map(JSONString: jsonString) {
+                    return categoryResponse.data ?? []
+                }
             } catch {
                 print("error:\(error)")
             }
@@ -22,12 +23,12 @@ class Respository {
         return []
     }
     func getSetups() -> [Setup] {
-        if let url = Bundle.main.url(forResource: "setup", withExtension: "json") {
+        if let filePath = Bundle.main.path(forResource: "setup", ofType: "json") {
             do {
-                let data = try Data(contentsOf: url)
-                let decoder = JSONDecoder()
-                let jsonData = try decoder.decode(SetupResponse.self, from: data)
-                return jsonData.data
+                let jsonString = try String(contentsOfFile: filePath, encoding: .utf8)
+                if let categoryResponse = Mapper<SetupResponse>().map(JSONString: jsonString) {
+                    return categoryResponse.data ?? []
+                }
             } catch {
                 print("error:\(error)")
             }

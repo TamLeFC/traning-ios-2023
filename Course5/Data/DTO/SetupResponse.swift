@@ -1,19 +1,18 @@
 //
-//  SetupResponse.swift
+//  SetupResponse_OM.swift
 //  Course5
 //
 //  Created by KietKoy on 27/06/2023.
 //
 
 import Foundation
-
-struct SetupResponse: Codable {
+import ObjectMapper
+struct SetupResponse: Mappable {
     var data: [Setup] = []
-    enum Keys: String, CodingKey {
-        case data = "data"
+    init?(map: Map) {
+        
     }
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.data = try container.decode([Setup].self, forKey: .data)
+    mutating func mapping(map: Map) {
+        data <- map["data"]
     }
 }

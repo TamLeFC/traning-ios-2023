@@ -1,20 +1,19 @@
 //
-//  Command.swift
+//  Command_OM.swift
 //  Course5
 //
-//  Created by KietKoy on 26/06/2023.
+//  Created by KietKoy on 27/06/2023.
 //
 
 import Foundation
-struct Command: Codable {
-    var text: String
+import ObjectMapper
+struct Command: Mappable {
+    var text: String = ""
     
-    enum Keys: String, CodingKey {
-        case text
+    init?(map: Map) {
+        
     }
-
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: Keys.self)
-        text = try container.decode(String.self, forKey: .text)
+    mutating func mapping(map: Map) {
+        text <- map["text"]
     }
 }
