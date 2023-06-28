@@ -17,43 +17,56 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="147"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdI-Kc-buw">
-                        <rect key="frame" x="15.999999999999996" y="64" width="39.666666666666657" height="19.333333333333329"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" highlightedImage="heart.fill" translatesAutoresizingMaskIntoConstraints="NO" id="jVM-hd-he5">
-                        <rect key="frame" x="280" y="63.666666666666657" width="24" height="21"/>
-                        <color key="tintColor" systemColor="systemRedColor"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zfs-lG-1Rr">
+                        <rect key="frame" x="0.0" y="8" width="320" height="131"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdI-Kc-buw">
+                                <rect key="frame" x="15.999999999999996" y="56.000000000000007" width="39.666666666666657" height="19.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" highlightedImage="heart.fill" translatesAutoresizingMaskIntoConstraints="NO" id="jVM-hd-he5">
+                                <rect key="frame" x="280" y="55.666666666666657" width="24" height="21"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="Znc-fY-2vQ"/>
+                                    <constraint firstAttribute="height" constant="24" id="qG2-nV-XIy"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yo-hw-p5d">
+                                <rect key="frame" x="280" y="53.666666666666657" width="24" height="24"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="onFavoriteTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="GOl-8O-p85"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="24" id="Znc-fY-2vQ"/>
-                            <constraint firstAttribute="height" constant="24" id="qG2-nV-XIy"/>
+                            <constraint firstItem="sdI-Kc-buw" firstAttribute="centerY" secondItem="zfs-lG-1Rr" secondAttribute="centerY" id="3cv-rq-eDe"/>
+                            <constraint firstAttribute="trailing" secondItem="jVM-hd-he5" secondAttribute="trailing" constant="16" id="3w3-Jx-Uhz"/>
+                            <constraint firstItem="4yo-hw-p5d" firstAttribute="centerY" secondItem="jVM-hd-he5" secondAttribute="centerY" id="9LC-Ny-HuQ"/>
+                            <constraint firstItem="4yo-hw-p5d" firstAttribute="centerX" secondItem="jVM-hd-he5" secondAttribute="centerX" id="9q2-lu-UGN"/>
+                            <constraint firstItem="4yo-hw-p5d" firstAttribute="width" secondItem="jVM-hd-he5" secondAttribute="width" id="EM4-cf-BMf"/>
+                            <constraint firstItem="4yo-hw-p5d" firstAttribute="height" secondItem="jVM-hd-he5" secondAttribute="height" id="IfR-iq-gOv"/>
+                            <constraint firstItem="sdI-Kc-buw" firstAttribute="leading" secondItem="zfs-lG-1Rr" secondAttribute="leading" constant="16" id="Jpl-iq-GQY"/>
+                            <constraint firstItem="jVM-hd-he5" firstAttribute="centerY" secondItem="sdI-Kc-buw" secondAttribute="centerY" id="adI-Gx-qgj"/>
+                            <constraint firstItem="jVM-hd-he5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sdI-Kc-buw" secondAttribute="trailing" constant="8" symbolic="YES" id="pTS-2r-KJL"/>
                         </constraints>
-                    </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yo-hw-p5d">
-                        <rect key="frame" x="280" y="61.666666666666657" width="24" height="24"/>
-                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                        <connections>
-                            <action selector="onFavoriteTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="GOl-8O-p85"/>
-                        </connections>
-                    </button>
+                    </view>
                 </subviews>
-                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="4yo-hw-p5d" firstAttribute="centerX" secondItem="jVM-hd-he5" secondAttribute="centerX" id="0Qy-ZV-UlE"/>
-                    <constraint firstItem="jVM-hd-he5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sdI-Kc-buw" secondAttribute="trailing" constant="8" symbolic="YES" id="3aC-4y-IgC"/>
-                    <constraint firstItem="jVM-hd-he5" firstAttribute="centerY" secondItem="sdI-Kc-buw" secondAttribute="centerY" id="3or-vE-AEF"/>
-                    <constraint firstItem="4yo-hw-p5d" firstAttribute="centerY" secondItem="jVM-hd-he5" secondAttribute="centerY" id="8X1-Rn-YNi"/>
-                    <constraint firstItem="sdI-Kc-buw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Bdy-30-7Qz"/>
-                    <constraint firstAttribute="trailing" secondItem="jVM-hd-he5" secondAttribute="trailing" constant="16" id="Bii-MK-ffE"/>
-                    <constraint firstItem="4yo-hw-p5d" firstAttribute="width" secondItem="jVM-hd-he5" secondAttribute="width" id="Vyj-0X-aSO"/>
-                    <constraint firstItem="4yo-hw-p5d" firstAttribute="height" secondItem="jVM-hd-he5" secondAttribute="height" id="n1V-67-sNp"/>
-                    <constraint firstItem="sdI-Kc-buw" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="nee-Z3-PM3"/>
+                    <constraint firstItem="zfs-lG-1Rr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="GCj-uf-pmL"/>
+                    <constraint firstItem="zfs-lG-1Rr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Mc3-tn-5Ti"/>
+                    <constraint firstAttribute="bottom" secondItem="zfs-lG-1Rr" secondAttribute="bottom" constant="8" id="Vjo-m0-FiP"/>
+                    <constraint firstAttribute="trailing" secondItem="zfs-lG-1Rr" secondAttribute="trailing" id="iRL-Ae-kOU"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="containView" destination="zfs-lG-1Rr" id="kKo-rR-Drq"/>
                 <outlet property="favoriteImageView" destination="jVM-hd-he5" id="Zh3-nP-Hzh"/>
                 <outlet property="itemLabel" destination="sdI-Kc-buw" id="xiL-WH-Uya"/>
             </connections>
@@ -63,6 +76,9 @@
     <resources>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

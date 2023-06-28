@@ -1,11 +1,6 @@
-//
-//  CommandVC.swift
-//  Course5
-//
-//  Created by Mobile Dev 1 on 27/06/2023.
-//
-
 import UIKit
+import RxSwift
+import RxDataSources
 
 class CommandVC: UIViewController {
     
@@ -15,7 +10,9 @@ class CommandVC: UIViewController {
     
     private let category: Category
     
-    private var viewModel: CommandVM!
+    private var viewModel = CommandVM()
+    
+    private let bag = DisposeBag()
     
     init(_ category: Category) {
         self.category = category
@@ -28,10 +25,12 @@ class CommandVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        viewModel = CommandVM(category)
         
         initViews()
+        
+        bindViewModel()
+        
+        viewModel.fetchData(category)
     }
     
     private func initViews() {
@@ -49,7 +48,14 @@ class CommandVC: UIViewController {
         itemTableView.sectionFooterHeight = 16
         
         itemTableView.delegate = self
-        itemTableView.dataSource = self
+    }
+    
+    private func bindViewModel() {
+        viewModel.commandsSub
+            .asObserver()
+            .map { [SectionModel(model: (), items: $0)] }
+            .bind(to: self.itemTableView.rx.items(dataSource: getCommandsDataSource()))
+            .disposed(by: bag)
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
@@ -58,28 +64,14 @@ class CommandVC: UIViewController {
 
 }
 
-extension CommandVC: UITableViewDelegate, UITableViewDataSource {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return viewModel.commands.count
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
+extension CommandVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 58
+        return 58 + 16
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return UIView()
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CommandTableViewCell", for: indexPath) as! CommandTableViewCell
-        cell.configure(viewModel.commands[indexPath.section])
-        return cell
     }
     
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {

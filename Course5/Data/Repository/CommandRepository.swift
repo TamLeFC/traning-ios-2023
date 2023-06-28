@@ -1,16 +1,17 @@
 import Foundation
 import ObjectMapper
+import RxSwift
 
 class CommandRepository {
-    func getCommands() -> [Category] {
+    func getCommands() -> Observable<[Category]> {
         guard let path = Bundle.main.url(forResource: "commands", withExtension: "json"),
               let data = try? Data(contentsOf: path),
               let jsonString = String(data: data, encoding: .utf8),
               let response = CommandResponse(JSONString: jsonString)
         else {
-            return []
+            return Observable.just([])
         }
         
-        return response.data
+        return Observable.just(response.data)
     }
 }

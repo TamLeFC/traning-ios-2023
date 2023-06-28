@@ -1,10 +1,14 @@
+import RxSwift
+
 class CommandVM {
     
-    let category: Category
-    let commands: [Command]
+    let commandsSub = PublishSubject<[Command]>()
     
-    init(_ category: Category) {
-        self.category = category
-        self.commands = category.commands
+    private let category: Category? = nil
+    
+    private let commands: [Command] = []
+    
+    func fetchData(_ category: Category) {
+        commandsSub.onNext(category.commands)
     }
 }

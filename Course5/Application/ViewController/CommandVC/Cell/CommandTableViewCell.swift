@@ -2,6 +2,7 @@ import UIKit
 
 class CommandTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var containView: UIView!
     @IBOutlet weak var itemLabel: UILabel!
     @IBOutlet weak var favoriteImageView: UIImageView!
     
@@ -12,9 +13,8 @@ class CommandTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        contentView.layer.cornerRadius = 16
+        containView.layer.cornerRadius = 16
     }
-    
     
     @IBAction func onFavoriteTapped(_ sender: Any) {
         favoriteImageView.isHighlighted = !favoriteImageView.isHighlighted

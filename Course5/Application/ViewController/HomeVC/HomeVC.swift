@@ -1,14 +1,22 @@
 import UIKit
+import RxSwift
+import RxDataSources
 
 class HomeVC: UIViewController {
-
+    
     @IBOutlet weak var commandCollectionView: UICollectionView!
+    
+    private let bag = DisposeBag()
+    
     private let viewModel = HomeVM()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupCollectionView()
+        bindViewModel()
+        
+        viewModel.fetchData()
     }
     
     private func setupCollectionView() {
@@ -22,9 +30,29 @@ class HomeVC: UIViewController {
         commandCollectionView.register(nib, forCellWithReuseIdentifier: identifier)
         
         commandCollectionView.delegate = self
-        commandCollectionView.dataSource = self
         
         commandCollectionView.showsVerticalScrollIndicator = false
+    }
+    
+    private func bindViewModel() {
+        viewModel.categoriesSub
+            .asObserver()
+            .map { [SectionModel(model: (), items: $0)] }
+            .bind(to: self.commandCollectionView.rx.items(dataSource: getCagegoriesDataSource()))
+            .disposed(by: bag)
+        
+        onItemSelected()
+    }
+    
+    private func onItemSelected() {
+        commandCollectionView
+            .rx
+            .modelSelected(Category.self)
+            .subscribe(onNext: { item in
+                let vc = CommandVC(item)
+                self.navigationController?.pushViewController(vc, animated: true)
+            })
+            .disposed(by: bag)
     }
 }
 
@@ -34,22 +62,5 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
         let width = (collectionView.frame.width - (categoryCellSpacing * 3) - (collectionView.layoutMargins.right + collectionView.layoutMargins.left)) / 4
         let height = width + 26
         return CGSize(width: width, height: height)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = CommandVC(viewModel.categories[indexPath.row])
-        navigationController?.pushViewController(vc, animated: true)
-    }
-}
-
-extension HomeVC: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.categories.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionViewCell", for: indexPath) as! HomeCollectionViewCell
-        cell.configure(viewModel.categories[indexPath.row])
-        return cell
     }
 }

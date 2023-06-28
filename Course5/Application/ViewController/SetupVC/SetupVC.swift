@@ -1,4 +1,6 @@
 import UIKit
+import RxSwift
+import RxDataSources
 
 class SetupVC: UIViewController {
 
@@ -10,6 +12,8 @@ class SetupVC: UIViewController {
     
     private let viewModel = SetupVM()
     
+    private let bag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -17,6 +21,9 @@ class SetupVC: UIViewController {
         applyItemStyle(to: echoView)
         applyItemStyle(to: echoPlusView)
         applyItemStyle(to: tapView)
+        
+        bindViewModel()
+        viewModel.fetchData()
         
         setupCollectionView()
     }
@@ -40,9 +47,17 @@ class SetupVC: UIViewController {
         groupCollectionView.register(nib, forCellWithReuseIdentifier: identifier)
         
         groupCollectionView.delegate = self
-        groupCollectionView.dataSource = self
+//        groupCollectionView.dataSource = self
         
         groupCollectionView.showsVerticalScrollIndicator = false
+    }
+    
+    private func bindViewModel() {
+        viewModel.setupsSub
+            .asObserver()
+            .map { [SectionModel(model: (), items: Array($0.dropFirst(4)))] }
+            .bind(to: self.groupCollectionView.rx.items(dataSource: getSetupsDataSource()))
+            .disposed(by: bag)
     }
 }
 
@@ -55,14 +70,14 @@ extension SetupVC: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension SetupVC: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.setups.count - 4
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SetupCollectionViewCell", for: indexPath) as! SetupCollectionViewCell
-        cell.configure(viewModel.setups[indexPath.row + 4])
-        return cell
-    }
-}
+//extension SetupVC: UICollectionViewDataSource {
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        viewModel.setups.count - 4
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SetupCollectionViewCell", for: indexPath) as! SetupCollectionViewCell
+//        cell.configure(viewModel.setups[indexPath.row + 4])
+//        return cell
+//    }
+//}
