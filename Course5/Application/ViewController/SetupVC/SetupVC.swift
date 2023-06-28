@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxDataSources
 
 class SetupVC: UIViewController {
 
@@ -15,29 +17,35 @@ class SetupVC: UIViewController {
     @IBOutlet weak var echoContainerView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    private let data = SetupVM()
+    private var viewModel: SetupVM = SetupVM()
+    private let bag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         initView()
+        
+        bindViewModel()
+        
+        viewModel.fetchData()
     }
+    
     private func initView() {
         setupUIView()
         setupCollectionView()
     }
+    
     private func setupUIView() {
         echoContainerView.addDropShadow(shadowRadius: 16, offset: CGSize(width: 0, height: 8), color: UIColor(hex: 0x024E66, alpha: 0.2))
         echoDotContainerView.addDropShadow(shadowRadius: 16, offset: CGSize(width: 0, height: 8), color: UIColor(hex: 0x024E66, alpha: 0.2))
         tapContainerView.addDropShadow(shadowRadius: 16, offset: CGSize(width: 0, height: 8), color: UIColor(hex: 0x024E66, alpha: 0.2))
         echoPlusContainerView.addDropShadow(shadowRadius: 16, offset: CGSize(width: 0, height: 8), color: UIColor(hex: 0x024E66, alpha: 0.2))
     }
+    
     private func setupCollectionView() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.sectionInset = UIEdgeInsets(top: 16, left: 0, bottom: 16, right: 0)
         collectionView.setCollectionViewLayout(layout, animated: true)
-        collectionView.dataSource = self
+        
         collectionView.delegate = self
         
         let nib = UINib(nibName: SetupCell.identifier, bundle: nil)
@@ -46,20 +54,15 @@ class SetupVC: UIViewController {
         
         collectionView.showsVerticalScrollIndicator = false
     }
-}
-extension SetupVC: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.setups.count
+    
+    private func bindViewModel() {
+        viewModel.setupS.asObservable()
+                    .map { [SectionModel(model: (), items: $0)] }
+                    .bind(to: self.collectionView.rx.items(dataSource: getSetupsDataSource()))
+                    .disposed(by: bag)
     }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SetupCell.identifier, for: indexPath) as! SetupCell
-        cell.configureCell(data.setups[indexPath.row])
-        return cell
-    }
-    
-    
 }
+
 extension SetupVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let setupCellSpacing: CGFloat = 8

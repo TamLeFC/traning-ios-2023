@@ -7,31 +7,38 @@
 
 import Foundation
 import ObjectMapper
+import RxSwift
 
 class Respository {
-    func getJsonData<U: Mappable>(fileName: String) -> U? {
-        if let filePath = Bundle.main.path(forResource: fileName, ofType: "json") {
-            do {
-                let jsonString = try String(contentsOfFile: filePath, encoding: .utf8)
-                if let response = Mapper<U>().map(JSONString: jsonString) {
-                    return response
-                }
-            } catch {
-                print("error:\(error)")
+    
+    func readJSONFile<T: Mappable>(fileName: String) -> Observable<T> {
+        guard let filePath = Bundle.main.path(forResource: fileName, ofType: "json") else {
+            return Observable.empty()
+        }
+        
+        do {
+            let jsonString = try String(contentsOfFile: filePath, encoding: .utf8)
+            if let response = Mapper<T>().map(JSONString: jsonString) {
+                return Observable.just(response)
             }
+        } catch {
+            print("error: \(error)")
         }
-        return nil
+        
+        return Observable.empty()
     }
-    func getCommands() -> [Category] {
-        if let response: CategoryResponse = getJsonData(fileName: "commands") {
-            return response.data
-        }
-        return []
+
+    func getCommands() -> Observable<[Category]> {
+        return readJSONFile(fileName: "commands")
+                .map { (categoryResponse: CategoryResponse) -> [Category] in
+                    return categoryResponse.data
+                }
     }
-    func getSetups() -> [Setup] {
-        if let response: SetupResponse = getJsonData(fileName: "setup") {
-            return response.data
-        }
-        return []
+
+    func getSetups() -> Observable<[Setup]> {
+        return readJSONFile(fileName: "setup")
+                .map { (setupResponse: SetupResponse) -> [Setup] in
+                    return setupResponse.data
+                }
     }
 }

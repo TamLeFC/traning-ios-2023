@@ -6,19 +6,26 @@
 //
 
 import UIKit
+import RxSwift
+import RxDataSources
 
 class HomeVC: UIViewController {
-    private let data = HomeVM()
-    
+    private var viewModel: HomeVM = HomeVM()
+    private let bag = DisposeBag()
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
+        bindViewModel()
+        
+        viewModel.fetchData()
     }
+    
     private func initView() {
         setupCollectionView()
     }
+    
     private func setupCollectionView() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -26,7 +33,7 @@ class HomeVC: UIViewController {
         collectionView.setCollectionViewLayout(layout, animated: true)
         
         collectionView.delegate = self
-        collectionView.dataSource = self
+        //        collectionView.dataSource = self
         
         let nib = UINib(nibName: CategoryCell.identifier, bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: CategoryCell.identifier)
@@ -34,18 +41,15 @@ class HomeVC: UIViewController {
         
         collectionView.showsVerticalScrollIndicator = false
     }
-}
-extension HomeVC: UICollectionViewDataSource {
-    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        data.categories.count
-    }
     
-    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCell.identifier, for: indexPath) as! CategoryCell
-        cell.configureCell(data.categories[indexPath.row])
-        return cell
+    private func bindViewModel() {
+        viewModel.categorieS.asObservable()
+            .map { [SectionModel(model: (), items: $0)] }
+            .bind(to: self.collectionView.rx.items(dataSource: getCagegoriesDataSource()))
+            .disposed(by: bag)
     }
 }
+
 extension HomeVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let categoryCellSpacing: CGFloat = 16
@@ -54,3 +58,31 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
         return CGSize(width: width, height: height)
     }
 }
+
+extension HomeVC: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = CommandDetailVC()
+        
+        viewModel.categorieS.subscribe(onNext: { [weak self] categories in
+            guard self != nil else {
+                return
+            }
+            if indexPath.row < categories.count {
+                let selectedCategory = categories[indexPath.row]
+                vc.commands = selectedCategory.commands
+                vc.titleText = selectedCategory.displayName
+            }
+        }).disposed(by: bag)
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+        viewModel.fetchData()
+    }
+}
+
+
+
+
+
+
+

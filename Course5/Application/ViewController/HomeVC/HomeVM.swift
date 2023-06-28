@@ -6,10 +6,23 @@
 //
 
 import Foundation
-
+import RxSwift
+import RxCocoa
 class HomeVM {
-    var categories: [Category]
-    init() {
-        categories = Respository().getCommands()
+    
+    let categorieS = PublishSubject<[Category]>()
+    
+    private var categories: [Category] = []
+    
+    private let bag = DisposeBag()
+    
+    func fetchData() {
+        Respository().getCommands()
+            .subscribe(onNext: {[weak self] categories in
+                guard let self = self else {
+                    return
+                }
+                self.categorieS.onNext(categories)
+            }).disposed(by: bag)
     }
 }

@@ -12,6 +12,7 @@ struct Category: Mappable {
     var displayName: String = ""
     var image: String = ""
     var commands: [Command] = []
+    
     init?(map: Map) {
         
     }

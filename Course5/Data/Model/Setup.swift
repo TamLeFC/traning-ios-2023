@@ -7,7 +7,9 @@
 
 import Foundation
 import ObjectMapper
+
 struct Setup: Mappable {
+    
     var type: String  = ""
     var title: String = ""
     var icon: String = ""
@@ -16,6 +18,7 @@ struct Setup: Mappable {
     init?(map: Map) {
         
     }
+    
     mutating func mapping(map: Map) {
         type <- map["type"]
         title <- map["title"]
