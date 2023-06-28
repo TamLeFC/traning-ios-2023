@@ -6,17 +6,24 @@
 //
 
 import UIKit
+import RxSwift
+import RxDataSources
 
 class HomeVC: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    private let viewModel = HomeVM()
+    private let bag = DisposeBag()
+    
+    private var viewModel: HomeVM = HomeVM()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         initViews()
+        bindViewModel()
+        
+        viewModel.fetchData()
     }
     
     private func initViews() {
@@ -34,9 +41,15 @@ class HomeVC: UIViewController {
         collectionView.register(nib, forCellWithReuseIdentifier: identifier)
         
         collectionView.delegate = self
-        collectionView.dataSource = self
         
         collectionView.showsVerticalScrollIndicator = false
+    }
+    
+    private func bindViewModel() {
+        viewModel.categoriesS.asObservable()
+            .map { [SectionModel(model: (), items: $0)] }
+            .bind(to: self.collectionView.rx.items(dataSource: getCagegoriesDataSource()))
+            .disposed(by: bag)
     }
 
 }
@@ -50,19 +63,7 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = CommandVC(viewModel.categories[indexPath.row])
-        navigationController?.pushViewController(vc, animated: true)
-    }
-}
-
-extension HomeVC: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.categories.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCell", for: indexPath) as! CategoryCell
-        cell.configure(viewModel.categories[indexPath.row])
-        return cell
+//        let vc = CommandVC(viewModel.categories[indexPath.row])
+//        navigationController?.pushViewController(vc, animated: true)
     }
 }

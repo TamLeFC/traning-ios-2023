@@ -6,17 +6,18 @@
 //
 
 import Foundation
+import RxSwift
 
 class Repository {
     
-    func getCommands() -> [Category] {
+    func getCommands() -> Observable<[Category]> {
         if let path = Bundle.main.url(forResource: "commands", withExtension: "json") {
             if let data = try? Data(contentsOf: path) {
                 let response = try? JSONDecoder().decode(CateogryResponse.self, from: data)
-                return response?.data ?? []
+                return Observable.just(response?.data ?? [])
             }
         }
-        return []
+        return Observable.just([])
     }
     
     func getSetups() -> [Setup] {

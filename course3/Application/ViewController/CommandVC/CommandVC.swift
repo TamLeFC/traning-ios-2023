@@ -70,5 +70,4 @@ extension CommandVC: UITableViewDelegate, UITableViewDataSource {
         cell.configure(viewModel.commands[indexPath.row])
         return cell
     }
-    
 }
