@@ -9,6 +9,8 @@ import UIKit
 
 class VoiceVC: UIViewController {
 
+    
+    @IBOutlet weak var appLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -30,6 +32,7 @@ class VoiceVC: UIViewController {
         super.viewDidLoad()
         
         viewModel = VoiceVM(category)
+        appLabel.font = UIFont(name: "Inter-Medium", size: 16)
         
         initViews()
     }
