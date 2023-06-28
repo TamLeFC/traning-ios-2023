@@ -14,7 +14,6 @@
                 <outlet property="appLabel" destination="3qn-dq-PSo" id="2OX-89-MR3"/>
                 <outlet property="homeImageView" destination="Tmc-81-ZFz" id="eOr-bF-3SP"/>
                 <outlet property="pageView" destination="2Ag-q0-I3f" id="gZN-E0-Bw6"/>
-                <outlet property="setupButton" destination="fKr-Lq-HW2" id="zF9-44-cMT"/>
                 <outlet property="setupImageView" destination="UKZ-lf-oSW" id="ZtK-l7-u5b"/>
                 <outlet property="titleLabel" destination="tkD-Du-x5s" id="9q7-Ua-KCp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

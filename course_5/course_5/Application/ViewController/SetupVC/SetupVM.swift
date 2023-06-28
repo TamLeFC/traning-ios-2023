@@ -22,10 +22,9 @@ class SetupVM {
         repository.getSetups()
             .subscribe(onNext: {[weak self] setups in
                 guard let self = self else { return }
-                self.setupsS.onNext(setups)
+                let itemsFromIndex4 = Array(setups.suffix(from: 4))
+                self.setupsS.onNext(itemsFromIndex4)
             }).disposed(by: bag)
     }
-    
-    
 }
 

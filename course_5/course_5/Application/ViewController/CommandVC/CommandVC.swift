@@ -17,6 +17,8 @@ class CommandVC: UIViewController {
     
     private let bag = DisposeBag()
     
+    private var categories: [Category] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,6 +49,11 @@ class CommandVC: UIViewController {
     }
     
     private func bindViewModel(){
+        viewModel.categoriesS
+                .subscribe(onNext: { [weak self] categories in
+                    self?.categories = categories
+                })
+                .disposed(by: bag)
         viewModel.categoriesS.asObserver()
             .map{ [SectionModel(model: (), items: $0)] }
             .bind(to: self.collectionView.rx.items(dataSource: getCategoriesDataSource()))
@@ -64,7 +71,8 @@ extension CommandVC: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let vc = VoiceVC(viewModel.categories[indexPath.row])
-//        navigationController?.pushViewController(vc, animated: true)
+        let selectedCategory = categories[indexPath.row]
+            let vc = VoiceVC(selectedCategory)
+            navigationController?.pushViewController(vc, animated: true)
     }
 }

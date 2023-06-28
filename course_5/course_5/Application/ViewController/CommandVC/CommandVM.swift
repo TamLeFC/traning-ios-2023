@@ -18,6 +18,10 @@ class CommandVM {
     
     private let bag = DisposeBag()
     
+    var categoriesObservable: Observable<[Category]> {
+            return categoriesS.asObservable()
+        }
+    
     func fetchData(){
         repository.getCommands()
             .subscribe(onNext: {[weak self] categories in
