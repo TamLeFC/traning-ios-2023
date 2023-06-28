@@ -6,17 +6,25 @@
 //
 
 import UIKit
+import RxSwift
+import RxDataSources
 
 class CommandVC: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    private let viewModel = CommandVM()
+    private var viewModel = CommandVM()
+    
+    private let bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initViews()
+        
+        bindViewModel()
+        
+        viewModel.fetchData()
     }
     
     private func initViews() {
@@ -34,10 +42,17 @@ class CommandVC: UIViewController {
         collectionView.register(nib, forCellWithReuseIdentifier: identifier)
         
         collectionView.delegate = self
-        collectionView.dataSource = self
-        
+ 
         collectionView.showsVerticalScrollIndicator = false
     }
+    
+    private func bindViewModel(){
+        viewModel.categoriesS.asObserver()
+            .map{ [SectionModel(model: (), items: $0)] }
+            .bind(to: self.collectionView.rx.items(dataSource: getCategoriesDataSource()))
+            .disposed(by: bag)
+    }
+    
 }
 
 extension CommandVC: UICollectionViewDelegateFlowLayout {
@@ -49,19 +64,7 @@ extension CommandVC: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = VoiceVC(viewModel.categories[indexPath.row])
-        navigationController?.pushViewController(vc, animated: true)
-    }
-}
-
-extension CommandVC: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.categories.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CommandCell", for: indexPath) as! CommandCell
-        cell.configure(viewModel.categories[indexPath.row])
-        return cell
+//        let vc = VoiceVC(viewModel.categories[indexPath.row])
+//        navigationController?.pushViewController(vc, animated: true)
     }
 }

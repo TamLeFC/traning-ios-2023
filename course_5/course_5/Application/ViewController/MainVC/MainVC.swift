@@ -15,6 +15,7 @@ class MainVC: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var appLabel: UILabel!
     
+    @IBOutlet weak var setupButton: UIButton!
     private var pageVC: MainPageVC!
     
     override func viewDidLoad() {
@@ -24,6 +25,8 @@ class MainVC: UIViewController {
 
         appLabel.font = UIFont(name: "Inter-Medium", size: 16)
         titleLabel.font = UIFont(name: "Poppins-Bold", size: 20)
+        
+        setupButton.setTitle(nil, for: .normal)
         
         setupPageView()
         selectHome()

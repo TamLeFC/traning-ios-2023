@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6284A1D6B1C8916FE2D82BDD /* Pods_course_5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80C06E93D46B8D4764DA9B80 /* Pods_course_5.framework */; };
 		802B11F32A493395003F253F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802B11F22A493395003F253F /* AppDelegate.swift */; };
 		802B11FC2A493396003F253F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 802B11FB2A493396003F253F /* Assets.xcassets */; };
 		802B11FF2A493396003F253F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 802B11FD2A493396003F253F /* LaunchScreen.storyboard */; };
@@ -45,12 +46,10 @@
 		802B128A2A4982E8003F253F /* VoiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 802B12882A4982E8003F253F /* VoiceCell.xib */; };
 		802B128C2A49915F003F253F /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 802B128B2A49915F003F253F /* Inter-Medium.ttf */; };
 		802B12932A499CB8003F253F /* UIView+Corner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802B12922A499CB8003F253F /* UIView+Corner.swift */; };
-		8F9CF250E86D1B30C8EB07C7 /* Pods_course_5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032056A7D5CB8F2A807E53D0 /* Pods_course_5.framework */; };
+		80D72ACC2A4C1B8800618939 /* AppDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D72ACB2A4C1B8800618939 /* AppDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		032056A7D5CB8F2A807E53D0 /* Pods_course_5.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_course_5.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C05D857E08D7D0BEC51CA65 /* Pods-course_5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-course_5.debug.xcconfig"; path = "Target Support Files/Pods-course_5/Pods-course_5.debug.xcconfig"; sourceTree = "<group>"; };
 		802B11EF2A493395003F253F /* course_5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = course_5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		802B11F22A493395003F253F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		802B11FB2A493396003F253F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,7 +90,10 @@
 		802B12882A4982E8003F253F /* VoiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoiceCell.xib; sourceTree = "<group>"; };
 		802B128B2A49915F003F253F /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
 		802B12922A499CB8003F253F /* UIView+Corner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Corner.swift"; sourceTree = "<group>"; };
-		E77E694D3128B178F4389302 /* Pods-course_5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-course_5.release.xcconfig"; path = "Target Support Files/Pods-course_5/Pods-course_5.release.xcconfig"; sourceTree = "<group>"; };
+		80C06E93D46B8D4764DA9B80 /* Pods_course_5.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_course_5.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80D72ACB2A4C1B8800618939 /* AppDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataSource.swift; sourceTree = "<group>"; };
+		DFD8BB0D9DBBB9FE5EF3EC51 /* Pods-course_5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-course_5.release.xcconfig"; path = "Target Support Files/Pods-course_5/Pods-course_5.release.xcconfig"; sourceTree = "<group>"; };
+		F0DC0DA00B51150BC8952F47 /* Pods-course_5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-course_5.debug.xcconfig"; path = "Target Support Files/Pods-course_5/Pods-course_5.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,17 +101,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F9CF250E86D1B30C8EB07C7 /* Pods_course_5.framework in Frameworks */,
+				6284A1D6B1C8916FE2D82BDD /* Pods_course_5.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1DFC475C333FC568F72F613E /* Frameworks */ = {
+		3AA352CCBE9A4A1E49D8749F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				032056A7D5CB8F2A807E53D0 /* Pods_course_5.framework */,
+				80C06E93D46B8D4764DA9B80 /* Pods_course_5.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -117,10 +119,9 @@
 		5EE07CBFEE48A546A678730A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1C05D857E08D7D0BEC51CA65 /* Pods-course_5.debug.xcconfig */,
-				E77E694D3128B178F4389302 /* Pods-course_5.release.xcconfig */,
+				F0DC0DA00B51150BC8952F47 /* Pods-course_5.debug.xcconfig */,
+				DFD8BB0D9DBBB9FE5EF3EC51 /* Pods-course_5.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -130,7 +131,7 @@
 				802B11F12A493395003F253F /* course_5 */,
 				802B11F02A493395003F253F /* Products */,
 				5EE07CBFEE48A546A678730A /* Pods */,
-				1DFC475C333FC568F72F613E /* Frameworks */,
+				3AA352CCBE9A4A1E49D8749F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,6 +159,7 @@
 		802B12062A493560003F253F /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				80D72ACA2A4C1B7600618939 /* Helper */,
 				802B12102A493691003F253F /* ViewController */,
 				802B12122A4936B1003F253F /* Views */,
 				802B12112A49369A003F253F /* Extensions */,
@@ -356,6 +358,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		80D72ACA2A4C1B7600618939 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				80D72ACB2A4C1B8800618939 /* AppDataSource.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -363,11 +373,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 802B12032A493396003F253F /* Build configuration list for PBXNativeTarget "course_5" */;
 			buildPhases = (
-				731BB0AEBC8B6979B2328449 /* [CP] Check Pods Manifest.lock */,
+				AFF87F9FC7A79D014E5A1DBE /* [CP] Check Pods Manifest.lock */,
 				802B11EB2A493395003F253F /* Sources */,
 				802B11EC2A493395003F253F /* Frameworks */,
 				802B11ED2A493395003F253F /* Resources */,
-				2162D67E7E837EF2D19AC2AC /* [CP] Embed Pods Frameworks */,
+				34052691588442BEBFA5C275 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -438,7 +448,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2162D67E7E837EF2D19AC2AC /* [CP] Embed Pods Frameworks */ = {
+		34052691588442BEBFA5C275 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -455,7 +465,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-course_5/Pods-course_5-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		731BB0AEBC8B6979B2328449 /* [CP] Check Pods Manifest.lock */ = {
+		AFF87F9FC7A79D014E5A1DBE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -499,6 +509,7 @@
 				802B12602A493EB6003F253F /* VoiceVC.swift in Sources */,
 				802B124E2A493A79003F253F /* CategoryResponse.swift in Sources */,
 				802B12482A493A4C003F253F /* Command.swift in Sources */,
+				80D72ACC2A4C1B8800618939 /* AppDataSource.swift in Sources */,
 				802B121D2A4938D0003F253F /* MainVC.swift in Sources */,
 				802B12182A4937CD003F253F /* GradientView.swift in Sources */,
 				802B124C2A493A64003F253F /* Repository.swift in Sources */,
@@ -573,7 +584,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -627,7 +638,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -639,7 +650,7 @@
 		};
 		802B12042A493396003F253F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C05D857E08D7D0BEC51CA65 /* Pods-course_5.debug.xcconfig */;
+			baseConfigurationReference = F0DC0DA00B51150BC8952F47 /* Pods-course_5.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -652,6 +663,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -667,7 +679,7 @@
 		};
 		802B12052A493396003F253F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E77E694D3128B178F4389302 /* Pods-course_5.release.xcconfig */;
+			baseConfigurationReference = DFD8BB0D9DBBB9FE5EF3EC51 /* Pods-course_5.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -680,6 +692,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import RxSwift
+import RxDataSources
 
 class SetupVC: UIViewController {
-
+    
     @IBOutlet weak var echoDotView: UIView!
     @IBOutlet weak var echoTapView: UIView!
     @IBOutlet weak var echoPlusView: UIView!
@@ -20,12 +22,17 @@ class SetupVC: UIViewController {
     
     private let viewModel = SetupVM()
     
+    private let bag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initViews()
         groupLabel.font = UIFont(name: "Poppins-Bold", size: 16)
-
+        
+        bindViewModel()
+        
+        viewModel.fetchData()
     }
     
     private func initViews() {
@@ -53,9 +60,15 @@ class SetupVC: UIViewController {
         collectionView.register(nib, forCellWithReuseIdentifier: identifier)
         
         collectionView.delegate = self
-        collectionView.dataSource = self
         
         collectionView.showsVerticalScrollIndicator = false
+    }
+
+    private func bindViewModel() {
+        viewModel.setupsS.asObservable()
+            .map { [SectionModel(model: (), items: $0)] }
+            .bind(to: self.collectionView.rx.items(dataSource: getSetupDataSource()))
+            .disposed(by: bag)
     }
 }
 
@@ -65,17 +78,5 @@ extension SetupVC: UICollectionViewDelegateFlowLayout {
         let width = (collectionView.frame.width - groupCellSpacing) / 2
         let height = width / 2
         return CGSize(width: width, height: height)
-    }
-}
-
-extension SetupVC: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.setups.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GroupCell", for: indexPath) as! GroupCell
-        cell.configure(viewModel.setups[indexPath.row])
-        return cell
     }
 }

@@ -5,23 +5,27 @@
 //  Created by Mobile Dev on 26/06/2023.
 //
 
-import Foundation
+import RxSwift
+import RxCocoa
 
 class SetupVM {
     
-    private var allSetups: [Setup] = []
-    var setups: [Setup] = []
+    let setupsS = PublishSubject<[Setup]>()
+    
+    private var setups: [Setup] = []
     
     private let repository = Repository()
     
-    init() {
-        allSetups = repository.getSetups()
-        
-        if allSetups.count > 4 {
-            setups = Array(allSetups[4..<allSetups.count])
-        } else {
-            setups = []
-        }
+    private let bag = DisposeBag()
+    
+    func fetchData(){
+        repository.getSetups()
+            .subscribe(onNext: {[weak self] setups in
+                guard let self = self else { return }
+                self.setupsS.onNext(setups)
+            }).disposed(by: bag)
     }
+    
+    
 }
 
