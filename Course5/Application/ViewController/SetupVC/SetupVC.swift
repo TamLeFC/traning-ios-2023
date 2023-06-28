@@ -1,6 +1,8 @@
 import UIKit
+import RxSwift
+import RxDataSources
 
-class SetupVC: UIViewController {
+class SetupVC: BaseVC<SetupVM> {
 
     @IBOutlet weak var echoDotView: UIView!
     @IBOutlet weak var echoView: UIView!
@@ -8,18 +10,40 @@ class SetupVC: UIViewController {
     @IBOutlet weak var tapView: UIView!
     @IBOutlet weak var groupCollectionView: UICollectionView!
     
-    private let viewModel = SetupVM()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    override func initViews() {
         applyItemStyle(to: echoDotView)
         applyItemStyle(to: echoView)
         applyItemStyle(to: echoPlusView)
         applyItemStyle(to: tapView)
-        
+    }
+    
+    override func configureListView() {
         setupCollectionView()
     }
+    
+    override func bindViewModel() {
+        super.bindViewModel()
+        
+        viewModel.setupsSub
+            .asObserver()
+            .map { [SectionModel(model: (), items: Array($0.dropFirst(4)))] }
+            .bind(to: self.groupCollectionView.rx.items(dataSource: getSetupsDataSource()))
+            .disposed(by: bag)
+        
+        viewModel.fetchData()
+    }
+}
+
+extension SetupVC: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let categoryCellSpacing: CGFloat = 12
+        let width = (collectionView.frame.width - categoryCellSpacing) / 2
+        let height = width / 2
+        return CGSize(width: width, height: height)
+    }
+}
+
+extension SetupVC {
     
     private func applyItemStyle(to view: UIView) {
         view.layer.cornerRadius = 16
@@ -35,34 +59,11 @@ class SetupVC: UIViewController {
         layout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 32, right: 0)
         groupCollectionView.setCollectionViewLayout(layout, animated: true)
         
-        let identifier = "SetupCollectionViewCell"
-        let nib = UINib(nibName: identifier, bundle: nil)
-        groupCollectionView.register(nib, forCellWithReuseIdentifier: identifier)
+        let nib = UINib(nibName: SetupCollectionViewCell.identifier, bundle: nil)
+        groupCollectionView.register(nib, forCellWithReuseIdentifier: SetupCollectionViewCell.identifier)
         
         groupCollectionView.delegate = self
-        groupCollectionView.dataSource = self
         
         groupCollectionView.showsVerticalScrollIndicator = false
-    }
-}
-
-extension SetupVC: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let categoryCellSpacing: CGFloat = 12
-        let width = (collectionView.frame.width - categoryCellSpacing) / 2
-        let height = width / 2
-        return CGSize(width: width, height: height)
-    }
-}
-
-extension SetupVC: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.setups.count - 4
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SetupCollectionViewCell", for: indexPath) as! SetupCollectionViewCell
-        cell.configure(viewModel.setups[indexPath.row + 4])
-        return cell
     }
 }

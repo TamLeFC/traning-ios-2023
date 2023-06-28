@@ -1,9 +1,16 @@
-class SetupVM {
-    var setups: [Setup] = []
+import RxSwift
+
+class SetupVM: BaseVM {
     
-    private let repository = SetupRepository()
+    let setupsSub = PublishSubject<[Setup]>()
     
-    init() {
-        setups = repository.getSetups()
+    private var setups: [Setup] = []
+    
+    func fetchData() {
+        repository.getSetups()
+            .subscribe(onNext: {[weak self] setups in
+                guard let self = self else { return }
+                self.setupsSub.onNext(setups)
+            }).disposed(by: bag)
     }
 }

@@ -1,6 +1,6 @@
 import UIKit
 
-class SetupCollectionViewCell: UICollectionViewCell {
+class SetupCollectionViewCell: BaseCollectionViewCell {
 
     @IBOutlet weak var setupItemImageView: UIImageView!
     

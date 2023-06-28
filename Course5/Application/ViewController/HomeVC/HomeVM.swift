@@ -1,9 +1,16 @@
-class HomeVM {
-    var categories: [Category] = []
+import RxSwift
+
+class HomeVM: BaseVM {
     
-    private let repository = CommandRepository()
+    let categoriesSub = PublishSubject<[Category]>()
     
-    init() {
-        categories = repository.getCommands()
+    private var categories: [Category] = []
+    
+    func fetchData() {
+        repository.getCommands()
+            .subscribe(onNext: {[weak self] categories in
+                guard let self = self else { return }
+                self.categoriesSub.onNext(categories)
+            }).disposed(by: bag)
     }
 }

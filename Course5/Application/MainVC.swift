@@ -1,6 +1,6 @@
 import UIKit
 
-class MainVC: UIViewController {
+class MainVC: BaseVC<BaseVM> {
 
     @IBOutlet weak var titleHeaderLabel: UILabel!
     @IBOutlet weak var pageMainView: UIView!
@@ -8,14 +8,20 @@ class MainVC: UIViewController {
     @IBOutlet weak var setupTabImageView: UIImageView!
     private var pageVC: MainPageVC!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    override func initViews() {
+        super.initViews()
+        
         setupMainPageView()
+    }
+    
+    override func addEventForViews() {
+        super.addEventForViews()
         
         onHomeTabTapped()
     }
-    
+}
+
+extension MainVC {
     private func setupMainPageView() {
         pageVC = MainPageVC()
         
@@ -35,7 +41,7 @@ class MainVC: UIViewController {
         onSetupTabTapped()
     }
     
-    private func onHomeTabTapped() {
+    func onHomeTabTapped() {
         titleHeaderLabel.text = "Commands"
         
         homeTabImageView.isHighlighted = true
@@ -44,7 +50,7 @@ class MainVC: UIViewController {
         pageVC.handleChangePage(pageIndex: 0)
     }
     
-    private func onSetupTabTapped() {
+    func onSetupTabTapped() {
         titleHeaderLabel.text = "Setup"
         
         homeTabImageView.isHighlighted = false

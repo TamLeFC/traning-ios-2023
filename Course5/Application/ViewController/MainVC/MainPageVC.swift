@@ -9,7 +9,7 @@ import UIKit
 
 class MainPageVC: UIPageViewController {
 
-    lazy var pages: [UIViewController] = [HomeVC(), SetupVC()]
+    lazy var pages: [UIViewController] = [HomeVC.instantiate(viewModel: HomeVM()), SetupVC.instantiate(viewModel: SetupVM())]
     private var currentPageIndex = 0
     
     override func viewDidLoad() {
