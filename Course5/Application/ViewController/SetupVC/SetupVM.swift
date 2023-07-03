@@ -8,16 +8,14 @@
 import Foundation
 import RxSwift
 import RxCocoa
-class SetupVM {
+class SetupVM: BaseVM {
     
     let setupS = PublishSubject<[Setup]>()
     
     private var setups: [Setup] = []
     
-    private let bag = DisposeBag()
-    
     func fetchData() {
-        Respository().getSetups()
+        respository.getSetups()
             .subscribe(onNext: {[weak self] setups in
                 guard let self = self else {
                     return

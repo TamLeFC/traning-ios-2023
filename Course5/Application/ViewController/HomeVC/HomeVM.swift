@@ -8,13 +8,11 @@
 import Foundation
 import RxSwift
 import RxCocoa
-class HomeVM {
+class HomeVM: BaseVM {
     
     let categorieS = PublishSubject<[Category]>()
     
     private var categories: [Category] = []
-    
-    private let bag = DisposeBag()
     
     func fetchData() {
         Respository().getCommands()

@@ -8,7 +8,10 @@
 import UIKit
 class MainPageVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
-    lazy var pages: [UIViewController] = [HomeVC(), SetupVC()]
+    let setupVC = SetupVC.instantiate(viewModel: SetupVM())
+    let homeVC = HomeVC.instantiate(viewModel: HomeVM())
+    
+    lazy var pages: [UIViewController] = [homeVC, setupVC]
     
     private var currentPageIndex = -1
     

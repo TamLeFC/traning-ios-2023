@@ -7,8 +7,7 @@
 
 import UIKit
 
-class CategoryCell: UICollectionViewCell {
-    static let identifier = "CategoryCell"
+class CategoryCell: BaseCollectionViewCell {
     
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var textLabel: UILabel!

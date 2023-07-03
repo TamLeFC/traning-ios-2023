@@ -10,5 +10,6 @@ pod 'RxSwift', '6.5.0'
     pod 'RxCocoa', '6.5.0'
     pod 'RxSwiftExt', '6.0.1'
     pod 'RxDataSources', '5.0.0'
-
+pod 'RealmSwift', '~>10'
+pod "RxRealm"
 end

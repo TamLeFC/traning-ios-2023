@@ -48,6 +48,11 @@
 		35DCB0C42A4979D500872E08 /* commands.json in Resources */ = {isa = PBXBuildFile; fileRef = 35DCB0B32A496C9700872E08 /* commands.json */; };
 		35DCB0C62A497D2D00872E08 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DCB0C52A497D2D00872E08 /* HomeVM.swift */; };
 		35E2970C2A4C0C3300C02C75 /* AppDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E2970B2A4C0C3300C02C75 /* AppDataSource.swift */; };
+		35F608582A528B7A0089CCE9 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F608542A528B7A0089CCE9 /* BaseTableViewCell.swift */; };
+		35F608592A528B7A0089CCE9 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F608552A528B7A0089CCE9 /* BaseVC.swift */; };
+		35F6085A2A528B7A0089CCE9 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F608562A528B7A0089CCE9 /* BaseCollectionViewCell.swift */; };
+		35F6085B2A528B7A0089CCE9 /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F608572A528B7A0089CCE9 /* BaseVM.swift */; };
+		35F6085D2A52B62C0089CCE9 /* CommandDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F6085C2A52B62C0089CCE9 /* CommandDetailVM.swift */; };
 		DE1F2ABA86612999512652CB /* Pods_Course5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 690125DD332A913C1A49C0A7 /* Pods_Course5.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +69,7 @@
 		357E5A402A4BC68500CC701E /* CommandDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommandDetailVC.xib; sourceTree = "<group>"; };
 		357E5A442A4BC8CE00CC701E /* CommandCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandCell.swift; sourceTree = "<group>"; };
 		357E5A452A4BC8CE00CC701E /* CommandCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommandCell.xib; sourceTree = "<group>"; };
+		35B59B022A4E90B90009BB45 /* RxRealm.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RxRealm.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		35DCB0582A49340A00872E08 /* Course5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Course5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35DCB05B2A49340A00872E08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35DCB0642A49340B00872E08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,6 +101,13 @@
 		35DCB0BD2A49709E00872E08 /* Respository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Respository.swift; sourceTree = "<group>"; };
 		35DCB0C52A497D2D00872E08 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		35E2970B2A4C0C3300C02C75 /* AppDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataSource.swift; sourceTree = "<group>"; };
+		35E2970E2A4D2D5A00C02C75 /* RXSwift.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RXSwift.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		35E297102A4D7D5900C02C75 /* Realm.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Realm.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		35F608542A528B7A0089CCE9 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		35F608552A528B7A0089CCE9 /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		35F608562A528B7A0089CCE9 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		35F608572A528B7A0089CCE9 /* BaseVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVM.swift; sourceTree = "<group>"; };
+		35F6085C2A52B62C0089CCE9 /* CommandDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandDetailVM.swift; sourceTree = "<group>"; };
 		4022859E349BBFAA4C2387B1 /* Pods-Course5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Course5.debug.xcconfig"; path = "Target Support Files/Pods-Course5/Pods-Course5.debug.xcconfig"; sourceTree = "<group>"; };
 		690125DD332A913C1A49C0A7 /* Pods_Course5.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Course5.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		769CDE8DA9E9D1A7D4633FA4 /* Pods-Course5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Course5.release.xcconfig"; path = "Target Support Files/Pods-Course5/Pods-Course5.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +148,7 @@
 				357E5A432A4BC85200CC701E /* Cell */,
 				357E5A3F2A4BC68500CC701E /* CommandDetailVC.swift */,
 				357E5A402A4BC68500CC701E /* CommandDetailVC.xib */,
+				35F6085C2A52B62C0089CCE9 /* CommandDetailVM.swift */,
 			);
 			path = CommandDetailVC;
 			sourceTree = "<group>";
@@ -169,6 +183,8 @@
 		35DCB05A2A49340A00872E08 /* Course5 */ = {
 			isa = PBXGroup;
 			children = (
+				35F608532A528B7A0089CCE9 /* Base */,
+				35E2970F2A4D7D3800C02C75 /* Playground */,
 				35DCB07C2A4936F300872E08 /* Data */,
 				35DCB0722A49346900872E08 /* Application */,
 				35DCB0712A49345C00872E08 /* Resources */,
@@ -371,6 +387,27 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		35E2970F2A4D7D3800C02C75 /* Playground */ = {
+			isa = PBXGroup;
+			children = (
+				35E2970E2A4D2D5A00C02C75 /* RXSwift.playground */,
+				35E297102A4D7D5900C02C75 /* Realm.playground */,
+				35B59B022A4E90B90009BB45 /* RxRealm.playground */,
+			);
+			path = Playground;
+			sourceTree = "<group>";
+		};
+		35F608532A528B7A0089CCE9 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				35F608542A528B7A0089CCE9 /* BaseTableViewCell.swift */,
+				35F608552A528B7A0089CCE9 /* BaseVC.swift */,
+				35F608562A528B7A0089CCE9 /* BaseCollectionViewCell.swift */,
+				35F608572A528B7A0089CCE9 /* BaseVM.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		C91C00CCD891477D26580FCF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -511,15 +548,20 @@
 				35DCB0972A49404800872E08 /* MainPageVC.swift in Sources */,
 				35DCB0892A49380200872E08 /* HomeVC.swift in Sources */,
 				357E5A412A4BC68500CC701E /* CommandDetailVC.swift in Sources */,
+				35F608582A528B7A0089CCE9 /* BaseTableViewCell.swift in Sources */,
+				35F6085A2A528B7A0089CCE9 /* BaseCollectionViewCell.swift in Sources */,
+				35F608592A528B7A0089CCE9 /* BaseVC.swift in Sources */,
 				357E5A2E2A4A901E00CC701E /* Command.swift in Sources */,
 				35DCB0AF2A4952B300872E08 /* UIView+Shadow.swift in Sources */,
 				357E5A312A4A903600CC701E /* Category.swift in Sources */,
+				35F6085D2A52B62C0089CCE9 /* CommandDetailVM.swift in Sources */,
 				35DCB05C2A49340A00872E08 /* AppDelegate.swift in Sources */,
 				35DCB0AE2A4952B300872E08 /* UIView+Border+Corner.swift in Sources */,
 				35DCB0B02A4952B300872E08 /* UIView+BorderInDirection.swift in Sources */,
 				357E5A462A4BC8CE00CC701E /* CommandCell.swift in Sources */,
 				35DCB0A92A4952AF00872E08 /* UITextField.swift in Sources */,
 				35DCB09F2A4951B500872E08 /* CategoryCell.swift in Sources */,
+				35F6085B2A528B7A0089CCE9 /* BaseVM.swift in Sources */,
 				357E5A352A4A931100CC701E /* CategoryResponse.swift in Sources */,
 				35DCB0932A49389400872E08 /* GradientView.swift in Sources */,
 				35DCB0902A49382C00872E08 /* SetupVC.swift in Sources */,

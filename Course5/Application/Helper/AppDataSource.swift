@@ -6,6 +6,7 @@
 //
 
 import RxDataSources
+
 func getCagegoriesDataSource() -> RxCollectionViewSectionedReloadDataSource<SectionModel<Void, Category>> {
     return RxCollectionViewSectionedReloadDataSource<SectionModel<Void, Category>>(
         configureCell: {
@@ -15,6 +16,7 @@ func getCagegoriesDataSource() -> RxCollectionViewSectionedReloadDataSource<Sect
             return cell
     })
 }
+
 func getSetupsDataSource() -> RxCollectionViewSectionedReloadDataSource<SectionModel<Void, Setup>> {
     return RxCollectionViewSectionedReloadDataSource<SectionModel<Void, Setup>>(
         configureCell: {

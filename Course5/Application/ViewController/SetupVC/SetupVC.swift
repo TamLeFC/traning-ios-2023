@@ -9,27 +9,30 @@ import UIKit
 import RxSwift
 import RxDataSources
 
-class SetupVC: UIViewController {
-
+class SetupVC: BaseVC<SetupVM> {
+    
     @IBOutlet weak var echoDotContainerView: UIView!
     @IBOutlet weak var echoPlusContainerView: UIView!
     @IBOutlet weak var tapContainerView: UIView!
     @IBOutlet weak var echoContainerView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    private var viewModel: SetupVM = SetupVM()
-    private let bag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
-        initView()
         
-        bindViewModel()
-        
+        configureListView()
         viewModel.fetchData()
     }
     
-    private func initView() {
+    override func initViews() {
+        super.initViews()
+        
         setupUIView()
+    }
+    
+    override func configureListView() {
+        super.configureListView()
+        
         setupCollectionView()
     }
     
@@ -55,11 +58,12 @@ class SetupVC: UIViewController {
         collectionView.showsVerticalScrollIndicator = false
     }
     
-    private func bindViewModel() {
+    override func bindViewModel() {
+        super.bindViewModel()
         viewModel.setupS.asObservable()
-                    .map { [SectionModel(model: (), items: $0)] }
-                    .bind(to: self.collectionView.rx.items(dataSource: getSetupsDataSource()))
-                    .disposed(by: bag)
+            .map { [SectionModel(model: (), items: $0)] }
+            .bind(to: self.collectionView.rx.items(dataSource: getSetupsDataSource()))
+            .disposed(by: bag)
     }
 }
 

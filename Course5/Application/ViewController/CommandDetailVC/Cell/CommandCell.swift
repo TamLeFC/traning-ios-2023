@@ -7,9 +7,7 @@
 
 import UIKit
 
-class CommandCell: UITableViewCell {
-
-    static let identifier = "CommandCell"
+class CommandCell: BaseTableViewCell {
     
     @IBOutlet weak var commandLabel: UILabel!
     

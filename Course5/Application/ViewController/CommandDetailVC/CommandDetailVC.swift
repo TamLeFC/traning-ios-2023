@@ -7,27 +7,45 @@
 
 import UIKit
 import Foundation
-class CommandDetailVC: UIViewController {
+class CommandDetailVC: BaseVC<CommandDetailVM> {
 
     var commands:[Command] = []
-    var titleText: String = ""
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initView()
+        
+        configureListView()
+        
+        viewModel.fetchData()
     }
     
-    private func initView() {
-        titleLabel.text = titleText
+    override func initViews() {
+        super.initViews()
+    }
+    
+    override func bindViewModel() {
+        super.bindViewModel()
+        viewModel.dataS
+            .asObservable()
+            .subscribe(onNext: {[weak self] category in
+                guard let self = self else { return }
+                self.titleLabel.text = category.displayName
+                self.commands = category.commands
+            }).disposed(by: bag)
+    }
+    
+    override func configureListView() {
+        super.configureListView()
         setupTableView()
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
+    
     
     private func setupTableView() {
         tableView.dataSource = self

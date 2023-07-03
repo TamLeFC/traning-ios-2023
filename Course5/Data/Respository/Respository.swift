@@ -11,6 +11,8 @@ import RxSwift
 
 class Respository {
     
+    static let shared = Respository()
+    
     func readJSONFile<T: Mappable>(fileName: String) -> Observable<T> {
         guard let filePath = Bundle.main.path(forResource: fileName, ofType: "json") else {
             return Observable.empty()

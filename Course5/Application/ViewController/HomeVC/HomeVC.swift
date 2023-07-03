@@ -8,21 +8,24 @@
 import UIKit
 import RxSwift
 import RxDataSources
+import RxRealm
+import RealmSwift
 
-class HomeVC: UIViewController {
-    private var viewModel: HomeVM = HomeVM()
-    private let bag = DisposeBag()
+class HomeVC: BaseVC<HomeVM> {
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initView()
-        bindViewModel()
+        
+        configureListView()
+        
         
         viewModel.fetchData()
     }
     
-    private func initView() {
+    
+    override func configureListView() {
+        super.configureListView()
         setupCollectionView()
     }
     
@@ -42,7 +45,9 @@ class HomeVC: UIViewController {
         collectionView.showsVerticalScrollIndicator = false
     }
     
-    private func bindViewModel() {
+    
+    override func bindViewModel() {
+        super.bindViewModel()
         viewModel.categorieS.asObservable()
             .map { [SectionModel(model: (), items: $0)] }
             .bind(to: self.collectionView.rx.items(dataSource: getCagegoriesDataSource()))
@@ -61,7 +66,8 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
 
 extension HomeVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = CommandDetailVC()
+        var vc: CommandDetailVC?
+        var didSelectValidCategory = false
         
         viewModel.categorieS.subscribe(onNext: { [weak self] categories in
             guard self != nil else {
@@ -69,14 +75,19 @@ extension HomeVC: UICollectionViewDelegate {
             }
             if indexPath.row < categories.count {
                 let selectedCategory = categories[indexPath.row]
-                vc.commands = selectedCategory.commands
-                vc.titleText = selectedCategory.displayName
+                vc = CommandDetailVC.instantiate(viewModel: CommandDetailVM(selectedCategory))
+                didSelectValidCategory = true
             }
         }).disposed(by: bag)
         
-        self.navigationController?.pushViewController(vc, animated: true)
-        
         viewModel.fetchData()
+        
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self, let vc = vc, didSelectValidCategory else {
+                return
+            }
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 
