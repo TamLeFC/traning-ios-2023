@@ -7,7 +7,7 @@
 
 import UIKit
 
-class VoiceCell: UITableViewCell {
+class VoiceCell: BaseTableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!

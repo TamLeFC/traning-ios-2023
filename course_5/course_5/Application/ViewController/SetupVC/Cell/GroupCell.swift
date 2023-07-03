@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GroupCell: UICollectionViewCell {
+class GroupCell: BaseCollectionViewCell {
 
     @IBOutlet weak var groupCellImageView: UIImageView!
     

@@ -5,9 +5,11 @@
 //  Created by Mobile Dev on 26/06/2023.
 //
 
-import Foundation
+import RxSwift
 
-class VoiceVM {
+class VoiceVM: BaseVM {
+    
+    let dataS: PublishSubject<Category> = PublishSubject()
     
     let category: Category
     let commands: [Command]
@@ -15,5 +17,13 @@ class VoiceVM {
     init(_ category: Category) {
         self.category = category
         self.commands = category.commands
+        super.init()
+        
+        fetchData()
+    }
+    
+    private func fetchData() {
+        dataS.onNext(category)
     }
 }
+

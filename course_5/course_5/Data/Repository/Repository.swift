@@ -9,6 +9,7 @@ import ObjectMapper
 import RxSwift
 
 class Repository {
+    
     func getCommands() -> Observable<[Category]> {
         if let path = Bundle.main.url(forResource: "commands", withExtension: "json") {
             do {

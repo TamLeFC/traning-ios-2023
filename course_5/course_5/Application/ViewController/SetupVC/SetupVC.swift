@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxDataSources
 
-class SetupVC: UIViewController {
+class SetupVC: BaseVC<SetupVM> {
     
     @IBOutlet weak var echoDotView: UIView!
     @IBOutlet weak var echoTapView: UIView!
@@ -20,13 +20,9 @@ class SetupVC: UIViewController {
     
     @IBOutlet weak var groupLabel: UILabel!
     
-    private let viewModel = SetupVM()
-    
-    private let bag = DisposeBag()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        viewModel = SetupVM()
         initViews()
         groupLabel.font = UIFont(name: "Poppins-Bold", size: 16)
         
@@ -35,7 +31,8 @@ class SetupVC: UIViewController {
         viewModel.fetchData()
     }
     
-    private func initViews() {
+    override func initViews() {
+        super.initViews()
         setupCollectionView()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
             self.echoDotView.addDropShadow(shadowRadius: 8, offset: CGSize(width: 0, height: 16), color: UIColor(hex: 0x024E66, alpha: 0.15))
@@ -55,17 +52,17 @@ class SetupVC: UIViewController {
         layout.sectionInset = UIEdgeInsets(top: 16, left: 0, bottom: 16, right: 0)
         collectionView.setCollectionViewLayout(layout, animated: true)
         
-        let identifier = "GroupCell"
-        let nib = UINib(nibName: identifier, bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: identifier)
+        let nib = UINib(nibName: GroupCell.identifier, bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: GroupCell.identifier)
         
         collectionView.delegate = self
         
         collectionView.showsVerticalScrollIndicator = false
     }
 
-    private func bindViewModel() {
-        viewModel.setupsS.asObservable()
+    override func bindViewModel() {
+        super.bindViewModel()
+        viewModel?.setupsS.asObservable()
             .map { [SectionModel(model: (), items: $0)] }
             .bind(to: self.collectionView.rx.items(dataSource: getSetupDataSource()))
             .disposed(by: bag)

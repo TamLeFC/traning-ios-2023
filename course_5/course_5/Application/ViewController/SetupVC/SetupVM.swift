@@ -8,15 +8,11 @@
 import RxSwift
 import RxCocoa
 
-class SetupVM {
+class SetupVM: BaseVM {
     
-    let setupsS = PublishSubject<[Setup]>()
+    let setupsS: PublishSubject<[Setup]> = PublishSubject()
     
     private var setups: [Setup] = []
-    
-    private let repository = Repository()
-    
-    private let bag = DisposeBag()
     
     func fetchData(){
         repository.getSetups()

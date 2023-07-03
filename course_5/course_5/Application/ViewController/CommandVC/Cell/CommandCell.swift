@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CommandCell: UICollectionViewCell {
+class CommandCell: BaseCollectionViewCell {
 
     @IBOutlet weak var parentView: GradientView!
     @IBOutlet weak var commandCellView: GradientView!

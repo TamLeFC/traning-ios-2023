@@ -46,6 +46,10 @@
 		802B128A2A4982E8003F253F /* VoiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 802B12882A4982E8003F253F /* VoiceCell.xib */; };
 		802B128C2A49915F003F253F /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 802B128B2A49915F003F253F /* Inter-Medium.ttf */; };
 		802B12932A499CB8003F253F /* UIView+Corner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802B12922A499CB8003F253F /* UIView+Corner.swift */; };
+		80A6C98B2A52A78F0072A3DB /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A6C9872A52A78F0072A3DB /* BaseTableViewCell.swift */; };
+		80A6C98C2A52A78F0072A3DB /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A6C9882A52A78F0072A3DB /* BaseVC.swift */; };
+		80A6C98D2A52A78F0072A3DB /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A6C9892A52A78F0072A3DB /* BaseCollectionViewCell.swift */; };
+		80A6C98E2A52A78F0072A3DB /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A6C98A2A52A78F0072A3DB /* BaseVM.swift */; };
 		80D72ACC2A4C1B8800618939 /* AppDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D72ACB2A4C1B8800618939 /* AppDataSource.swift */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +96,10 @@
 		802B12882A4982E8003F253F /* VoiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoiceCell.xib; sourceTree = "<group>"; };
 		802B128B2A49915F003F253F /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
 		802B12922A499CB8003F253F /* UIView+Corner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Corner.swift"; sourceTree = "<group>"; };
+		80A6C9872A52A78F0072A3DB /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		80A6C9882A52A78F0072A3DB /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		80A6C9892A52A78F0072A3DB /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		80A6C98A2A52A78F0072A3DB /* BaseVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVM.swift; sourceTree = "<group>"; };
 		80D72ACB2A4C1B8800618939 /* AppDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataSource.swift; sourceTree = "<group>"; };
 		DBF2D05BE5A11402DD7A5B2D /* Pods-course_5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-course_5.debug.xcconfig"; path = "Target Support Files/Pods-course_5/Pods-course_5.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,6 +146,7 @@
 		802B11F12A493395003F253F /* course_5 */ = {
 			isa = PBXGroup;
 			children = (
+				80A6C9862A52A78F0072A3DB /* Base */,
 				802B121A2A493896003F253F /* AppDelegate */,
 				802B120A2A493649003F253F /* Resources */,
 				802B12092A493630003F253F /* Data */,
@@ -350,6 +359,17 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		80A6C9862A52A78F0072A3DB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				80A6C9872A52A78F0072A3DB /* BaseTableViewCell.swift */,
+				80A6C9882A52A78F0072A3DB /* BaseVC.swift */,
+				80A6C9892A52A78F0072A3DB /* BaseCollectionViewCell.swift */,
+				80A6C98A2A52A78F0072A3DB /* BaseVM.swift */,
+			);
+			path = Base;
+			sourceTree = SOURCE_ROOT;
+		};
 		80D72ACA2A4C1B7600618939 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -498,18 +518,22 @@
 				802B12752A493F74003F253F /* CommandCell.swift in Sources */,
 				802B122A2A49391F003F253F /* MainPageVC.swift in Sources */,
 				802B12502A493A90003F253F /* SetupResponse.swift in Sources */,
+				80A6C98E2A52A78F0072A3DB /* BaseVM.swift in Sources */,
 				802B12712A493F5B003F253F /* GroupCell.swift in Sources */,
 				802B122D2A493938003F253F /* SetupVC.swift in Sources */,
 				802B12842A497DD4003F253F /* UIView+Shadow.swift in Sources */,
 				802B12892A4982E8003F253F /* VoiceCell.swift in Sources */,
 				802B12382A49398D003F253F /* CommandVC.swift in Sources */,
+				80A6C98C2A52A78F0072A3DB /* BaseVC.swift in Sources */,
 				802B12932A499CB8003F253F /* UIView+Corner.swift in Sources */,
+				80A6C98D2A52A78F0072A3DB /* BaseCollectionViewCell.swift in Sources */,
 				802B11F32A493395003F253F /* AppDelegate.swift in Sources */,
 				802B124A2A493A55003F253F /* Setup.swift in Sources */,
 				802B12602A493EB6003F253F /* VoiceVC.swift in Sources */,
 				802B124E2A493A79003F253F /* CategoryResponse.swift in Sources */,
 				802B12482A493A4C003F253F /* Command.swift in Sources */,
 				80D72ACC2A4C1B8800618939 /* AppDataSource.swift in Sources */,
+				80A6C98B2A52A78F0072A3DB /* BaseTableViewCell.swift in Sources */,
 				802B121D2A4938D0003F253F /* MainVC.swift in Sources */,
 				802B12182A4937CD003F253F /* GradientView.swift in Sources */,
 				802B124C2A493A64003F253F /* Repository.swift in Sources */,

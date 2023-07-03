@@ -11,7 +11,7 @@ func getCategoriesDataSource() -> RxCollectionViewSectionedReloadDataSource<Sect
     return RxCollectionViewSectionedReloadDataSource(configureCell: {
             (dataSource, collectionView, indexPath, item) ->
                 UICollectionViewCell in
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CommandCell", for: indexPath) as! CommandCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CommandCell.identifier, for: indexPath) as! CommandCell
         cell.configure(item)
         return cell
     })
@@ -20,7 +20,7 @@ func getCategoriesDataSource() -> RxCollectionViewSectionedReloadDataSource<Sect
 func getSetupDataSource() -> RxCollectionViewSectionedReloadDataSource<SectionModel<Void, Setup>> {
     return RxCollectionViewSectionedReloadDataSource(configureCell: {
         (dataSource, collectionView, indexPath, item) -> UICollectionViewCell in
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GroupCell", for: indexPath) as! GroupCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GroupCell.identifier, for: indexPath) as! GroupCell
         cell.configure(item)
         return cell
     })

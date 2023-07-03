@@ -8,15 +8,11 @@
 import RxSwift
 import RxCocoa
 
-class CommandVM {
+class CommandVM: BaseVM {
     
     let categoriesS = PublishSubject<[Category]>()
     
-    private var categories: [Category] = []
-    
-    private let repository = Repository()
-    
-    private let bag = DisposeBag()
+    var categories: [Category] = []
     
     var categoriesObservable: Observable<[Category]> {
             return categoriesS.asObservable()
@@ -25,8 +21,10 @@ class CommandVM {
     func fetchData(){
         repository.getCommands()
             .subscribe(onNext: {[weak self] categories in
-                guard let self = self else {return}
+                guard let self = self else { return }
+                self.categories = categories
                 self.categoriesS.onNext(categories)
             }).disposed(by: bag)
     }
 }
+

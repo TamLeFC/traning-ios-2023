@@ -9,55 +9,56 @@ import UIKit
 import RxSwift
 import RxDataSources
 
-class CommandVC: UIViewController {
+class CommandVC: BaseVC<CommandVM> {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    private var viewModel = CommandVM()
-    
-    private let bag = DisposeBag()
     
     private var categories: [Category] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewModel = CommandVM()
+        
         initViews()
-        
         bindViewModel()
-        
         viewModel.fetchData()
     }
     
-    private func initViews() {
-        setupCollectionView()
+    override func initViews() {
+        super.initViews()
+        configureListView()
     }
     
-    private func setupCollectionView() {
+    override func configureListView() {
+        super.configureListView()
+        
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.sectionInset = UIEdgeInsets(top: 24, left: 0, bottom: 24, right: 0)
         collectionView.setCollectionViewLayout(layout, animated: true)
         
-        let identifier = "CommandCell"
-        let nib = UINib(nibName: identifier, bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: identifier)
+        let nib = UINib(nibName: CommandCell.identifier, bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: CommandCell.identifier)
         
         collectionView.delegate = self
  
         collectionView.showsVerticalScrollIndicator = false
     }
     
-    private func bindViewModel(){
-        viewModel.categoriesS
-                .subscribe(onNext: { [weak self] categories in
-                    self?.categories = categories
-                })
-                .disposed(by: bag)
-        viewModel.categoriesS.asObserver()
+    override func bindViewModel(){
+        super.bindViewModel()
+        
+        viewModel?.categoriesS
+            .subscribe(onNext: { [weak self] categories in
+                self?.categories = categories
+            })
+            .disposed(by: bag)
+        viewModel?.categoriesS.asObserver()
             .map{ [SectionModel(model: (), items: $0)] }
             .bind(to: self.collectionView.rx.items(dataSource: getCategoriesDataSource()))
             .disposed(by: bag)
+       
     }
     
 }
@@ -71,8 +72,8 @@ extension CommandVC: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedCategory = categories[indexPath.row]
-            let vc = VoiceVC(selectedCategory)
-            navigationController?.pushViewController(vc, animated: true)
+        let selectedCategory = VoiceVM(viewModel.categories[indexPath.row])
+        let vc = VoiceVC.instantiate(viewModel: selectedCategory)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

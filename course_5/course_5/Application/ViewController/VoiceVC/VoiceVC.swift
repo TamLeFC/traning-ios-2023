@@ -7,8 +7,7 @@
 
 import UIKit
 
-class VoiceVC: UIViewController {
-
+class VoiceVC: BaseVC<VoiceVM> {
     
     @IBOutlet weak var appLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
@@ -17,11 +16,10 @@ class VoiceVC: UIViewController {
     
     private let category: Category
     
-    private var viewModel: VoiceVM!
-    
-    init(_ category: Category) {
-        self.category = category
+    init(viewModel: VoiceVM) {
+        self.category = viewModel.category
         super.init(nibName: nil, bundle: nil)
+        self.viewModel = viewModel
     }
     
     required init?(coder: NSCoder) {
@@ -30,22 +28,21 @@ class VoiceVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        viewModel = VoiceVM(category)
+    
         appLabel.font = UIFont(name: "Inter-Medium", size: 16)
         
         initViews()
     }
     
-    private func initViews() {
+    override func initViews() {
+        super.initViews()
         titleLabel.text = category.displayName
-        setupTableView()
+        configureListView()
     }
     
-    private func setupTableView() {
-        let identifier = "VoiceCell"
-        let nib = UINib(nibName: identifier, bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: identifier)
+    override func configureListView() {
+        let nib = UINib(nibName: VoiceCell.identifier, bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: VoiceCell.identifier)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -54,7 +51,6 @@ class VoiceVC: UIViewController {
     @IBAction func backButtonTapped(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
-    
 }
 
 extension VoiceVC: UITableViewDelegate, UITableViewDataSource {
@@ -67,10 +63,9 @@ extension VoiceVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "VoiceCell", for: indexPath) as! VoiceCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: VoiceCell.identifier, for: indexPath) as! VoiceCell
         cell.configure(viewModel.commands[indexPath.row])
    
         return cell
     }
 }
-
