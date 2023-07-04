@@ -10,19 +10,19 @@ import RxSwift
 class VoiceVM: BaseVM {
     
     let dataS: PublishSubject<Category> = PublishSubject()
+    var commands: [Command] = []
     
-    let category: Category
-    let commands: [Command]
-    
-    init(_ category: Category) {
-        self.category = category
-        self.commands = category.commands
-        super.init()
-        
-        fetchData()
+    var category: Observable<Category> {
+        return dataS.asObservable()
     }
     
-    private func fetchData() {
+    init(_ category: Category) {
+        super.init()
+        self.getCommands(for: category)
+    }
+    
+    func getCommands(for category: Category) {
+        commands = category.commands
         dataS.onNext(category)
     }
 }

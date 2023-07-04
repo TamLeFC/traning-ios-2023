@@ -72,8 +72,9 @@ extension CommandVC: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedCategory = VoiceVM(viewModel.categories[indexPath.row])
-        let vc = VoiceVC.instantiate(viewModel: selectedCategory)
+        let selectedCategory = categories[indexPath.row]
+        let voiceVM = VoiceVM(selectedCategory)
+        let vc = VoiceVC.instantiate(viewModel: voiceVM)
         navigationController?.pushViewController(vc, animated: true)
     }
 }
