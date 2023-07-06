@@ -7,9 +7,12 @@ target 'Course5' do
 
   # Pods for Course5
   pod 'ObjectMapper'
+  
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'RxDataSources'
   pod 'RxSwiftExt'
+  
   pod 'RealmSwift'
+  pod 'RxRealm'
 end

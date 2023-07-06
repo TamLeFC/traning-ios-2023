@@ -8,10 +8,6 @@ class CommandVC: BaseVC<CommandVM> {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var itemTableView: UITableView!
     
-    override func initViews() {
-        titleLabel.text = viewModel.category.displayName
-    }
-    
     override func configureListView() {
         setupTableView()
     }
@@ -19,10 +15,24 @@ class CommandVC: BaseVC<CommandVM> {
     override func bindViewModel() {
         super.bindViewModel()
         
-        viewModel.commandsSub
-            .asObserver()
+        viewModel.titleS
+            .asObservable()
+            .subscribe(onNext: {[weak self] title in
+                guard let self = self else { return }
+                self.titleLabel.text = title
+            }).disposed(by: bag)
+        
+        viewModel.commandsS
+            .asObservable()
             .map { [SectionModel(model: (), items: $0)] }
-            .bind(to: self.itemTableView.rx.items(dataSource: getCommandsDataSource()))
+            .bind(
+                to: self.itemTableView.rx.items(
+                    dataSource: getCommandsDataSource() {[weak self] cmd in
+                        guard let self = self else { return }
+                        self.viewModel.favoriteChanged(cmd)
+                    }
+                )
+            )
             .disposed(by: bag)
         
         viewModel.fetchData()
@@ -31,7 +41,6 @@ class CommandVC: BaseVC<CommandVM> {
     @IBAction func backButtonTapped(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
-
 }
 
 extension CommandVC: UITableViewDelegate {

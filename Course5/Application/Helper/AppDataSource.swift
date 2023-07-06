@@ -4,7 +4,7 @@ func getCagegoriesDataSource() -> RxCollectionViewSectionedReloadDataSource<Sect
     return RxCollectionViewSectionedReloadDataSource<SectionModel<Void, Category>>(
         configureCell: {
             (dataSource, collectionView, indexPath, item) -> UICollectionViewCell in
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as! HomeCollectionViewCell
+            let cell = collectionView.dequeueReuseable(ofType: HomeCollectionViewCell.self, indexPath: indexPath)
             cell.configure(item)
             return cell
         })
@@ -14,18 +14,19 @@ func getSetupsDataSource() -> RxCollectionViewSectionedReloadDataSource<SectionM
     return RxCollectionViewSectionedReloadDataSource<SectionModel<Void, Setup>>(
         configureCell: {
             (dataSource, collectionView, indexPath, item) -> UICollectionViewCell in
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SetupCollectionViewCell.identifier, for: indexPath) as! SetupCollectionViewCell
+            let cell = collectionView.dequeueReuseable(ofType: SetupCollectionViewCell.self, indexPath: indexPath)
             cell.configure(item)
             return cell
         })
 }
 
-func getCommandsDataSource() -> RxTableViewSectionedReloadDataSource<SectionModel<Void, Command>> {
+func getCommandsDataSource(onFavoriteChanged: @escaping (Command) -> Void) -> RxTableViewSectionedReloadDataSource<SectionModel<Void, Command>> {
     return RxTableViewSectionedReloadDataSource<SectionModel<Void, Command>>(
         configureCell: {
             (dataSource, tableView, indexPath, item) -> UITableViewCell in
-            let cell = tableView.dequeueReusableCell(withIdentifier: CommandTableViewCell.identifier, for: indexPath) as! CommandTableViewCell
+            let cell = tableView.dequeueReuseable(ofType: CommandTableViewCell.self, indexPath: indexPath)
             cell.configure(item)
+            cell.onFavoriteChanged = onFavoriteChanged
             return cell
         })
 }

@@ -1,10 +1,3 @@
-//
-//  BaseVC.swift
-//  course3
-//
-//  Created by Tam Le on 03/07/2023.
-//
-
 import UIKit
 import RxSwift
 import RxCocoa
@@ -31,6 +24,10 @@ class BaseVC<VM: BaseVM>: UIViewController {
     open func addEventForViews() { }
     
     open func bindViewModel() { }
+    
+    deinit {
+        print("deinit :: >>>> \(String(describing: self)) <<<<")
+    }
 }
 
 extension BaseVC {
