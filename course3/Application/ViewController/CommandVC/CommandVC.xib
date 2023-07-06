@@ -14,7 +14,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommandVC" customModule="course2" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommandVC" customModule="course3" customModuleProvider="target">
             <connections>
                 <outlet property="backButton" destination="Vu6-W2-I7V" id="f9B-By-oD9"/>
                 <outlet property="tableView" destination="6eU-HD-0Jf" id="2xI-3R-2jf"/>
@@ -42,7 +42,7 @@
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" image="ic_chevron_left"/>
                                     <connections>
-                                        <action selector="backButtonTapped:" destination="-1" eventType="touchUpInside" id="8ZX-Wu-9Rd"/>
+                                        <action selector="backButtonTapped:" destination="-1" eventType="touchUpInside" id="HEF-b0-fm0"/>
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJ1-e0-mbu">

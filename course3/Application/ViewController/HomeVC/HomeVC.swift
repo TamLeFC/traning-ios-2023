@@ -9,49 +9,43 @@ import UIKit
 import RxSwift
 import RxDataSources
 
-class HomeVC: UIViewController {
-
+class HomeVC: BaseVC<HomeVM> {
+    
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    private let bag = DisposeBag()
-    
-    private var viewModel: HomeVM = HomeVM()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        initViews()
-        bindViewModel()
         
         viewModel.fetchData()
     }
     
-    private func initViews() {
-        setupCollectionView()
+    override func initViews() {
+        super.initViews()
+        
     }
     
-    private func setupCollectionView() {
+    override func configureListView() {
+        super.configureListView()
+        
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.sectionInset = UIEdgeInsets(top: 16, left: 0, bottom: 16, right: 0)
         collectionView.setCollectionViewLayout(layout, animated: true)
         
-        let identifier = "CategoryCell"
-        let nib = UINib(nibName: identifier, bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: identifier)
+        collectionView.registerCellNib(CategoryCell.self)
         
         collectionView.delegate = self
-        
         collectionView.showsVerticalScrollIndicator = false
     }
     
-    private func bindViewModel() {
+    override func bindViewModel() {
+        super.bindViewModel()
         viewModel.categoriesS.asObservable()
             .map { [SectionModel(model: (), items: $0)] }
             .bind(to: self.collectionView.rx.items(dataSource: getCagegoriesDataSource()))
             .disposed(by: bag)
     }
-
+    
 }
 
 extension HomeVC: UICollectionViewDelegateFlowLayout {
@@ -63,7 +57,12 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let vc = CommandVC(viewModel.categories[indexPath.row])
-//        navigationController?.pushViewController(vc, animated: true)
+        do {
+            let item: Category = try collectionView.rx.model(at: indexPath)
+            let vc = CommandVC.instantiate(viewModel: CommandVM(item))
+            navigationController?.pushViewController(vc, animated: true)
+        } catch {
+            //MARK: - check error here
+        }
     }
 }

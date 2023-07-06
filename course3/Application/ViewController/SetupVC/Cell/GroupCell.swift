@@ -10,7 +10,6 @@ import UIKit
 class GroupCell: UICollectionViewCell {
 
     @IBOutlet weak var imageView: UIImageView!
-    
 
     func configure(_ item: Setup) {
         imageView.image = UIImage(named: item.icon)

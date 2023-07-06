@@ -7,15 +7,18 @@
 
 import Foundation
 
-class SetupVM {
+class SetupVM: BaseVM {
     
     private var allSetups: [Setup] = []
-    var setups: [Setup] = []
+    private var setups: [Setup] = []
     
-    private let repository = Repository()
-    
-    init() {
+    override init() {
+        super.init()
         allSetups = repository.getSetups()
         setups = Array(allSetups[4..<allSetups.count])
+    }
+    
+    func fetchData() {
+        
     }
 }

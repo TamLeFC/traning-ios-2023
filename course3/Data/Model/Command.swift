@@ -21,4 +21,8 @@ struct Command: Codable {
         let container = try decoder.container(keyedBy: Keys.self)
         text = try container.decode(String.self, forKey: .text)
     }
+    
+    init(_ text: String) {
+        self.text = text
+    }
 }

@@ -49,6 +49,21 @@
 		28F4F5B32A1B26EA001564F5 /* SetupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F4F5B12A1B26EA001564F5 /* SetupVC.swift */; };
 		28F4F5B42A1B26EA001564F5 /* SetupVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F4F5B22A1B26EA001564F5 /* SetupVC.xib */; };
 		56A6756F930819984EA26B89 /* Pods_course3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D769354BB902B257CE650E6F /* Pods_course3.framework */; };
+		E61F236A2A5266B5006F577E /* ModelConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61F235D2A5266B5006F577E /* ModelConvertibleType.swift */; };
+		E61F236B2A5266B5006F577E /* RealmRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61F235E2A5266B5006F577E /* RealmRepresentable.swift */; };
+		E61F236C2A5266B5006F577E /* Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61F235F2A5266B5006F577E /* Reactive.swift */; };
+		E61F236D2A5266B5006F577E /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61F23602A5266B5006F577E /* DBManager.swift */; };
+		E61F23702A5266B5006F577E /* BaseDaoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61F23662A5266B5006F577E /* BaseDaoService.swift */; };
+		E61F23712A5266B5006F577E /* BaseDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61F23672A5266B5006F577E /* BaseDao.swift */; };
+		E61F23722A5266B5006F577E /* RCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61F23692A5266B5006F577E /* RCommand.swift */; };
+		E61F23752A526871006F577E /* CommandDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61F23742A526871006F577E /* CommandDAO.swift */; };
+		E61F23782A527119006F577E /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61F23772A527119006F577E /* BaseVM.swift */; };
+		E61F237A2A52714C006F577E /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61F23792A52714C006F577E /* BaseVC.swift */; };
+		E61F23802A528424006F577E /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61F237F2A528424006F577E /* BaseCollectionViewCell.swift */; };
+		E61F23822A52847A006F577E /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61F23812A52847A006F577E /* BaseTableViewCell.swift */; };
+		E61F23842A52A936006F577E /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61F23832A52A936006F577E /* UICollectionView.swift */; };
+		E61F23862A52A94C006F577E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61F23852A52A94C006F577E /* String.swift */; };
+		E61F23882A52A9F3006F577E /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61F23872A52A9F3006F577E /* UITableView.swift */; };
 		E63C289C2A4BED2400A8553F /* AppDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63C289B2A4BED2400A8553F /* AppDataSource.swift */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +114,21 @@
 		53CE889FA0C6E6C2A54BD38A /* Pods-course3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-course3.debug.xcconfig"; path = "Target Support Files/Pods-course3/Pods-course3.debug.xcconfig"; sourceTree = "<group>"; };
 		6449C44BC28BB654ACB882A1 /* Pods-course3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-course3.release.xcconfig"; path = "Target Support Files/Pods-course3/Pods-course3.release.xcconfig"; sourceTree = "<group>"; };
 		D769354BB902B257CE650E6F /* Pods_course3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_course3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E61F235D2A5266B5006F577E /* ModelConvertibleType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelConvertibleType.swift; sourceTree = "<group>"; };
+		E61F235E2A5266B5006F577E /* RealmRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmRepresentable.swift; sourceTree = "<group>"; };
+		E61F235F2A5266B5006F577E /* Reactive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reactive.swift; sourceTree = "<group>"; };
+		E61F23602A5266B5006F577E /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		E61F23662A5266B5006F577E /* BaseDaoService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDaoService.swift; sourceTree = "<group>"; };
+		E61F23672A5266B5006F577E /* BaseDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDao.swift; sourceTree = "<group>"; };
+		E61F23692A5266B5006F577E /* RCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCommand.swift; sourceTree = "<group>"; };
+		E61F23742A526871006F577E /* CommandDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandDAO.swift; sourceTree = "<group>"; };
+		E61F23772A527119006F577E /* BaseVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVM.swift; sourceTree = "<group>"; };
+		E61F23792A52714C006F577E /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		E61F237F2A528424006F577E /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		E61F23812A52847A006F577E /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		E61F23832A52A936006F577E /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		E61F23852A52A94C006F577E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		E61F23872A52A9F3006F577E /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		E63C289B2A4BED2400A8553F /* AppDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,6 +194,7 @@
 		280722CB2A15C350004AD4D3 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				E61F23762A52710E006F577E /* Base */,
 				E63C289A2A4BED1900A8553F /* Helper */,
 				280723032A1618E8004AD4D3 /* ViewController */,
 				28F4F5732A175849001564F5 /* Extensions */,
@@ -271,6 +302,9 @@
 				28F4F5742A175849001564F5 /* UIColor.swift */,
 				28F4F5752A175849001564F5 /* UIView+Corner.swift */,
 				28F4F5762A175849001564F5 /* UIView+Shadow.swift */,
+				E61F23832A52A936006F577E /* UICollectionView.swift */,
+				E61F23852A52A94C006F577E /* String.swift */,
+				E61F23872A52A9F3006F577E /* UITableView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -278,6 +312,7 @@
 		28F4F57A2A176940001564F5 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				E61F235B2A5266B5006F577E /* Local */,
 				28F4F5912A19D790001564F5 /* DTO */,
 				28F4F58E2A18DE02001564F5 /* Respository */,
 				28F4F57B2A17694E001564F5 /* Model */,
@@ -365,6 +400,72 @@
 				D769354BB902B257CE650E6F /* Pods_course3.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E61F235B2A5266B5006F577E /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				E61F235C2A5266B5006F577E /* Core */,
+				E61F23612A5266B5006F577E /* DAO */,
+				E61F23682A5266B5006F577E /* Entities */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		E61F235C2A5266B5006F577E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E61F235D2A5266B5006F577E /* ModelConvertibleType.swift */,
+				E61F235E2A5266B5006F577E /* RealmRepresentable.swift */,
+				E61F235F2A5266B5006F577E /* Reactive.swift */,
+				E61F23602A5266B5006F577E /* DBManager.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E61F23612A5266B5006F577E /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				E61F23732A52685D006F577E /* CommandDAO */,
+				E61F23652A5266B5006F577E /* Base */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		E61F23652A5266B5006F577E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E61F23662A5266B5006F577E /* BaseDaoService.swift */,
+				E61F23672A5266B5006F577E /* BaseDao.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		E61F23682A5266B5006F577E /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				E61F23692A5266B5006F577E /* RCommand.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		E61F23732A52685D006F577E /* CommandDAO */ = {
+			isa = PBXGroup;
+			children = (
+				E61F23742A526871006F577E /* CommandDAO.swift */,
+			);
+			path = CommandDAO;
+			sourceTree = "<group>";
+		};
+		E61F23762A52710E006F577E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E61F23772A527119006F577E /* BaseVM.swift */,
+				E61F23792A52714C006F577E /* BaseVC.swift */,
+				E61F237F2A528424006F577E /* BaseCollectionViewCell.swift */,
+				E61F23812A52847A006F577E /* BaseTableViewCell.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		E63C289A2A4BED1900A8553F /* Helper */ = {
@@ -507,10 +608,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				280722B52A15BC99004AD4D3 /* AppDelegate.swift in Sources */,
+				E61F237A2A52714C006F577E /* BaseVC.swift in Sources */,
+				E61F23752A526871006F577E /* CommandDAO.swift in Sources */,
 				28F4F57D2A176975001564F5 /* Category.swift in Sources */,
 				28F4F5772A175849001564F5 /* UIColor.swift in Sources */,
 				28F4F5992A1A749F001564F5 /* GroupCell.swift in Sources */,
+				E61F23782A527119006F577E /* BaseVM.swift in Sources */,
+				E61F23802A528424006F577E /* BaseCollectionViewCell.swift in Sources */,
 				28F4F5B32A1B26EA001564F5 /* SetupVC.swift in Sources */,
+				E61F236A2A5266B5006F577E /* ModelConvertibleType.swift in Sources */,
 				28F4F5882A177A90001564F5 /* HomeVM.swift in Sources */,
 				28F4F5A82A1A7A68001564F5 /* CommandVC.swift in Sources */,
 				28634F142A1724A200465EC0 /* HomeVC.swift in Sources */,
@@ -519,15 +625,25 @@
 				28F4F5902A18DE02001564F5 /* Repository.swift in Sources */,
 				28634F0F2A171FA200465EC0 /* MainPageVC.swift in Sources */,
 				280723022A160E92004AD4D3 /* GradientView.swift in Sources */,
+				E61F23822A52847A006F577E /* BaseTableViewCell.swift in Sources */,
+				E61F236C2A5266B5006F577E /* Reactive.swift in Sources */,
+				E61F23712A5266B5006F577E /* BaseDao.swift in Sources */,
 				28F4F59E2A1A75D3001564F5 /* Setup.swift in Sources */,
+				E61F236B2A5266B5006F577E /* RealmRepresentable.swift in Sources */,
 				28F4F59C2A1A759A001564F5 /* SetupVM.swift in Sources */,
 				E63C289C2A4BED2400A8553F /* AppDataSource.swift in Sources */,
 				28F4F5792A175849001564F5 /* UIView+Shadow.swift in Sources */,
 				28F4F5A42A1A7A13001564F5 /* CommandCell.swift in Sources */,
+				E61F23862A52A94C006F577E /* String.swift in Sources */,
 				28F4F5942A19D790001564F5 /* CateogryResponse.swift in Sources */,
+				E61F23882A52A9F3006F577E /* UITableView.swift in Sources */,
+				E61F236D2A5266B5006F577E /* DBManager.swift in Sources */,
 				28F4F5822A176B4A001564F5 /* Command.swift in Sources */,
+				E61F23842A52A936006F577E /* UICollectionView.swift in Sources */,
 				28F4F5952A19D790001564F5 /* SetupResponse.swift in Sources */,
+				E61F23702A5266B5006F577E /* BaseDaoService.swift in Sources */,
 				28F4F5AC2A1A7AAC001564F5 /* CommandVM.swift in Sources */,
+				E61F23722A5266B5006F577E /* RCommand.swift in Sources */,
 				28F4F5712A175470001564F5 /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

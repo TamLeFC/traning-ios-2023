@@ -7,10 +7,11 @@
 
 import UIKit
 
-class CategoryCell: UICollectionViewCell {
-
+class CategoryCell: BaseCollectionViewCell {
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    
     func configure(_ item: Category) {
         imageView.image = UIImage(named: item.image)
         titleLabel.text = item.displayName
