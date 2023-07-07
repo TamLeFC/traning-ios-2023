@@ -19,6 +19,17 @@
 		357E5A422A4BC68500CC701E /* CommandDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 357E5A402A4BC68500CC701E /* CommandDetailVC.xib */; };
 		357E5A462A4BC8CE00CC701E /* CommandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357E5A442A4BC8CE00CC701E /* CommandCell.swift */; };
 		357E5A472A4BC8CE00CC701E /* CommandCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 357E5A452A4BC8CE00CC701E /* CommandCell.xib */; };
+		35BB3E762A56AF54008EBAE9 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BB3E752A56AF54008EBAE9 /* DBManager.swift */; };
+		35BB3E782A56AF5A008EBAE9 /* ModelConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BB3E772A56AF5A008EBAE9 /* ModelConvertibleType.swift */; };
+		35BB3E7A2A56AF5E008EBAE9 /* Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BB3E792A56AF5E008EBAE9 /* Reactive.swift */; };
+		35BB3E7C2A56AF63008EBAE9 /* RealmRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BB3E7B2A56AF62008EBAE9 /* RealmRepresentable.swift */; };
+		35BB3E7F2A56B13E008EBAE9 /* BaseDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BB3E7E2A56B13E008EBAE9 /* BaseDao.swift */; };
+		35BB3E812A56B14C008EBAE9 /* BaseDaoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BB3E802A56B14C008EBAE9 /* BaseDaoService.swift */; };
+		35BB3E832A57A5FD008EBAE9 /* RCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BB3E822A57A5FD008EBAE9 /* RCommand.swift */; };
+		35BB3E882A57B436008EBAE9 /* CommandDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BB3E872A57B436008EBAE9 /* CommandDAO.swift */; };
+		35BB3E8A2A57C759008EBAE9 /* RCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BB3E892A57C759008EBAE9 /* RCategory.swift */; };
+		35BB3E8C2A57C848008EBAE9 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BB3E8B2A57C848008EBAE9 /* UITableView.swift */; };
+		35BB3E8E2A57C8A8008EBAE9 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BB3E8D2A57C8A8008EBAE9 /* UICollectionView.swift */; };
 		35DCB05C2A49340A00872E08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DCB05B2A49340A00872E08 /* AppDelegate.swift */; };
 		35DCB0652A49340B00872E08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35DCB0642A49340B00872E08 /* Assets.xcassets */; };
 		35DCB0682A49340B00872E08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35DCB0662A49340B00872E08 /* LaunchScreen.storyboard */; };
@@ -70,6 +81,17 @@
 		357E5A442A4BC8CE00CC701E /* CommandCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandCell.swift; sourceTree = "<group>"; };
 		357E5A452A4BC8CE00CC701E /* CommandCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommandCell.xib; sourceTree = "<group>"; };
 		35B59B022A4E90B90009BB45 /* RxRealm.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RxRealm.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		35BB3E752A56AF54008EBAE9 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		35BB3E772A56AF5A008EBAE9 /* ModelConvertibleType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelConvertibleType.swift; sourceTree = "<group>"; };
+		35BB3E792A56AF5E008EBAE9 /* Reactive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reactive.swift; sourceTree = "<group>"; };
+		35BB3E7B2A56AF62008EBAE9 /* RealmRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmRepresentable.swift; sourceTree = "<group>"; };
+		35BB3E7E2A56B13E008EBAE9 /* BaseDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDao.swift; sourceTree = "<group>"; };
+		35BB3E802A56B14C008EBAE9 /* BaseDaoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDaoService.swift; sourceTree = "<group>"; };
+		35BB3E822A57A5FD008EBAE9 /* RCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCommand.swift; sourceTree = "<group>"; };
+		35BB3E872A57B436008EBAE9 /* CommandDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandDAO.swift; sourceTree = "<group>"; };
+		35BB3E892A57C759008EBAE9 /* RCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCategory.swift; sourceTree = "<group>"; };
+		35BB3E8B2A57C848008EBAE9 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		35BB3E8D2A57C8A8008EBAE9 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		35DCB0582A49340A00872E08 /* Course5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Course5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35DCB05B2A49340A00872E08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35DCB0642A49340B00872E08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -162,6 +184,63 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		35BB3E712A56AEEE008EBAE9 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				35BB3E742A56AF08008EBAE9 /* Core */,
+				35BB3E732A56AEFE008EBAE9 /* Entities */,
+				35BB3E722A56AEF7008EBAE9 /* DAO */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		35BB3E722A56AEF7008EBAE9 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				35BB3E862A57B418008EBAE9 /* CommandDAO */,
+				35BB3E7D2A56B12C008EBAE9 /* Base */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		35BB3E732A56AEFE008EBAE9 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				35BB3E822A57A5FD008EBAE9 /* RCommand.swift */,
+				35BB3E892A57C759008EBAE9 /* RCategory.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		35BB3E742A56AF08008EBAE9 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				35BB3E752A56AF54008EBAE9 /* DBManager.swift */,
+				35BB3E772A56AF5A008EBAE9 /* ModelConvertibleType.swift */,
+				35BB3E792A56AF5E008EBAE9 /* Reactive.swift */,
+				35BB3E7B2A56AF62008EBAE9 /* RealmRepresentable.swift */,
+			);
+			name = Core;
+			path = "Coẻ";
+			sourceTree = "<group>";
+		};
+		35BB3E7D2A56B12C008EBAE9 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				35BB3E7E2A56B13E008EBAE9 /* BaseDao.swift */,
+				35BB3E802A56B14C008EBAE9 /* BaseDaoService.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		35BB3E862A57B418008EBAE9 /* CommandDAO */ = {
+			isa = PBXGroup;
+			children = (
+				35BB3E872A57B436008EBAE9 /* CommandDAO.swift */,
+			);
+			path = CommandDAO;
+			sourceTree = "<group>";
+		};
 		35DCB04F2A49340A00872E08 = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +317,7 @@
 		35DCB07C2A4936F300872E08 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				35BB3E712A56AEEE008EBAE9 /* Local */,
 				35DCB0BA2A496F8F00872E08 /* Respository */,
 				35DCB0B92A496F8700872E08 /* DTO */,
 				35DCB0B42A496DBE00872E08 /* Model */,
@@ -272,6 +352,8 @@
 				35DCB0A62A4952AA00872E08 /* UIColor.swift */,
 				35DCB0A82A4952AF00872E08 /* UITextField.swift */,
 				35DCB0AA2A4952B300872E08 /* UIView */,
+				35BB3E8B2A57C848008EBAE9 /* UITableView.swift */,
+				35BB3E8D2A57C8A8008EBAE9 /* UICollectionView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -549,13 +631,19 @@
 				35DCB0892A49380200872E08 /* HomeVC.swift in Sources */,
 				357E5A412A4BC68500CC701E /* CommandDetailVC.swift in Sources */,
 				35F608582A528B7A0089CCE9 /* BaseTableViewCell.swift in Sources */,
+				35BB3E782A56AF5A008EBAE9 /* ModelConvertibleType.swift in Sources */,
 				35F6085A2A528B7A0089CCE9 /* BaseCollectionViewCell.swift in Sources */,
 				35F608592A528B7A0089CCE9 /* BaseVC.swift in Sources */,
 				357E5A2E2A4A901E00CC701E /* Command.swift in Sources */,
+				35BB3E812A56B14C008EBAE9 /* BaseDaoService.swift in Sources */,
 				35DCB0AF2A4952B300872E08 /* UIView+Shadow.swift in Sources */,
 				357E5A312A4A903600CC701E /* Category.swift in Sources */,
 				35F6085D2A52B62C0089CCE9 /* CommandDetailVM.swift in Sources */,
+				35BB3E762A56AF54008EBAE9 /* DBManager.swift in Sources */,
+				35BB3E8C2A57C848008EBAE9 /* UITableView.swift in Sources */,
 				35DCB05C2A49340A00872E08 /* AppDelegate.swift in Sources */,
+				35BB3E7A2A56AF5E008EBAE9 /* Reactive.swift in Sources */,
+				35BB3E832A57A5FD008EBAE9 /* RCommand.swift in Sources */,
 				35DCB0AE2A4952B300872E08 /* UIView+Border+Corner.swift in Sources */,
 				35DCB0B02A4952B300872E08 /* UIView+BorderInDirection.swift in Sources */,
 				357E5A462A4BC8CE00CC701E /* CommandCell.swift in Sources */,
@@ -564,13 +652,18 @@
 				35F6085B2A528B7A0089CCE9 /* BaseVM.swift in Sources */,
 				357E5A352A4A931100CC701E /* CategoryResponse.swift in Sources */,
 				35DCB0932A49389400872E08 /* GradientView.swift in Sources */,
+				35BB3E882A57B436008EBAE9 /* CommandDAO.swift in Sources */,
+				35BB3E8A2A57C759008EBAE9 /* RCategory.swift in Sources */,
 				35DCB0902A49382C00872E08 /* SetupVC.swift in Sources */,
 				35DCB0A32A4952A000872E08 /* String.swift in Sources */,
+				35BB3E8E2A57C8A8008EBAE9 /* UICollectionView.swift in Sources */,
 				357E5A262A4A773A00CC701E /* SetupVM.swift in Sources */,
 				35DCB0832A4937E700872E08 /* MainVC.swift in Sources */,
 				35DCB0BE2A49709E00872E08 /* Respository.swift in Sources */,
 				35DCB0A52A4952A500872E08 /* UIButton.swift in Sources */,
 				357E5A372A4A931E00CC701E /* SetupResponse.swift in Sources */,
+				35BB3E7C2A56AF63008EBAE9 /* RealmRepresentable.swift in Sources */,
+				35BB3E7F2A56B13E008EBAE9 /* BaseDao.swift in Sources */,
 				357E5A332A4A904200CC701E /* Setup.swift in Sources */,
 				35DCB0C62A497D2D00872E08 /* HomeVM.swift in Sources */,
 				35E2970C2A4C0C3300C02C75 /* AppDataSource.swift in Sources */,

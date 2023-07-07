@@ -7,17 +7,15 @@
 
 import UIKit
 import Foundation
-class CommandDetailVC: BaseVC<CommandDetailVM> {
+import RxDataSources
 
-    var commands:[Command] = []
+class CommandDetailVC: BaseVC<CommandDetailVM> {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        configureListView()
         
         viewModel.fetchData()
     }
@@ -26,70 +24,71 @@ class CommandDetailVC: BaseVC<CommandDetailVM> {
         super.initViews()
     }
     
+    override func addEventForViews() {
+        super.addEventForViews()
+        
+        
+        tableView.rx
+            .modelSelected(Command.self)
+            .subscribe(onNext: { [weak self] item in
+                guard self != nil else { return }
+            })
+            .disposed(by: bag)
+    }
+    
     override func bindViewModel() {
         super.bindViewModel()
-        viewModel.dataS
+        
+        viewModel.titleS
             .asObservable()
-            .subscribe(onNext: {[weak self] category in
+            .subscribe(onNext: {[weak self] title in
                 guard let self = self else { return }
-                self.titleLabel.text = category.displayName
-                self.commands = category.commands
+                self.titleLabel.text = title
             }).disposed(by: bag)
+        
+        viewModel.commandsS
+            .asObservable()
+            .map { [SectionModel(model: (), items: $0)] }
+            .bind(
+                to: self.tableView.rx.items(
+                    dataSource: getCommandsDataSource() {[weak self] cmd in
+                        guard let self = self else { return }
+                        self.viewModel.favoriteChanged(cmd)
+                    }
+                )
+            )
+            .disposed(by: bag)
     }
     
     override func configureListView() {
         super.configureListView()
-        setupTableView()
+        
+        tableView.delegate = self
+        
+        tableView.registerCellNib(CommandCell.self)
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
     
-    
-    private func setupTableView() {
-        tableView.dataSource = self
-        tableView.delegate = self
-        
-        if #available(iOS 15.0, *) {
-            tableView.sectionHeaderTopPadding = 0
-        }
-        
-        let nib = UINib(nibName: CommandCell.identifier, bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: CommandCell.identifier)
-        tableView.reloadData()
-    }
 }
-extension CommandDetailVC: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        commands.count
-    }
+
+
+extension CommandDetailVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         58
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CommandCell.identifier, for: indexPath) as! CommandCell
-        cell.configureCell(commands[indexPath.section])
-        return cell
-    }
-    
+
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 16))
         view.backgroundColor = .clear
         return view
     }
-    
+
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        16
+        return 16
     }
 }
 
-extension CommandDetailVC: UITableViewDelegate {
-    
-}

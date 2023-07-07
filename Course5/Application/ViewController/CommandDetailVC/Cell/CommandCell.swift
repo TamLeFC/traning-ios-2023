@@ -10,6 +10,10 @@ import UIKit
 class CommandCell: BaseTableViewCell {
     
     @IBOutlet weak var commandLabel: UILabel!
+    @IBOutlet weak var favoriteImageView: UIImageView!
+    
+    var onFavoriteChanged: ((Command) -> Void)? = nil
+    private var command: Command!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,6 +27,14 @@ class CommandCell: BaseTableViewCell {
     }
     
     func configureCell(_ item: Command) {
+        self.command = item
         commandLabel.text = item.text
+        
+        favoriteImageView.image = item.isFavorite ? "ic_heart_favorite".toUIImage : "ic_heart".toUIImage
+    }
+    
+    
+    @IBAction func favoriteButtonTouched(_ sender: UIButton) {
+        onFavoriteChanged?(command)
     }
 }

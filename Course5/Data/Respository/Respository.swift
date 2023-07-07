@@ -13,6 +13,8 @@ class Respository {
     
     static let shared = Respository()
     
+    private var commandDAO = CommandDAO(config: DBManager.shared().config)
+    
     func readJSONFile<T: Mappable>(fileName: String) -> Observable<T> {
         guard let filePath = Bundle.main.path(forResource: fileName, ofType: "json") else {
             return Observable.empty()
@@ -30,7 +32,7 @@ class Respository {
         return Observable.empty()
     }
 
-    func getCommands() -> Observable<[Category]> {
+    func getCategories() -> Observable<[Category]> {
         return readJSONFile(fileName: "commands")
                 .map { (categoryResponse: CategoryResponse) -> [Category] in
                     return categoryResponse.data
@@ -42,5 +44,17 @@ class Respository {
                 .map { (setupResponse: SetupResponse) -> [Setup] in
                     return setupResponse.data
                 }
+    }
+    
+    func getFavoriteds() -> Observable<[Command]> {
+        return commandDAO.findAll()
+    }
+    
+    func addFavoriteds(_ command: Command) -> RxSwift.Observable<Command> {
+        return commandDAO.save(command.asRealm())
+    }
+    
+    func deleteFavorited(_ command: Command) -> Observable<Void> {
+        return commandDAO.delete(command.asRealm())
     }
 }

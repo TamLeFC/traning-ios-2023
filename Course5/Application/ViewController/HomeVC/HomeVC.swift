@@ -17,9 +17,6 @@ class HomeVC: BaseVC<HomeVM> {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureListView()
-        
-        
         viewModel.fetchData()
     }
     
@@ -35,12 +32,10 @@ class HomeVC: BaseVC<HomeVM> {
         layout.sectionInset = UIEdgeInsets(top: 16, left: 0, bottom: 16, right: 0)
         collectionView.setCollectionViewLayout(layout, animated: true)
         
-        collectionView.delegate = self
-        //        collectionView.dataSource = self
+        collectionView.registerCellNib(CategoryCell.self)
         
-        let nib = UINib(nibName: CategoryCell.identifier, bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: CategoryCell.identifier)
-        collectionView.reloadData()
+        collectionView.delegate = self
+        collectionView.showsVerticalScrollIndicator = false
         
         collectionView.showsVerticalScrollIndicator = false
     }
@@ -48,7 +43,7 @@ class HomeVC: BaseVC<HomeVM> {
     
     override func bindViewModel() {
         super.bindViewModel()
-        viewModel.categorieS.asObservable()
+        viewModel.categoriesS.asObservable()
             .map { [SectionModel(model: (), items: $0)] }
             .bind(to: self.collectionView.rx.items(dataSource: getCagegoriesDataSource()))
             .disposed(by: bag)
@@ -66,27 +61,11 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
 
 extension HomeVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        var vc: CommandDetailVC?
-        var didSelectValidCategory = false
-        
-        viewModel.categorieS.subscribe(onNext: { [weak self] categories in
-            guard self != nil else {
-                return
-            }
-            if indexPath.row < categories.count {
-                let selectedCategory = categories[indexPath.row]
-                vc = CommandDetailVC.instantiate(viewModel: CommandDetailVM(selectedCategory))
-                didSelectValidCategory = true
-            }
-        }).disposed(by: bag)
-        
-        viewModel.fetchData()
-        
-        DispatchQueue.main.async { [weak self] in
-            guard let self = self, let vc = vc, didSelectValidCategory else {
-                return
-            }
-            self.navigationController?.pushViewController(vc, animated: true)
+        do {
+            let item: Category = try collectionView.rx.model(at: indexPath)
+            let vc = CommandDetailVC.instantiate(viewModel: CommandDetailVM(item))
+            navigationController?.pushViewController(vc, animated: true)
+        } catch {
         }
     }
 }

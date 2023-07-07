@@ -8,19 +8,29 @@
 import Foundation
 import RxSwift
 import RxCocoa
+
 class HomeVM: BaseVM {
     
-    let categorieS = PublishSubject<[Category]>()
+    let categoriesS = PublishSubject<[Category]>()
     
-    private var categories: [Category] = []
+    override init() {
+        super.init()
+        
+        trigger.asObservable()
+            .flatMapLatest { _ -> Observable<[Category]> in
+                self.getCategories()
+            }
+            .subscribe(onNext: {[weak self] categories in
+                guard let self = self else { return }
+                self.categoriesS.onNext(categories)
+            }).disposed(by: bag)
+    }
     
     func fetchData() {
-        Respository().getCommands()
-            .subscribe(onNext: {[weak self] categories in
-                guard let self = self else {
-                    return
-                }
-                self.categorieS.onNext(categories)
-            }).disposed(by: bag)
+        trigger.accept(())
+    }
+    
+    private func getCategories() -> Observable<[Category]> {
+        return respository.getCategories()
     }
 }
