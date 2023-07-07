@@ -14,6 +14,8 @@ class CommandDetailVC: BaseVC<CommandDetailVM> {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    private var numberOfSection: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,7 +28,6 @@ class CommandDetailVC: BaseVC<CommandDetailVM> {
     
     override func addEventForViews() {
         super.addEventForViews()
-        
         
         tableView.rx
             .modelSelected(Command.self)
@@ -65,6 +66,8 @@ class CommandDetailVC: BaseVC<CommandDetailVM> {
         
         tableView.delegate = self
         
+        tableView.separatorStyle = .none
+        
         tableView.registerCellNib(CommandCell.self)
     }
     
@@ -78,17 +81,6 @@ class CommandDetailVC: BaseVC<CommandDetailVM> {
 extension CommandDetailVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        58
-    }
-
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 16))
-        view.backgroundColor = .clear
-        return view
-    }
-
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 16
+        74
     }
 }
-
