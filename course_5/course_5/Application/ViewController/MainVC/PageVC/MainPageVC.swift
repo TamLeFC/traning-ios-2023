@@ -9,7 +9,7 @@ import UIKit
 
 class MainPageVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
-    lazy var pages: [UIViewController] = [CommandVC(), SetupVC()]
+    lazy var pages: [UIViewController] = [CategoryVC(), SetupVC()]
     
     private var currentPageIndex = -1
     

@@ -10,7 +10,9 @@ import RxSwift
 
 class Repository {
     
-    func getCommands() -> Observable<[Category]> {
+    private var commandDAO = CommandDAO(config: DBManager.shared().config)
+    
+    func getCategories() -> Observable<[Category]> {
         if let path = Bundle.main.url(forResource: "commands", withExtension: "json") {
             do {
                 let data = try Data(contentsOf: path)
@@ -40,5 +42,17 @@ class Repository {
             }
         }
         return Observable.just([])
+    }
+    
+    func getFavoriteds() -> Observable<[Command]> {
+        return commandDAO.findAll()
+    }
+    
+    func addFavoriteds(_ command: Command) -> RxSwift.Observable<Command> {
+        return commandDAO.save(command.asRealm())
+    }
+    
+    func deleteFavorited(_ command: Command) -> Observable<Void> {
+        return commandDAO.delete(command.asRealm())
     }
 }

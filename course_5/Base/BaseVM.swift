@@ -15,4 +15,7 @@ class BaseVM {
     
     let trigger = PublishRelay<Void>()
     
+    deinit {
+        print("deinit :: >>>> \(String(describing: self)) <<<<")
+    }
 }

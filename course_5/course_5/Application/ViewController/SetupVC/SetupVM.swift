@@ -12,15 +12,27 @@ class SetupVM: BaseVM {
     
     let setupsS: PublishSubject<[Setup]> = PublishSubject()
     
-    private var setups: [Setup] = []
-    
-    func fetchData(){
-        repository.getSetups()
+    override init() {
+        super.init()
+        
+        trigger.asObservable()
+            .flatMapLatest { _ -> Observable<[Setup]> in
+                self.getSetups()
+            }
             .subscribe(onNext: {[weak self] setups in
                 guard let self = self else { return }
                 let itemsFromIndex4 = Array(setups.suffix(from: 4))
                 self.setupsS.onNext(itemsFromIndex4)
             }).disposed(by: bag)
+        
+    }
+    
+    func fetchData(){
+        trigger.accept(())
+    }
+    
+    private func getSetups() -> Observable<[Setup]> {
+        return repository.getSetups()
     }
 }
 

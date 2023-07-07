@@ -1,80 +1,84 @@
 //
-//  CommandVC.swift
+//  VoiceVC.swift
 //  course_5
 //
 //  Created by Mobile Dev on 26/06/2023.
 //
 
 import UIKit
-import RxSwift
 import RxDataSources
 
 class CommandVC: BaseVC<CommandVM> {
+
+    @IBOutlet weak var appLabel: UILabel!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    init() {
+        super.init(nibName: nil, bundle: nil)
+    }
     
-    private var categories: [Category] = []
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        viewModel = CommandVM()
-        
+    
         initViews()
-        bindViewModel()
+        
         viewModel.fetchData()
     }
     
     override func initViews() {
         super.initViews()
-        configureListView()
+        
     }
     
     override func configureListView() {
         super.configureListView()
         
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        layout.sectionInset = UIEdgeInsets(top: 24, left: 0, bottom: 24, right: 0)
-        collectionView.setCollectionViewLayout(layout, animated: true)
-        
-        let nib = UINib(nibName: CommandCell.identifier, bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: CommandCell.identifier)
-        
-        collectionView.delegate = self
- 
-        collectionView.showsVerticalScrollIndicator = false
+        appLabel.font = UIFont(name: "Inter-Medium", size: 16)
+        tableView.registerCellNib(CommandCell.self)
     }
     
-    override func bindViewModel(){
+    override func bindViewModel() {
         super.bindViewModel()
         
-        viewModel?.categoriesS
-            .subscribe(onNext: { [weak self] categories in
-                self?.categories = categories
+        viewModel.titleS
+            .asObservable()
+            .subscribe(onNext: {[weak self] title in
+                guard let self = self else { return }
+                self.titleLabel.text = title
+            }).disposed(by: bag)
+        
+        viewModel.commandS
+            .map { [SectionModel(model: (), items: $0)] }
+            .bind(
+                to: tableView.rx.items(
+                    dataSource: getCommandsDataSource(onFavoriteChanged: { [weak self] cmd in
+                        guard let self = self else { return }
+                        self.viewModel.favoriteChanged(cmd)
+                    })
+                )
+            )
+            .disposed(by: bag)
+    }
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    override func addEventForViews() {
+        super.addEventForViews()
+        
+        tableView.rx
+            .modelSelected(Command.self)
+            .subscribe(onNext: { [weak self] item in
+                guard self != nil else { return }
+                //MARK: - todo something
             })
             .disposed(by: bag)
-        viewModel?.categoriesS.asObserver()
-            .map{ [SectionModel(model: (), items: $0)] }
-            .bind(to: self.collectionView.rx.items(dataSource: getCategoriesDataSource()))
-            .disposed(by: bag)
-       
-    }
-    
-}
-
-extension CommandVC: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let commandCellSpacing: CGFloat = 16
-        let width = (collectionView.frame.width - (commandCellSpacing * 3) ) / 4
-        let height = width + 30
-        return CGSize(width: width, height: height)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedCategory = categories[indexPath.row]
-        let voiceVM = VoiceVM(selectedCategory)
-        let vc = VoiceVC.instantiate(viewModel: voiceVM)
-        navigationController?.pushViewController(vc, animated: true)
     }
 }

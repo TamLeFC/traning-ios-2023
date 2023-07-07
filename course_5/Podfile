@@ -6,10 +6,13 @@ target 'course_5' do
   use_frameworks!
 
   # Pods for course_5
-  pod 'ObjectMapper', '~> 4.2.0'
+  pod 'ObjectMapper', '4.2.0'
   pod 'RxSwift', '6.5.0'
   pod 'RxCocoa', '6.5.0'
   pod 'RxSwiftExt', '6.0.1'
   pod 'RxDataSources', '5.0.0'
+  pod 'RealmSwift'
+  pod 'RxRealm'
+
 
 end

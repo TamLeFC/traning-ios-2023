@@ -19,6 +19,8 @@ class BaseVC<VM: BaseVM>: UIViewController {
         super.viewDidLoad()
         
         initViews()
+        configureListView()
+        addEventForViews()
         bindViewModel()
     }
     
@@ -29,6 +31,10 @@ class BaseVC<VM: BaseVM>: UIViewController {
     open func addEventForViews() { }
     
     open func bindViewModel() { }
+    
+    deinit {
+        print("deinit :: >>>> \(String(describing: self)) <<<<")
+    }
 }
 
 extension BaseVC {

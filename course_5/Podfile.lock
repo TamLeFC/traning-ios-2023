@@ -1,6 +1,11 @@
 PODS:
   - Differentiator (5.0.0)
   - ObjectMapper (4.2.0)
+  - Realm (10.41.0):
+    - Realm/Headers (= 10.41.0)
+  - Realm/Headers (10.41.0)
+  - RealmSwift (10.41.0):
+    - Realm (= 10.41.0)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
     - RxSwift (= 6.5.0)
@@ -8,6 +13,11 @@ PODS:
     - Differentiator (~> 5.0)
     - RxCocoa (~> 6.0)
     - RxSwift (~> 6.0)
+  - RxRealm (5.0.4):
+    - Realm (~> 10.21)
+    - RealmSwift (~> 10.21)
+    - RxCocoa (~> 6.1)
+    - RxSwift (~> 6.1)
   - RxRelay (6.5.0):
     - RxSwift (= 6.5.0)
   - RxSwift (6.5.0)
@@ -21,9 +31,11 @@ PODS:
     - RxSwiftExt/Core
 
 DEPENDENCIES:
-  - ObjectMapper (~> 4.2.0)
+  - ObjectMapper (= 4.2.0)
+  - RealmSwift
   - RxCocoa (= 6.5.0)
   - RxDataSources (= 5.0.0)
+  - RxRealm
   - RxSwift (= 6.5.0)
   - RxSwiftExt (= 6.0.1)
 
@@ -31,8 +43,11 @@ SPEC REPOS:
   trunk:
     - Differentiator
     - ObjectMapper
+    - Realm
+    - RealmSwift
     - RxCocoa
     - RxDataSources
+    - RxRealm
     - RxRelay
     - RxSwift
     - RxSwiftExt
@@ -40,12 +55,15 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  Realm: 669efee7dc1ce0aa9f6739a60f8c0df0a3835067
+  RealmSwift: 6b7b0e91b79dc66d5cfceeb3b319cacfc9b1a70e
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
+  RxRealm: 666c8785327fe2fff972a3093b35dc7055c1ca38
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   RxSwiftExt: d61c4b9b06e0a448041b1c659e0f1b5c5a035afc
 
-PODFILE CHECKSUM: 7231ade3cb11c2675ac4bf479cf6851d0ddef1cd
+PODFILE CHECKSUM: 219c81e8047dbf26785e0af566401aa94ed32872
 
 COCOAPODS: 1.12.1
