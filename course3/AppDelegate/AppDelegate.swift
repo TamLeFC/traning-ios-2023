@@ -24,7 +24,7 @@ extension AppDelegate {
     private func windowMainConfig() {
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        window?.rootViewController = UINavigationController(rootViewController: MainVC())
+        window?.rootViewController = UINavigationController(rootViewController: MainVC.instantiate(viewModel: MainVM()))
         window?.makeKeyAndVisible()
     }
 }

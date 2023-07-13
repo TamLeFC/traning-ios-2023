@@ -11,7 +11,7 @@ import RxCocoa
 class BaseVM {
 
     let bag = DisposeBag()
-    let repository = Repository()
+    let repository: Repository = RepositoryImp()
     
     let trigger = PublishRelay<Void>()
     
