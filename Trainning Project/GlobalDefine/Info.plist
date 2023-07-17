@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>poppins_light.ttf</string>
+		<string>poppins_semibold.ttf</string>
+		<string>minecraft_regular.otf</string>
+		<string>minecrafter_reg.ttf</string>
+		<string>poppins_medium.ttf</string>
+		<string>space_grotesk_bold.ttf</string>
+		<string>poppins_bold.ttf</string>
+		<string>minecraft_bold_italic.otf</string>
+		<string>poppins_regular.ttf</string>
+		<string>minecrafter_alt.ttf</string>
+		<string>minecraft_bold.otf</string>
+		<string>space_grotesk_light.ttf</string>
+		<string>space_grotesk_medium.ttf</string>
+		<string>poppins_italic.ttf</string>
+		<string>space_grotesk_regular.ttf</string>
+		<string>minecraft_italic.otf</string>
+	</array>
+</dict>
+</plist>
