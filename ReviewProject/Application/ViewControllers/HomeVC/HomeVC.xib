@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="Course6" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="ReviewProject" customModuleProvider="target">
             <connections>
                 <outlet property="listKnotCollectionView" destination="UKx-7X-Mdo" id="ZDK-lh-0Qo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -31,7 +31,7 @@
                 </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" red="0.92941176470588238" green="0.94509803921568625" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="UKx-7X-Mdo" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="43O-c0-TEu"/>
                 <constraint firstItem="UKx-7X-Mdo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="HmR-NV-uqH"/>
