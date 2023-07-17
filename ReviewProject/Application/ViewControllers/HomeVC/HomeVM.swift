@@ -2,15 +2,15 @@ import RxSwift
 import RxCocoa
 
 class HomeVM: BaseVM {
-    let knotsS = PublishSubject<[Knot]>()
+    let knotsS = PublishSubject<[Addon]>()
     
     override init() {
         super.init()
         
         trigger
             .asObservable()
-            .flatMapLatest { _ -> Observable<[Knot]> in
-                self.repository.getKnots()
+            .flatMapLatest { _ -> Observable<[Addon]> in
+                self.repository.getAddons()
                     .map { $0.data }
                     .asObservable()
             }

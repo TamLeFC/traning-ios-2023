@@ -66,9 +66,9 @@ extension HomeVC {
         
         listKnotCollectionView
             .rx
-            .modelSelected(Knot.self)
+            .modelSelected(Addon.self)
             .subscribe(onNext: { item in
-                let vc = KnotDetailVC.instantiate(viewModel: KnotDetailVM(id: item.id))
+                let vc = KnotDetailVC.instantiate(viewModel: KnotDetailVM(id: item.itemId))
                 self.navigationController?.pushViewController(vc, animated: true)
             })
             .disposed(by: bag)

@@ -1,5 +1,5 @@
 import RxSwift
 
 protocol Repository {
-    func getKnots() -> Single<ListKnotResponse>
+    func getAddons() -> Single<AddonsResponse>
 }

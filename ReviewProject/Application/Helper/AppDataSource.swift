@@ -1,7 +1,7 @@
 import RxDataSources
 
-func getKnotsDataSource() -> RxCollectionViewSectionedReloadDataSource<SectionModel<Void, Knot>> {
-    return RxCollectionViewSectionedReloadDataSource<SectionModel<Void, Knot>>(
+func getKnotsDataSource() -> RxCollectionViewSectionedReloadDataSource<SectionModel<Void, Addon>> {
+    return RxCollectionViewSectionedReloadDataSource<SectionModel<Void, Addon>>(
         configureCell: {
             (dataSource, collectionView, indexPath, item) -> UICollectionViewCell in
             let cell = collectionView.dequeueReuseable(ofType: HomeCollectionViewCell.self, indexPath: indexPath)

@@ -10,10 +10,8 @@
 		80F275492A64DA04000818EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80F275482A64DA04000818EE /* Assets.xcassets */; };
 		80F275952A64DAF7000818EE /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F2755A2A64DAF6000818EE /* Repository.swift */; };
 		80F275962A64DAF7000818EE /* RepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F2755B2A64DAF6000818EE /* RepositoryImp.swift */; };
-		80F275972A64DAF7000818EE /* Knot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F2755D2A64DAF6000818EE /* Knot.swift */; };
-		80F275982A64DAF7000818EE /* Command.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 80F2755E2A64DAF6000818EE /* Command.xcdatamodeld */; };
-		80F275992A64DAF7000818EE /* ListKnotResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F275622A64DAF6000818EE /* ListKnotResponse.swift */; };
-		80F2759A2A64DAF7000818EE /* KnotResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F275632A64DAF6000818EE /* KnotResponse.swift */; };
+		80F275972A64DAF7000818EE /* Addon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F2755D2A64DAF6000818EE /* Addon.swift */; };
+		80F2759A2A64DAF7000818EE /* AddonsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F275632A64DAF6000818EE /* AddonsResponse.swift */; };
 		80F2759B2A64DAF7000818EE /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F275642A64DAF6000818EE /* ErrorResponse.swift */; };
 		80F2759C2A64DAF7000818EE /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F275652A64DAF6000818EE /* ApiService.swift */; };
 		80F2759D2A64DAF7000818EE /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F275682A64DAF6000818EE /* NetworkProvider.swift */; };
@@ -80,10 +78,8 @@
 		80F2754D2A64DA04000818EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80F2755A2A64DAF6000818EE /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		80F2755B2A64DAF6000818EE /* RepositoryImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryImp.swift; sourceTree = "<group>"; };
-		80F2755D2A64DAF6000818EE /* Knot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Knot.swift; sourceTree = "<group>"; };
-		80F2755F2A64DAF6000818EE /* Command.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Command.xcdatamodel; sourceTree = "<group>"; };
-		80F275622A64DAF6000818EE /* ListKnotResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListKnotResponse.swift; sourceTree = "<group>"; };
-		80F275632A64DAF6000818EE /* KnotResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnotResponse.swift; sourceTree = "<group>"; };
+		80F2755D2A64DAF6000818EE /* Addon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Addon.swift; sourceTree = "<group>"; };
+		80F275632A64DAF6000818EE /* AddonsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddonsResponse.swift; sourceTree = "<group>"; };
 		80F275642A64DAF6000818EE /* ErrorResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		80F275652A64DAF6000818EE /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		80F275682A64DAF6000818EE /* NetworkProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
@@ -206,8 +202,8 @@
 		80F275582A64DAF6000818EE /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				80F275592A64DAF6000818EE /* Respository */,
 				80F2755C2A64DAF6000818EE /* Model */,
+				80F275592A64DAF6000818EE /* Respository */,
 				80F275602A64DAF6000818EE /* Remote */,
 			);
 			path = Data;
@@ -225,8 +221,7 @@
 		80F2755C2A64DAF6000818EE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				80F2755D2A64DAF6000818EE /* Knot.swift */,
-				80F2755E2A64DAF6000818EE /* Command.xcdatamodeld */,
+				80F2755D2A64DAF6000818EE /* Addon.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -235,8 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				80F275612A64DAF6000818EE /* Response */,
-				80F275652A64DAF6000818EE /* ApiService.swift */,
 				80F275662A64DAF6000818EE /* Network */,
+				80F275652A64DAF6000818EE /* ApiService.swift */,
 				80F2756E2A64DAF6000818EE /* ApiServiceImp.swift */,
 			);
 			path = Remote;
@@ -245,8 +240,7 @@
 		80F275612A64DAF6000818EE /* Response */ = {
 			isa = PBXGroup;
 			children = (
-				80F275622A64DAF6000818EE /* ListKnotResponse.swift */,
-				80F275632A64DAF6000818EE /* KnotResponse.swift */,
+				80F275632A64DAF6000818EE /* AddonsResponse.swift */,
 				80F275642A64DAF6000818EE /* ErrorResponse.swift */,
 			);
 			path = Response;
@@ -292,9 +286,9 @@
 			isa = PBXGroup;
 			children = (
 				80F275722A64DAF7000818EE /* Extensions */,
+				80F2758D2A64DAF7000818EE /* Helper */,
 				80F2757B2A64DAF7000818EE /* ViewControllers */,
 				80F2758B2A64DAF7000818EE /* Views */,
-				80F2758D2A64DAF7000818EE /* Helper */,
 				80F275902A64DAF7000818EE /* Base */,
 			);
 			path = Application;
@@ -580,7 +574,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80F2759A2A64DAF7000818EE /* KnotResponse.swift in Sources */,
+				80F2759A2A64DAF7000818EE /* AddonsResponse.swift in Sources */,
 				80F275B92A64DAF7000818EE /* ReachabilityManager.swift in Sources */,
 				80F275A22A64DAF7000818EE /* ApiServiceImp.swift in Sources */,
 				80F275A82A64DAF7000818EE /* String.swift in Sources */,
@@ -600,7 +594,6 @@
 				80F275A42A64DAF7000818EE /* UIColor.swift in Sources */,
 				80F275A02A64DAF7000818EE /* AppNetwork.swift in Sources */,
 				80F2759D2A64DAF7000818EE /* NetworkProvider.swift in Sources */,
-				80F275992A64DAF7000818EE /* ListKnotResponse.swift in Sources */,
 				80F275AE2A64DAF7000818EE /* TableViewCell.swift in Sources */,
 				80F275BB2A64DAF7000818EE /* BaseVC.swift in Sources */,
 				80F275B42A64DAF7000818EE /* KnotDetailCollectionViewCell.swift in Sources */,
@@ -609,14 +602,13 @@
 				80F275E62A64E91B000818EE /* InvertedCornerView.swift in Sources */,
 				80F275B72A64DAF7000818EE /* GradientView.swift in Sources */,
 				80F275AA2A64DAF7000818EE /* UILabel.swift in Sources */,
-				80F275972A64DAF7000818EE /* Knot.swift in Sources */,
+				80F275972A64DAF7000818EE /* Addon.swift in Sources */,
 				80F275A62A64DAF7000818EE /* UICollectionView.swift in Sources */,
 				80F275952A64DAF7000818EE /* Repository.swift in Sources */,
 				80F2759E2A64DAF7000818EE /* NetworkConfig.swift in Sources */,
 				80F275BC2A64DAF7000818EE /* BaseCollectionViewCell.swift in Sources */,
 				80F275B82A64DAF7000818EE /* AppDataSource.swift in Sources */,
 				80F275AD2A64DAF7000818EE /* HomeCollectionViewCell.swift in Sources */,
-				80F275982A64DAF7000818EE /* Command.xcdatamodeld in Sources */,
 				80F2759C2A64DAF7000818EE /* ApiService.swift in Sources */,
 				80F2759B2A64DAF7000818EE /* ErrorResponse.swift in Sources */,
 				80F275AB2A64DAF7000818EE /* UIView+Shadow.swift in Sources */,
@@ -821,19 +813,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		80F2755E2A64DAF6000818EE /* Command.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				80F2755F2A64DAF6000818EE /* Command.xcdatamodel */,
-			);
-			currentVersion = 80F2755F2A64DAF6000818EE /* Command.xcdatamodel */;
-			path = Command.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 80F275342A64DA03000818EE /* Project object */;
 }

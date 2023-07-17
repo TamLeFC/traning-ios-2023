@@ -22,16 +22,16 @@ class KnotDetailVC: BaseVC<KnotDetailVM> {
     override func bindViewModel() {
         super.bindViewModel()
         
-        viewModel.knotS.subscribe {[weak self] knot in
+        viewModel.knotS.subscribe {[weak self] addon in
             guard let self = self else { return }
-            self.previewImageView.kf.setImage(with: URL(string: knot.element!.preview))
-            self.titleLabel.text = knot.element?.title
-            self.descriptionLabel.text = knot.element?.description
+            self.previewImageView.kf.setImage(with: URL(string: addon.element!.thumbUrl))
+            self.titleLabel.text = addon.element?.itemName
+            self.descriptionLabel.text = addon.element?.description
         }.disposed(by: bag)
         
         viewModel.knotS
             .asObserver()
-            .map { [SectionModel(model: (), items: $0.newMedia)] }
+            .map { [SectionModel(model: (), items: [$0.imageUrl])] }
             .bind(to: self.newMediaCollectionView.rx.items(dataSource: getNewMediaKnotDataSource()))
             .disposed(by: bag)
         

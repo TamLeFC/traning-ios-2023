@@ -8,11 +8,7 @@ class RepositoryImp: Repository {
     
     let apiService: ApiService = ApiServiceImp()
     
-    func getKnots() -> Single<ListKnotResponse> {
-        return apiService.getKnots()
-    }
-    
-    func getDetailKnot(id: String) -> Single<KnotResponse> {
-        return apiService.getDetailKnot(id: id)
+    func getAddons() -> Single<AddonsResponse> {
+        return apiService.getAddons()
     }
 }

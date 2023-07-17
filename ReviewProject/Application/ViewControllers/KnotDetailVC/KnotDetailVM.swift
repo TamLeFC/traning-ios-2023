@@ -2,7 +2,7 @@ import RxSwift
 import RxCocoa
 
 class KnotDetailVM: BaseVM {
-    let knotS = PublishSubject<Knot>()
+    let knotS = PublishSubject<Addon>()
     
     private let id: String
     
@@ -10,20 +10,20 @@ class KnotDetailVM: BaseVM {
         self.id = id
         super.init()
         
-        trigger
-            .asObservable()
-            .flatMapLatest { _ -> Observable<[Knot]> in
-                self.repository.getDetailKnot(id: id)
-                    .map { $0.data }
-                    .asObservable()
-            }
-            .subscribe(onNext: {[weak self] knot in
-                guard let self = self else { return }
-                self.knotS.onNext(knot.first!)
-            }, onError: {[weak self] error in
-                guard let _ = self else { return }
-                //MARK: - handle error
-            }).disposed(by: bag)
+//        trigger
+//            .asObservable()
+//            .flatMapLatest { _ -> Observable<[Addon]> in
+//                self.repository.getAddons()(id: id)
+//                    .map { $0.data }
+//                    .asObservable()
+//            }
+//            .subscribe(onNext: {[weak self] knot in
+//                guard let self = self else { return }
+//                self.knotS.onNext(knot.first!)
+//            }, onError: {[weak self] error in
+//                guard let _ = self else { return }
+//                //MARK: - handle error
+//            }).disposed(by: bag)
     }
     
     func fetchData() {

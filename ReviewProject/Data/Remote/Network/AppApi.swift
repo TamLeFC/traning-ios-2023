@@ -2,8 +2,7 @@ import Alamofire
 import Moya
 
 enum AppApi {
-    case knots
-    case detailKnot(id: String)
+    case addons
 }
 
 extension AppApi: TargetType {
@@ -17,10 +16,8 @@ extension AppApi: TargetType {
     //MARK: -- path
     var path: String {
         switch self {
-        case .knots:
-            return "knots"
-        case .detailKnot(let id):
-            return "knots/\(id)"
+        case .addons:
+            return "get_hot_items_home"
         }
     }
     

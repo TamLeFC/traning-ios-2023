@@ -8,13 +8,10 @@ final class ApiServiceImp: ApiService {
     
     //MARK: -- Demo
     
-    func getKnots() -> Single<ListKnotResponse> {
-        return appNetwork.requestObject(.knots, type: ListKnotResponse.self)
+    func getAddons() -> Single<AddonsResponse> {
+        return appNetwork.requestObject(.addons, type: AddonsResponse.self)
     }
     
-    func getDetailKnot(id: String) -> Single<KnotResponse> {
-        return appNetwork.requestObject(.detailKnot(id: id), type: KnotResponse.self)
-    }
     //MARK: App
 
     

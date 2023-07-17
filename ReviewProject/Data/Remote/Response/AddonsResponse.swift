@@ -1,13 +1,13 @@
 import ObjectMapper
 
-struct KnotResponse: Mappable {
+struct AddonsResponse: Mappable {
     
-    var data: [Knot] = []
+    var data: [Addon] = []
     
     init?(map: Map) {}
     
     mutating func mapping(map: Map) {
-        data <- map["data"]
+        data <- map[""]
     }
     
 }
