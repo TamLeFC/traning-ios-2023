@@ -1,9 +1,8 @@
 import UIKit
 import Kingfisher
 
-class HomeCollectionViewCell: BaseCollectionViewCell {
+class ListAddonCollectionViewCell: BaseCollectionViewCell {
     
-
     @IBOutlet weak var thumbImageView: UIImageView!
     @IBOutlet weak var itemNameLabel: UILabel!
     @IBOutlet weak var authorNameLabel: UILabel!

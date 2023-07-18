@@ -1,9 +1,8 @@
 import UIKit
 import RxDataSources
 
-class HomeVC: BaseVC<HomeVM> {
+class ListAddonVC: BaseVC<ListAddonVM> {
 
-    
     @IBOutlet weak var listAddonCollectionView: UICollectionView!
     
     override func configureListView() {
@@ -25,7 +24,7 @@ class HomeVC: BaseVC<HomeVM> {
     }
 }
 
-extension HomeVC: UICollectionViewDelegateFlowLayout {
+extension ListAddonVC: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 24
@@ -44,10 +43,10 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
     
 }
 
-extension HomeVC {
+extension ListAddonVC {
     private func setupCollectionView() {
-        let nib = UINib(nibName: HomeCollectionViewCell.identifier, bundle: nil)
-        listAddonCollectionView.register(nib, forCellWithReuseIdentifier: HomeCollectionViewCell.identifier)
+        let nib = UINib(nibName: ListAddonCollectionViewCell.identifier, bundle: nil)
+        listAddonCollectionView.register(nib, forCellWithReuseIdentifier: ListAddonCollectionViewCell.identifier)
         
         listAddonCollectionView.delegate = self
     }
@@ -68,7 +67,7 @@ extension HomeVC {
             .rx
             .modelSelected(Addon.self)
             .subscribe(onNext: { item in
-                let vc = KnotDetailVC.instantiate(viewModel: KnotDetailVM(id: item.itemId))
+                let vc = AddonDetailVC.instantiate(viewModel: AddonDetailVM(addon: item))
                 self.navigationController?.pushViewController(vc, animated: true)
             })
             .disposed(by: bag)

@@ -13,6 +13,10 @@ target 'ReviewProject' do
   pod 'RxSwiftExt'
   pod 'RxDataSources'
 
+  #realm
+  pod 'RealmSwift'
+  pod 'RxRealm'
+
   #api request
   pod 'Alamofire'
   pod 'RxAlamofire'

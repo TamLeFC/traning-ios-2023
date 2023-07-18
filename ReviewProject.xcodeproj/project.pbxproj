@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80BE05172A662DBC0090AB96 /* ModelConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BE050B2A662DBC0090AB96 /* ModelConvertibleType.swift */; };
+		80BE05182A662DBC0090AB96 /* RealmRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BE050C2A662DBC0090AB96 /* RealmRepresentable.swift */; };
+		80BE05192A662DBC0090AB96 /* Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BE050D2A662DBC0090AB96 /* Reactive.swift */; };
+		80BE051A2A662DBC0090AB96 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BE050E2A662DBC0090AB96 /* DBManager.swift */; };
+		80BE051B2A662DBC0090AB96 /* AddonDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BE05112A662DBC0090AB96 /* AddonDAO.swift */; };
+		80BE051C2A662DBC0090AB96 /* BaseDaoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BE05132A662DBC0090AB96 /* BaseDaoService.swift */; };
+		80BE051D2A662DBC0090AB96 /* BaseDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BE05142A662DBC0090AB96 /* BaseDao.swift */; };
+		80BE051E2A662DBC0090AB96 /* RAddon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BE05162A662DBC0090AB96 /* RAddon.swift */; };
 		80F275492A64DA04000818EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80F275482A64DA04000818EE /* Assets.xcassets */; };
 		80F275952A64DAF7000818EE /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F2755A2A64DAF6000818EE /* Repository.swift */; };
 		80F275962A64DAF7000818EE /* RepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F2755B2A64DAF6000818EE /* RepositoryImp.swift */; };
@@ -28,16 +36,14 @@
 		80F275A92A64DAF7000818EE /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F275782A64DAF7000818EE /* UIImage.swift */; };
 		80F275AA2A64DAF7000818EE /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F275792A64DAF7000818EE /* UILabel.swift */; };
 		80F275AB2A64DAF7000818EE /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F2757A2A64DAF7000818EE /* UIView+Shadow.swift */; };
-		80F275AC2A64DAF7000818EE /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F2757D2A64DAF7000818EE /* HomeVM.swift */; };
-		80F275AD2A64DAF7000818EE /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F2757F2A64DAF7000818EE /* HomeCollectionViewCell.swift */; };
-		80F275AF2A64DAF7000818EE /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80F275812A64DAF7000818EE /* HomeCollectionViewCell.xib */; };
-		80F275B02A64DAF7000818EE /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80F275822A64DAF7000818EE /* HomeVC.xib */; };
-		80F275B12A64DAF7000818EE /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F275832A64DAF7000818EE /* HomeVC.swift */; };
-		80F275B22A64DAF7000818EE /* KnotDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F275852A64DAF7000818EE /* KnotDetailVM.swift */; };
-		80F275B32A64DAF7000818EE /* KnotDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80F275872A64DAF7000818EE /* KnotDetailCollectionViewCell.xib */; };
-		80F275B42A64DAF7000818EE /* KnotDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F275882A64DAF7000818EE /* KnotDetailCollectionViewCell.swift */; };
-		80F275B52A64DAF7000818EE /* KnotDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F275892A64DAF7000818EE /* KnotDetailVC.swift */; };
-		80F275B62A64DAF7000818EE /* KnotDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80F2758A2A64DAF7000818EE /* KnotDetailVC.xib */; };
+		80F275AC2A64DAF7000818EE /* ListAddonVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F2757D2A64DAF7000818EE /* ListAddonVM.swift */; };
+		80F275AD2A64DAF7000818EE /* ListAddonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F2757F2A64DAF7000818EE /* ListAddonCollectionViewCell.swift */; };
+		80F275AF2A64DAF7000818EE /* ListAddonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80F275812A64DAF7000818EE /* ListAddonCollectionViewCell.xib */; };
+		80F275B02A64DAF7000818EE /* ListAddonVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80F275822A64DAF7000818EE /* ListAddonVC.xib */; };
+		80F275B12A64DAF7000818EE /* ListAddonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F275832A64DAF7000818EE /* ListAddonVC.swift */; };
+		80F275B22A64DAF7000818EE /* AddonDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F275852A64DAF7000818EE /* AddonDetailVM.swift */; };
+		80F275B52A64DAF7000818EE /* AddonDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F275892A64DAF7000818EE /* AddonDetailVC.swift */; };
+		80F275B62A64DAF7000818EE /* AddonDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80F2758A2A64DAF7000818EE /* AddonDetailVC.xib */; };
 		80F275B72A64DAF7000818EE /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F2758C2A64DAF7000818EE /* GradientView.swift */; };
 		80F275B82A64DAF7000818EE /* AppDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F2758E2A64DAF7000818EE /* AppDataSource.swift */; };
 		80F275B92A64DAF7000818EE /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F2758F2A64DAF7000818EE /* ReachabilityManager.swift */; };
@@ -71,6 +77,14 @@
 
 /* Begin PBXFileReference section */
 		0C204B0C65DBDB490B71BFE2 /* Pods_ReviewProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReviewProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80BE050B2A662DBC0090AB96 /* ModelConvertibleType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelConvertibleType.swift; sourceTree = "<group>"; };
+		80BE050C2A662DBC0090AB96 /* RealmRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmRepresentable.swift; sourceTree = "<group>"; };
+		80BE050D2A662DBC0090AB96 /* Reactive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reactive.swift; sourceTree = "<group>"; };
+		80BE050E2A662DBC0090AB96 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		80BE05112A662DBC0090AB96 /* AddonDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddonDAO.swift; sourceTree = "<group>"; };
+		80BE05132A662DBC0090AB96 /* BaseDaoService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDaoService.swift; sourceTree = "<group>"; };
+		80BE05142A662DBC0090AB96 /* BaseDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDao.swift; sourceTree = "<group>"; };
+		80BE05162A662DBC0090AB96 /* RAddon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAddon.swift; sourceTree = "<group>"; };
 		80F2753C2A64DA03000818EE /* ReviewProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReviewProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80F275482A64DA04000818EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80F2754D2A64DA04000818EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,16 +108,14 @@
 		80F275782A64DAF7000818EE /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		80F275792A64DAF7000818EE /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		80F2757A2A64DAF7000818EE /* UIView+Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
-		80F2757D2A64DAF7000818EE /* HomeVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
-		80F2757F2A64DAF7000818EE /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
-		80F275812A64DAF7000818EE /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
-		80F275822A64DAF7000818EE /* HomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
-		80F275832A64DAF7000818EE /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		80F275852A64DAF7000818EE /* KnotDetailVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnotDetailVM.swift; sourceTree = "<group>"; };
-		80F275872A64DAF7000818EE /* KnotDetailCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KnotDetailCollectionViewCell.xib; sourceTree = "<group>"; };
-		80F275882A64DAF7000818EE /* KnotDetailCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnotDetailCollectionViewCell.swift; sourceTree = "<group>"; };
-		80F275892A64DAF7000818EE /* KnotDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnotDetailVC.swift; sourceTree = "<group>"; };
-		80F2758A2A64DAF7000818EE /* KnotDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KnotDetailVC.xib; sourceTree = "<group>"; };
+		80F2757D2A64DAF7000818EE /* ListAddonVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAddonVM.swift; sourceTree = "<group>"; };
+		80F2757F2A64DAF7000818EE /* ListAddonCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAddonCollectionViewCell.swift; sourceTree = "<group>"; };
+		80F275812A64DAF7000818EE /* ListAddonCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListAddonCollectionViewCell.xib; sourceTree = "<group>"; };
+		80F275822A64DAF7000818EE /* ListAddonVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListAddonVC.xib; sourceTree = "<group>"; };
+		80F275832A64DAF7000818EE /* ListAddonVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAddonVC.swift; sourceTree = "<group>"; };
+		80F275852A64DAF7000818EE /* AddonDetailVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddonDetailVM.swift; sourceTree = "<group>"; };
+		80F275892A64DAF7000818EE /* AddonDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddonDetailVC.swift; sourceTree = "<group>"; };
+		80F2758A2A64DAF7000818EE /* AddonDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddonDetailVC.xib; sourceTree = "<group>"; };
 		80F2758C2A64DAF7000818EE /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		80F2758E2A64DAF7000818EE /* AppDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDataSource.swift; sourceTree = "<group>"; };
 		80F2758F2A64DAF7000818EE /* ReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
@@ -165,6 +177,61 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		80BE05092A662DBC0090AB96 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				80BE050A2A662DBC0090AB96 /* Core */,
+				80BE050F2A662DBC0090AB96 /* DAO */,
+				80BE05152A662DBC0090AB96 /* Entities */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		80BE050A2A662DBC0090AB96 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				80BE050B2A662DBC0090AB96 /* ModelConvertibleType.swift */,
+				80BE050C2A662DBC0090AB96 /* RealmRepresentable.swift */,
+				80BE050D2A662DBC0090AB96 /* Reactive.swift */,
+				80BE050E2A662DBC0090AB96 /* DBManager.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		80BE050F2A662DBC0090AB96 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				80BE05102A662DBC0090AB96 /* AddonDAO */,
+				80BE05122A662DBC0090AB96 /* Base */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		80BE05102A662DBC0090AB96 /* AddonDAO */ = {
+			isa = PBXGroup;
+			children = (
+				80BE05112A662DBC0090AB96 /* AddonDAO.swift */,
+			);
+			path = AddonDAO;
+			sourceTree = "<group>";
+		};
+		80BE05122A662DBC0090AB96 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				80BE05132A662DBC0090AB96 /* BaseDaoService.swift */,
+				80BE05142A662DBC0090AB96 /* BaseDao.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		80BE05152A662DBC0090AB96 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				80BE05162A662DBC0090AB96 /* RAddon.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		80F275332A64DA03000818EE = {
 			isa = PBXGroup;
 			children = (
@@ -199,8 +266,9 @@
 			isa = PBXGroup;
 			children = (
 				80F2755C2A64DAF6000818EE /* Model */,
-				80F275592A64DAF6000818EE /* Respository */,
+				80BE05092A662DBC0090AB96 /* Local */,
 				80F275602A64DAF6000818EE /* Remote */,
+				80F275592A64DAF6000818EE /* Respository */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -308,50 +376,40 @@
 			isa = PBXGroup;
 			children = (
 				80F275E72A64FCC9000818EE /* MainVC */,
-				80F2757C2A64DAF7000818EE /* HomeVC */,
-				80F275842A64DAF7000818EE /* KnotDetailVC */,
+				80F2757C2A64DAF7000818EE /* ListAddonVC */,
+				80F275842A64DAF7000818EE /* AddonDetailVC */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		80F2757C2A64DAF7000818EE /* HomeVC */ = {
+		80F2757C2A64DAF7000818EE /* ListAddonVC */ = {
 			isa = PBXGroup;
 			children = (
 				80F2757E2A64DAF7000818EE /* Cell */,
-				80F275822A64DAF7000818EE /* HomeVC.xib */,
-				80F275832A64DAF7000818EE /* HomeVC.swift */,
-				80F2757D2A64DAF7000818EE /* HomeVM.swift */,
+				80F275832A64DAF7000818EE /* ListAddonVC.swift */,
+				80F275822A64DAF7000818EE /* ListAddonVC.xib */,
+				80F2757D2A64DAF7000818EE /* ListAddonVM.swift */,
 			);
-			path = HomeVC;
+			path = ListAddonVC;
 			sourceTree = "<group>";
 		};
 		80F2757E2A64DAF7000818EE /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				80F2757F2A64DAF7000818EE /* HomeCollectionViewCell.swift */,
-				80F275812A64DAF7000818EE /* HomeCollectionViewCell.xib */,
+				80F2757F2A64DAF7000818EE /* ListAddonCollectionViewCell.swift */,
+				80F275812A64DAF7000818EE /* ListAddonCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		80F275842A64DAF7000818EE /* KnotDetailVC */ = {
+		80F275842A64DAF7000818EE /* AddonDetailVC */ = {
 			isa = PBXGroup;
 			children = (
-				80F275852A64DAF7000818EE /* KnotDetailVM.swift */,
-				80F275862A64DAF7000818EE /* Cell */,
-				80F275892A64DAF7000818EE /* KnotDetailVC.swift */,
-				80F2758A2A64DAF7000818EE /* KnotDetailVC.xib */,
+				80F275892A64DAF7000818EE /* AddonDetailVC.swift */,
+				80F2758A2A64DAF7000818EE /* AddonDetailVC.xib */,
+				80F275852A64DAF7000818EE /* AddonDetailVM.swift */,
 			);
-			path = KnotDetailVC;
-			sourceTree = "<group>";
-		};
-		80F275862A64DAF7000818EE /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				80F275872A64DAF7000818EE /* KnotDetailCollectionViewCell.xib */,
-				80F275882A64DAF7000818EE /* KnotDetailCollectionViewCell.swift */,
-			);
-			path = Cell;
+			path = AddonDetailVC;
 			sourceTree = "<group>";
 		};
 		80F2758B2A64DAF7000818EE /* Views */ = {
@@ -494,7 +552,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80F275B62A64DAF7000818EE /* KnotDetailVC.xib in Resources */,
+				80F275B62A64DAF7000818EE /* AddonDetailVC.xib in Resources */,
 				80F275492A64DA04000818EE /* Assets.xcassets in Resources */,
 				80F275D82A64DBE3000818EE /* poppins_semibold.ttf in Resources */,
 				80F275E12A64DBE3000818EE /* poppins_regular.ttf in Resources */,
@@ -502,7 +560,7 @@
 				80F275DA2A64DBE3000818EE /* minecrafter_reg.ttf in Resources */,
 				80F275DB2A64DBE3000818EE /* space_grotesk_regular.ttf in Resources */,
 				80F275D62A64DBE3000818EE /* space_grotesk_medium.ttf in Resources */,
-				80F275B02A64DAF7000818EE /* HomeVC.xib in Resources */,
+				80F275B02A64DAF7000818EE /* ListAddonVC.xib in Resources */,
 				80F275DC2A64DBE3000818EE /* minecraft_regular.otf in Resources */,
 				80F275D72A64DBE3000818EE /* space_grotesk_light.ttf in Resources */,
 				80F275E02A64DBE3000818EE /* minecraft_bold_italic.otf in Resources */,
@@ -510,8 +568,7 @@
 				80F275E22A64DBE3000818EE /* poppins_light.ttf in Resources */,
 				80F275E32A64DBE3000818EE /* poppins_bold.ttf in Resources */,
 				80F275EB2A64FCC9000818EE /* MainVC.xib in Resources */,
-				80F275B32A64DAF7000818EE /* KnotDetailCollectionViewCell.xib in Resources */,
-				80F275AF2A64DAF7000818EE /* HomeCollectionViewCell.xib in Resources */,
+				80F275AF2A64DAF7000818EE /* ListAddonCollectionViewCell.xib in Resources */,
 				80F275DD2A64DBE3000818EE /* minecraft_bold.otf in Resources */,
 				80F275D92A64DBE3000818EE /* minecraft_italic.otf in Resources */,
 				80F275DE2A64DBE3000818EE /* space_grotesk_bold.ttf in Resources */,
@@ -571,11 +628,16 @@
 				80F275B92A64DAF7000818EE /* ReachabilityManager.swift in Sources */,
 				80F275A22A64DAF7000818EE /* ApiServiceImp.swift in Sources */,
 				80F275A82A64DAF7000818EE /* String.swift in Sources */,
-				80F275B22A64DAF7000818EE /* KnotDetailVM.swift in Sources */,
-				80F275B12A64DAF7000818EE /* HomeVC.swift in Sources */,
+				80BE051D2A662DBC0090AB96 /* BaseDao.swift in Sources */,
+				80F275B22A64DAF7000818EE /* AddonDetailVM.swift in Sources */,
+				80BE05192A662DBC0090AB96 /* Reactive.swift in Sources */,
+				80F275B12A64DAF7000818EE /* ListAddonVC.swift in Sources */,
 				80F275EC2A64FCC9000818EE /* MainPageVC.swift in Sources */,
-				80F275AC2A64DAF7000818EE /* HomeVM.swift in Sources */,
+				80F275AC2A64DAF7000818EE /* ListAddonVM.swift in Sources */,
+				80BE05172A662DBC0090AB96 /* ModelConvertibleType.swift in Sources */,
 				80F275ED2A64FCC9000818EE /* MainVC.swift in Sources */,
+				80BE051B2A662DBC0090AB96 /* AddonDAO.swift in Sources */,
+				80BE051E2A662DBC0090AB96 /* RAddon.swift in Sources */,
 				80F275A12A64DAF7000818EE /* AppNetworkImp.swift in Sources */,
 				80F275A52A64DAF7000818EE /* UIView+Corner.swift in Sources */,
 				80F275A32A64DAF7000818EE /* AppDelegate.swift in Sources */,
@@ -583,12 +645,12 @@
 				80F275A92A64DAF7000818EE /* UIImage.swift in Sources */,
 				80F275962A64DAF7000818EE /* RepositoryImp.swift in Sources */,
 				80F275BA2A64DAF7000818EE /* BaseTableViewCell.swift in Sources */,
-				80F275B52A64DAF7000818EE /* KnotDetailVC.swift in Sources */,
+				80F275B52A64DAF7000818EE /* AddonDetailVC.swift in Sources */,
 				80F275A42A64DAF7000818EE /* UIColor.swift in Sources */,
 				80F275A02A64DAF7000818EE /* AppNetwork.swift in Sources */,
 				80F2759D2A64DAF7000818EE /* NetworkProvider.swift in Sources */,
 				80F275BB2A64DAF7000818EE /* BaseVC.swift in Sources */,
-				80F275B42A64DAF7000818EE /* KnotDetailCollectionViewCell.swift in Sources */,
+				80BE051A2A662DBC0090AB96 /* DBManager.swift in Sources */,
 				80F275A72A64DAF7000818EE /* UITableView.swift in Sources */,
 				80F2759F2A64DAF7000818EE /* AppApi.swift in Sources */,
 				80F275E62A64E91B000818EE /* InvertedCornerView.swift in Sources */,
@@ -600,9 +662,11 @@
 				80F2759E2A64DAF7000818EE /* NetworkConfig.swift in Sources */,
 				80F275BC2A64DAF7000818EE /* BaseCollectionViewCell.swift in Sources */,
 				80F275B82A64DAF7000818EE /* AppDataSource.swift in Sources */,
-				80F275AD2A64DAF7000818EE /* HomeCollectionViewCell.swift in Sources */,
+				80F275AD2A64DAF7000818EE /* ListAddonCollectionViewCell.swift in Sources */,
 				80F2759C2A64DAF7000818EE /* ApiService.swift in Sources */,
+				80BE051C2A662DBC0090AB96 /* BaseDaoService.swift in Sources */,
 				80F2759B2A64DAF7000818EE /* ErrorResponse.swift in Sources */,
+				80BE05182A662DBC0090AB96 /* RealmRepresentable.swift in Sources */,
 				80F275AB2A64DAF7000818EE /* UIView+Shadow.swift in Sources */,
 				80F275C22A64DB67000818EE /* Configs.swift in Sources */,
 			);

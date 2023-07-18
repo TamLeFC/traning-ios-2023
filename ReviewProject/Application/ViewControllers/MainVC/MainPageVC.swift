@@ -2,7 +2,10 @@ import UIKit
 
 class MainPageVC: UIPageViewController {
 
-    lazy var pages: [UIViewController] = [HomeVC.instantiate(viewModel: HomeVM()), HomeVC.instantiate(viewModel: HomeVM()), HomeVC.instantiate(viewModel: HomeVM())]
+    lazy var pages: [UIViewController] = [
+        ListAddonVC.instantiate(viewModel: ListAddonVM(pageIndex: 0)),
+        ListAddonVC.instantiate(viewModel: ListAddonVM(pageIndex: 1)),
+        ListAddonVC.instantiate(viewModel: ListAddonVM(pageIndex: 2))]
     private var currentPageIndex = 0
     
     override func viewDidLoad() {

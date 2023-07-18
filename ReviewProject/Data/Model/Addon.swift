@@ -20,6 +20,8 @@ struct Addon: Mappable {
     var createTime: String = ""
     var price: String = ""
     
+    var isFavorited: Bool = false
+    
     init?(map: ObjectMapper.Map) {}
     
     mutating func mapping(map: Map) {
@@ -34,7 +36,7 @@ struct Addon: Mappable {
         version <- map["version"]
         size <- map["size"]
         description <- map["description"]
-        shortDescription <- map["shortDescription"]
+        shortDescription <- map["short_description"]
         hotPriority <- map["hot_priority"]
         downloadCount <- map["download_count"]
         videoCode <- map["video_code"]
@@ -43,4 +45,3 @@ struct Addon: Mappable {
         price <- map["price"]
     }
 }
-
