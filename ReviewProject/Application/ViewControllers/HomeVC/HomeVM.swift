@@ -2,7 +2,7 @@ import RxSwift
 import RxCocoa
 
 class HomeVM: BaseVM {
-    let knotsS = PublishSubject<[Addon]>()
+    let addonsS = PublishSubject<[Addon]>()
     
     override init() {
         super.init()
@@ -11,12 +11,12 @@ class HomeVM: BaseVM {
             .asObservable()
             .flatMapLatest { _ -> Observable<[Addon]> in
                 self.repository.getAddons()
-                    .map { $0.data }
+                    .map { $0 }
                     .asObservable()
             }
-            .subscribe(onNext: {[weak self] knots in
+            .subscribe(onNext: {[weak self] addons in
                 guard let self = self else { return }
-                self.knotsS.onNext(knots)
+                self.addonsS.onNext(addons)
             }, onError: {[weak self] error in
                 guard let _ = self else { return }
                 //MARK: - handle error

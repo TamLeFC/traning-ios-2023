@@ -8,7 +8,7 @@ class RepositoryImp: Repository {
     
     let apiService: ApiService = ApiServiceImp()
     
-    func getAddons() -> Single<AddonsResponse> {
+    func getAddons() -> Single<[Addon]> {
         return apiService.getAddons()
     }
 }

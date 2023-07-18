@@ -8,8 +8,8 @@ final class ApiServiceImp: ApiService {
     
     //MARK: -- Demo
     
-    func getAddons() -> Single<AddonsResponse> {
-        return appNetwork.requestObject(.addons, type: AddonsResponse.self)
+    func getAddons() -> Single<[Addon]> {
+        return appNetwork.requestArray(.addons, type: Addon.self)
     }
     
     //MARK: App

@@ -11,7 +11,6 @@
 		80F275952A64DAF7000818EE /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F2755A2A64DAF6000818EE /* Repository.swift */; };
 		80F275962A64DAF7000818EE /* RepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F2755B2A64DAF6000818EE /* RepositoryImp.swift */; };
 		80F275972A64DAF7000818EE /* Addon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F2755D2A64DAF6000818EE /* Addon.swift */; };
-		80F2759A2A64DAF7000818EE /* AddonsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F275632A64DAF6000818EE /* AddonsResponse.swift */; };
 		80F2759B2A64DAF7000818EE /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F275642A64DAF6000818EE /* ErrorResponse.swift */; };
 		80F2759C2A64DAF7000818EE /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F275652A64DAF6000818EE /* ApiService.swift */; };
 		80F2759D2A64DAF7000818EE /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F275682A64DAF6000818EE /* NetworkProvider.swift */; };
@@ -31,7 +30,6 @@
 		80F275AB2A64DAF7000818EE /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F2757A2A64DAF7000818EE /* UIView+Shadow.swift */; };
 		80F275AC2A64DAF7000818EE /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F2757D2A64DAF7000818EE /* HomeVM.swift */; };
 		80F275AD2A64DAF7000818EE /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F2757F2A64DAF7000818EE /* HomeCollectionViewCell.swift */; };
-		80F275AE2A64DAF7000818EE /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F275802A64DAF7000818EE /* TableViewCell.swift */; };
 		80F275AF2A64DAF7000818EE /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80F275812A64DAF7000818EE /* HomeCollectionViewCell.xib */; };
 		80F275B02A64DAF7000818EE /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80F275822A64DAF7000818EE /* HomeVC.xib */; };
 		80F275B12A64DAF7000818EE /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F275832A64DAF7000818EE /* HomeVC.swift */; };
@@ -79,7 +77,6 @@
 		80F2755A2A64DAF6000818EE /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		80F2755B2A64DAF6000818EE /* RepositoryImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryImp.swift; sourceTree = "<group>"; };
 		80F2755D2A64DAF6000818EE /* Addon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Addon.swift; sourceTree = "<group>"; };
-		80F275632A64DAF6000818EE /* AddonsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddonsResponse.swift; sourceTree = "<group>"; };
 		80F275642A64DAF6000818EE /* ErrorResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		80F275652A64DAF6000818EE /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		80F275682A64DAF6000818EE /* NetworkProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
@@ -99,7 +96,6 @@
 		80F2757A2A64DAF7000818EE /* UIView+Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		80F2757D2A64DAF7000818EE /* HomeVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		80F2757F2A64DAF7000818EE /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
-		80F275802A64DAF7000818EE /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		80F275812A64DAF7000818EE /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		80F275822A64DAF7000818EE /* HomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
 		80F275832A64DAF7000818EE /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -240,7 +236,6 @@
 		80F275612A64DAF6000818EE /* Response */ = {
 			isa = PBXGroup;
 			children = (
-				80F275632A64DAF6000818EE /* AddonsResponse.swift */,
 				80F275642A64DAF6000818EE /* ErrorResponse.swift */,
 			);
 			path = Response;
@@ -249,8 +244,8 @@
 		80F275662A64DAF6000818EE /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				80F275672A64DAF6000818EE /* Configure */,
 				80F2756A2A64DAF6000818EE /* AppApi.swift */,
+				80F275672A64DAF6000818EE /* Configure */,
 				80F2756B2A64DAF6000818EE /* AppNetwork */,
 			);
 			path = Network;
@@ -322,10 +317,10 @@
 		80F2757C2A64DAF7000818EE /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
-				80F2757D2A64DAF7000818EE /* HomeVM.swift */,
 				80F2757E2A64DAF7000818EE /* Cell */,
 				80F275822A64DAF7000818EE /* HomeVC.xib */,
 				80F275832A64DAF7000818EE /* HomeVC.swift */,
+				80F2757D2A64DAF7000818EE /* HomeVM.swift */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -334,7 +329,6 @@
 			isa = PBXGroup;
 			children = (
 				80F2757F2A64DAF7000818EE /* HomeCollectionViewCell.swift */,
-				80F275802A64DAF7000818EE /* TableViewCell.swift */,
 				80F275812A64DAF7000818EE /* HomeCollectionViewCell.xib */,
 			);
 			path = Cell;
@@ -434,8 +428,8 @@
 			isa = PBXGroup;
 			children = (
 				80F275E82A64FCC9000818EE /* MainVC.xib */,
-				80F275E92A64FCC9000818EE /* MainPageVC.swift */,
 				80F275EA2A64FCC9000818EE /* MainVC.swift */,
+				80F275E92A64FCC9000818EE /* MainPageVC.swift */,
 			);
 			path = MainVC;
 			sourceTree = "<group>";
@@ -574,7 +568,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80F2759A2A64DAF7000818EE /* AddonsResponse.swift in Sources */,
 				80F275B92A64DAF7000818EE /* ReachabilityManager.swift in Sources */,
 				80F275A22A64DAF7000818EE /* ApiServiceImp.swift in Sources */,
 				80F275A82A64DAF7000818EE /* String.swift in Sources */,
@@ -594,7 +587,6 @@
 				80F275A42A64DAF7000818EE /* UIColor.swift in Sources */,
 				80F275A02A64DAF7000818EE /* AppNetwork.swift in Sources */,
 				80F2759D2A64DAF7000818EE /* NetworkProvider.swift in Sources */,
-				80F275AE2A64DAF7000818EE /* TableViewCell.swift in Sources */,
 				80F275BB2A64DAF7000818EE /* BaseVC.swift in Sources */,
 				80F275B42A64DAF7000818EE /* KnotDetailCollectionViewCell.swift in Sources */,
 				80F275A72A64DAF7000818EE /* UITableView.swift in Sources */,

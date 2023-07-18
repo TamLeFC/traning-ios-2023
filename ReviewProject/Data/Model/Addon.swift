@@ -30,7 +30,7 @@ struct Addon: Mappable {
         fileUrl <- map["file_url"]
         imageUrl <- map["image_url"]
         thumbUrl <- map["thumb_url"]
-        authorName <- map["author _ name"]
+        authorName <- map["author_name"]
         version <- map["version"]
         size <- map["size"]
         description <- map["description"]

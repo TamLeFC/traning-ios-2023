@@ -1,6 +1,6 @@
 import RxDataSources
 
-func getKnotsDataSource() -> RxCollectionViewSectionedReloadDataSource<SectionModel<Void, Addon>> {
+func getAddonsDataSource() -> RxCollectionViewSectionedReloadDataSource<SectionModel<Void, Addon>> {
     return RxCollectionViewSectionedReloadDataSource<SectionModel<Void, Addon>>(
         configureCell: {
             (dataSource, collectionView, indexPath, item) -> UICollectionViewCell in

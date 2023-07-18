@@ -1,5 +1,5 @@
 import RxSwift
 
 protocol ApiService {
-    func getAddons() -> Single<AddonsResponse>
+    func getAddons() -> Single<[Addon]>
 }

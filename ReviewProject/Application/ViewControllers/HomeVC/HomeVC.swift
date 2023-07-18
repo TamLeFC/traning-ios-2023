@@ -4,7 +4,7 @@ import RxDataSources
 class HomeVC: BaseVC<HomeVM> {
 
     
-    @IBOutlet weak var listKnotCollectionView: UICollectionView!
+    @IBOutlet weak var listAddonCollectionView: UICollectionView!
     
     override func configureListView() {
         super.configureListView()
@@ -28,15 +28,15 @@ class HomeVC: BaseVC<HomeVM> {
 extension HomeVC: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 16
+        return 24
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         if let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            let width = collectionView.frame.width - flowLayout.sectionInset.left * 2
+            let size = collectionView.frame.width - flowLayout.sectionInset.left * 2
             
-            return CGSize(width: width, height: width / 3)
+            return CGSize(width: size, height: size * 0.95)
         }
         
         return CGSize()
@@ -47,16 +47,16 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
 extension HomeVC {
     private func setupCollectionView() {
         let nib = UINib(nibName: HomeCollectionViewCell.identifier, bundle: nil)
-        listKnotCollectionView.register(nib, forCellWithReuseIdentifier: HomeCollectionViewCell.identifier)
+        listAddonCollectionView.register(nib, forCellWithReuseIdentifier: HomeCollectionViewCell.identifier)
         
-        listKnotCollectionView.delegate = self
+        listAddonCollectionView.delegate = self
     }
     
     private func bindData() {
-        viewModel.knotsS
+        viewModel.addonsS
             .asObserver()
             .map { [SectionModel(model: (), items: $0)] }
-            .bind(to: self.listKnotCollectionView.rx.items(dataSource: getKnotsDataSource()))
+            .bind(to: self.listAddonCollectionView.rx.items(dataSource: getAddonsDataSource()))
             .disposed(by: bag)
         
         viewModel.fetchData()
@@ -64,7 +64,7 @@ extension HomeVC {
     
     private func onItemSelected() {
         
-        listKnotCollectionView
+        listAddonCollectionView
             .rx
             .modelSelected(Addon.self)
             .subscribe(onNext: { item in
