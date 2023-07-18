@@ -8,48 +8,51 @@
 import ObjectMapper
 
 struct Addon: Mappable {
-//    var itemID: String = ""
-//    var typeID: String = ""
-//    var categoryID: String = ""
+    var itemID: String = ""
     var itemName: String = ""
-//    var fileUrl: String = ""
-//    var imageUrl: String = ""
     var thumbUrl: String = ""
     var authorName: String = ""
-//    var version: String = ""
-//    var size: String = ""
     var description: String = ""
     var shortDescription: String = ""
     var hotPriority: String = ""
     var downloadCount: String = ""
-//    var videoCode: String = ""
-//    var isVerify: String = ""
-//    var createTime: String = ""
-//    var price: String = ""
     var isFavorite: Bool = false
     
     init?(map: Map) {
         
     }
     
+    init(_ itemID: String,
+         _ itemName: String,
+         _ thumbUrl: String,
+         _ authorName: String,
+         _ description: String,
+         _ shortDescription: String,
+         _ hotPriority: String,
+         _ downloadCount: String,
+         _ isFavorite: Bool) {
+        self.itemID = itemID
+        self.itemName = itemName
+        self.thumbUrl = thumbUrl
+        self.authorName = authorName
+        self.description = description
+        self.shortDescription = shortDescription
+        self.hotPriority = hotPriority
+        self.downloadCount = downloadCount
+        self.isFavorite = isFavorite
+        
+    }
+    
     mutating func mapping(map: Map) {
-//        itemID <- map["item_id"]
-//        typeID <- map["type_id"]
-//        categoryID <- map["category_id"]
+        itemID <- map["item_id"]
         itemName <- map["item_name"]
-//        fileUrl <- map["file_url"]
-//        imageUrl <- map["image_url"]
         thumbUrl <- map["thumb_url"]
         authorName <- map["author_name"]
-//        version <- map["version"]
-//        size <- map["size"]
         description <- map["description"]
         shortDescription <- map["short_description"]
         hotPriority <- map["hot_priority"]
         downloadCount <- map["download_count"]
-//        videoCode <- map["video_code"]
-//        isVerify <- map["is_verify"]
-//        createTime <- map["create_time"]
-//        price <- map["price"]
     }
+    
+    
 }

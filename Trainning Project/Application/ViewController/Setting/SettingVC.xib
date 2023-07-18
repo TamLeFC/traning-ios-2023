@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -16,7 +15,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingVC" customModule="Trainning_Project" customModuleProvider="target">
             <connections>
-                <outlet property="collectionView" destination="5t3-OH-ZTd" id="FUm-dQ-ovA"/>
+                <outlet property="tableView" destination="eoF-tc-mSe" id="5YB-a9-Ce6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -51,34 +50,25 @@
                         <constraint firstItem="TyO-jM-iqU" firstAttribute="centerY" secondItem="Fxl-4C-CRR" secondAttribute="centerY" id="s49-Fv-CLe"/>
                     </constraints>
                 </view>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="5t3-OH-ZTd">
-                    <rect key="frame" x="24" y="134" width="366" height="728"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JUB-Nd-c23">
-                        <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eoF-tc-mSe">
+                    <rect key="frame" x="0.0" y="112" width="414" height="750"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eoF-tc-mSe" secondAttribute="trailing" id="5iE-bg-Dtp"/>
                 <constraint firstItem="Fxl-4C-CRR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="7eg-uH-3KH"/>
-                <constraint firstItem="5t3-OH-ZTd" firstAttribute="top" secondItem="Fxl-4C-CRR" secondAttribute="bottom" constant="36" id="SMb-Sb-ozy"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5t3-OH-ZTd" secondAttribute="trailing" constant="24" id="USV-bm-vGk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="eoF-tc-mSe" secondAttribute="bottom" id="VIb-VC-i6u"/>
                 <constraint firstItem="Fxl-4C-CRR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="dz5-Cs-IWV"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="5t3-OH-ZTd" secondAttribute="bottom" id="gbG-2b-yoa"/>
-                <constraint firstItem="5t3-OH-ZTd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="vWV-kJ-0gb"/>
+                <constraint firstItem="eoF-tc-mSe" firstAttribute="top" secondItem="Fxl-4C-CRR" secondAttribute="bottom" constant="14" id="frw-FL-01N"/>
+                <constraint firstItem="eoF-tc-mSe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gph-5t-icC"/>
             </constraints>
             <point key="canvasLocation" x="66" y="21"/>
         </view>
     </objects>
     <resources>
         <image name="ic_avatar" width="30" height="30"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

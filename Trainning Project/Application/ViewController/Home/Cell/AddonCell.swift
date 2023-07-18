@@ -44,4 +44,10 @@ class AddonCell: BaseCollectionViewCell {
         favoriteCountLabel.text = "\(item.hotPriority)k"
         commentCountLabel.text = "\(item.downloadCount)k"
     }
+    
+    
+    @IBAction func moreButtonTouched(_ sender: UIButton) {
+        
+    }
+    
 }

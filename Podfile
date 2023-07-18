@@ -24,6 +24,7 @@ target 'Trainning Project' do
   #convert json object
   pod 'ObjectMapper', '~> 4.2.0'
   
+  #load image
   pod 'Kingfisher', '~> 6.3.1'
   
   post_install do |pi|
@@ -33,4 +34,6 @@ target 'Trainning Project' do
           end
       end
   end
+  #notification banner
+  pod 'NotificationBannerSwift', '~> 3.0.0'
 end

@@ -70,6 +70,13 @@
                                     <constraint firstAttribute="bottom" secondItem="UVd-aO-uRa" secondAttribute="bottom" id="zRH-yf-JJG"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45i-iP-Shf">
+                                <rect key="frame" x="0.0" y="0.0" width="132" height="40"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="moreButtonTouched:" destination="gTV-IL-0wX" eventType="touchUpInside" id="dbX-JW-H4q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -79,9 +86,13 @@
                             <constraint firstItem="Pdi-jn-acd" firstAttribute="leading" secondItem="76L-Hb-vQ6" secondAttribute="leading" id="HOm-Rr-klD"/>
                             <constraint firstAttribute="trailing" secondItem="Pdi-jn-acd" secondAttribute="trailing" id="Lou-fO-SLd"/>
                             <constraint firstAttribute="trailing" secondItem="qoD-35-Qq7" secondAttribute="trailing" constant="36.5" id="RWh-gj-lai"/>
+                            <constraint firstAttribute="bottom" secondItem="45i-iP-Shf" secondAttribute="bottom" id="ZbN-Ma-3eS"/>
                             <constraint firstItem="qoD-35-Qq7" firstAttribute="top" secondItem="76L-Hb-vQ6" secondAttribute="top" constant="12" id="b1Z-fd-ubm"/>
                             <constraint firstItem="qoD-35-Qq7" firstAttribute="leading" secondItem="76L-Hb-vQ6" secondAttribute="leading" constant="36.5" id="dEk-qk-Zbj"/>
+                            <constraint firstItem="45i-iP-Shf" firstAttribute="leading" secondItem="76L-Hb-vQ6" secondAttribute="leading" id="m5y-cq-8va"/>
+                            <constraint firstAttribute="trailing" secondItem="45i-iP-Shf" secondAttribute="trailing" id="mne-7N-iU7"/>
                             <constraint firstAttribute="width" secondItem="76L-Hb-vQ6" secondAttribute="height" multiplier="132:40" id="sHH-Wc-YgO"/>
+                            <constraint firstItem="45i-iP-Shf" firstAttribute="top" secondItem="76L-Hb-vQ6" secondAttribute="top" id="u8v-IB-AW8"/>
                         </constraints>
                     </view>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0dv-8H-KIP">

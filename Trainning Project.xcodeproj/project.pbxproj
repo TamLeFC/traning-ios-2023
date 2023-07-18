@@ -67,8 +67,21 @@
 		352F73932A65237000423A08 /* AppDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73922A65237000423A08 /* AppDatasource.swift */; };
 		35DF6D2E2A653D9E005AD456 /* DetailAddon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DF6D2C2A653D9E005AD456 /* DetailAddon.swift */; };
 		35DF6D2F2A653D9E005AD456 /* DetailAddon.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35DF6D2D2A653D9E005AD456 /* DetailAddon.xib */; };
-		35DF6D332A6585D0005AD456 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DF6D312A6585D0005AD456 /* SettingCell.swift */; };
-		35DF6D342A6585D0005AD456 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35DF6D322A6585D0005AD456 /* SettingCell.xib */; };
+		35DF6D362A66254C005AD456 /* SettingVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DF6D352A66254C005AD456 /* SettingVM.swift */; };
+		35DF6D392A6625CE005AD456 /* SettingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DF6D382A6625CE005AD456 /* SettingItem.swift */; };
+		35DF6D3B2A6625D8005AD456 /* SettingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DF6D3A2A6625D8005AD456 /* SettingSection.swift */; };
+		35DF6D3D2A6631A7005AD456 /* SectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DF6D3C2A6631A6005AD456 /* SectionFooterView.swift */; };
+		35DF6D402A663E1C005AD456 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DF6D3E2A663E1C005AD456 /* SettingCell.swift */; };
+		35DF6D412A663E1C005AD456 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35DF6D3F2A663E1C005AD456 /* SettingCell.xib */; };
+		35DF6D452A666FE9005AD456 /* FavoriteVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DF6D442A666FE9005AD456 /* FavoriteVM.swift */; };
+		35DF6D492A667057005AD456 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DF6D482A667057005AD456 /* DBManager.swift */; };
+		35DF6D4B2A66706A005AD456 /* ModelConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DF6D4A2A66706A005AD456 /* ModelConvertibleType.swift */; };
+		35DF6D4D2A667094005AD456 /* Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DF6D4C2A667094005AD456 /* Reactive.swift */; };
+		35DF6D4F2A6670B0005AD456 /* RealmRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DF6D4E2A6670B0005AD456 /* RealmRepresentable.swift */; };
+		35DF6D522A6670DD005AD456 /* RAddon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DF6D512A6670DD005AD456 /* RAddon.swift */; };
+		35DF6D562A667451005AD456 /* BaseDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DF6D552A667451005AD456 /* BaseDao.swift */; };
+		35DF6D582A667471005AD456 /* BaseDaoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DF6D572A667471005AD456 /* BaseDaoService.swift */; };
+		35DF6D5B2A6674D6005AD456 /* AddonDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DF6D5A2A6674D6005AD456 /* AddonDAO.swift */; };
 		4F9692FA83FF20E8188CAAC5 /* Pods_Trainning_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19CE61126B01C0423980F160 /* Pods_Trainning_Project.framework */; };
 /* End PBXBuildFile section */
 
@@ -136,8 +149,21 @@
 		352F73922A65237000423A08 /* AppDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatasource.swift; sourceTree = "<group>"; };
 		35DF6D2C2A653D9E005AD456 /* DetailAddon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAddon.swift; sourceTree = "<group>"; };
 		35DF6D2D2A653D9E005AD456 /* DetailAddon.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailAddon.xib; sourceTree = "<group>"; };
-		35DF6D312A6585D0005AD456 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
-		35DF6D322A6585D0005AD456 /* SettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
+		35DF6D352A66254C005AD456 /* SettingVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVM.swift; sourceTree = "<group>"; };
+		35DF6D382A6625CE005AD456 /* SettingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingItem.swift; sourceTree = "<group>"; };
+		35DF6D3A2A6625D8005AD456 /* SettingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSection.swift; sourceTree = "<group>"; };
+		35DF6D3C2A6631A6005AD456 /* SectionFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionFooterView.swift; sourceTree = "<group>"; };
+		35DF6D3E2A663E1C005AD456 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		35DF6D3F2A663E1C005AD456 /* SettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
+		35DF6D442A666FE9005AD456 /* FavoriteVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVM.swift; sourceTree = "<group>"; };
+		35DF6D482A667057005AD456 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		35DF6D4A2A66706A005AD456 /* ModelConvertibleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelConvertibleType.swift; sourceTree = "<group>"; };
+		35DF6D4C2A667094005AD456 /* Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reactive.swift; sourceTree = "<group>"; };
+		35DF6D4E2A6670B0005AD456 /* RealmRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepresentable.swift; sourceTree = "<group>"; };
+		35DF6D512A6670DD005AD456 /* RAddon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAddon.swift; sourceTree = "<group>"; };
+		35DF6D552A667451005AD456 /* BaseDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDao.swift; sourceTree = "<group>"; };
+		35DF6D572A667471005AD456 /* BaseDaoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDaoService.swift; sourceTree = "<group>"; };
+		35DF6D5A2A6674D6005AD456 /* AddonDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddonDAO.swift; sourceTree = "<group>"; };
 		6356562FA624C039304B6394 /* Pods-Trainning Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trainning Project.debug.xcconfig"; path = "Target Support Files/Pods-Trainning Project/Pods-Trainning Project.debug.xcconfig"; sourceTree = "<group>"; };
 		A98791FB214EFFCD2CBDBE7A /* Pods-Trainning Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trainning Project.release.xcconfig"; path = "Target Support Files/Pods-Trainning Project/Pods-Trainning Project.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -215,6 +241,7 @@
 		352F73062A64D9A000423A08 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				35DF6D462A66703B005AD456 /* Local */,
 				352F730B2A64D9EA00423A08 /* Model */,
 				352F730A2A64D9E500423A08 /* Remote */,
 				352F73092A64D9DB00423A08 /* Respository */,
@@ -265,7 +292,8 @@
 		352F730B2A64D9EA00423A08 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				352F73692A64ED9900423A08 /* Addon.swift */,
+				35DF6D422A666E9E005AD456 /* Addon */,
+				35DF6D372A6625BE005AD456 /* Setting */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -341,6 +369,7 @@
 			children = (
 				352F733E2A64DE7200423A08 /* FavoriteVC.swift */,
 				352F733F2A64DE7200423A08 /* FavoriteVC.xib */,
+				35DF6D442A666FE9005AD456 /* FavoriteVM.swift */,
 			);
 			path = Favorite;
 			sourceTree = "<group>";
@@ -351,6 +380,7 @@
 				35DF6D302A6585B2005AD456 /* Cell */,
 				352F73422A64DE8100423A08 /* SettingVC.swift */,
 				352F73432A64DE8100423A08 /* SettingVC.xib */,
+				35DF6D352A66254C005AD456 /* SettingVM.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -393,6 +423,7 @@
 			isa = PBXGroup;
 			children = (
 				352F73642A64E08800423A08 /* GradientView.swift */,
+				35DF6D3C2A6631A6005AD456 /* SectionFooterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -461,10 +492,82 @@
 		35DF6D302A6585B2005AD456 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				35DF6D312A6585D0005AD456 /* SettingCell.swift */,
-				35DF6D322A6585D0005AD456 /* SettingCell.xib */,
+				35DF6D3E2A663E1C005AD456 /* SettingCell.swift */,
+				35DF6D3F2A663E1C005AD456 /* SettingCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		35DF6D372A6625BE005AD456 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				35DF6D382A6625CE005AD456 /* SettingItem.swift */,
+				35DF6D3A2A6625D8005AD456 /* SettingSection.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		35DF6D422A666E9E005AD456 /* Addon */ = {
+			isa = PBXGroup;
+			children = (
+				352F73692A64ED9900423A08 /* Addon.swift */,
+			);
+			path = Addon;
+			sourceTree = "<group>";
+		};
+		35DF6D462A66703B005AD456 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				35DF6D532A66743A005AD456 /* DAO */,
+				35DF6D502A6670CC005AD456 /* Entities */,
+				35DF6D472A667044005AD456 /* Core */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		35DF6D472A667044005AD456 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				35DF6D482A667057005AD456 /* DBManager.swift */,
+				35DF6D4A2A66706A005AD456 /* ModelConvertibleType.swift */,
+				35DF6D4C2A667094005AD456 /* Reactive.swift */,
+				35DF6D4E2A6670B0005AD456 /* RealmRepresentable.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		35DF6D502A6670CC005AD456 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				35DF6D512A6670DD005AD456 /* RAddon.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		35DF6D532A66743A005AD456 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				35DF6D592A6674B9005AD456 /* AddonDAO */,
+				35DF6D542A667440005AD456 /* Base */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		35DF6D542A667440005AD456 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				35DF6D552A667451005AD456 /* BaseDao.swift */,
+				35DF6D572A667471005AD456 /* BaseDaoService.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		35DF6D592A6674B9005AD456 /* AddonDAO */ = {
+			isa = PBXGroup;
+			children = (
+				35DF6D5A2A6674D6005AD456 /* AddonDAO.swift */,
+			);
+			path = AddonDAO;
 			sourceTree = "<group>";
 		};
 		E90CE2F4059F3DC103655586 /* Frameworks */ = {
@@ -546,7 +649,7 @@
 				352F73272A64DAA300423A08 /* poppins_semibold.ttf in Resources */,
 				352F73292A64DAA300423A08 /* minecrafter_reg.ttf in Resources */,
 				352F732D2A64DAA300423A08 /* minecraft_bold_italic.otf in Resources */,
-				35DF6D342A6585D0005AD456 /* SettingCell.xib in Resources */,
+				35DF6D412A663E1C005AD456 /* SettingCell.xib in Resources */,
 				352F72FD2A64D91800423A08 /* LaunchScreen.storyboard in Resources */,
 				352F73312A64DAA300423A08 /* space_grotesk_light.ttf in Resources */,
 				352F72FA2A64D91800423A08 /* Assets.xcassets in Resources */,
@@ -617,10 +720,14 @@
 				352F73402A64DE7200423A08 /* FavoriteVC.swift in Sources */,
 				352F73682A64E68100423A08 /* mainPageVC.swift in Sources */,
 				352F734D2A64E04500423A08 /* BaseCollectionViewCell.swift in Sources */,
+				35DF6D392A6625CE005AD456 /* SettingItem.swift in Sources */,
+				35DF6D582A667471005AD456 /* BaseDaoService.swift in Sources */,
 				352F73912A65224600423A08 /* HomeVM.swift in Sources */,
+				35DF6D3D2A6631A7005AD456 /* SectionFooterView.swift in Sources */,
 				352F73732A64F2E900423A08 /* NetworkProvider.swift in Sources */,
+				35DF6D4B2A66706A005AD456 /* ModelConvertibleType.swift in Sources */,
 				352F735F2A64E08100423A08 /* UITableView.swift in Sources */,
-				35DF6D332A6585D0005AD456 /* SettingCell.swift in Sources */,
+				35DF6D452A666FE9005AD456 /* FavoriteVM.swift in Sources */,
 				352F737D2A64F3E100423A08 /* AppApi.swift in Sources */,
 				352F73602A64E08100423A08 /* UITextField.swift in Sources */,
 				352F735E2A64E08100423A08 /* UICollectionView.swift in Sources */,
@@ -632,21 +739,30 @@
 				352F73822A64F49100423A08 /* ReachabilityManager.swift in Sources */,
 				352F736C2A64F07200423A08 /* Respository.swift in Sources */,
 				352F73932A65237000423A08 /* AppDatasource.swift in Sources */,
+				35DF6D562A667451005AD456 /* BaseDao.swift in Sources */,
 				352F73862A64F4E900423A08 /* ApiServiceImp.swift in Sources */,
+				35DF6D362A66254C005AD456 /* SettingVM.swift in Sources */,
+				35DF6D5B2A6674D6005AD456 /* AddonDAO.swift in Sources */,
+				35DF6D4D2A667094005AD456 /* Reactive.swift in Sources */,
 				352F73792A64F37600423A08 /* appNetwork.swift in Sources */,
 				352F735B2A64E08100423A08 /* UIView+Shadow.swift in Sources */,
 				352F734E2A64E04500423A08 /* BaseVM.swift in Sources */,
+				35DF6D4F2A6670B0005AD456 /* RealmRepresentable.swift in Sources */,
 				352F73752A64F2FD00423A08 /* NetworkConfig.swift in Sources */,
 				352F738F2A65205200423A08 /* RespositoryImp.swift in Sources */,
 				352F735A2A64E08100423A08 /* UIView+Border+Corner.swift in Sources */,
 				352F736A2A64ED9900423A08 /* Addon.swift in Sources */,
 				352F72F12A64D91700423A08 /* AppDelegate.swift in Sources */,
 				352F734B2A64E04500423A08 /* BaseTableViewCell.swift in Sources */,
+				35DF6D522A6670DD005AD456 /* RAddon.swift in Sources */,
 				352F735D2A64E08100423A08 /* UIColor.swift in Sources */,
 				352F734C2A64E04500423A08 /* BaseVC.swift in Sources */,
+				35DF6D3B2A6625D8005AD456 /* SettingSection.swift in Sources */,
 				352F73842A64F4D700423A08 /* ApiService.swift in Sources */,
+				35DF6D492A667057005AD456 /* DBManager.swift in Sources */,
 				352F73612A64E08100423A08 /* String.swift in Sources */,
 				35DF6D2E2A653D9E005AD456 /* DetailAddon.swift in Sources */,
+				35DF6D402A663E1C005AD456 /* SettingCell.swift in Sources */,
 				352F73122A64DA6C00423A08 /* MainVC.swift in Sources */,
 				352F735C2A64E08100423A08 /* UIView+BorderInDirection.swift in Sources */,
 			);
