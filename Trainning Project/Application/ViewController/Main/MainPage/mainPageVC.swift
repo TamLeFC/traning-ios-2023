@@ -12,7 +12,7 @@ class MainPageVC: UIPageViewController, UIPageViewControllerDataSource, UIPageVi
     
 //    let setupVC = SetupVC.instantiate(viewModel: SetupVM())
 //    let homeVC = HomeVC.instantiate(viewModel: HomeVM())
-    let homeVC = HomeVC()
+    let homeVC = HomeVC.instantiate(viewModel: HomeVM())
     let favoriteVC = FavoriteVC()
     let settingVC = SettingVC()
     

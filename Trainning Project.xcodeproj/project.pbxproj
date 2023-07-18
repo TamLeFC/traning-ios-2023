@@ -48,6 +48,27 @@
 		352F73612A64E08100423A08 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73582A64E08100423A08 /* String.swift */; };
 		352F73652A64E08800423A08 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73642A64E08800423A08 /* GradientView.swift */; };
 		352F73682A64E68100423A08 /* mainPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73672A64E68100423A08 /* mainPageVC.swift */; };
+		352F736A2A64ED9900423A08 /* Addon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73692A64ED9900423A08 /* Addon.swift */; };
+		352F736C2A64F07200423A08 /* Respository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F736B2A64F07200423A08 /* Respository.swift */; };
+		352F73732A64F2E900423A08 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73722A64F2E900423A08 /* NetworkProvider.swift */; };
+		352F73752A64F2FD00423A08 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73742A64F2FD00423A08 /* NetworkConfig.swift */; };
+		352F73792A64F37600423A08 /* appNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73782A64F37600423A08 /* appNetwork.swift */; };
+		352F737B2A64F38500423A08 /* appNetworkImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F737A2A64F38500423A08 /* appNetworkImp.swift */; };
+		352F737D2A64F3E100423A08 /* AppApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F737C2A64F3E100423A08 /* AppApi.swift */; };
+		352F737F2A64F41000423A08 /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F737E2A64F41000423A08 /* Configs.swift */; };
+		352F73822A64F49100423A08 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73812A64F49100423A08 /* ReachabilityManager.swift */; };
+		352F73842A64F4D700423A08 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73832A64F4D600423A08 /* ApiService.swift */; };
+		352F73862A64F4E900423A08 /* ApiServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73852A64F4E900423A08 /* ApiServiceImp.swift */; };
+		352F738A2A64F8CA00423A08 /* AddonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73882A64F8CA00423A08 /* AddonCell.swift */; };
+		352F738B2A64F8CA00423A08 /* AddonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 352F73892A64F8CA00423A08 /* AddonCell.xib */; };
+		352F738D2A651F1700423A08 /* LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F738C2A651F1700423A08 /* LoadImage.swift */; };
+		352F738F2A65205200423A08 /* RespositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F738E2A65205200423A08 /* RespositoryImp.swift */; };
+		352F73912A65224600423A08 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73902A65224600423A08 /* HomeVM.swift */; };
+		352F73932A65237000423A08 /* AppDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73922A65237000423A08 /* AppDatasource.swift */; };
+		35DF6D2E2A653D9E005AD456 /* DetailAddon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DF6D2C2A653D9E005AD456 /* DetailAddon.swift */; };
+		35DF6D2F2A653D9E005AD456 /* DetailAddon.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35DF6D2D2A653D9E005AD456 /* DetailAddon.xib */; };
+		35DF6D332A6585D0005AD456 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DF6D312A6585D0005AD456 /* SettingCell.swift */; };
+		35DF6D342A6585D0005AD456 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35DF6D322A6585D0005AD456 /* SettingCell.xib */; };
 		4F9692FA83FF20E8188CAAC5 /* Pods_Trainning_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19CE61126B01C0423980F160 /* Pods_Trainning_Project.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +117,27 @@
 		352F73582A64E08100423A08 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		352F73642A64E08800423A08 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		352F73672A64E68100423A08 /* mainPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainPageVC.swift; sourceTree = "<group>"; };
+		352F73692A64ED9900423A08 /* Addon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addon.swift; sourceTree = "<group>"; };
+		352F736B2A64F07200423A08 /* Respository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Respository.swift; sourceTree = "<group>"; };
+		352F73722A64F2E900423A08 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		352F73742A64F2FD00423A08 /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
+		352F73782A64F37600423A08 /* appNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = appNetwork.swift; path = ../../../../../../../../../appNetwork.swift; sourceTree = "<group>"; };
+		352F737A2A64F38500423A08 /* appNetworkImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appNetworkImp.swift; sourceTree = "<group>"; };
+		352F737C2A64F3E100423A08 /* AppApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppApi.swift; sourceTree = "<group>"; };
+		352F737E2A64F41000423A08 /* Configs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
+		352F73812A64F49100423A08 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
+		352F73832A64F4D600423A08 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		352F73852A64F4E900423A08 /* ApiServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceImp.swift; sourceTree = "<group>"; };
+		352F73882A64F8CA00423A08 /* AddonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddonCell.swift; sourceTree = "<group>"; };
+		352F73892A64F8CA00423A08 /* AddonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddonCell.xib; sourceTree = "<group>"; };
+		352F738C2A651F1700423A08 /* LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImage.swift; sourceTree = "<group>"; };
+		352F738E2A65205200423A08 /* RespositoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespositoryImp.swift; sourceTree = "<group>"; };
+		352F73902A65224600423A08 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		352F73922A65237000423A08 /* AppDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatasource.swift; sourceTree = "<group>"; };
+		35DF6D2C2A653D9E005AD456 /* DetailAddon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAddon.swift; sourceTree = "<group>"; };
+		35DF6D2D2A653D9E005AD456 /* DetailAddon.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailAddon.xib; sourceTree = "<group>"; };
+		35DF6D312A6585D0005AD456 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		35DF6D322A6585D0005AD456 /* SettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
 		6356562FA624C039304B6394 /* Pods-Trainning Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trainning Project.debug.xcconfig"; path = "Target Support Files/Pods-Trainning Project/Pods-Trainning Project.debug.xcconfig"; sourceTree = "<group>"; };
 		A98791FB214EFFCD2CBDBE7A /* Pods-Trainning Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trainning Project.release.xcconfig"; path = "Target Support Files/Pods-Trainning Project/Pods-Trainning Project.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				352F72FE2A64D91800423A08 /* Info.plist */,
+				352F737E2A64F41000423A08 /* Configs.swift */,
 			);
 			path = GlobalDefine;
 			sourceTree = "<group>";
@@ -202,6 +245,8 @@
 		352F73092A64D9DB00423A08 /* Respository */ = {
 			isa = PBXGroup;
 			children = (
+				352F736B2A64F07200423A08 /* Respository.swift */,
+				352F738E2A65205200423A08 /* RespositoryImp.swift */,
 			);
 			path = Respository;
 			sourceTree = "<group>";
@@ -209,6 +254,10 @@
 		352F730A2A64D9E500423A08 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				352F736E2A64F15300423A08 /* Network */,
+				352F736D2A64F14D00423A08 /* Response */,
+				352F73832A64F4D600423A08 /* ApiService.swift */,
+				352F73852A64F4E900423A08 /* ApiServiceImp.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -216,6 +265,7 @@
 		352F730B2A64D9EA00423A08 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				352F73692A64ED9900423A08 /* Addon.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -223,6 +273,7 @@
 		352F730C2A64D9F900423A08 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				35DF6D2B2A653D7F005AD456 /* DetailAddon */,
 				352F73382A64DDFD00423A08 /* Setting */,
 				352F73372A64DDF500423A08 /* Favorite */,
 				352F73362A64DDF000423A08 /* Home */,
@@ -234,6 +285,9 @@
 		352F730D2A64DA0B00423A08 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				352F73812A64F49100423A08 /* ReachabilityManager.swift */,
+				352F738C2A651F1700423A08 /* LoadImage.swift */,
+				352F73922A65237000423A08 /* AppDatasource.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -274,8 +328,10 @@
 		352F73362A64DDF000423A08 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				352F73872A64F84700423A08 /* Cell */,
 				352F733A2A64DE5D00423A08 /* HomeVC.swift */,
 				352F733B2A64DE5D00423A08 /* HomeVC.xib */,
+				352F73902A65224600423A08 /* HomeVM.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -292,6 +348,7 @@
 		352F73382A64DDFD00423A08 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				35DF6D302A6585B2005AD456 /* Cell */,
 				352F73422A64DE8100423A08 /* SettingVC.swift */,
 				352F73432A64DE8100423A08 /* SettingVC.xib */,
 			);
@@ -346,6 +403,68 @@
 				352F73672A64E68100423A08 /* mainPageVC.swift */,
 			);
 			path = MainPage;
+			sourceTree = "<group>";
+		};
+		352F736D2A64F14D00423A08 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		352F736E2A64F15300423A08 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				352F73772A64F34600423A08 /* AppNetwork */,
+				352F73712A64F2C600423A08 /* Configure */,
+				352F737C2A64F3E100423A08 /* AppApi.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		352F73712A64F2C600423A08 /* Configure */ = {
+			isa = PBXGroup;
+			children = (
+				352F73722A64F2E900423A08 /* NetworkProvider.swift */,
+				352F73742A64F2FD00423A08 /* NetworkConfig.swift */,
+			);
+			path = Configure;
+			sourceTree = "<group>";
+		};
+		352F73772A64F34600423A08 /* AppNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				352F73782A64F37600423A08 /* appNetwork.swift */,
+				352F737A2A64F38500423A08 /* appNetworkImp.swift */,
+			);
+			path = AppNetwork;
+			sourceTree = "<group>";
+		};
+		352F73872A64F84700423A08 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				352F73882A64F8CA00423A08 /* AddonCell.swift */,
+				352F73892A64F8CA00423A08 /* AddonCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		35DF6D2B2A653D7F005AD456 /* DetailAddon */ = {
+			isa = PBXGroup;
+			children = (
+				35DF6D2C2A653D9E005AD456 /* DetailAddon.swift */,
+				35DF6D2D2A653D9E005AD456 /* DetailAddon.xib */,
+			);
+			path = DetailAddon;
+			sourceTree = "<group>";
+		};
+		35DF6D302A6585B2005AD456 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				35DF6D312A6585D0005AD456 /* SettingCell.swift */,
+				35DF6D322A6585D0005AD456 /* SettingCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		E90CE2F4059F3DC103655586 /* Frameworks */ = {
@@ -419,6 +538,7 @@
 				352F73332A64DAA300423A08 /* poppins_italic.ttf in Resources */,
 				352F732F2A64DAA300423A08 /* minecrafter_alt.ttf in Resources */,
 				352F73282A64DAA300423A08 /* minecraft_regular.otf in Resources */,
+				352F738B2A64F8CA00423A08 /* AddonCell.xib in Resources */,
 				352F73132A64DA6C00423A08 /* MainVC.xib in Resources */,
 				352F73342A64DAA300423A08 /* space_grotesk_regular.ttf in Resources */,
 				352F73262A64DAA300423A08 /* poppins_light.ttf in Resources */,
@@ -426,12 +546,14 @@
 				352F73272A64DAA300423A08 /* poppins_semibold.ttf in Resources */,
 				352F73292A64DAA300423A08 /* minecrafter_reg.ttf in Resources */,
 				352F732D2A64DAA300423A08 /* minecraft_bold_italic.otf in Resources */,
+				35DF6D342A6585D0005AD456 /* SettingCell.xib in Resources */,
 				352F72FD2A64D91800423A08 /* LaunchScreen.storyboard in Resources */,
 				352F73312A64DAA300423A08 /* space_grotesk_light.ttf in Resources */,
 				352F72FA2A64D91800423A08 /* Assets.xcassets in Resources */,
 				352F732E2A64DAA300423A08 /* poppins_regular.ttf in Resources */,
 				352F732A2A64DAA300423A08 /* poppins_medium.ttf in Resources */,
 				352F73352A64DAA300423A08 /* minecraft_italic.otf in Resources */,
+				35DF6D2F2A653D9E005AD456 /* DetailAddon.xib in Resources */,
 				352F73302A64DAA300423A08 /* minecraft_bold.otf in Resources */,
 				352F733D2A64DE5D00423A08 /* HomeVC.xib in Resources */,
 				352F73322A64DAA300423A08 /* space_grotesk_medium.ttf in Resources */,
@@ -491,22 +613,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				352F73652A64E08800423A08 /* GradientView.swift in Sources */,
+				352F737B2A64F38500423A08 /* appNetworkImp.swift in Sources */,
 				352F73402A64DE7200423A08 /* FavoriteVC.swift in Sources */,
 				352F73682A64E68100423A08 /* mainPageVC.swift in Sources */,
 				352F734D2A64E04500423A08 /* BaseCollectionViewCell.swift in Sources */,
+				352F73912A65224600423A08 /* HomeVM.swift in Sources */,
+				352F73732A64F2E900423A08 /* NetworkProvider.swift in Sources */,
 				352F735F2A64E08100423A08 /* UITableView.swift in Sources */,
+				35DF6D332A6585D0005AD456 /* SettingCell.swift in Sources */,
+				352F737D2A64F3E100423A08 /* AppApi.swift in Sources */,
 				352F73602A64E08100423A08 /* UITextField.swift in Sources */,
 				352F735E2A64E08100423A08 /* UICollectionView.swift in Sources */,
+				352F738A2A64F8CA00423A08 /* AddonCell.swift in Sources */,
 				352F733C2A64DE5D00423A08 /* HomeVC.swift in Sources */,
 				352F73442A64DE8100423A08 /* SettingVC.swift in Sources */,
+				352F738D2A651F1700423A08 /* LoadImage.swift in Sources */,
+				352F737F2A64F41000423A08 /* Configs.swift in Sources */,
+				352F73822A64F49100423A08 /* ReachabilityManager.swift in Sources */,
+				352F736C2A64F07200423A08 /* Respository.swift in Sources */,
+				352F73932A65237000423A08 /* AppDatasource.swift in Sources */,
+				352F73862A64F4E900423A08 /* ApiServiceImp.swift in Sources */,
+				352F73792A64F37600423A08 /* appNetwork.swift in Sources */,
 				352F735B2A64E08100423A08 /* UIView+Shadow.swift in Sources */,
 				352F734E2A64E04500423A08 /* BaseVM.swift in Sources */,
+				352F73752A64F2FD00423A08 /* NetworkConfig.swift in Sources */,
+				352F738F2A65205200423A08 /* RespositoryImp.swift in Sources */,
 				352F735A2A64E08100423A08 /* UIView+Border+Corner.swift in Sources */,
+				352F736A2A64ED9900423A08 /* Addon.swift in Sources */,
 				352F72F12A64D91700423A08 /* AppDelegate.swift in Sources */,
 				352F734B2A64E04500423A08 /* BaseTableViewCell.swift in Sources */,
 				352F735D2A64E08100423A08 /* UIColor.swift in Sources */,
 				352F734C2A64E04500423A08 /* BaseVC.swift in Sources */,
+				352F73842A64F4D700423A08 /* ApiService.swift in Sources */,
 				352F73612A64E08100423A08 /* String.swift in Sources */,
+				35DF6D2E2A653D9E005AD456 /* DetailAddon.swift in Sources */,
 				352F73122A64DA6C00423A08 /* MainVC.swift in Sources */,
 				352F735C2A64E08100423A08 /* UIView+BorderInDirection.swift in Sources */,
 			);

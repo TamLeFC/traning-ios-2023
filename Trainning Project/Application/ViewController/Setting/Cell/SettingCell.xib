@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="minecraft_regular.otf">
+            <string>Minecraft-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SettingCell" customModule="Trainning_Project" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="258" height="16"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="258" height="16"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_useric_person" translatesAutoresizingMaskIntoConstraints="NO" id="ICI-6A-Gcg">
+                        <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="HeU-CU-knX"/>
+                            <constraint firstAttribute="width" secondItem="ICI-6A-Gcg" secondAttribute="height" id="Vke-sN-FRE"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSh-Vj-DxA">
+                        <rect key="frame" x="40" y="-2" width="169.66666666666666" height="20"/>
+                        <fontDescription key="fontDescription" name="Minecraft-Regular" family="Minecraft" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="FSh-Vj-DxA" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="NIF-QS-82M"/>
+                <constraint firstItem="ICI-6A-Gcg" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="PGn-oG-acY"/>
+                <constraint firstItem="ICI-6A-Gcg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="PJs-Bv-baU"/>
+                <constraint firstItem="FSh-Vj-DxA" firstAttribute="leading" secondItem="ICI-6A-Gcg" secondAttribute="trailing" constant="24" id="pBs-OJ-TKN"/>
+            </constraints>
+            <connections>
+                <outlet property="iconImageView" destination="ICI-6A-Gcg" id="XPb-ul-GM1"/>
+                <outlet property="titleSettingLabel" destination="FSh-Vj-DxA" id="e6x-yd-BRX"/>
+            </connections>
+            <point key="canvasLocation" x="-32.061068702290072" y="19.718309859154932"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_useric_person" width="16" height="16"/>
+    </resources>
+</document>
