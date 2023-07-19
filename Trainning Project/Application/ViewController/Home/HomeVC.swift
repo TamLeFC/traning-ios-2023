@@ -13,7 +13,7 @@ class HomeVC: BaseVC<HomeVM> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         viewModel.fetchData()
     }
     
@@ -22,7 +22,10 @@ class HomeVC: BaseVC<HomeVM> {
         
         viewModel.addonsS.asObserver()
             .map { [SectionModel(model: (), items: $0)] }
-            .bind(to: self.collectionView.rx.items(dataSource: getAddonsDataSource()))
+            .bind(to: self.collectionView.rx.items(dataSource: getAddonsDataSource() {[weak self] addon in
+                guard let self = self else { return }
+                self.navigationController?.pushViewController(DetailAddonVC(), animated: true)
+            }))
             .disposed(by: bag)
     }
     

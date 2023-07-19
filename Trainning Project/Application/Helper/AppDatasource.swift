@@ -8,12 +8,13 @@
 import Foundation
 import RxDataSources
 
-func getAddonsDataSource() -> RxCollectionViewSectionedReloadDataSource<SectionModel<Void, Addon>> {
+func getAddonsDataSource(onMoreButtonTouched: @escaping (Addon) -> Void) -> RxCollectionViewSectionedReloadDataSource<SectionModel<Void, Addon>> {
     return RxCollectionViewSectionedReloadDataSource<SectionModel<Void, Addon>>(
         configureCell: {
             (dataSource, collectionView, indexPath, item) -> UICollectionViewCell in
             let cell = collectionView.dequeueReuseable(ofType: AddonCell.self, indexPath: indexPath)
             cell.configureCell(item)
+            cell.onMoreButtonTouched = onMoreButtonTouched
             return cell
         })
 }

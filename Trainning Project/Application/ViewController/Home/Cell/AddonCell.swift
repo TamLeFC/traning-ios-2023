@@ -22,6 +22,8 @@ class AddonCell: BaseCollectionViewCell {
     
     @IBOutlet weak var moreButton: UIView!
     
+    var onMoreButtonTouched: ((Addon) -> Void)? = nil
+    private var addon: Addon!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,6 +40,8 @@ class AddonCell: BaseCollectionViewCell {
     }
     
     public func configureCell(_ item: Addon) {
+        self.addon = item
+        
         loadImage(from: item.thumbUrl, into: thumbImage)
         itemNameLable.text = item.itemName
         authorLabel.text = item.authorName
@@ -47,7 +51,7 @@ class AddonCell: BaseCollectionViewCell {
     
     
     @IBAction func moreButtonTouched(_ sender: UIButton) {
-        
+        onMoreButtonTouched?(addon)
     }
     
 }

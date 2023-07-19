@@ -65,8 +65,9 @@
 		352F738F2A65205200423A08 /* RespositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F738E2A65205200423A08 /* RespositoryImp.swift */; };
 		352F73912A65224600423A08 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73902A65224600423A08 /* HomeVM.swift */; };
 		352F73932A65237000423A08 /* AppDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73922A65237000423A08 /* AppDatasource.swift */; };
-		35DF6D2E2A653D9E005AD456 /* DetailAddon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DF6D2C2A653D9E005AD456 /* DetailAddon.swift */; };
-		35DF6D2F2A653D9E005AD456 /* DetailAddon.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35DF6D2D2A653D9E005AD456 /* DetailAddon.xib */; };
+		3564C3152A670412008CED5B /* DetailAddonVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3564C3142A670412008CED5B /* DetailAddonVM.swift */; };
+		35DF6D2E2A653D9E005AD456 /* DetailAddonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DF6D2C2A653D9E005AD456 /* DetailAddonVC.swift */; };
+		35DF6D2F2A653D9E005AD456 /* DetailAddonVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35DF6D2D2A653D9E005AD456 /* DetailAddonVC.xib */; };
 		35DF6D362A66254C005AD456 /* SettingVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DF6D352A66254C005AD456 /* SettingVM.swift */; };
 		35DF6D392A6625CE005AD456 /* SettingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DF6D382A6625CE005AD456 /* SettingItem.swift */; };
 		35DF6D3B2A6625D8005AD456 /* SettingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DF6D3A2A6625D8005AD456 /* SettingSection.swift */; };
@@ -147,8 +148,9 @@
 		352F738E2A65205200423A08 /* RespositoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespositoryImp.swift; sourceTree = "<group>"; };
 		352F73902A65224600423A08 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		352F73922A65237000423A08 /* AppDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatasource.swift; sourceTree = "<group>"; };
-		35DF6D2C2A653D9E005AD456 /* DetailAddon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAddon.swift; sourceTree = "<group>"; };
-		35DF6D2D2A653D9E005AD456 /* DetailAddon.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailAddon.xib; sourceTree = "<group>"; };
+		3564C3142A670412008CED5B /* DetailAddonVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAddonVM.swift; sourceTree = "<group>"; };
+		35DF6D2C2A653D9E005AD456 /* DetailAddonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAddonVC.swift; sourceTree = "<group>"; };
+		35DF6D2D2A653D9E005AD456 /* DetailAddonVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailAddonVC.xib; sourceTree = "<group>"; };
 		35DF6D352A66254C005AD456 /* SettingVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVM.swift; sourceTree = "<group>"; };
 		35DF6D382A6625CE005AD456 /* SettingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingItem.swift; sourceTree = "<group>"; };
 		35DF6D3A2A6625D8005AD456 /* SettingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSection.swift; sourceTree = "<group>"; };
@@ -483,8 +485,9 @@
 		35DF6D2B2A653D7F005AD456 /* DetailAddon */ = {
 			isa = PBXGroup;
 			children = (
-				35DF6D2C2A653D9E005AD456 /* DetailAddon.swift */,
-				35DF6D2D2A653D9E005AD456 /* DetailAddon.xib */,
+				35DF6D2C2A653D9E005AD456 /* DetailAddonVC.swift */,
+				35DF6D2D2A653D9E005AD456 /* DetailAddonVC.xib */,
+				3564C3142A670412008CED5B /* DetailAddonVM.swift */,
 			);
 			path = DetailAddon;
 			sourceTree = "<group>";
@@ -656,7 +659,7 @@
 				352F732E2A64DAA300423A08 /* poppins_regular.ttf in Resources */,
 				352F732A2A64DAA300423A08 /* poppins_medium.ttf in Resources */,
 				352F73352A64DAA300423A08 /* minecraft_italic.otf in Resources */,
-				35DF6D2F2A653D9E005AD456 /* DetailAddon.xib in Resources */,
+				35DF6D2F2A653D9E005AD456 /* DetailAddonVC.xib in Resources */,
 				352F73302A64DAA300423A08 /* minecraft_bold.otf in Resources */,
 				352F733D2A64DE5D00423A08 /* HomeVC.xib in Resources */,
 				352F73322A64DAA300423A08 /* space_grotesk_medium.ttf in Resources */,
@@ -732,6 +735,7 @@
 				352F73602A64E08100423A08 /* UITextField.swift in Sources */,
 				352F735E2A64E08100423A08 /* UICollectionView.swift in Sources */,
 				352F738A2A64F8CA00423A08 /* AddonCell.swift in Sources */,
+				3564C3152A670412008CED5B /* DetailAddonVM.swift in Sources */,
 				352F733C2A64DE5D00423A08 /* HomeVC.swift in Sources */,
 				352F73442A64DE8100423A08 /* SettingVC.swift in Sources */,
 				352F738D2A651F1700423A08 /* LoadImage.swift in Sources */,
@@ -761,7 +765,7 @@
 				352F73842A64F4D700423A08 /* ApiService.swift in Sources */,
 				35DF6D492A667057005AD456 /* DBManager.swift in Sources */,
 				352F73612A64E08100423A08 /* String.swift in Sources */,
-				35DF6D2E2A653D9E005AD456 /* DetailAddon.swift in Sources */,
+				35DF6D2E2A653D9E005AD456 /* DetailAddonVC.swift in Sources */,
 				35DF6D402A663E1C005AD456 /* SettingCell.swift in Sources */,
 				352F73122A64DA6C00423A08 /* MainVC.swift in Sources */,
 				352F735C2A64E08100423A08 /* UIView+BorderInDirection.swift in Sources */,

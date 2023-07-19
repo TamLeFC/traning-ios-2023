@@ -11,6 +11,9 @@
         <array key="minecrafter_reg.ttf">
             <string>Minecrafter</string>
         </array>
+        <array key="space_grotesk_bold.ttf">
+            <string>SpaceGrotesk-Bold</string>
+        </array>
         <array key="space_grotesk_medium.ttf">
             <string>SpaceGrotesk-Medium</string>
         </array>
@@ -19,8 +22,10 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailAddon" customModule="Trainning_Project" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailAddonVC" customModule="Trainning_Project" customModuleProvider="target">
             <connections>
+                <outlet property="favoriteView" destination="WCL-3O-xFg" id="MJ8-eG-Ped"/>
+                <outlet property="stackView" destination="mxt-S9-9dm" id="Jm0-lM-Nmx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -47,6 +52,9 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56e-Wp-QX2">
                                     <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <connections>
+                                        <action selector="backButtonTouched:" destination="-1" eventType="touchUpInside" id="Slb-IH-UEo"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -201,27 +209,100 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Im-fK-VXe">
+                    <rect key="frame" x="24" y="522.66666666666663" width="111" height="23"/>
+                    <fontDescription key="fontDescription" name="SpaceGrotesk-Bold" family="Space Grotesk" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Mq-pV-bKY">
+                    <rect key="frame" x="24" y="423.66666666666669" width="366" height="67"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_background_favorite_button" translatesAutoresizingMaskIntoConstraints="NO" id="bk8-GA-9Se">
+                            <rect key="frame" x="0.0" y="0.0" width="366" height="67"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add to favorite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bu-bt-TlL">
+                            <rect key="frame" x="117.66666666666666" y="22" width="131" height="23"/>
+                            <fontDescription key="fontDescription" name="SpaceGrotesk-Bold" family="Space Grotesk" pointSize="18"/>
+                            <color key="textColor" red="1" green="0.70196078431372544" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6Z-I1-SrH">
+                            <rect key="frame" x="0.0" y="0.0" width="366" height="67"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="K6Z-I1-SrH" firstAttribute="leading" secondItem="0Mq-pV-bKY" secondAttribute="leading" id="8rk-GB-NvE"/>
+                        <constraint firstAttribute="bottom" secondItem="K6Z-I1-SrH" secondAttribute="bottom" id="FPl-cf-LWa"/>
+                        <constraint firstItem="1bu-bt-TlL" firstAttribute="centerX" secondItem="0Mq-pV-bKY" secondAttribute="centerX" id="J0N-xK-RAj"/>
+                        <constraint firstItem="1bu-bt-TlL" firstAttribute="centerY" secondItem="0Mq-pV-bKY" secondAttribute="centerY" id="JnP-tM-ait"/>
+                        <constraint firstAttribute="trailing" secondItem="K6Z-I1-SrH" secondAttribute="trailing" id="K1P-8e-YCO"/>
+                        <constraint firstItem="K6Z-I1-SrH" firstAttribute="top" secondItem="0Mq-pV-bKY" secondAttribute="top" id="Lgv-w8-hhz"/>
+                        <constraint firstItem="bk8-GA-9Se" firstAttribute="top" secondItem="0Mq-pV-bKY" secondAttribute="top" id="gnA-cT-Uiz"/>
+                        <constraint firstAttribute="bottom" secondItem="bk8-GA-9Se" secondAttribute="bottom" id="pLN-2L-btH"/>
+                        <constraint firstAttribute="width" secondItem="0Mq-pV-bKY" secondAttribute="height" multiplier="327:60" id="qOk-Cj-ORk"/>
+                        <constraint firstItem="bk8-GA-9Se" firstAttribute="leading" secondItem="0Mq-pV-bKY" secondAttribute="leading" id="sop-nP-1He"/>
+                        <constraint firstAttribute="trailing" secondItem="bk8-GA-9Se" secondAttribute="trailing" id="wm1-6j-vAl"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S26-46-Ul0">
+                    <rect key="frame" x="0.0" y="545.66666666666663" width="414" height="316.33333333333337"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cj3-66-bmx">
+                            <rect key="frame" x="24" y="0.0" width="372.66666666666669" height="896"/>
+                            <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </string>
+                            <fontDescription key="fontDescription" name="SpaceGrotesk-Regular" family="Space Grotesk" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                            <string key="userLabel">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</string>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Cj3-66-bmx" firstAttribute="width" secondItem="bW9-bF-OZr" secondAttribute="width" multiplier="0.9" id="1kb-u2-rCP"/>
+                        <constraint firstItem="Cj3-66-bmx" firstAttribute="trailing" secondItem="ZmL-o9-2eB" secondAttribute="trailing" constant="24" id="54V-9r-OlW"/>
+                        <constraint firstItem="Cj3-66-bmx" firstAttribute="bottom" secondItem="ZmL-o9-2eB" secondAttribute="bottom" id="6BH-ro-feB"/>
+                        <constraint firstItem="Cj3-66-bmx" firstAttribute="bottom" secondItem="ZmL-o9-2eB" secondAttribute="bottom" id="J1d-IY-GM2"/>
+                        <constraint firstItem="Cj3-66-bmx" firstAttribute="leading" secondItem="ZmL-o9-2eB" secondAttribute="leading" constant="24" id="NLj-fu-fhi"/>
+                        <constraint firstItem="Cj3-66-bmx" firstAttribute="top" secondItem="ZmL-o9-2eB" secondAttribute="top" id="WPT-wR-Se4"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="ZmL-o9-2eB"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="bW9-bF-OZr"/>
+                </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.11764705882352941" green="0.12156862745098039" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ATH-Er-hBw" secondAttribute="trailing" id="3Vl-Ip-KVq"/>
+                <constraint firstItem="5Im-fK-VXe" firstAttribute="top" secondItem="0Mq-pV-bKY" secondAttribute="bottom" constant="32" id="Dgx-Vf-eF9"/>
                 <constraint firstItem="ATH-Er-hBw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="HPr-jN-rNl"/>
                 <constraint firstItem="mop-zU-Yij" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LkK-ue-AkC"/>
                 <constraint firstItem="CJO-dV-N9A" firstAttribute="top" secondItem="mop-zU-Yij" secondAttribute="bottom" constant="-30" id="P0z-sK-n6n"/>
+                <constraint firstItem="S26-46-Ul0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Pmp-op-XMH"/>
                 <constraint firstItem="ATH-Er-hBw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Tfh-c4-tUX"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CJO-dV-N9A" secondAttribute="trailing" constant="24" id="ZSM-hy-f3B"/>
                 <constraint firstItem="mop-zU-Yij" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="fAC-T4-KX5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0Mq-pV-bKY" secondAttribute="trailing" constant="24" id="hfO-Pf-lPh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="S26-46-Ul0" secondAttribute="trailing" id="l19-gf-8m3"/>
+                <constraint firstItem="0Mq-pV-bKY" firstAttribute="top" secondItem="CJO-dV-N9A" secondAttribute="bottom" constant="32" id="lpN-or-dIp"/>
+                <constraint firstItem="0Mq-pV-bKY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="24" id="nK5-MA-y0E"/>
                 <constraint firstItem="mop-zU-Yij" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rmP-Xe-EDN"/>
+                <constraint firstItem="S26-46-Ul0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="sh3-Z3-kvZ"/>
+                <constraint firstItem="5Im-fK-VXe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="uSV-3j-6tN"/>
+                <constraint firstItem="S26-46-Ul0" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="vJk-p5-h96"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="S26-46-Ul0" secondAttribute="bottom" id="vqV-H5-2Vx"/>
                 <constraint firstItem="CJO-dV-N9A" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="z3G-Ik-1eO"/>
+                <constraint firstItem="S26-46-Ul0" firstAttribute="top" secondItem="5Im-fK-VXe" secondAttribute="bottom" id="zdF-Jz-tgL"/>
             </constraints>
-            <point key="canvasLocation" x="33" y="20"/>
+            <point key="canvasLocation" x="31.884057971014496" y="19.419642857142858"/>
         </view>
     </objects>
     <resources>
         <image name="ic_back" width="24" height="24"/>
         <image name="ic_comments" width="24" height="24"/>
         <image name="ic_heart" width="24" height="24"/>
+        <image name="img_background_favorite_button" width="327" height="40"/>
         <image name="img_photo_default" width="327" height="184"/>
     </resources>
 </document>

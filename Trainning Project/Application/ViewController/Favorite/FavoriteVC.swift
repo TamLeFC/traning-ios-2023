@@ -9,12 +9,12 @@ import UIKit
 import RxDataSources
 
 class FavoriteVC: BaseVC<FavoriteVM> {
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         viewModel.fetchData()
     }
     
@@ -36,7 +36,10 @@ class FavoriteVC: BaseVC<FavoriteVM> {
         
         viewModel.addonsS.asObserver()
             .map { [SectionModel(model: (), items: $0)] }
-            .bind(to: self.collectionView.rx.items(dataSource: getAddonsDataSource()))
+            .bind(to: self.collectionView.rx.items(dataSource: getAddonsDataSource() {[weak self] addon in
+                guard let self = self else { return }
+                self.navigationController?.pushViewController(DetailAddonVC(), animated: true)
+            }))
             .disposed(by: bag)
     }
 }
