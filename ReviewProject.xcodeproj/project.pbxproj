@@ -379,10 +379,10 @@
 			isa = PBXGroup;
 			children = (
 				80F275722A64DAF7000818EE /* Extensions */,
-				80F2758D2A64DAF7000818EE /* Helper */,
-				80F2757B2A64DAF7000818EE /* ViewControllers */,
 				80F2758B2A64DAF7000818EE /* Views */,
 				80F275902A64DAF7000818EE /* Base */,
+				80F2758D2A64DAF7000818EE /* Helper */,
+				80F2757B2A64DAF7000818EE /* ViewControllers */,
 			);
 			path = Application;
 			sourceTree = "<group>";

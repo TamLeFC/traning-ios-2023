@@ -1,12 +1,19 @@
 import UIKit
 
 class MainVC: BaseVC<BaseVM> {
-
+    
     @IBOutlet weak var titleHeaderLabel: UILabel!
     @IBOutlet weak var pageMainView: UIView!
     @IBOutlet weak var homeTabImageView: UIImageView!
     @IBOutlet weak var favoriteTabImageView: UIImageView!
     @IBOutlet weak var settingTabImageView: UIImageView!
+    
+    @IBAction func onNotiTapped(_ sender: Any) {
+        popupAlert(title: "Notification",
+                   message: "Message from notification",
+                   actionTitles: ["OK", "Cancel"],
+                   actions: [nil, nil])
+    }
     
     private var pageVC: MainPageVC!
     override func initViews() {

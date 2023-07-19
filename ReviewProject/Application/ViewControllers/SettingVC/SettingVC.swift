@@ -27,7 +27,24 @@ class SettingVC: BaseVC<BaseVM> {
 }
 
 extension SettingVC: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let section = SettingSections(rawValue: indexPath.section) else { return }
+        
+        switch section {
+        case .AppGuildline:
+            popupAlert(title: AppGuildline(rawValue: indexPath.row)?.description,
+                       message: AppGuildline(rawValue: indexPath.row)?.description,
+                       actionTitles: ["OK", "Cancel"],
+                       actions: [nil, nil])
+        case .PersonalSetting:
+            popupAlert(title: PersonalSetting(rawValue: indexPath.row)?.description,
+                       message: PersonalSetting(rawValue: indexPath.row)?.description,
+                       actionTitles: ["OK", "Cancel"],
+                       actions: [nil, nil])
+        }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 extension SettingVC: UITableViewDataSource {
