@@ -5,7 +5,7 @@ class MainPageVC: UIPageViewController {
     lazy var pages: [UIViewController] = [
         ListAddonVC.instantiate(viewModel: ListAddonVM(pageIndex: 0)),
         ListAddonVC.instantiate(viewModel: ListAddonVM(pageIndex: 1)),
-        ListAddonVC.instantiate(viewModel: ListAddonVM(pageIndex: 2))]
+        SettingVC.instantiate(viewModel: BaseVM())]
     private var currentPageIndex = 0
     
     override func viewDidLoad() {

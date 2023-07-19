@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="space_grotesk_bold.ttf">
+            <string>SpaceGrotesk-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingVC" customModule="ReviewProject" customModuleProvider="target">
+            <connections>
+                <outlet property="settingTableView" destination="wr8-8N-iUi" id="Ozc-RH-Szj"/>
+                <outlet property="userAvatarImageView" destination="71W-C3-byq" id="0pG-6f-3JF"/>
+                <outlet property="userHearInfoView" destination="ude-aQ-AFf" id="725-PT-tw7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ude-aQ-AFf">
+                    <rect key="frame" x="0.0" y="59" width="393" height="30"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_avatar_default" translatesAutoresizingMaskIntoConstraints="NO" id="71W-C3-byq">
+                            <rect key="frame" x="24" y="0.0" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="JFh-WS-FeJ"/>
+                                <constraint firstAttribute="width" secondItem="71W-C3-byq" secondAttribute="height" id="VRh-eM-osU"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDP-6I-mJT">
+                            <rect key="frame" x="62" y="3.6666666666666643" width="92" height="23"/>
+                            <fontDescription key="fontDescription" name="SpaceGrotesk-Bold" family="Space Grotesk" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="71W-C3-byq" firstAttribute="top" secondItem="ude-aQ-AFf" secondAttribute="top" id="1k2-ak-mqz"/>
+                        <constraint firstItem="71W-C3-byq" firstAttribute="leading" secondItem="ude-aQ-AFf" secondAttribute="leading" constant="24" id="5yn-jp-1E8"/>
+                        <constraint firstItem="GDP-6I-mJT" firstAttribute="centerY" secondItem="ude-aQ-AFf" secondAttribute="centerY" id="ZhL-qI-33v"/>
+                        <constraint firstAttribute="bottom" secondItem="71W-C3-byq" secondAttribute="bottom" id="lj1-3z-pRH"/>
+                        <constraint firstItem="71W-C3-byq" firstAttribute="centerY" secondItem="ude-aQ-AFf" secondAttribute="centerY" id="uI9-49-tn0"/>
+                        <constraint firstItem="GDP-6I-mJT" firstAttribute="leading" secondItem="71W-C3-byq" secondAttribute="trailing" constant="8" id="y7Y-n0-wO1"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wr8-8N-iUi">
+                    <rect key="frame" x="0.0" y="119" width="393" height="699"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ude-aQ-AFf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="J00-Ai-1wF"/>
+                <constraint firstItem="wr8-8N-iUi" firstAttribute="top" secondItem="ude-aQ-AFf" secondAttribute="bottom" constant="30" id="Mc8-dO-zqN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wr8-8N-iUi" secondAttribute="trailing" id="R0n-ei-WgS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="wr8-8N-iUi" secondAttribute="bottom" id="b5l-tH-PxC"/>
+                <constraint firstItem="wr8-8N-iUi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="n0R-Eg-VBV"/>
+                <constraint firstItem="ude-aQ-AFf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="qTU-4a-dKL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ude-aQ-AFf" secondAttribute="trailing" id="uom-re-aCs"/>
+            </constraints>
+            <point key="canvasLocation" x="80" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_avatar_default" width="30" height="30"/>
+    </resources>
+</document>

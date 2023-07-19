@@ -15,6 +15,11 @@
 		80BE051C2A662DBC0090AB96 /* BaseDaoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BE05132A662DBC0090AB96 /* BaseDaoService.swift */; };
 		80BE051D2A662DBC0090AB96 /* BaseDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BE05142A662DBC0090AB96 /* BaseDao.swift */; };
 		80BE051E2A662DBC0090AB96 /* RAddon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BE05162A662DBC0090AB96 /* RAddon.swift */; };
+		80BE05222A677CE10090AB96 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BE05202A677CE10090AB96 /* SettingVC.swift */; };
+		80BE05232A677CE10090AB96 /* SettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80BE05212A677CE10090AB96 /* SettingVC.xib */; };
+		80BE05252A677FAF0090AB96 /* SettingSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BE05242A677FAF0090AB96 /* SettingSections.swift */; };
+		80BE05292A678D980090AB96 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BE05272A678D980090AB96 /* SettingTableViewCell.swift */; };
+		80BE052A2A678D980090AB96 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80BE05282A678D980090AB96 /* SettingTableViewCell.xib */; };
 		80F275492A64DA04000818EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80F275482A64DA04000818EE /* Assets.xcassets */; };
 		80F275952A64DAF7000818EE /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F2755A2A64DAF6000818EE /* Repository.swift */; };
 		80F275962A64DAF7000818EE /* RepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F2755B2A64DAF6000818EE /* RepositoryImp.swift */; };
@@ -85,6 +90,11 @@
 		80BE05132A662DBC0090AB96 /* BaseDaoService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDaoService.swift; sourceTree = "<group>"; };
 		80BE05142A662DBC0090AB96 /* BaseDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDao.swift; sourceTree = "<group>"; };
 		80BE05162A662DBC0090AB96 /* RAddon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAddon.swift; sourceTree = "<group>"; };
+		80BE05202A677CE10090AB96 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		80BE05212A677CE10090AB96 /* SettingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingVC.xib; sourceTree = "<group>"; };
+		80BE05242A677FAF0090AB96 /* SettingSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSections.swift; sourceTree = "<group>"; };
+		80BE05272A678D980090AB96 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		80BE05282A678D980090AB96 /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
 		80F2753C2A64DA03000818EE /* ReviewProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReviewProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80F275482A64DA04000818EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80F2754D2A64DA04000818EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -232,6 +242,25 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		80BE051F2A6775B40090AB96 /* SettingVC */ = {
+			isa = PBXGroup;
+			children = (
+				80BE05262A678D720090AB96 /* Cell */,
+				80BE05202A677CE10090AB96 /* SettingVC.swift */,
+				80BE05212A677CE10090AB96 /* SettingVC.xib */,
+			);
+			path = SettingVC;
+			sourceTree = "<group>";
+		};
+		80BE05262A678D720090AB96 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				80BE05272A678D980090AB96 /* SettingTableViewCell.swift */,
+				80BE05282A678D980090AB96 /* SettingTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		80F275332A64DA03000818EE = {
 			isa = PBXGroup;
 			children = (
@@ -286,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				80F2755D2A64DAF6000818EE /* Addon.swift */,
+				80BE05242A677FAF0090AB96 /* SettingSections.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -378,6 +408,7 @@
 				80F275E72A64FCC9000818EE /* MainVC */,
 				80F2757C2A64DAF7000818EE /* ListAddonVC */,
 				80F275842A64DAF7000818EE /* AddonDetailVC */,
+				80BE051F2A6775B40090AB96 /* SettingVC */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -564,6 +595,7 @@
 				80F275DC2A64DBE3000818EE /* minecraft_regular.otf in Resources */,
 				80F275D72A64DBE3000818EE /* space_grotesk_light.ttf in Resources */,
 				80F275E02A64DBE3000818EE /* minecraft_bold_italic.otf in Resources */,
+				80BE052A2A678D980090AB96 /* SettingTableViewCell.xib in Resources */,
 				80F275D52A64DBE3000818EE /* poppins_medium.ttf in Resources */,
 				80F275E22A64DBE3000818EE /* poppins_light.ttf in Resources */,
 				80F275E32A64DBE3000818EE /* poppins_bold.ttf in Resources */,
@@ -571,6 +603,7 @@
 				80F275AF2A64DAF7000818EE /* ListAddonCollectionViewCell.xib in Resources */,
 				80F275DD2A64DBE3000818EE /* minecraft_bold.otf in Resources */,
 				80F275D92A64DBE3000818EE /* minecraft_italic.otf in Resources */,
+				80BE05232A677CE10090AB96 /* SettingVC.xib in Resources */,
 				80F275DE2A64DBE3000818EE /* space_grotesk_bold.ttf in Resources */,
 				80F275DF2A64DBE3000818EE /* minecrafter_alt.ttf in Resources */,
 			);
@@ -655,13 +688,16 @@
 				80F2759F2A64DAF7000818EE /* AppApi.swift in Sources */,
 				80F275E62A64E91B000818EE /* InvertedCornerView.swift in Sources */,
 				80F275B72A64DAF7000818EE /* GradientView.swift in Sources */,
+				80BE05292A678D980090AB96 /* SettingTableViewCell.swift in Sources */,
 				80F275AA2A64DAF7000818EE /* UILabel.swift in Sources */,
 				80F275972A64DAF7000818EE /* Addon.swift in Sources */,
+				80BE05252A677FAF0090AB96 /* SettingSections.swift in Sources */,
 				80F275A62A64DAF7000818EE /* UICollectionView.swift in Sources */,
 				80F275952A64DAF7000818EE /* Repository.swift in Sources */,
 				80F2759E2A64DAF7000818EE /* NetworkConfig.swift in Sources */,
 				80F275BC2A64DAF7000818EE /* BaseCollectionViewCell.swift in Sources */,
 				80F275B82A64DAF7000818EE /* AppDataSource.swift in Sources */,
+				80BE05222A677CE10090AB96 /* SettingVC.swift in Sources */,
 				80F275AD2A64DAF7000818EE /* ListAddonCollectionViewCell.swift in Sources */,
 				80F2759C2A64DAF7000818EE /* ApiService.swift in Sources */,
 				80BE051C2A662DBC0090AB96 /* BaseDaoService.swift in Sources */,
