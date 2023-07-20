@@ -19,6 +19,10 @@ class RAddon: Object {
     @objc dynamic var hotPriority: String = ""
     @objc dynamic var downloadCount: String = ""
     @objc dynamic var isFavorite: Bool = false
+    
+    override class func primaryKey() -> String? {
+        return "itemID"
+    }
 }
 
 extension RAddon : ModelConvertibleType {

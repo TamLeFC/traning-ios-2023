@@ -24,8 +24,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailAddonVC" customModule="Trainning_Project" customModuleProvider="target">
             <connections>
+                <outlet property="authorNameLabel" destination="WEr-jr-Rg4" id="1bm-vi-Slp"/>
+                <outlet property="commentCountLabel" destination="ujh-Wz-i3l" id="ZUd-XD-Yfl"/>
+                <outlet property="descriptionLabel" destination="Cj3-66-bmx" id="SmX-Ns-z4v"/>
+                <outlet property="favoriteCountLabel" destination="z7n-a5-H0C" id="1MG-db-SDX"/>
                 <outlet property="favoriteView" destination="WCL-3O-xFg" id="MJ8-eG-Ped"/>
+                <outlet property="itemNameLabel" destination="emD-Ol-CLC" id="vhA-68-ghL"/>
                 <outlet property="stackView" destination="mxt-S9-9dm" id="Jm0-lM-Nmx"/>
+                <outlet property="thumbImageView" destination="mop-zU-Yij" id="6ef-aT-4B2"/>
+                <outlet property="titleMoreButtonLabel" destination="1bu-bt-TlL" id="Luc-ye-FEl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -210,26 +217,29 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Im-fK-VXe">
-                    <rect key="frame" x="24" y="522.66666666666663" width="111" height="23"/>
+                    <rect key="frame" x="24" y="495.66666666666669" width="111" height="23.000000000000057"/>
                     <fontDescription key="fontDescription" name="SpaceGrotesk-Bold" family="Space Grotesk" pointSize="18"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Mq-pV-bKY">
-                    <rect key="frame" x="24" y="423.66666666666669" width="366" height="67"/>
+                    <rect key="frame" x="24" y="423.66666666666669" width="366" height="40"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_background_favorite_button" translatesAutoresizingMaskIntoConstraints="NO" id="bk8-GA-9Se">
-                            <rect key="frame" x="0.0" y="0.0" width="366" height="67"/>
+                            <rect key="frame" x="0.0" y="0.0" width="366" height="40"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add to favorite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bu-bt-TlL">
-                            <rect key="frame" x="117.66666666666666" y="22" width="131" height="23"/>
+                            <rect key="frame" x="117.66666666666666" y="8.3333333333333144" width="131" height="23"/>
                             <fontDescription key="fontDescription" name="SpaceGrotesk-Bold" family="Space Grotesk" pointSize="18"/>
                             <color key="textColor" red="1" green="0.70196078431372544" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6Z-I1-SrH">
-                            <rect key="frame" x="0.0" y="0.0" width="366" height="67"/>
+                            <rect key="frame" x="0.0" y="0.0" width="366" height="40"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <connections>
+                                <action selector="onFavoriteChanged:" destination="-1" eventType="touchUpInside" id="1Jg-N3-a3k"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -242,13 +252,12 @@
                         <constraint firstItem="K6Z-I1-SrH" firstAttribute="top" secondItem="0Mq-pV-bKY" secondAttribute="top" id="Lgv-w8-hhz"/>
                         <constraint firstItem="bk8-GA-9Se" firstAttribute="top" secondItem="0Mq-pV-bKY" secondAttribute="top" id="gnA-cT-Uiz"/>
                         <constraint firstAttribute="bottom" secondItem="bk8-GA-9Se" secondAttribute="bottom" id="pLN-2L-btH"/>
-                        <constraint firstAttribute="width" secondItem="0Mq-pV-bKY" secondAttribute="height" multiplier="327:60" id="qOk-Cj-ORk"/>
                         <constraint firstItem="bk8-GA-9Se" firstAttribute="leading" secondItem="0Mq-pV-bKY" secondAttribute="leading" id="sop-nP-1He"/>
                         <constraint firstAttribute="trailing" secondItem="bk8-GA-9Se" secondAttribute="trailing" id="wm1-6j-vAl"/>
                     </constraints>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S26-46-Ul0">
-                    <rect key="frame" x="0.0" y="545.66666666666663" width="414" height="316.33333333333337"/>
+                    <rect key="frame" x="0.0" y="518.66666666666663" width="414" height="343.33333333333337"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cj3-66-bmx">
                             <rect key="frame" x="24" y="0.0" width="372.66666666666669" height="896"/>

@@ -185,8 +185,8 @@
                             <constraint firstAttribute="width" secondItem="0dv-8H-KIP" secondAttribute="height" multiplier="327:48" id="GLL-wD-ton"/>
                         </constraints>
                     </stackView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I51-ds-qwM">
-                        <rect key="frame" x="12" y="251" width="29" height="18"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I51-ds-qwM">
+                        <rect key="frame" x="12" y="251" width="36" height="18"/>
                         <fontDescription key="fontDescription" name="SpaceGrotesk-Medium" family="Space Grotesk" pointSize="14"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -198,6 +198,7 @@
             <constraints>
                 <constraint firstItem="0dv-8H-KIP" firstAttribute="top" secondItem="76L-Hb-vQ6" secondAttribute="bottom" constant="19" id="4sz-5O-gm0"/>
                 <constraint firstItem="nBk-un-DJn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="5hc-Bk-h6d"/>
+                <constraint firstItem="76L-Hb-vQ6" firstAttribute="leading" secondItem="I51-ds-qwM" secondAttribute="trailing" constant="135" id="92U-eR-IzI"/>
                 <constraint firstAttribute="trailing" secondItem="0dv-8H-KIP" secondAttribute="trailing" id="AMv-NY-RiK"/>
                 <constraint firstItem="bD6-Df-hjZ" firstAttribute="top" secondItem="nBk-un-DJn" secondAttribute="bottom" constant="12" id="EjC-C3-X0f"/>
                 <constraint firstAttribute="trailing" secondItem="bD6-Df-hjZ" secondAttribute="trailing" constant="12" id="HGa-4x-igA"/>

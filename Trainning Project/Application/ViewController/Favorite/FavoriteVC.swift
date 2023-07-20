@@ -37,8 +37,9 @@ class FavoriteVC: BaseVC<FavoriteVM> {
         viewModel.addonsS.asObserver()
             .map { [SectionModel(model: (), items: $0)] }
             .bind(to: self.collectionView.rx.items(dataSource: getAddonsDataSource() {[weak self] addon in
+                print("data: \(addon)")
                 guard let self = self else { return }
-                self.navigationController?.pushViewController(DetailAddonVC(), animated: true)
+                self.navigationController?.pushViewController(DetailAddonVC.instantiate(viewModel: DetailAddonVM(addon)), animated: true)
             }))
             .disposed(by: bag)
     }

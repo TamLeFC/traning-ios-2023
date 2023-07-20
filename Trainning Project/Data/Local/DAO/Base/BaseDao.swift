@@ -25,7 +25,6 @@ class BaseDAO: BaseDaoService {
         serialScheduler = SerialDispatchQueueScheduler(queue: concurrentQueue, internalSerialQueueName: "internalSerialQueueName")
     }
     
-    
     var realm: Realm {
         guard let realm = try? Realm(configuration: config) else {
             fatalError()

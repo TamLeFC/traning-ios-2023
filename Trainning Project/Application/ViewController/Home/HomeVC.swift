@@ -24,7 +24,7 @@ class HomeVC: BaseVC<HomeVM> {
             .map { [SectionModel(model: (), items: $0)] }
             .bind(to: self.collectionView.rx.items(dataSource: getAddonsDataSource() {[weak self] addon in
                 guard let self = self else { return }
-                self.navigationController?.pushViewController(DetailAddonVC(), animated: true)
+                self.navigationController?.pushViewController(DetailAddonVC.instantiate(viewModel: DetailAddonVM(addon)), animated: true)
             }))
             .disposed(by: bag)
     }
