@@ -51,9 +51,18 @@ class HomeVC: BaseVC<HomeVM> {
 
 extension HomeVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.frame.width
-        let height: CGFloat = (width * 332) / 327
-        return CGSize(width: width, height: height)
+        
+        let width: CGFloat = collectionView.frame.width
+        var height: CGFloat = 0
+        
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            let screenHeight = UIScreen.main.bounds.height
+            height = screenHeight / 2
+            return CGSize(width: width, height: height)
+        } else {
+            height = (width * 332) / 327
+            return CGSize(width: width, height: height)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

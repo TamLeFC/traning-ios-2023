@@ -9,5 +9,5 @@ import UIKit
 import Kingfisher
 
 func loadImage(from imagePath: String, into imageView: UIImageView) {
-    imageView.kf.setImage(with: URL(string: imagePath))
+    imageView.kf.setImage(with: URL(string: imagePath), placeholder: "img_photo_default".toUIImage)
 }
