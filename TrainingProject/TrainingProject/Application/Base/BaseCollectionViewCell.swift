@@ -5,4 +5,12 @@
 //  Created by Mobile Dev on 17/07/2023.
 //
 
-import Foundation
+import UIKit
+
+class BaseCollectionViewCell: UICollectionViewCell {
+    
+    class var identifier: String {
+        return NSStringFromClass(self).components(separatedBy: ".").last!
+    }
+    
+}

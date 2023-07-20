@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ItemCell: UITableViewCell {
+class ItemCell: BaseTableViewCell {
 
     @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var moreButton: UIButton!
@@ -15,6 +15,9 @@ class ItemCell: UITableViewCell {
         super.awakeFromNib()
         moreButton.imageView?.contentMode = .scaleAspectFill
         cellView.layer.cornerRadius = 4
+    }
+    func configure() {
+        
     }
 
 

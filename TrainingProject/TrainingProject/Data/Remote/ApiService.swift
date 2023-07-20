@@ -6,3 +6,8 @@
 //
 
 import Foundation
+import RxSwift
+
+protocol ApiService {
+    func getAllMineCrafts() -> Single<[MineCraft]>
+}

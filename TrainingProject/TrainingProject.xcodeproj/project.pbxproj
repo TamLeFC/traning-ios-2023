@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5EC02E769C16B5CD4634987C /* Pods_TrainingProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE4C6A1840545ABB9FACE7D /* Pods_TrainingProject.framework */; };
+		8046DDF92A67E29300280BFC /* AppApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8046DDF82A67E29300280BFC /* AppApi.swift */; };
 		805459C22A66430B004F5451 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805459C02A66430B004F5451 /* DetailVC.swift */; };
 		805459C32A66430B004F5451 /* DetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 805459C12A66430B004F5451 /* DetailVC.xib */; };
 		805459C52A664316004F5451 /* DetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805459C42A664316004F5451 /* DetailVM.swift */; };
@@ -24,7 +25,6 @@
 		806A94492A64EAE6002A351D /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806A94482A64EAE6002A351D /* Repository.swift */; };
 		806A944B2A64EAF4002A351D /* RepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806A944A2A64EAF4002A351D /* RepositoryImp.swift */; };
 		806A944D2A64EDBB002A351D /* MineCraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806A944C2A64EDBB002A351D /* MineCraft.swift */; };
-		806A944F2A64EDE6002A351D /* MineCraftResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806A944E2A64EDE6002A351D /* MineCraftResponse.swift */; };
 		806A94522A64EE6A002A351D /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806A94512A64EE6A002A351D /* BaseTableViewCell.swift */; };
 		806A94542A64EE7A002A351D /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806A94532A64EE7A002A351D /* BaseCollectionViewCell.swift */; };
 		806A94562A64EE83002A351D /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806A94552A64EE83002A351D /* BaseVM.swift */; };
@@ -76,6 +76,7 @@
 
 /* Begin PBXFileReference section */
 		4AE4C6A1840545ABB9FACE7D /* Pods_TrainingProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainingProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8046DDF82A67E29300280BFC /* AppApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppApi.swift; sourceTree = "<group>"; };
 		805459C02A66430B004F5451 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		805459C12A66430B004F5451 /* DetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailVC.xib; sourceTree = "<group>"; };
 		805459C42A664316004F5451 /* DetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVM.swift; sourceTree = "<group>"; };
@@ -94,7 +95,6 @@
 		806A94482A64EAE6002A351D /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		806A944A2A64EAF4002A351D /* RepositoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryImp.swift; sourceTree = "<group>"; };
 		806A944C2A64EDBB002A351D /* MineCraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineCraft.swift; sourceTree = "<group>"; };
-		806A944E2A64EDE6002A351D /* MineCraftResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineCraftResponse.swift; sourceTree = "<group>"; };
 		806A94512A64EE6A002A351D /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		806A94532A64EE7A002A351D /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		806A94552A64EE83002A351D /* BaseVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVM.swift; sourceTree = "<group>"; };
@@ -309,7 +309,6 @@
 		806A94342A64E9B8002A351D /* Remote */ = {
 			isa = PBXGroup;
 			children = (
-				806A94392A64EA35002A351D /* Response */,
 				806A94382A64EA30002A351D /* Network */,
 				806A943C2A64EA6B002A351D /* ApiService.swift */,
 				806A943E2A64EA7F002A351D /* ApiServiceImp.swift */,
@@ -349,16 +348,9 @@
 			children = (
 				806A943B2A64EA47002A351D /* Configure */,
 				806A943A2A64EA3F002A351D /* AppNetwork */,
+				8046DDF82A67E29300280BFC /* AppApi.swift */,
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		806A94392A64EA35002A351D /* Response */ = {
-			isa = PBXGroup;
-			children = (
-				806A944E2A64EDE6002A351D /* MineCraftResponse.swift */,
-			);
-			path = Response;
 			sourceTree = "<group>";
 		};
 		806A943A2A64EA3F002A351D /* AppNetwork */ = {
@@ -662,6 +654,7 @@
 				806A94412A64EA9B002A351D /* NetworkConfig.swift in Sources */,
 				806A94872A64FC43002A351D /* HomeVC.swift in Sources */,
 				806A94972A64FDC3002A351D /* FavoriteVM.swift in Sources */,
+				8046DDF92A67E29300280BFC /* AppApi.swift in Sources */,
 				806A946D2A64FA49002A351D /* DBManager.swift in Sources */,
 				806A946B2A64FA3D002A351D /* ModelConvertibleType.swift in Sources */,
 				806A948A2A64FC50002A351D /* HomeVM.swift in Sources */,
@@ -683,7 +676,6 @@
 				806A94582A64EE8B002A351D /* BaseVC.swift in Sources */,
 				806A944B2A64EAF4002A351D /* RepositoryImp.swift in Sources */,
 				806A94842A64FC24002A351D /* MainPageVC.swift in Sources */,
-				806A944F2A64EDE6002A351D /* MineCraftResponse.swift in Sources */,
 				806A94672A64FA20002A351D /* RealmRepresentable.swift in Sources */,
 				806A94602A64EECB002A351D /* UITableView.swift in Sources */,
 				806A94522A64EE6A002A351D /* BaseTableViewCell.swift in Sources */,

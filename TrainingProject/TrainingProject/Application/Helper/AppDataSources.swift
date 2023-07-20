@@ -5,4 +5,14 @@
 //  Created by Mobile Dev on 17/07/2023.
 //
 
-import Foundation
+import RxDataSources
+
+func getMineCraftsDatasources() -> RxTableViewSectionedReloadDataSource<SectionModel<Void, MineCraft>> {
+    return RxTableViewSectionedReloadDataSource<SectionModel<Void, MineCraft>>(
+        configureCell: {
+            (dataSource, tableView, indexPath, item) -> UITableViewCell in
+            let cell = tableView.dequeueReuseable(ofType: ItemCell.self, indexPath: indexPath)
+            cell.configure()
+            return cell
+    })
+}

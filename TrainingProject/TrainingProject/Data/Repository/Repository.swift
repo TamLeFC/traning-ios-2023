@@ -6,3 +6,10 @@
 //
 
 import Foundation
+import RxSwift
+
+protocol Repository {
+    
+    func getAllMineCrafts() -> Single<MineCraftResponse>
+    
+}

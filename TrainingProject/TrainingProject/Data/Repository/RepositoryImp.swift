@@ -5,4 +5,13 @@
 //  Created by Mobile Dev on 17/07/2023.
 //
 
-import Foundation
+import RxSwift
+import RxCocoa
+
+class RepositoryImp: Repository {
+    let apiService: ApiService = ApiServiceImp()
+    
+    func getAllMineCrafts() -> RxSwift.Single<MineCraftResponse> {
+        return apiService.getAllMineCrafts()
+    }
+}
