@@ -24,7 +24,9 @@ class HomeVC: BaseVC<HomeVM> {
             .map { [SectionModel(model: (), items: $0)] }
             .bind(to: self.collectionView.rx.items(dataSource: getAddonsDataSource() {[weak self] addon in
                 guard let self = self else { return }
-                self.navigationController?.pushViewController(DetailAddonVC.instantiate(viewModel: DetailAddonVM(addon)), animated: true)
+                self.navigationController?.pushViewController(
+                    DetailAddonVC.instantiate(viewModel: DetailAddonVM(addon)),
+                    animated: true)
             }))
             .disposed(by: bag)
     }
@@ -32,18 +34,21 @@ class HomeVC: BaseVC<HomeVM> {
     override func configureListView() {
         super.configureListView()
         
+        configureCollectionViewLayout()
+        collectionView.delegate = self
+        collectionView.registerCellNib(AddonCell.self)
+    }
+    
+    private func configureCollectionViewLayout() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.sectionInset = UIEdgeInsets(top: 16, left: 0, bottom: 16, right: 0)
         collectionView.setCollectionViewLayout(layout, animated: true)
-        
-        collectionView.delegate = self
-        
-        collectionView.registerCellNib(AddonCell.self)
     }
 }
 
 //MARK: - UICollectionViewLayout
+
 extension HomeVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.frame.width

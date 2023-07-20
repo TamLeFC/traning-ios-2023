@@ -36,22 +36,28 @@ class AddonCell: BaseCollectionViewCell {
         
         stackView.addTopBorder(with: UIColor(hex: 0x1E1F21), andWidth: 1.0)
         
-        moreButton.addDropShadow(shadowRadius: 6, offset: CGSize(width: 2, height: 4), color: UIColor(hex: 0x000000, alpha: 0.5))
+        moreButton.addDropShadow(shadowRadius: 6,
+                                 offset: CGSize(width: 2, height: 4),
+                                 color: UIColor(hex: 0x000000, alpha: 0.5))
     }
     
     public func configureCell(_ item: Addon) {
         self.addon = item
         
-        loadImage(from: item.thumbUrl, into: thumbImage)
-        itemNameLable.text = item.itemName
-        authorLabel.text = item.authorName
-        favoriteCountLabel.text = "\(item.hotPriority)k"
-        commentCountLabel.text = "\(item.downloadCount)k"
+        configureCellUI(with: item)
     }
-    
     
     @IBAction func moreButtonTouched(_ sender: UIButton) {
         onMoreButtonTouched?(addon)
     }
-    
+}
+
+extension AddonCell {
+    private func configureCellUI(with addon: Addon) {
+        loadImage(from: addon.thumbUrl, into: thumbImage)
+        itemNameLable.text = addon.itemName
+        authorLabel.text = addon.authorName
+        favoriteCountLabel.text = "\(addon.hotPriority)k"
+        commentCountLabel.text = "\(addon.downloadCount)k"
+    }
 }

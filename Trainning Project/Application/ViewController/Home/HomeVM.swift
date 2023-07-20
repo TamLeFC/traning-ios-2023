@@ -17,7 +17,7 @@ class HomeVM: BaseVM {
         trigger
             .asObservable()
             .flatMapLatest { _ -> Observable<[Addon]> in
-                self.getListAddon()
+                self.fetchAddonList()
             }
             .subscribe(onNext: {[weak self] knots in
                 guard let self = self else { return }
@@ -25,14 +25,15 @@ class HomeVM: BaseVM {
             }, onError: {[weak self] error in
                 guard let _ = self else { return }
                 //MARK: - handle error
-            }).disposed(by: bag)
+            })
+            .disposed(by: bag)
     }
     
     func fetchData() {
         trigger.accept(())
     }
     
-    private func getListAddon() -> Observable<[Addon]> {
+    private func fetchAddonList() -> Observable<[Addon]> {
         return Observable.combineLatest(respository.getListAddon().asObservable(), respository.getFavoriteds())
             .map { (listAddon, favoriteds) in
                 return listAddon.map { addon in

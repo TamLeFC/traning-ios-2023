@@ -15,7 +15,6 @@ class SettingVC: BaseVC<SettingVM> {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureListView()
     }
     
     override func configureListView() {
@@ -35,6 +34,11 @@ class SettingVC: BaseVC<SettingVM> {
 //MARK: - UITableViewDataSource
 
 extension SettingVC: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.numberOfSections()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfRowsInSection(section: section)
     }
@@ -46,21 +50,17 @@ extension SettingVC: UITableViewDataSource {
         
         return cell
     }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return viewModel.numberOfSections()
-    }
 }
 
 //MARK: - UITableViewDelegate
 extension SettingVC: UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return section == viewModel.numberOfSections() - 1 ? 0 : 36
-    }
-    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return section == 0 ? 0 : 36
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return section == viewModel.numberOfSections() - 1 ? 0 : 36
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -79,10 +79,14 @@ extension SettingVC: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let title = viewModel.settingItemForIndexPath(indexPath: indexPath).text
-        
-        let leftView = UIImageView(image: viewModel.settingItemForIndexPath(indexPath: indexPath).icon.toUIImage)
-        
+        let settingItem = viewModel.settingItemForIndexPath(indexPath: indexPath)
+        showNotificationBanner(title: settingItem.text, icon: settingItem.icon)
+    }
+}
+
+extension SettingVC {
+    private func showNotificationBanner(title: String, icon: String) {
+        let leftView = UIImageView(image: icon.toUIImage)
         let banner = NotificationBanner(title: title, leftView: leftView)
         banner.show()
     }

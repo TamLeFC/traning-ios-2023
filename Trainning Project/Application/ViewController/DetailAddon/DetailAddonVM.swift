@@ -15,12 +15,16 @@ class DetailAddonVM: BaseVM {
     
     let addonS: PublishSubject<Addon> = PublishSubject()
     
-    init(_ item: Addon) {
+    private var addon: Addon!
+    
+    init(_ addon: Addon) {
         super.init()
         
+        self.addon = addon
+        
         trigger
-            .flatMapLatest { _ -> Observable<Addon> in
-                return Observable.just(item)
+            .flatMapLatest { [unowned self] _ -> Observable<Addon> in
+                return Observable.just(self.addon)
             }
             .subscribe(onNext: {[weak self] addon in
                 guard let self = self else { return }
@@ -31,8 +35,8 @@ class DetailAddonVM: BaseVM {
         
         favoritedTrigger
             .asObservable()
-            .flatMapLatest { addon -> Observable<Void> in
-                if (addon.isFavorite) {
+            .flatMapLatest { [unowned self] addon -> Observable<Void> in
+                if addon.isFavorite {
                     return self.respository.deleteFavorited(addon)
                 } else {
                     return self.respository.addFavoriteds(addon).map {_ in return () }
@@ -50,8 +54,11 @@ class DetailAddonVM: BaseVM {
         trigger.accept(())
     }
     
-    func favoriteChanged(_ item: Addon) {
-        favoritedTrigger.accept(item)
+    func favoriteChanged(_ addon: Addon) {
+        self.addon.isFavorite = !self.addon.isFavorite
+        
+        trigger.accept(())
+        
+        favoritedTrigger.accept(addon)
     }
-    
 }

@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 
 class FavoriteVM: BaseVM {
-    var addonsS: PublishSubject<[Addon]>  = PublishSubject()
+    var addonsS = PublishSubject<[Addon]>()
     
     override init() {
         super.init()
@@ -18,7 +18,7 @@ class FavoriteVM: BaseVM {
         trigger
             .asObservable()
             .flatMapLatest { _ -> Observable<[Addon]> in
-                self.getAddonsFavorite()
+                self.fetchAddonsFavorite()
             }
             .subscribe(onNext: {[weak self] addons in
                 guard let self = self else { return }
@@ -26,30 +26,31 @@ class FavoriteVM: BaseVM {
             }, onError: {[weak self] error in
                 guard let _ = self else { return }
                 //MARK: - handle error
-            }).disposed(by: bag)
+            })
+            .disposed(by: bag)
     }
     
     func fetchData() {
         trigger.accept(())
     }
     
-    private func getAddonsFavorite() -> Observable<[Addon]> {
-        let addonsObservable = Observable.combineLatest(respository.getListAddon().asObservable(), respository.getFavoriteds())
+    private func fetchAddonsFavorite() -> Observable<[Addon]> {
+        return Observable.combineLatest(respository.getListAddon().asObservable(), respository.getFavoriteds())
             .map { (listAddon, listFavoriteds) -> [Addon] in
                 return listAddon.filter { addon in
                     return listFavoriteds.contains { $0.itemID == addon.itemID }
                 }
             }
-        return updateAddonFavoriteState(addonsObservable)
+            .map { [weak self] addons in
+                return self?.updateAddonFavoriteState(addons) ?? []
+            }
     }
     
-    private func updateAddonFavoriteState(_ addonsObservable : Observable<[Addon]>) -> Observable<[Addon]> {
-        return addonsObservable.map { addons in
-            return addons.map { addon in
-                var updatedAddon = addon
-                updatedAddon.isFavorite = true
-                return updatedAddon
-            }
+    private func updateAddonFavoriteState(_ addons: [Addon]) -> [Addon] {
+        return addons.map { addon in
+            var updatedAddon = addon
+            updatedAddon.isFavorite = true
+            return updatedAddon
         }
     }
 }
