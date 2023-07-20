@@ -41,7 +41,7 @@ class AddonDetailVC: BaseVC<AddonDetailVM> {
 
 extension AddonDetailVC {
     func bindAddonData(_ element: Addon) {
-        self.imageView.kf.setImage(with: URL(string: element.imageUrl))
+        self.imageView.kf.setImage(with: URL(string: element.imageUrl.trimmingCharacters(in: .whitespacesAndNewlines)), placeholder: "image_thumb_default".toUIImage)
         self.itemNameLabel.text = element.itemName
         self.authorNameLabel.text = "Author: \(element.authorName)"
         self.likeCountLabel.text = element.hotPriority.formatNumber()

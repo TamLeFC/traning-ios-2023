@@ -35,7 +35,7 @@ extension ListAddonVC: UICollectionViewDelegateFlowLayout {
         if let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             let size = collectionView.frame.width - flowLayout.sectionInset.left * 2
             
-            return CGSize(width: size, height: size * 0.95)
+            return CGSize(width: size, height: size * 0.93)
         }
         
         return CGSize()
