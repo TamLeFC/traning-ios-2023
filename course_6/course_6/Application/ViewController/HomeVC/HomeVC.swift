@@ -14,12 +14,9 @@ class HomeVC: BaseVC<HomeVM> {
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        initViews()
-        
-        tableView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
-
+                
         viewModel.trigger.accept(())
+        configureListView()
     }
     
     override func initViews() {
@@ -29,6 +26,8 @@ class HomeVC: BaseVC<HomeVM> {
     override func configureListView() {
         super.configureListView()
         
+        tableView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
+
         navigationController?.navigationBar.isHidden = true
         
         tableView.registerCellNib(CardCell.self)

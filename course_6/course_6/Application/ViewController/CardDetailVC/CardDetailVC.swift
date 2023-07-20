@@ -11,7 +11,7 @@ import RxDataSources
 import Kingfisher
 
 class CardDetailVC: BaseVC<CardDetailVM> {
-
+    
     @IBOutlet weak var cardNameLabel: UILabel!
     @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -22,11 +22,9 @@ class CardDetailVC: BaseVC<CardDetailVM> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationController?.navigationBar.isHidden = true
-        
+                
         viewModel.trigger.accept(())
-
+        configureListView()
     }
     
     override func initViews() {
@@ -35,6 +33,8 @@ class CardDetailVC: BaseVC<CardDetailVM> {
     
     override func configureListView() {
         super.configureListView()
+        
+        navigationController?.navigationBar.isHidden = true
         
         cardNameLabel.font = UIFont(name: "Roboto-Bold", size: 20)
         descriptionLabel.font = UIFont(name: "Roboto-Regular", size: 18)
@@ -77,7 +77,7 @@ class CardDetailVC: BaseVC<CardDetailVM> {
     @IBAction func backButtonTapped(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
-
+    
 }
 
 extension CardDetailVC: UICollectionViewDelegateFlowLayout {

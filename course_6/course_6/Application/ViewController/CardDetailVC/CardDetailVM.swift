@@ -36,5 +36,5 @@ class CardDetailVM: BaseVM {
                 //MARK: - handle error
             }).disposed(by: bag)
     }
-
+    
 }
