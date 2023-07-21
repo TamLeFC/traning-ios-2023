@@ -1,5 +1,7 @@
 import UIKit
 import RxDataSources
+import RxSwift
+import RxCocoa
 
 class ListAddonVC: BaseVC<ListAddonVM> {
     
@@ -26,38 +28,35 @@ class ListAddonVC: BaseVC<ListAddonVM> {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         
-        
+        coordinator.animate(alongsideTransition: { [weak self] _ in
+            self?.listAddonCollectionView.collectionViewLayout.invalidateLayout()
+        }, completion: nil)
     }
 }
 
 extension ListAddonVC: UICollectionViewDelegateFlowLayout {
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 24
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 8
+        return 24
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
+        guard let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout else {
+            return .init()
+        }
         let collectionViewWidth = collectionView.frame.width
         let sectionInset = flowLayout.sectionInset.left * 2
         
-        var numberOfColumns = 1.0
-        
-        if UIDevice.current.userInterfaceIdiom == .pad && UIDevice.current.orientation.isLandscape {
-            numberOfColumns = 3.0
-        } else if UIDevice.current.userInterfaceIdiom == .pad || UIDevice.current.orientation.isLandscape {
-            numberOfColumns = 2.0
-        }
+        let numberOfColumns = CGFloat(calculateNumberOfColumns(for: collectionView))
         
         let availableWidth = collectionViewWidth - sectionInset * numberOfColumns
         let itemWidth = availableWidth / numberOfColumns
         let itemHeight = itemWidth * 0.97
         
-        return CGSize(width: itemWidth, height: itemHeight)
+        return .init(width: itemWidth, height: itemHeight)
     }
     
 }
@@ -81,7 +80,6 @@ extension ListAddonVC {
     }
     
     private func onItemSelected() {
-        
         listAddonCollectionView
             .rx
             .modelSelected(Addon.self)
@@ -90,5 +88,15 @@ extension ListAddonVC {
                 self.navigationController?.pushViewController(vc, animated: true)
             })
             .disposed(by: bag)
+    }
+    
+    private func calculateNumberOfColumns(for collectionView: UICollectionView) -> Int {
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            return UIDevice.current.orientation.isLandscape ? 3 : 2
+        } else if UIDevice.current.orientation.isLandscape {
+            return 2
+        }
+        
+        return 1
     }
 }
