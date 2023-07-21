@@ -206,17 +206,22 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="IBz-Bk-Rn6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="2zi-li-cIx"/>
-                    <constraint firstAttribute="bottom" secondItem="IBz-Bk-Rn6" secondAttribute="bottom" id="5Ab-Eb-M8G"/>
-                    <constraint firstItem="IBz-Bk-Rn6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7T7-Lu-D8X"/>
+                    <constraint firstAttribute="bottom" secondItem="IBz-Bk-Rn6" secondAttribute="bottom" constant="20" id="5Ab-Eb-M8G"/>
                     <constraint firstItem="IBz-Bk-Rn6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wcJ-cY-jgo"/>
                     <constraint firstAttribute="trailing" secondItem="IBz-Bk-Rn6" secondAttribute="trailing" id="y7r-pS-NXg"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" name="background_primary"/>
             <connections>
+                <outlet property="authorNameLabel" destination="R1y-in-6yk" id="lD3-yc-GhQ"/>
                 <outlet property="cellView" destination="IBz-Bk-Rn6" id="tge-Vr-eXJ"/>
+                <outlet property="contentView" destination="H2p-sc-9uM" id="rbO-z7-lDd"/>
+                <outlet property="downloadCountLabel" destination="J27-B4-qFQ" id="4Pc-nD-Gwd"/>
+                <outlet property="hotPriorityLabel" destination="Ov0-Or-A2o" id="Ejs-Xo-6ed"/>
                 <outlet property="moreButton" destination="C4o-H2-277" id="iSw-tE-0S8"/>
+                <outlet property="nameLabel" destination="KiX-0H-aFz" id="8Vz-nL-KnW"/>
+                <outlet property="thumbnailImageView" destination="1Kv-YN-XwG" id="F4v-xo-CYU"/>
             </connections>
             <point key="canvasLocation" x="3.8167938931297707" y="-20.422535211267608"/>
         </tableViewCell>

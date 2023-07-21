@@ -12,7 +12,7 @@ func getMineCraftsDatasources() -> RxTableViewSectionedReloadDataSource<SectionM
         configureCell: {
             (dataSource, tableView, indexPath, item) -> UITableViewCell in
             let cell = tableView.dequeueReuseable(ofType: ItemCell.self, indexPath: indexPath)
-            cell.configure()
+            cell.configure(item)
             return cell
     })
 }

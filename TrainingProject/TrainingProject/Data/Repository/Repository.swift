@@ -10,6 +10,6 @@ import RxSwift
 
 protocol Repository {
     
-    func getAllMineCrafts() -> Single<MineCraftResponse>
+    func getAllMineCrafts() -> Single<[MineCraft]>
     
 }

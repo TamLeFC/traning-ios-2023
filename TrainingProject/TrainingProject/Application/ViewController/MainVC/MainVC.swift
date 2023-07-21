@@ -10,9 +10,8 @@ import UIKit
 class MainVC: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var pageView: UIView!
     @IBOutlet weak var tabView: UIView!
-    
+    @IBOutlet weak var mainPageView: UIView!
     @IBOutlet weak var homeImageView: UIImageView!
     @IBOutlet weak var favoriteImageview: UIImageView!
     @IBOutlet weak var settingImageView: UIImageView!
@@ -24,6 +23,7 @@ class MainVC: UIViewController {
 
         setupUI()
         setupPageView()
+        selectHome()
     }
     
     private func setupUI() {
@@ -39,8 +39,8 @@ class MainVC: UIViewController {
         pageVC = MainPageVC()
         
         addChild(pageVC)
-        pageVC.view.frame = pageView.bounds
-        pageView.addSubview(pageVC.view)
+        pageVC.view.frame = mainPageView.bounds
+        mainPageView.addSubview(pageVC.view)
         
         pageVC.didMove(toParent: self)
     }

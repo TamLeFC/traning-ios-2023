@@ -7,10 +7,10 @@
 
 import UIKit
 
-class MainPageVC: UIPageViewController {
+class MainPageVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     lazy var pages: [UIViewController] = [HomeVC(), FavoriteVC(), SettingVC()]
     
-    private var currentPageIndex = 0
+    private var currentPageIndex = -1
     
     func handleUIChangePage(pageIndex: Int) {
         if pageIndex == currentPageIndex { return }
@@ -27,13 +27,12 @@ class MainPageVC: UIPageViewController {
         
         currentPageIndex = pageIndex
     }
-}
-
-extension MainPageVC: UIPageViewControllerDataSource {
+    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = pages.firstIndex(of: viewController) else { return nil }
         let previousIndex = viewControllerIndex - 1
         
+        // ~= check if value range
         guard pages.indices ~= previousIndex else { return nil }
         
         return pages[previousIndex]
@@ -46,6 +45,6 @@ extension MainPageVC: UIPageViewControllerDataSource {
         guard pages.indices ~= nextIndex else { return nil }
         
         return pages[nextIndex]
-
     }
 }
+

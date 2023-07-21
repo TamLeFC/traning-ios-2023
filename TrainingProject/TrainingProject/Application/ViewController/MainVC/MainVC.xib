@@ -12,7 +12,7 @@
             <connections>
                 <outlet property="favoriteImageview" destination="pb2-ty-9ek" id="Dh9-E5-8sW"/>
                 <outlet property="homeImageView" destination="pHU-Xy-Vtg" id="XRQ-Va-sj9"/>
-                <outlet property="pageView" destination="c3p-CW-i9V" id="DkS-B7-Cgk"/>
+                <outlet property="mainPageView" destination="c3p-CW-i9V" id="RJ0-kd-nJh"/>
                 <outlet property="settingImageView" destination="qLk-zE-9he" id="0cP-CN-yAU"/>
                 <outlet property="tabView" destination="rBe-pU-pMh" id="rdi-Tc-Yh1"/>
                 <outlet property="titleLabel" destination="W1n-GT-IN4" id="8O9-Px-ajO"/>
@@ -55,6 +55,10 @@
                         <constraint firstItem="W1n-GT-IN4" firstAttribute="leading" secondItem="qmB-G1-YH2" secondAttribute="leading" constant="24" id="T2i-wE-qjL"/>
                         <constraint firstItem="iMQ-lq-S6E" firstAttribute="top" secondItem="qmB-G1-YH2" secondAttribute="top" constant="10" id="uKi-s9-Op3"/>
                     </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c3p-CW-i9V">
+                    <rect key="frame" x="0.0" y="94" width="375" height="635"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rBe-pU-pMh">
                     <rect key="frame" x="0.0" y="729" width="375" height="83"/>
@@ -162,10 +166,6 @@
                         <constraint firstItem="uOy-XY-7ns" firstAttribute="top" secondItem="rBe-pU-pMh" secondAttribute="top" id="xKd-pY-21n"/>
                         <constraint firstAttribute="trailing" secondItem="Jiv-MY-Xb3" secondAttribute="trailing" id="zjJ-yl-7dw"/>
                     </constraints>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c3p-CW-i9V">
-                    <rect key="frame" x="0.0" y="94" width="375" height="635"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

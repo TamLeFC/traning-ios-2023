@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import Kingfisher
 
-class DetailVC: UIViewController {
+class DetailVC: BaseVC<DetailVM> {
+    @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var addonDetailView: UIView!
     
     @IBOutlet weak var nameLabel: UILabel!
@@ -22,12 +24,25 @@ class DetailVC: UIViewController {
     @IBOutlet weak var favoriteLabel: UILabel!
     @IBOutlet weak var informationLabel: UILabel!
     @IBOutlet weak var contentInformationLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.trigger.accept(())
+        configureListView()
 
+    }
+    
+    override func initViews() {
+        super.initViews()
+    }
+    
+    override func configureListView() {
+        super.configureListView()
+        
         addonDetailView.layer.cornerRadius = 8
         
-        favoriteImageView.contentMode = .scaleToFill
+        headerView.contentMode = .scaleAspectFill
+        favoriteImageView.contentMode = .scaleAspectFill
         favoriteImageView.clipsToBounds = true
 
         nameLabel.font = UIFont(name: "minecrafter_reg", size: 16)
@@ -38,13 +53,31 @@ class DetailVC: UIViewController {
         favoriteLabel.font = UIFont(name: "space_grotesk_bold", size: 18)
         informationLabel.font = UIFont(name: "space_grotesk_bold", size: 18)
         contentInformationLabel.font = UIFont(name: "space_grotesk_regular", size: 18)
+    }
+    
+    override func bindViewModel() {
+        super.bindViewModel()
         
-        
+        viewModel?.mineCraftS.asObservable()
+            .subscribe(onNext:  {[weak self] mineCraft in
+                guard let self = self else { return }
+                
+                self.detailImageView.kf.setImage(with: URL(string: mineCraft.imageURL))
+                self.nameLabel.text = mineCraft.itemName
+                self.nameAuthorLabel.text = mineCraft.authorName
+                self.hotLabel.text = mineCraft.hotPriority
+                self.downloadCountLabel.text = mineCraft.downloadCount
+                self.contentInformationLabel.text = mineCraft.shortDescription
+            }).disposed(by: bag)
         
     }
 
     @IBAction func backButtonTapped(_ sender: Any) {
         navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func favoriteButtontapped(_ sender: Any) {
+        
     }
 
 }

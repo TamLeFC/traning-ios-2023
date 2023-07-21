@@ -11,7 +11,7 @@ import RxCocoa
 class RepositoryImp: Repository {
     let apiService: ApiService = ApiServiceImp()
     
-    func getAllMineCrafts() -> RxSwift.Single<MineCraftResponse> {
+    func getAllMineCrafts() -> RxSwift.Single<[MineCraft]> {
         return apiService.getAllMineCrafts()
     }
 }

@@ -19,23 +19,21 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zZe-T1-JmL">
-                    <rect key="frame" x="0.0" y="50" width="375" height="728"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zZe-T1-JmL">
+                    <rect key="frame" x="24" y="67" width="327" height="711"/>
                     <color key="backgroundColor" name="background_primary"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="375" id="NYs-gk-T5V"/>
-                    </constraints>
+                    <color key="sectionIndexBackgroundColor" name="background_primary"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.11764705882352941" green="0.12156862745098039" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="zZe-T1-JmL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="MXQ-fm-fAV"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zZe-T1-JmL" secondAttribute="trailing" id="Zwc-3S-FTu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zZe-T1-JmL" secondAttribute="trailing" constant="24" id="KyQ-el-gWf"/>
+                <constraint firstItem="zZe-T1-JmL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="V99-SK-Pj8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="zZe-T1-JmL" secondAttribute="bottom" id="mtf-c0-utr"/>
-                <constraint firstItem="zZe-T1-JmL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="rUN-x8-SNp"/>
+                <constraint firstItem="zZe-T1-JmL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="17" id="rUN-x8-SNp"/>
             </constraints>
-            <point key="canvasLocation" x="35" y="-11"/>
+            <point key="canvasLocation" x="34.399999999999999" y="-11.083743842364532"/>
         </view>
     </objects>
     <resources>
