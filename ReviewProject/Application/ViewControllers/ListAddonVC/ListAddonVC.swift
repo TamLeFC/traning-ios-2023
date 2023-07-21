@@ -2,7 +2,7 @@ import UIKit
 import RxDataSources
 
 class ListAddonVC: BaseVC<ListAddonVM> {
-
+    
     @IBOutlet weak var listAddonCollectionView: UICollectionView!
     
     override func configureListView() {
@@ -22,6 +22,12 @@ class ListAddonVC: BaseVC<ListAddonVM> {
         
         onItemSelected()
     }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        
+        
+    }
 }
 
 extension ListAddonVC: UICollectionViewDelegateFlowLayout {
@@ -30,15 +36,28 @@ extension ListAddonVC: UICollectionViewDelegateFlowLayout {
         return 24
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 8
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
+        let collectionViewWidth = collectionView.frame.width
+        let sectionInset = flowLayout.sectionInset.left * 2
         
-        if let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            let size = collectionView.frame.width - flowLayout.sectionInset.left * 2
-            
-            return CGSize(width: size, height: size * 0.93)
+        var numberOfColumns = 1.0
+        
+        if UIDevice.current.userInterfaceIdiom == .pad && UIDevice.current.orientation.isLandscape {
+            numberOfColumns = 3.0
+        } else if UIDevice.current.userInterfaceIdiom == .pad || UIDevice.current.orientation.isLandscape {
+            numberOfColumns = 2.0
         }
         
-        return CGSize()
+        let availableWidth = collectionViewWidth - sectionInset * numberOfColumns
+        let itemWidth = availableWidth / numberOfColumns
+        let itemHeight = itemWidth * 0.97
+        
+        return CGSize(width: itemWidth, height: itemHeight)
     }
     
 }
