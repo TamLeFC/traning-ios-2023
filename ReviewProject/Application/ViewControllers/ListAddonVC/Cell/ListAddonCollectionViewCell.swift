@@ -2,7 +2,6 @@ import UIKit
 import Kingfisher
 
 class ListAddonCollectionViewCell: BaseCollectionViewCell {
-    
     @IBOutlet weak var thumbImageView: UIImageView!
     @IBOutlet weak var itemNameLabel: UILabel!
     @IBOutlet weak var authorNameLabel: UILabel!
@@ -18,7 +17,5 @@ class ListAddonCollectionViewCell: BaseCollectionViewCell {
         commentCount.text = item.downloadCount.formatNumber()
         
         invertedButton.addDropShadow(shadowRadius: 6, offset: .init(width: 2, height: 4), color: .black.withAlphaComponent(0.5))
-        
     }
-    
 }

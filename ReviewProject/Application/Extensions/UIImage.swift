@@ -1,11 +1,3 @@
-//
-//  UIImage.swift
-//  BaseProject
-//
-//  Created by Tam Le on 22/11/2020.
-//  Copyright © 2020 Tam Le. All rights reserved.
-//
-
 import UIKit
 
 enum BlurStyle: String {

@@ -1,14 +1,6 @@
-//
-//  SettingVC.swift
-//  ReviewProject
-//
-//  Created by Mobile Dev 1 on 19/07/2023.
-//
-
 import UIKit
 
 class SettingVC: BaseVC<BaseVM> {
-    
     @IBOutlet weak var userHearInfoView: UIView!
     @IBOutlet weak var settingTableView: UITableView!
     @IBOutlet weak var userAvatarImageView: UIImageView!
@@ -42,7 +34,6 @@ extension SettingVC: UITableViewDelegate {
                        actionTitles: ["OK", "Cancel"],
                        actions: [nil, nil])
         }
-        
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
@@ -73,7 +64,6 @@ extension SettingVC: UITableViewDataSource {
         case .PersonalSetting:
             cell.configure(PersonalSetting(rawValue: indexPath.row)!)
         }
-        
         return cell
     }
     
@@ -94,12 +84,10 @@ extension SettingVC: UITableViewDataSource {
             divider.centerYAnchor.constraint(equalTo: footerView.centerYAnchor).isActive = true
             divider.heightAnchor.constraint(equalToConstant: 4).isActive = true
         }
-        
         return footerView
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        
         return 36
     }
 }

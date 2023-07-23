@@ -3,7 +3,6 @@ import RxDataSources
 import Kingfisher
 
 class AddonDetailVC: BaseVC<AddonDetailVM> {
-    
     @IBOutlet weak var contentFavoriteButtonLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var commentCountLabel: UILabel!

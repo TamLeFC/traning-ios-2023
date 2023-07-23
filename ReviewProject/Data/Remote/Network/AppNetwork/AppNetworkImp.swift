@@ -1,12 +1,3 @@
-//
-//  Networking.swift
-//  BaseProject
-//
-//  Created by Tam Le on 09/07/2021.
-//  Copyright © 2021 Tam Le. All rights reserved.
-//
-
-
 import Foundation
 import Moya
 import RxSwift
@@ -14,7 +5,6 @@ import Alamofire
 import ObjectMapper
 
 class AppNetworkImp: AppNetwork {
-    
     let provider: NetworkProvider<AppApi>
     
     init() {

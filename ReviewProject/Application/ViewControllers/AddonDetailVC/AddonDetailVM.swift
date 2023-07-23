@@ -14,12 +14,9 @@ class AddonDetailVM: BaseVM {
         
         trigger
             .flatMapLatest { _ -> Observable<Addon> in
-                //                return Observable.just(addon)
-                
                 self.repository.getFavoritedAddons()
                     .map { favAddons -> Addon in
                         let favAddonIds = favAddons.map { $0.itemId }
-                        
                         return self.setIsFavorited(favAddonIds.contains(addon.itemId), for: addon)
                     }
             }

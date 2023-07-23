@@ -5,7 +5,6 @@ private let dbVersion : UInt64 = 1
 private let dbName = "base_project"
 
 final class DBManager {
-    
     final class func shared() -> DBManager {
         return sharedInstance
     }

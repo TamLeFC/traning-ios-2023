@@ -6,7 +6,6 @@ enum AppApi {
 }
 
 extension AppApi: TargetType {
-    
     var baseURL: URL {
         let urlString = Configs.Server.baseURL
         guard let url = URL(string: urlString) else { fatalError("Base URL Invalid") }

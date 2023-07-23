@@ -4,11 +4,10 @@ import RxSwift
 import RxRealm
 
 class BaseDAO: BaseDaoService {
-
     var config: Realm.Configuration
     let concurrentScheduler: ConcurrentDispatchQueueScheduler
     let serialScheduler: SerialDispatchQueueScheduler
-
+    
     required init(config: Realm.Configuration) {
         self.config = config
         
@@ -24,7 +23,7 @@ class BaseDAO: BaseDaoService {
         }
         return realm
     }
-
+    
     func writeObject(executeCode: () -> ()) {
         do {
             try realm.write {

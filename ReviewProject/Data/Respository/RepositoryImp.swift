@@ -2,7 +2,6 @@ import RxSwift
 import RxCocoa
 
 class RepositoryImp: Repository {
-    
     static let shared = RepositoryImp()
     private init() {}
     

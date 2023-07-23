@@ -4,7 +4,6 @@ import RxSwift
 import RxCocoa
 
 class ListAddonVC: BaseVC<ListAddonVM> {
-    
     @IBOutlet weak var listAddonCollectionView: UICollectionView!
     
     override func configureListView() {
