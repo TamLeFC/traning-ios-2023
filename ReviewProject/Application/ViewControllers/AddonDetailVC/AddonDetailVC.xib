@@ -32,6 +32,7 @@
                 <outlet property="imageView" destination="GxS-jo-v6a" id="14J-4T-063"/>
                 <outlet property="itemNameLabel" destination="G61-YJ-4W2" id="3lH-ZY-AR6"/>
                 <outlet property="likeCountLabel" destination="vV2-MN-7R7" id="21d-8Z-iwg"/>
+                <outlet property="scrollView" destination="FBM-m5-tTW" id="UlK-tl-KfX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

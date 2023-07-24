@@ -6,6 +6,8 @@ import RxCocoa
 class ListAddonVC: BaseVC<ListAddonVM> {
     @IBOutlet weak var listAddonCollectionView: UICollectionView!
     
+    private let refreshControl = UIRefreshControl()
+    
     override func configureListView() {
         super.configureListView()
         
@@ -28,7 +30,9 @@ class ListAddonVC: BaseVC<ListAddonVM> {
         super.viewWillTransition(to: size, with: coordinator)
         
         coordinator.animate(alongsideTransition: { [weak self] _ in
-            self?.listAddonCollectionView.collectionViewLayout.invalidateLayout()
+            guard let self = self else { return }
+            
+            self.listAddonCollectionView.collectionViewLayout.invalidateLayout()
         }, completion: nil)
     }
 }
@@ -69,11 +73,28 @@ extension ListAddonVC {
     }
     
     private func bindData() {
+        listAddonCollectionView.refreshControl = refreshControl
+        
+        refreshControl.rx.controlEvent(.allEvents)
+            .subscribe(onNext: { [weak self] in
+                guard let self = self else { return }
+                self.fetchData()
+            })
+            .disposed(by: bag)
+        
         viewModel.addonsS
             .asObserver()
             .map { [SectionModel(model: (), items: $0)] }
             .bind(to: self.listAddonCollectionView.rx.items(dataSource: getAddonsDataSource()))
             .disposed(by: bag)
+        
+        fetchData()
+    }
+    
+    private func fetchData() {
+        viewModel.addonsS.asObserver().subscribe(onNext: { [weak self] _ in
+            self?.refreshControl.endRefreshing()
+        }).disposed(by: bag)
         
         viewModel.fetchData()
     }

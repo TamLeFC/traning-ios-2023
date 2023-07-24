@@ -1,7 +1,6 @@
 import UIKit
 
 class MainPageVC: UIPageViewController {
-    
     lazy var pages: [UIViewController] = [
         ListAddonVC.instantiate(viewModel: ListAddonVM(pageIndex: 0)),
         ListAddonVC.instantiate(viewModel: ListAddonVM(pageIndex: 1)),

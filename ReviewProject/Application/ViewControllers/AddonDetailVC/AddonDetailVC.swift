@@ -3,6 +3,7 @@ import RxDataSources
 import Kingfisher
 
 class AddonDetailVC: BaseVC<AddonDetailVM> {
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentFavoriteButtonLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var commentCountLabel: UILabel!
@@ -12,6 +13,7 @@ class AddonDetailVC: BaseVC<AddonDetailVM> {
     @IBOutlet weak var imageView: UIImageView!
     
     private var addon: Addon!
+    private let subView = UIView()
     
     @IBAction func onBackButtonTapped(_ sender: Any) {
         navigationController?.popViewController(animated: true)
@@ -19,6 +21,12 @@ class AddonDetailVC: BaseVC<AddonDetailVM> {
     
     @IBAction func onSetFavoriteButtonTapped(_ sender: Any) {
         self.viewModel.favoriteChanged(addon)
+    }
+    
+    override func initViews() {
+        super.initViews()
+        
+        scrollView.addSubview(subView)
     }
     
     override func bindViewModel() {
@@ -29,9 +37,7 @@ class AddonDetailVC: BaseVC<AddonDetailVM> {
                   let element = addon.element else { return }
             
             self.addon = element
-            
             bindAddonData(element)
-            
         }.disposed(by: bag)
         
         viewModel.fetchData()
@@ -39,7 +45,7 @@ class AddonDetailVC: BaseVC<AddonDetailVM> {
 }
 
 extension AddonDetailVC {
-    func bindAddonData(_ element: Addon) {
+    private func bindAddonData(_ element: Addon) {
         self.imageView.kf.setImage(with: URL(string: element.imageUrl.trimmingCharacters(in: .whitespacesAndNewlines)), placeholder: "image_thumb_default".toUIImage)
         self.itemNameLabel.text = element.itemName
         self.authorNameLabel.text = "Author: \(element.authorName)"
@@ -53,7 +59,7 @@ extension AddonDetailVC {
         }
     }
     
-    func setContentFavoriteButton(text: String, hexColor: Int) {
+    private func setContentFavoriteButton(text: String, hexColor: Int) {
         self.contentFavoriteButtonLabel.text = text
         self.contentFavoriteButtonLabel.textColor = UIColor.init(hex: hexColor)
     }

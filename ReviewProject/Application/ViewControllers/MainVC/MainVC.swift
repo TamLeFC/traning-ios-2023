@@ -1,7 +1,6 @@
 import UIKit
 
 class MainVC: BaseVC<BaseVM> {
-    
     @IBOutlet weak var titleHeaderLabel: UILabel!
     @IBOutlet weak var pageMainView: UIView!
     @IBOutlet weak var homeTabImageView: UIImageView!
@@ -52,7 +51,7 @@ extension MainVC {
         setupOnTapTapped(title: "Setting", pageIndex: 2)
     }
     
-    func setupOnTapTapped(title: String, pageIndex: Int) {
+    private func setupOnTapTapped(title: String, pageIndex: Int) {
         titleHeaderLabel.text = title.uppercased()
         
         homeTabImageView.isHighlighted = pageIndex == 0
