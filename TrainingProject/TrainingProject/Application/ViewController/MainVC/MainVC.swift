@@ -27,7 +27,7 @@ class MainVC: UIViewController {
     }
     
     private func setupUI() {
-        titleLabel.font = UIFont(name: "minecrafter_reg", size: 24)
+        titleLabel.font = UIFont(name: "Minecrafter", size: 24)
         tabView.clipsToBounds = true
         tabView.layer.cornerRadius = 16
         tabView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
@@ -46,7 +46,11 @@ class MainVC: UIViewController {
     }
     
     @IBAction func notifyButtonTapped(_ sender: Any) {
-        navigationController?.pushViewController(DetailVC(), animated: true)
+        let alert = UIAlertController(title: "Feature is not available!", message: "This feature is currently unavailable but will be created soon.", preferredStyle: .alert)
+        let alertActionOK = UIAlertAction(title: "OK", style: .default)
+        
+        alert.addAction(alertActionOK)
+        self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func mainHomeButtonTapped(_ sender: Any) {

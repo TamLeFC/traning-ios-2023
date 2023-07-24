@@ -30,29 +30,31 @@ extension RFavoriteMineCraft: ModelConvertibleType {
         return String(itemId)
     }
     
-    func asModel() -> RFavoriteMineCraft {
-        return self
+    func asModel() -> MineCraft {
+        return MineCraft(itemId: itemId,
+                         itemName: itemName,
+                         imageURL: imageURL,
+                         thumbURL: thumbURL,
+                         authorName: authorName,
+                         shortDescription: shortDescription,
+                         hotPriority: hotPriority,
+                         downloadCount: downloadCount)
     }
 }
 
-extension RFavoriteMineCraft: RealmRepresentable {
+extension MineCraft: RealmRepresentable {
     typealias RealmType = RFavoriteMineCraft
     
     func asRealm() -> RFavoriteMineCraft {
-        return RFavoriteMineCraft.build {
+        return MineCraft.build {
             $0.itemId = itemId
-            func asRealm() -> RFavoriteMineCraft {
-                let realmObject = RFavoriteMineCraft()
-                realmObject.itemId = itemId
-                realmObject.itemName = itemName
-                realmObject.imageURL = imageURL
-                realmObject.thumbURL = thumbURL
-                realmObject.authorName = authorName
-                realmObject.shortDescription = shortDescription
-                realmObject.hotPriority = hotPriority
-                realmObject.downloadCount = downloadCount
-                return realmObject
-            }
+            $0.itemName = itemName
+            $0.imageURL = imageURL
+            $0.thumbURL = thumbURL
+            $0.authorName = authorName
+            $0.shortDescription = shortDescription
+            $0.hotPriority = hotPriority
+            $0.downloadCount = downloadCount
         }
     }
 }

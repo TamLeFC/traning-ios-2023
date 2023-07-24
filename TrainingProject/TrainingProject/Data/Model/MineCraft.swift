@@ -16,8 +16,20 @@ struct MineCraft: Mappable {
     var shortDescription: String = ""
     var hotPriority: String = ""
     var downloadCount: String = ""
+    var isFavorited: Bool = false
     
     init?(map: ObjectMapper.Map) {}
+    
+    init(itemId: String, itemName: String, imageURL: String, thumbURL: String, authorName: String, shortDescription: String, hotPriority: String, downloadCount: String) {
+        self.itemId = itemId
+        self.itemName = itemName
+        self.imageURL = imageURL
+        self.thumbURL = thumbURL
+        self.authorName = authorName
+        self.shortDescription = shortDescription
+        self.hotPriority = hotPriority
+        self.downloadCount = downloadCount
+    }
     
     mutating func mapping(map: ObjectMapper.Map) {
         itemId <- map["item_id"]

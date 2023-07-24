@@ -27,8 +27,6 @@ class HomeVC: BaseVC<HomeVM> {
     
     override func configureListView() {
         super.configureListView()
-
-        tableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 24, right: 0)
         
         tableView.delegate = self
         tableView.registerCellNib(ItemCell.self)
@@ -50,9 +48,7 @@ extension HomeVC: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: false)
-//        tableView.selectRow(at: indexPath, animated: true, scrollPosition: .none)
-        cells[indexPath.row].selectionStyle = .none
+        tableView.deselectRow(at: indexPath, animated: true)
         do {
             let selectedMineCraft: MineCraft = try tableView.rx.model(at: indexPath)
             let detailVM = DetailVM(selectedMineCraft)

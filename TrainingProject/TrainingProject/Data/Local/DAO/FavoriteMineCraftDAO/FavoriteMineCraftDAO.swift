@@ -12,7 +12,7 @@ import RxSwift
 import RxRealm
 
 class FavoriteMineCraftDAO: BaseDAO {
-    func findAll() -> Observable<[RFavoriteMineCraft]> {
+    func findAll() -> Observable<[MineCraft]> {
         return Observable.deferred {
             let realm = self.realm
             let objs = realm
@@ -24,31 +24,10 @@ class FavoriteMineCraftDAO: BaseDAO {
         }
     }
     
-    func find(withContent itemName: Int) -> Observable<RFavoriteMineCraft?> {
-        let predicate = NSPredicate(format: "text == %@", itemName)
-        return Observable.deferred {
-            let realm = self.realm
-            let obj = realm
-                .objects(RFavoriteMineCraft.self)
-                .filter(predicate)
-                .first
-            return Observable.from(optional: obj)
-                .map { $0.asModel() }
-                .observe(on: self.concurrentScheduler)
-        }
-    }
-    
-    func save(_ entity: RFavoriteMineCraft) -> Observable<RFavoriteMineCraft> {
+    func save(_ entity: RFavoriteMineCraft) -> Observable<MineCraft> {
         return Observable.deferred {
             let realm = self.realm
             return realm.rx.save(entity).map { $0.asModel() }
-        }.observe(on: self.serialScheduler)
-    }
-    
-    func update(_ entity: RFavoriteMineCraft) -> Observable<RFavoriteMineCraft> {
-        return Observable.deferred {
-            let realm = self.realm
-            return realm.rx.save(entity, update: true).map { $0.asModel() }
         }.observe(on: self.serialScheduler)
     }
     

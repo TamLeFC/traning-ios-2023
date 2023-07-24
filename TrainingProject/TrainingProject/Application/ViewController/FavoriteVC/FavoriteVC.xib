@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavoriteVC" customModule="TrainingProject" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="izx-UP-buU" id="Lal-yx-wJa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,8 +18,20 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="izx-UP-buU">
+                    <rect key="frame" x="24" y="76" width="345" height="742"/>
+                    <color key="backgroundColor" name="background_primary"/>
+                </tableView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="background_primary"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="izx-UP-buU" secondAttribute="trailing" constant="24" id="3xM-oB-uMe"/>
+                <constraint firstItem="izx-UP-buU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="U5v-5v-11E"/>
+                <constraint firstItem="izx-UP-buU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="17" id="aXC-MM-AKH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="izx-UP-buU" secondAttribute="bottom" id="wBI-Vd-5As"/>
+            </constraints>
             <point key="canvasLocation" x="81" y="-11"/>
         </view>
     </objects>

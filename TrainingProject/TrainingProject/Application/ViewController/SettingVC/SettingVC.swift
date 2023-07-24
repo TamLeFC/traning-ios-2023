@@ -23,16 +23,22 @@ class SettingVC: UIViewController {
         super.viewDidLoad()
         
         avatarImageView.layer.cornerRadius = 15
-        avatarImageView.contentMode = .scaleAspectFit
+        avatarImageView.contentMode = .center
         
-        userNameLabel.font = UIFont(name: "space_grotesk_bold", size: 18)
-        informationLabel.font = UIFont(name: "minecraft_regular", size: 16)
-        passwordLabel.font = UIFont(name: "minecraft_regular", size: 16)
-        notificationLabel.font = UIFont(name: "minecraft_regular", size: 16)
-        howToUseLabel.font = UIFont(name: "minecraft_regular", size: 16)
-        premiumLabel.font = UIFont(name: "minecraft_regular", size: 16)
-        privacyLabel.font = UIFont(name: "minecraft_regular", size: 16)
+        userNameLabel.font = UIFont(name: "SpaceGrotesk-Bold", size: 18)
+        informationLabel.font = UIFont(name: "Minecraft-Regular", size: 16)
+        passwordLabel.font = UIFont(name: "Minecraft-Regular", size: 16)
+        notificationLabel.font = UIFont(name: "Minecraft-Regular", size: 16)
+        howToUseLabel.font = UIFont(name: "Minecraft-Regular", size: 16)
+        premiumLabel.font = UIFont(name: "Minecraft-Regular", size: 16)
+        privacyLabel.font = UIFont(name: "Minecraft-Regular", size: 16)
     }
 
-
+    @IBAction private func buttonTapped(_ sender: Any) {
+        let alert = UIAlertController(title: "Feature is not available!", message: "This feature is currently unavailable but will be created soon.", preferredStyle: .alert)
+        let alertActionOK = UIAlertAction(title: "OK", style: .default)
+        
+        alert.addAction(alertActionOK)
+        self.present(alert, animated: true, completion: nil)
+    }
 }

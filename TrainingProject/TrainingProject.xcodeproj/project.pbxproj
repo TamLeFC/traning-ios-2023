@@ -26,14 +26,12 @@
 		806A944B2A64EAF4002A351D /* RepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806A944A2A64EAF4002A351D /* RepositoryImp.swift */; };
 		806A944D2A64EDBB002A351D /* MineCraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806A944C2A64EDBB002A351D /* MineCraft.swift */; };
 		806A94522A64EE6A002A351D /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806A94512A64EE6A002A351D /* BaseTableViewCell.swift */; };
-		806A94542A64EE7A002A351D /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806A94532A64EE7A002A351D /* BaseCollectionViewCell.swift */; };
 		806A94562A64EE83002A351D /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806A94552A64EE83002A351D /* BaseVM.swift */; };
 		806A94582A64EE8B002A351D /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806A94572A64EE8B002A351D /* BaseVC.swift */; };
 		806A945A2A64EEA3002A351D /* AppDataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806A94592A64EEA3002A351D /* AppDataSources.swift */; };
 		806A945C2A64EEB0002A351D /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806A945B2A64EEB0002A351D /* ReachabilityManager.swift */; };
 		806A945E2A64EEBE002A351D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806A945D2A64EEBE002A351D /* String.swift */; };
 		806A94602A64EECB002A351D /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806A945F2A64EECB002A351D /* UITableView.swift */; };
-		806A94622A64EF9B002A351D /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806A94612A64EF9B002A351D /* GradientView.swift */; };
 		806A94672A64FA20002A351D /* RealmRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806A94662A64FA20002A351D /* RealmRepresentable.swift */; };
 		806A94692A64FA2C002A351D /* Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806A94682A64FA2C002A351D /* Reactive.swift */; };
 		806A946B2A64FA3D002A351D /* ModelConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806A946A2A64FA3D002A351D /* ModelConvertibleType.swift */; };
@@ -55,13 +53,11 @@
 		806A94972A64FDC3002A351D /* FavoriteVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806A94962A64FDC3002A351D /* FavoriteVM.swift */; };
 		806A949A2A64FDDC002A351D /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806A94982A64FDDC002A351D /* SettingVC.swift */; };
 		806A949B2A64FDDC002A351D /* SettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 806A94992A64FDDC002A351D /* SettingVC.xib */; };
-		806A949D2A64FDE5002A351D /* SettingVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806A949C2A64FDE5002A351D /* SettingVM.swift */; };
 		806A94AE2A651A86002A351D /* space_grotesk_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 806A949E2A651A85002A351D /* space_grotesk_medium.ttf */; };
 		806A94AF2A651A86002A351D /* space_grotesk_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 806A949F2A651A85002A351D /* space_grotesk_regular.ttf */; };
 		806A94B02A651A86002A351D /* minecraft_regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 806A94A02A651A85002A351D /* minecraft_regular.otf */; };
 		806A94B12A651A86002A351D /* poppins_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 806A94A12A651A85002A351D /* poppins_light.ttf */; };
 		806A94B22A651A86002A351D /* poppins_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 806A94A22A651A85002A351D /* poppins_medium.ttf */; };
-		806A94B32A651A86002A351D /* minecraft_bold_italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 806A94A32A651A85002A351D /* minecraft_bold_italic.otf */; };
 		806A94B42A651A86002A351D /* poppins_semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 806A94A42A651A85002A351D /* poppins_semibold.ttf */; };
 		806A94B52A651A86002A351D /* space_grotesk_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 806A94A52A651A85002A351D /* space_grotesk_bold.ttf */; };
 		806A94B62A651A86002A351D /* poppins_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 806A94A62A651A85002A351D /* poppins_italic.ttf */; };
@@ -72,6 +68,10 @@
 		806A94BB2A651A86002A351D /* minecrafter_reg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 806A94AB2A651A86002A351D /* minecrafter_reg.ttf */; };
 		806A94BC2A651A86002A351D /* poppins_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 806A94AC2A651A86002A351D /* poppins_regular.ttf */; };
 		806A94BD2A651A86002A351D /* minecrafter_alt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 806A94AD2A651A86002A351D /* minecrafter_alt.ttf */; };
+		80E543F52A6E13FE0075B071 /* minecraft_bold_italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 806A94A32A651A85002A351D /* minecraft_bold_italic.otf */; };
+		80E543F72A6E59750075B071 /* ThreePointGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E543F62A6E59750075B071 /* ThreePointGradientView.swift */; };
+		80E543F92A6E5C7C0075B071 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E543F82A6E5C7C0075B071 /* Color.swift */; };
+		80E543FB2A6E684F0075B071 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E543FA2A6E684F0075B071 /* Number.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,14 +96,12 @@
 		806A944A2A64EAF4002A351D /* RepositoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryImp.swift; sourceTree = "<group>"; };
 		806A944C2A64EDBB002A351D /* MineCraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineCraft.swift; sourceTree = "<group>"; };
 		806A94512A64EE6A002A351D /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
-		806A94532A64EE7A002A351D /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		806A94552A64EE83002A351D /* BaseVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVM.swift; sourceTree = "<group>"; };
 		806A94572A64EE8B002A351D /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		806A94592A64EEA3002A351D /* AppDataSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataSources.swift; sourceTree = "<group>"; };
 		806A945B2A64EEB0002A351D /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		806A945D2A64EEBE002A351D /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		806A945F2A64EECB002A351D /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
-		806A94612A64EF9B002A351D /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		806A94662A64FA20002A351D /* RealmRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepresentable.swift; sourceTree = "<group>"; };
 		806A94682A64FA2C002A351D /* Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reactive.swift; sourceTree = "<group>"; };
 		806A946A2A64FA3D002A351D /* ModelConvertibleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelConvertibleType.swift; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 		806A94962A64FDC3002A351D /* FavoriteVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVM.swift; sourceTree = "<group>"; };
 		806A94982A64FDDC002A351D /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		806A94992A64FDDC002A351D /* SettingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingVC.xib; sourceTree = "<group>"; };
-		806A949C2A64FDE5002A351D /* SettingVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVM.swift; sourceTree = "<group>"; };
 		806A949E2A651A85002A351D /* space_grotesk_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = space_grotesk_medium.ttf; sourceTree = "<group>"; };
 		806A949F2A651A85002A351D /* space_grotesk_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = space_grotesk_regular.ttf; sourceTree = "<group>"; };
 		806A94A02A651A85002A351D /* minecraft_regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = minecraft_regular.otf; sourceTree = "<group>"; };
@@ -142,6 +139,9 @@
 		806A94AB2A651A86002A351D /* minecrafter_reg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = minecrafter_reg.ttf; sourceTree = "<group>"; };
 		806A94AC2A651A86002A351D /* poppins_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = poppins_regular.ttf; sourceTree = "<group>"; };
 		806A94AD2A651A86002A351D /* minecrafter_alt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = minecrafter_alt.ttf; sourceTree = "<group>"; };
+		80E543F62A6E59750075B071 /* ThreePointGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreePointGradientView.swift; sourceTree = "<group>"; };
+		80E543F82A6E5C7C0075B071 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		80E543FA2A6E684F0075B071 /* Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
 		CEF1A43265419EA3A409D290 /* Pods-TrainingProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingProject.release.xcconfig"; path = "Target Support Files/Pods-TrainingProject/Pods-TrainingProject.release.xcconfig"; sourceTree = "<group>"; };
 		DD86BE242132BA64FD3FD3E9 /* Pods-TrainingProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingProject.debug.xcconfig"; path = "Target Support Files/Pods-TrainingProject/Pods-TrainingProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -259,7 +259,7 @@
 		806A942F2A64E49F002A351D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				806A94612A64EF9B002A351D /* GradientView.swift */,
+				80E543F62A6E59750075B071 /* ThreePointGradientView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -269,6 +269,8 @@
 			children = (
 				806A945D2A64EEBE002A351D /* String.swift */,
 				806A945F2A64EECB002A351D /* UITableView.swift */,
+				80E543F82A6E5C7C0075B071 /* Color.swift */,
+				80E543FA2A6E684F0075B071 /* Number.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -299,7 +301,6 @@
 			isa = PBXGroup;
 			children = (
 				806A94512A64EE6A002A351D /* BaseTableViewCell.swift */,
-				806A94532A64EE7A002A351D /* BaseCollectionViewCell.swift */,
 				806A94552A64EE83002A351D /* BaseVM.swift */,
 				806A94572A64EE8B002A351D /* BaseVC.swift */,
 			);
@@ -474,7 +475,6 @@
 			children = (
 				806A94982A64FDDC002A351D /* SettingVC.swift */,
 				806A94992A64FDDC002A351D /* SettingVC.xib */,
-				806A949C2A64FDE5002A351D /* SettingVM.swift */,
 			);
 			path = SettingVC;
 			sourceTree = "<group>";
@@ -572,7 +572,6 @@
 				806A94B22A651A86002A351D /* poppins_medium.ttf in Resources */,
 				806A949B2A64FDDC002A351D /* SettingVC.xib in Resources */,
 				806A94BC2A651A86002A351D /* poppins_regular.ttf in Resources */,
-				806A94B32A651A86002A351D /* minecraft_bold_italic.otf in Resources */,
 				806A94B02A651A86002A351D /* minecraft_regular.otf in Resources */,
 				806A94B42A651A86002A351D /* poppins_semibold.ttf in Resources */,
 				806A94AF2A651A86002A351D /* space_grotesk_regular.ttf in Resources */,
@@ -588,6 +587,7 @@
 				806A941E2A64DDE8002A351D /* Assets.xcassets in Resources */,
 				806A94BB2A651A86002A351D /* minecrafter_reg.ttf in Resources */,
 				806A94B92A651A86002A351D /* minecraft_bold.otf in Resources */,
+				80E543F52A6E13FE0075B071 /* minecraft_bold_italic.otf in Resources */,
 				806A94B52A651A86002A351D /* space_grotesk_bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -647,15 +647,16 @@
 				806A94702A64FA9E002A351D /* FavoriteMineCraftDAO.swift in Sources */,
 				806A945E2A64EEBE002A351D /* String.swift in Sources */,
 				806A94752A64FAC4002A351D /* BaseDao.swift in Sources */,
-				806A949D2A64FDE5002A351D /* SettingVM.swift in Sources */,
 				806A945A2A64EEA3002A351D /* AppDataSources.swift in Sources */,
 				806A94152A64DDE8002A351D /* AppDelegate.swift in Sources */,
-				806A94542A64EE7A002A351D /* BaseCollectionViewCell.swift in Sources */,
 				806A94412A64EA9B002A351D /* NetworkConfig.swift in Sources */,
+				80E543F72A6E59750075B071 /* ThreePointGradientView.swift in Sources */,
 				806A94872A64FC43002A351D /* HomeVC.swift in Sources */,
 				806A94972A64FDC3002A351D /* FavoriteVM.swift in Sources */,
 				8046DDF92A67E29300280BFC /* AppApi.swift in Sources */,
+				80E543F92A6E5C7C0075B071 /* Color.swift in Sources */,
 				806A946D2A64FA49002A351D /* DBManager.swift in Sources */,
+				80E543FB2A6E684F0075B071 /* Number.swift in Sources */,
 				806A946B2A64FA3D002A351D /* ModelConvertibleType.swift in Sources */,
 				806A948A2A64FC50002A351D /* HomeVM.swift in Sources */,
 				806A94692A64FA2C002A351D /* Reactive.swift in Sources */,
@@ -668,7 +669,6 @@
 				806A94942A64FDB8002A351D /* FavoriteVC.swift in Sources */,
 				806A943F2A64EA7F002A351D /* ApiServiceImp.swift in Sources */,
 				806A94772A64FADE002A351D /* RFavoriteMineCraft.swift in Sources */,
-				806A94622A64EF9B002A351D /* GradientView.swift in Sources */,
 				806A948F2A64FD8A002A351D /* ItemCell.swift in Sources */,
 				806A944D2A64EDBB002A351D /* MineCraft.swift in Sources */,
 				806A94432A64EAA8002A351D /* NetworkProvider.swift in Sources */,

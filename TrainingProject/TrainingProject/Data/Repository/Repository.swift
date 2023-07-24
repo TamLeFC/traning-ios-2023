@@ -12,4 +12,9 @@ protocol Repository {
     
     func getAllMineCrafts() -> Single<[MineCraft]>
     
+    func getFavoriteds() -> Observable<[MineCraft]>
+    
+    func addFavoriteds(_ mineCraft: MineCraft) -> RxSwift.Observable<MineCraft>
+    
+    func deleteFavorited(_ mineCraft: MineCraft) -> Observable<Void>
 }
