@@ -62,9 +62,9 @@ class CardDetailVC: BaseVC<CardDetailVM> {
         viewModel?.knotS.asObservable()
             .subscribe(onNext: {[weak self] knot in
                 guard let self = self else { return }
-                self.cardNameLabel.text = knot[0].title
-                self.contentDescriptionLabel.text = knot[0].description
-                self.mainImageView.kf.setImage(with: URL(string: knot[0].preview))
+                self.cardNameLabel.text = knot.title
+                self.contentDescriptionLabel.text = knot.description
+                self.mainImageView.kf.setImage(with: URL(string: knot.preview))
             }).disposed(by: bag)
         
         viewModel?.mediaS.asObservable()

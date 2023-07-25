@@ -10,7 +10,7 @@ import RxCocoa
 
 class CardDetailVM: BaseVM {
     
-    let knotS = PublishSubject<[DetailKnot]>()
+    let knotS = PublishSubject<DetailKnot>()
     let mediaS = PublishSubject<[String]>()
     
     private let knot: Knot
@@ -21,20 +21,16 @@ class CardDetailVM: BaseVM {
         
         trigger
             .asObservable()
-            .flatMapLatest{ _ -> Observable<[DetailKnot]> in
-                self.repository.getKnotDetail(knot.id)
-                    .map{ $0.data }
+            .flatMapLatest { [unowned self] _ -> Observable<DetailKnot> in
+                return self.repository.getKnotDetail(knot.id)
+                    .map{ $0.data.first! }
                     .asObservable()
             }
-            .subscribe(onNext: {[weak self] knots in
+            .subscribe(onNext: { [weak self] knot in
                 guard let self = self else { return }
-                self.knotS.onNext(knots)
-                let mediaURLs = knots.flatMap { $0.newMedia }
+                self.knotS.onNext(knot)
+                let mediaURLs = knot.newMedia
                 self.mediaS.onNext(mediaURLs)
-            }, onError: {[weak self] error in
-                guard let _ = self else { return }
-                //MARK: - handle error
             }).disposed(by: bag)
     }
-    
 }
