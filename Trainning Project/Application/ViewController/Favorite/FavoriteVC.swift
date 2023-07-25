@@ -12,6 +12,12 @@ class FavoriteVC: BaseVC<FavoriteVM> {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        
+        collectionView.collectionViewLayout.invalidateLayout()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,17 +58,22 @@ class FavoriteVC: BaseVC<FavoriteVM> {
 
 extension FavoriteVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width: CGFloat = collectionView.frame.width
+        var width: CGFloat = collectionView.frame.width
         var height: CGFloat = 0
+        
+        if UIDevice.current.orientation.isLandscape {
+            width = (collectionView.frame.width - 16*2) / 2
+        }
         
         if UIDevice.current.userInterfaceIdiom == .pad {
             let screenHeight = UIScreen.main.bounds.height
             height = screenHeight / 2
-            return CGSize(width: width, height: height)
+            
         } else {
             height = (width * 332) / 327
-            return CGSize(width: width, height: height)
         }
+        
+        return CGSize(width: width, height: height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

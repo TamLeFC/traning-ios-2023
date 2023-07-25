@@ -61,7 +61,7 @@
 		352F73862A64F4E900423A08 /* ApiServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73852A64F4E900423A08 /* ApiServiceImp.swift */; };
 		352F738A2A64F8CA00423A08 /* AddonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73882A64F8CA00423A08 /* AddonCell.swift */; };
 		352F738B2A64F8CA00423A08 /* AddonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 352F73892A64F8CA00423A08 /* AddonCell.xib */; };
-		352F738D2A651F1700423A08 /* LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F738C2A651F1700423A08 /* LoadImage.swift */; };
+		352F738D2A651F1700423A08 /* KingFisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F738C2A651F1700423A08 /* KingFisher.swift */; };
 		352F738F2A65205200423A08 /* RespositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F738E2A65205200423A08 /* RespositoryImp.swift */; };
 		352F73912A65224600423A08 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73902A65224600423A08 /* HomeVM.swift */; };
 		352F73932A65237000423A08 /* AppDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73922A65237000423A08 /* AppDatasource.swift */; };
@@ -144,7 +144,7 @@
 		352F73852A64F4E900423A08 /* ApiServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceImp.swift; sourceTree = "<group>"; };
 		352F73882A64F8CA00423A08 /* AddonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddonCell.swift; sourceTree = "<group>"; };
 		352F73892A64F8CA00423A08 /* AddonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddonCell.xib; sourceTree = "<group>"; };
-		352F738C2A651F1700423A08 /* LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImage.swift; sourceTree = "<group>"; };
+		352F738C2A651F1700423A08 /* KingFisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingFisher.swift; sourceTree = "<group>"; };
 		352F738E2A65205200423A08 /* RespositoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespositoryImp.swift; sourceTree = "<group>"; };
 		352F73902A65224600423A08 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		352F73922A65237000423A08 /* AppDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatasource.swift; sourceTree = "<group>"; };
@@ -316,7 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				352F73812A64F49100423A08 /* ReachabilityManager.swift */,
-				352F738C2A651F1700423A08 /* LoadImage.swift */,
+				352F738C2A651F1700423A08 /* KingFisher.swift */,
 				352F73922A65237000423A08 /* AppDatasource.swift */,
 			);
 			path = Helper;
@@ -738,7 +738,7 @@
 				3564C3152A670412008CED5B /* DetailAddonVM.swift in Sources */,
 				352F733C2A64DE5D00423A08 /* HomeVC.swift in Sources */,
 				352F73442A64DE8100423A08 /* SettingVC.swift in Sources */,
-				352F738D2A651F1700423A08 /* LoadImage.swift in Sources */,
+				352F738D2A651F1700423A08 /* KingFisher.swift in Sources */,
 				352F737F2A64F41000423A08 /* Configs.swift in Sources */,
 				352F73822A64F49100423A08 /* ReachabilityManager.swift in Sources */,
 				352F736C2A64F07200423A08 /* Respository.swift in Sources */,

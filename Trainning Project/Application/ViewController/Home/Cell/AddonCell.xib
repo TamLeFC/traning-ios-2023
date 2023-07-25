@@ -76,7 +76,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
-                                    <action selector="moreButtonTouched:" destination="gTV-IL-0wX" eventType="touchUpInside" id="dbX-JW-H4q"/>
+                                    <action selector="onmoreButtonTouched:" destination="gTV-IL-0wX" eventType="touchUpInside" id="2xa-RJ-Wf5"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -18,7 +18,7 @@ class FavoriteVM: BaseVM {
         trigger
             .asObservable()
             .flatMapLatest { _ -> Observable<[Addon]> in
-                self.fetchAddonsFavorite()
+                self.fetchAddonsSFavorite()
             }
             .subscribe(onNext: {[weak self] addons in
                 guard let self = self else { return }
@@ -34,7 +34,8 @@ class FavoriteVM: BaseVM {
         trigger.accept(())
     }
     
-    private func fetchAddonsFavorite() -> Observable<[Addon]> {
+    private func fetchAddonsSFavorite() -> Observable<[Addon]> {
+        //combine data from server and data from realm
         return Observable.combineLatest(respository.getListAddon().asObservable(), respository.getFavoriteds())
             .map { (listAddon, listFavoriteds) -> [Addon] in
                 return listAddon.filter { addon in
@@ -42,11 +43,11 @@ class FavoriteVM: BaseVM {
                 }
             }
             .map { [weak self] addons in
-                return self?.updateAddonFavoriteState(addons) ?? []
+                return self?.updateAddonsSFavoriteState(addons) ?? []
             }
     }
     
-    private func updateAddonFavoriteState(_ addons: [Addon]) -> [Addon] {
+    private func updateAddonsSFavoriteState(_ addons: [Addon]) -> [Addon] {
         return addons.map { addon in
             var updatedAddon = addon
             updatedAddon.isFavorite = true

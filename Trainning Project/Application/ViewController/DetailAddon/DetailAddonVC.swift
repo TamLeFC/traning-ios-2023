@@ -10,6 +10,8 @@ import RxCocoa
 
 class DetailAddonVC: BaseVC<DetailAddonVM> {
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var favoriteView: UIView!
     
@@ -30,11 +32,22 @@ class DetailAddonVC: BaseVC<DetailAddonVM> {
         viewModel.fetchData()
     }
     
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        
+        if UIDevice.current.orientation.isLandscape {
+            scrollView.isScrollEnabled = true
+        }
+    }
+    
     override func initViews() {
         super.initViews()
         
         stackView.addTopBorder(with: UIColor(hex: 0x1E1F21), andWidth: 1)
         favoriteView.addRightBorder(with: UIColor(hex: 0x979797), andWidth: 1)
+        
+        if UIDevice.current.orientation.isLandscape {
+            scrollView.isScrollEnabled = true
+        }
     }
     
     override func bindViewModel() {

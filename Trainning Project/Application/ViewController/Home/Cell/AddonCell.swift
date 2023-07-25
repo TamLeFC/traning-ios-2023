@@ -47,7 +47,7 @@ class AddonCell: BaseCollectionViewCell {
         configureCellUI(with: item)
     }
     
-    @IBAction func moreButtonTouched(_ sender: UIButton) {
+    @IBAction func onmoreButtonTouched(_ sender: UIButton) {
         onMoreButtonTouched?(addon)
     }
 }
