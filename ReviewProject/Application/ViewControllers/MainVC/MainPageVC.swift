@@ -14,7 +14,11 @@ class MainPageVC: UIPageViewController {
     }
     
     func handleChangePage(pageIndex: Int) {
-        guard pageIndex != currentPageIndex else { return }
+        guard pageIndex != currentPageIndex else {
+            guard let currentVC = pages[pageIndex] as? ListAddonVC else { return }
+            currentVC.scrollToTop()
+            return
+        }
         
         let direction: UIPageViewController.NavigationDirection = pageIndex > currentPageIndex ? .forward : .reverse
         

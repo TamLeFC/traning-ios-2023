@@ -31,7 +31,6 @@ class ListAddonVC: BaseVC<ListAddonVM> {
         
         coordinator.animate(alongsideTransition: { [weak self] _ in
             guard let self = self else { return }
-            
             self.listAddonCollectionView.collectionViewLayout.invalidateLayout()
         }, completion: nil)
     }
@@ -61,10 +60,13 @@ extension ListAddonVC: UICollectionViewDelegateFlowLayout {
         
         return .init(width: itemWidth, height: itemHeight)
     }
-    
 }
 
 extension ListAddonVC {
+    func scrollToTop() {
+        listAddonCollectionView.setContentOffset(.zero, animated: true)
+    }
+    
     private func setupCollectionView() {
         let nib = UINib(nibName: ListAddonCollectionViewCell.identifier, bundle: nil)
         listAddonCollectionView.register(nib, forCellWithReuseIdentifier: ListAddonCollectionViewCell.identifier)
@@ -78,6 +80,7 @@ extension ListAddonVC {
         refreshControl.rx.controlEvent(.allEvents)
             .subscribe(onNext: { [weak self] in
                 guard let self = self else { return }
+                listAddonCollectionView.reloadData()
                 self.fetchData()
             })
             .disposed(by: bag)
@@ -93,7 +96,8 @@ extension ListAddonVC {
     
     private func fetchData() {
         viewModel.addonsS.asObserver().subscribe(onNext: { [weak self] _ in
-            self?.refreshControl.endRefreshing()
+            guard let self = self else { return }
+            self.refreshControl.endRefreshing()
         }).disposed(by: bag)
         
         viewModel.fetchData()

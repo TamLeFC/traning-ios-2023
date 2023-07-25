@@ -26,6 +26,8 @@ target 'ReviewProject' do
   pod 'ObjectMapper'
   
   pod 'Kingfisher'
+
+  pod 'SkeletonView'
   
   post_install do |pi|
       pi.pods_project.targets.each do |t|
