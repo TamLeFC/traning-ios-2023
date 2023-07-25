@@ -25,6 +25,7 @@ struct Addon: Mappable {
     init?(map: ObjectMapper.Map) {}
     
     mutating func mapping(map: Map) {
+        
         itemId <- map["item_id"]
         typeId <- map["type_id"]
         categoryId <- map["category_id"]
@@ -44,4 +45,5 @@ struct Addon: Mappable {
         createTime <- map["create_time"]
         price <- map["price"]
     }
+    
 }

@@ -9,6 +9,7 @@ class BaseDAO: BaseDaoService {
     let serialScheduler: SerialDispatchQueueScheduler
     
     required init(config: Realm.Configuration) {
+        
         self.config = config
         
         let concurrentQueue = DispatchQueue.main
@@ -18,19 +19,28 @@ class BaseDAO: BaseDaoService {
     
     
     var realm: Realm {
+        
         guard let realm = try? Realm(configuration: config) else {
+            
             fatalError()
         }
+        
         return realm
     }
     
     func writeObject(executeCode: () -> ()) {
+        
         do {
+            
             try realm.write {
+                
                 executeCode()
             }
-        } catch {
+        }
+        catch {
+            
             print(error)
         }
     }
+    
 }

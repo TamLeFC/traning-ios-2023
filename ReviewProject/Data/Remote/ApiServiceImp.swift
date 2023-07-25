@@ -7,6 +7,7 @@ final class ApiServiceImp: ApiService {
     
     //MARK: -- Demo
     func getAddons() -> Single<[Addon]> {
+        
         return appNetwork.requestArray(.addons, type: Addon.self)
     }
     

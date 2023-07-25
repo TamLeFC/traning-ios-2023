@@ -2,14 +2,17 @@ import UIKit
 
 extension String {
     var toUIImage: UIImage? {
+        
         return UIImage(named: self)
     }
     
     static func className(_ aClass: AnyClass) -> String {
+        
         return NSStringFromClass(aClass).components(separatedBy: ".").last!
     }
     
     func formatNumber(locale: Locale = .current, maximumFractionDigits: Int = 1) -> String {
+        
         let numberFormatter = NumberFormatter()
         numberFormatter.locale = locale
         numberFormatter.numberStyle = .decimal
@@ -18,6 +21,7 @@ extension String {
         numberFormatter.minimumFractionDigits = 0
         
         guard let number = numberFormatter.number(from: self)?.doubleValue else {
+            
             return self
         }
         
@@ -40,6 +44,8 @@ extension String {
         }
         
         let formattedString = numberFormatter.string(from: NSNumber(value: formattedNumber)) ?? self
+        
         return formattedString + suffix
     }
+    
 }

@@ -26,4 +26,5 @@ class NetworkProvider<Target> where Target: TargetType {
     func request(_ token: Target) -> Single<Moya.Response> {
         return self.provider.rx.request(token)
     }
+    
 }

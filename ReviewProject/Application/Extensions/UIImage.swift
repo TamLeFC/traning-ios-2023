@@ -18,6 +18,7 @@ extension UIImage {
      CIMedianFilter
      */
     func asBlurImage(ciFilterName: BlurStyle = .ciGaussianBlur, radius: CGFloat = 10) -> UIImage? {
+        
         let context = CIContext(options: nil)
         let inputImage = CIImage(image: self)
         let originalOrientation = self.imageOrientation
@@ -44,11 +45,13 @@ extension UIImage {
     }
     
     public func withRoundedCorners(radius: CGFloat? = nil) -> UIImage? {
+        
         let maxRadius = min(size.width, size.height) / 2
         let cornerRadius: CGFloat
         if let radius = radius, radius > 0 && radius <= maxRadius {
             cornerRadius = radius
-        } else {
+        }
+        else {
             cornerRadius = maxRadius
         }
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
@@ -57,6 +60,8 @@ extension UIImage {
         draw(in: rect)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
+        
         return image
     }
+    
 }

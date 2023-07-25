@@ -3,6 +3,7 @@ enum SettingSections: Int, CaseIterable, CustomStringConvertible {
     case AppGuildline
     
     var description: String {
+        
         switch self {
         case .PersonalSetting: return "Personal Setting"
         case .AppGuildline: return "App Guildline"
@@ -11,6 +12,7 @@ enum SettingSections: Int, CaseIterable, CustomStringConvertible {
 }
 
 protocol SettingType: CustomStringConvertible {
+    
     var description: String { get }
     var icon: String { get }
 }
@@ -21,6 +23,7 @@ enum PersonalSetting: Int, CaseIterable, SettingType {
     case GetNotification
     
     var description: String {
+        
         switch self {
         case .PersonalInformation: return "Personal information"
         case .UpdatePassword: return "Update password"
@@ -29,6 +32,7 @@ enum PersonalSetting: Int, CaseIterable, SettingType {
     }
     
     var icon: String {
+        
         switch self {
         case .PersonalInformation: return "ic_person"
         case .UpdatePassword: return "ic_key"
@@ -43,6 +47,7 @@ enum AppGuildline: Int, CaseIterable, SettingType {
     case PrivacyPolicy
     
     var description: String {
+        
         switch self {
         case .HowToUse: return "How to use?"
         case .GoToPremium: return "Go to Premium"
@@ -51,6 +56,7 @@ enum AppGuildline: Int, CaseIterable, SettingType {
     }
     
     var icon: String {
+        
         switch self {
         case .HowToUse: return "ic_question"
         case .GoToPremium: return "ic_premium"

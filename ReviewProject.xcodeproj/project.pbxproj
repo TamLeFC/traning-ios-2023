@@ -516,8 +516,8 @@
 		80F275E72A64FCC9000818EE /* MainVC */ = {
 			isa = PBXGroup;
 			children = (
-				80F275E82A64FCC9000818EE /* MainVC.xib */,
 				80F275EA2A64FCC9000818EE /* MainVC.swift */,
+				80F275E82A64FCC9000818EE /* MainVC.xib */,
 				80F275E92A64FCC9000818EE /* MainPageVC.swift */,
 			);
 			path = MainVC;

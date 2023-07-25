@@ -9,6 +9,7 @@ class AddonDetailVM: BaseVM {
     private let addon: Addon
     
     init(addon: Addon) {
+        
         self.addon = addon
         super.init()
         
@@ -47,16 +48,21 @@ class AddonDetailVM: BaseVM {
     }
     
     func fetchData() {
+        
+        
         trigger.accept(())
     }
     
     func favoriteChanged(_ item: Addon) {
+        
         favoritedTrigger.accept(item)
     }
     
     private func setIsFavorited(_ isFavorited: Bool, for addon: Addon) -> Addon {
+        
         var newItem = addon
         newItem.isFavorited = isFavorited
         return newItem
     }
+    
 }

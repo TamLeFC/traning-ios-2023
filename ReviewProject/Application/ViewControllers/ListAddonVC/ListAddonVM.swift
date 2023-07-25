@@ -7,6 +7,7 @@ class ListAddonVM: BaseVM {
     private let pageIndex: Int
     
     init(pageIndex: Int) {
+        
         self.pageIndex = pageIndex
         super.init()
         
@@ -25,12 +26,16 @@ class ListAddonVM: BaseVM {
     }
     
     func fetchData() {
+        
         trigger.accept(())
     }
+    
 }
 
 extension ListAddonVM {
+    
     func getAddons() -> Observable<[Addon]> {
+        
         if pageIndex != 0 {
             return repository.getFavoritedAddons()
                 .flatMap { favoritedAddons -> Single<[Addon]> in
@@ -39,14 +44,18 @@ extension ListAddonVM {
                     return self.repository.getAddons()
                         .map { allAddons in
                             let filteredAddons = allAddons.filter { favoritedAddonIds.contains($0.itemId) }
+                            
                             return filteredAddons
                         }
                 }
                 .asObservable()
-        } else {
+        }
+        else {
+            
             return repository.getAddons()
                 .map { $0 }
                 .asObservable()
         }
     }
+    
 }
