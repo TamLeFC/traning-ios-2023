@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 class MainPageVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
-    let homeVC = HomeVC.instantiate(viewModel: HomeVM())
-    let favoriteVC = FavoriteVC.instantiate(viewModel: FavoriteVM())
-    let settingVC = SettingVC.instantiate(viewModel: SettingVM())
+    let homeVC      = HomeVC.instantiate(viewModel: HomeVM())
+    let favoriteVC  = FavoriteVC.instantiate(viewModel: FavoriteVM())
+    let settingVC   = SettingVC.instantiate(viewModel: SettingVM())
     
     lazy var pages: [UIViewController] = [homeVC, favoriteVC, settingVC]
     

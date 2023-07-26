@@ -46,7 +46,7 @@
 		352F735F2A64E08100423A08 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73562A64E08100423A08 /* UITableView.swift */; };
 		352F73612A64E08100423A08 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73582A64E08100423A08 /* String.swift */; };
 		352F73652A64E08800423A08 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73642A64E08800423A08 /* GradientView.swift */; };
-		352F73682A64E68100423A08 /* mainPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73672A64E68100423A08 /* mainPageVC.swift */; };
+		352F73682A64E68100423A08 /* MainPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73672A64E68100423A08 /* MainPageVC.swift */; };
 		352F736A2A64ED9900423A08 /* Addon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73692A64ED9900423A08 /* Addon.swift */; };
 		352F736C2A64F07200423A08 /* Respository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F736B2A64F07200423A08 /* Respository.swift */; };
 		352F73732A64F2E900423A08 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73722A64F2E900423A08 /* NetworkProvider.swift */; };
@@ -131,7 +131,7 @@
 		352F73562A64E08100423A08 /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		352F73582A64E08100423A08 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		352F73642A64E08800423A08 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
-		352F73672A64E68100423A08 /* mainPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainPageVC.swift; sourceTree = "<group>"; };
+		352F73672A64E68100423A08 /* MainPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageVC.swift; sourceTree = "<group>"; };
 		352F73692A64ED9900423A08 /* Addon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addon.swift; sourceTree = "<group>"; };
 		352F736B2A64F07200423A08 /* Respository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Respository.swift; sourceTree = "<group>"; };
 		352F73722A64F2E900423A08 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
@@ -438,7 +438,7 @@
 		352F73662A64E66B00423A08 /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
-				352F73672A64E68100423A08 /* mainPageVC.swift */,
+				352F73672A64E68100423A08 /* MainPageVC.swift */,
 			);
 			path = MainPage;
 			sourceTree = "<group>";
@@ -735,7 +735,7 @@
 				352F73652A64E08800423A08 /* GradientView.swift in Sources */,
 				352F737B2A64F38500423A08 /* appNetworkImp.swift in Sources */,
 				352F73402A64DE7200423A08 /* FavoriteVC.swift in Sources */,
-				352F73682A64E68100423A08 /* mainPageVC.swift in Sources */,
+				352F73682A64E68100423A08 /* MainPageVC.swift in Sources */,
 				352F734D2A64E04500423A08 /* BaseCollectionViewCell.swift in Sources */,
 				35DF6D392A6625CE005AD456 /* SettingItem.swift in Sources */,
 				35DF6D582A667471005AD456 /* BaseDaoService.swift in Sources */,
