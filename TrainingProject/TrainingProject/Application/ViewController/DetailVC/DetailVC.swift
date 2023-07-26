@@ -12,14 +12,12 @@ class DetailVC: BaseVC<DetailVM> {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var detailImageView: UIImageView!
     @IBOutlet weak var gradientView: UIView!
-    
     @IBOutlet weak var addonDetailView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var nameAuthorLabel: UILabel!
     @IBOutlet weak var hotLabel: UILabel!
     @IBOutlet weak var downloadCountLabel: UILabel!
-    
     @IBOutlet weak var favoriteView: UIView!
     @IBOutlet weak var favoriteImageView: UIImageView!
     @IBOutlet weak var favoriteButton: UIButton!
@@ -34,8 +32,6 @@ class DetailVC: BaseVC<DetailVM> {
         super.viewDidLoad()
         
         viewModel.trigger.accept(())
-        configureListView()
-
     }
     
     override func initViews() {
@@ -50,8 +46,7 @@ class DetailVC: BaseVC<DetailVM> {
         detailImageView.contentMode = .scaleAspectFill
         
         favoriteImageView.contentMode = .scaleAspectFill
-        favoriteImageView.clipsToBounds = false
-        favoriteImageView.translatesAutoresizingMaskIntoConstraints = false
+        favoriteImageView.clipsToBounds = true
 
         nameLabel.font = UIFont(name: "Minecrafter", size: 16)
         authorLabel.font = UIFont(name: "SpaceGrotesk-Regular", size: 16)
@@ -71,7 +66,6 @@ class DetailVC: BaseVC<DetailVM> {
                                                   endColor: endColor)
         threePointGradientView.backgroundColor = .clear
         threePointGradientView.frame = gradientView.bounds
-        threePointGradientView.clipsToBounds = false
         threePointGradientView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         gradientView.addSubview(threePointGradientView)

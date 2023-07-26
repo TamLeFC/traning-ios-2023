@@ -10,7 +10,6 @@ import UIKit
 class SettingVC: UIViewController {
 
     @IBOutlet weak var avatarImageView: UIImageView!
-    
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var informationLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
