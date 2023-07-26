@@ -8,14 +8,12 @@ class SettingVC: BaseVC<BaseVM> {
     override func initViews() {
         
         super.initViews()
-        
         userAvatarImageView.cornerRadius = userAvatarImageView.frame.width / 2
     }
     
     override func configureListView() {
         
         super.configureListView()
-        
         setupTableView()
     }
     
@@ -65,6 +63,7 @@ extension SettingVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: SettingTableViewCell.identifier, for: indexPath) as! SettingTableViewCell
         guard let section = SettingSections(rawValue: indexPath.section) else { return BaseTableViewCell() }
         

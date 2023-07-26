@@ -35,14 +35,12 @@ class MainVC: BaseVC<BaseVM> {
     override func initViews() {
         
         super.initViews()
-        
         setupMainPageView()
     }
     
     override func addEventForViews() {
         
         super.addEventForViews()
-        
         setupOnTapTapped(title: "Home", pageIndex: 0)
     }
     

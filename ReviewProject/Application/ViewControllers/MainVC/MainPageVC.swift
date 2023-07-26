@@ -12,7 +12,6 @@ class MainPageVC: UIPageViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
         setViewControllers([pages[currentPageIndex]], direction: .forward, animated: false, completion: nil)
     }
     

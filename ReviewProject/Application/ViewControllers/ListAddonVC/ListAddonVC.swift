@@ -11,28 +11,24 @@ class ListAddonVC: BaseVC<ListAddonVM> {
     override func configureListView() {
         
         super.configureListView()
-        
         setupCollectionView()
     }
     
     override func bindViewModel() {
         
         super.bindViewModel()
-        
         bindData()
     }
     
     override func addEventForViews() {
         
         super.addEventForViews()
-        
         onItemSelected()
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         
         super.viewWillTransition(to: size, with: coordinator)
-        
         coordinator.animate(alongsideTransition: { [weak self] _ in
             guard let self = self else { return }
             self.listAddonCollectionView.collectionViewLayout.invalidateLayout()
@@ -94,6 +90,7 @@ extension ListAddonVC {
         
         refreshControl.rx.controlEvent(.allEvents)
             .subscribe(onNext: { [weak self] in
+                
                 guard let self = self else { return }
                 listAddonCollectionView.reloadData()
                 self.fetchData()
@@ -112,6 +109,7 @@ extension ListAddonVC {
     private func fetchData() {
         
         viewModel.addonsS.asObserver().subscribe(onNext: { [weak self] _ in
+            
             guard let self = self else { return }
             self.refreshControl.endRefreshing()
         }).disposed(by: bag)
@@ -125,6 +123,7 @@ extension ListAddonVC {
             .rx
             .modelSelected(Addon.self)
             .subscribe(onNext: { item in
+                
                 let vc = AddonDetailVC.instantiate(viewModel: AddonDetailVM(addon: item))
                 self.navigationController?.pushViewController(vc, animated: true)
             })

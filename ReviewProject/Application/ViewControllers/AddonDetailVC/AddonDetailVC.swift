@@ -12,7 +12,6 @@ class AddonDetailVC: BaseVC<AddonDetailVM> {
     @IBOutlet dynamic weak var itemNameLabel: UILabel!
     @IBOutlet dynamic weak var imageView: UIImageView!
     
-    private var addon: Addon!
     private let subView = UIView()
     
     @IBAction dynamic func onBackButtonTapped(_ sender: Any) {
@@ -22,13 +21,12 @@ class AddonDetailVC: BaseVC<AddonDetailVM> {
     
     @IBAction dynamic func onSetFavoriteButtonTapped(_ sender: Any) {
         
-        self.viewModel.favoriteChanged(addon)
+        viewModel.favoriteChanged()
     }
     
     override func initViews() {
         
         super.initViews()
-        
         scrollView.addSubview(subView)
     }
     
@@ -36,11 +34,11 @@ class AddonDetailVC: BaseVC<AddonDetailVM> {
         
         super.bindViewModel()
         
-        viewModel.addonS.subscribe {[weak self] addon in
+        viewModel.addonS.subscribe { [weak self] addon in
+            
             guard let self = self,
                   let element = addon.element else { return }
             
-            self.addon = element
             bindAddonData(element)
         }.disposed(by: bag)
         
