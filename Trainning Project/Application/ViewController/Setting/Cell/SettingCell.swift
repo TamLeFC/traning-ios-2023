@@ -23,9 +23,9 @@ class SettingCell: BaseTableViewCell {
     }
     
     func configureCell(_ item: SettingItem) {
-        iconImageView.image = item.icon.toUIImage
+        iconImageView.image     = item.icon.toUIImage
         
-        titleSettingLabel.text = item.text
+        titleSettingLabel.text  = item.text
     }
     
 }

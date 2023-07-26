@@ -73,16 +73,16 @@ extension DetailAddonVC {
     func configureAddonUI(with addon: Addon) {
         loadImage(from: addon.thumbUrl, into: self.thumbImageView)
         
-        self.itemNameLabel.text = addon.itemName
-        self.authorNameLabel.text = addon.authorName
+        self.itemNameLabel.text      = addon.itemName
+        self.authorNameLabel.text    = addon.authorName
         self.favoriteCountLabel.text = "\(addon.hotPriority)k"
-        self.commentCountLabel.text = "\(addon.downloadCount)k"
-        self.descriptionLabel.text = addon.shortDescription
+        self.commentCountLabel.text  = "\(addon.downloadCount)k"
+        self.descriptionLabel.text   = addon.shortDescription
         
         let titleText = addon.isFavorite ? "Remove from favorite" : "Add to favorite"
         let titleColor = addon.isFavorite ? UIColor(hex: 0xFF431A) : UIColor(hex: 0xFFB31A)
         
-        self.titleMoreButtonLabel.text = titleText
+        self.titleMoreButtonLabel.text      = titleText
         self.titleMoreButtonLabel.textColor = titleColor
     }
 }

@@ -44,7 +44,6 @@
 		352F735D2A64E08100423A08 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73542A64E08100423A08 /* UIColor.swift */; };
 		352F735E2A64E08100423A08 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73552A64E08100423A08 /* UICollectionView.swift */; };
 		352F735F2A64E08100423A08 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73562A64E08100423A08 /* UITableView.swift */; };
-		352F73602A64E08100423A08 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73572A64E08100423A08 /* UITextField.swift */; };
 		352F73612A64E08100423A08 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73582A64E08100423A08 /* String.swift */; };
 		352F73652A64E08800423A08 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73642A64E08800423A08 /* GradientView.swift */; };
 		352F73682A64E68100423A08 /* mainPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73672A64E68100423A08 /* mainPageVC.swift */; };
@@ -130,7 +129,6 @@
 		352F73542A64E08100423A08 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		352F73552A64E08100423A08 /* UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		352F73562A64E08100423A08 /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
-		352F73572A64E08100423A08 /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		352F73582A64E08100423A08 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		352F73642A64E08800423A08 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		352F73672A64E68100423A08 /* mainPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainPageVC.swift; sourceTree = "<group>"; };
@@ -413,7 +411,6 @@
 				352F73542A64E08100423A08 /* UIColor.swift */,
 				352F73552A64E08100423A08 /* UICollectionView.swift */,
 				352F73562A64E08100423A08 /* UITableView.swift */,
-				352F73572A64E08100423A08 /* UITextField.swift */,
 				352F73582A64E08100423A08 /* String.swift */,
 			);
 			path = Extensions;
@@ -750,7 +747,6 @@
 				35DF6D452A666FE9005AD456 /* FavoriteVM.swift in Sources */,
 				352F737D2A64F3E100423A08 /* AppApi.swift in Sources */,
 				3564C3192A6F6129008CED5B /* SharedFlowLayout.swift in Sources */,
-				352F73602A64E08100423A08 /* UITextField.swift in Sources */,
 				352F735E2A64E08100423A08 /* UICollectionView.swift in Sources */,
 				352F738A2A64F8CA00423A08 /* AddonCell.swift in Sources */,
 				3564C3152A670412008CED5B /* DetailAddonVM.swift in Sources */,

@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import RxCocoa
 import RxSwift
 
 class RepositoryImp: Repository {
@@ -24,7 +23,7 @@ class RepositoryImp: Repository {
         return addonDAO.findAll()
     }
     
-    func addFavoriteds(_ addon: Addon) -> RxSwift.Observable<Addon> {
+    func addFavoriteds(_ addon: Addon) -> Observable<Addon> {
         return addonDAO.save(addon.asRealm())
     }
     

@@ -5,7 +5,6 @@
 //  Created by KietKoy on 17/07/2023.
 //
 
-import Foundation
 import RxSwift
 
 protocol Repository {
@@ -13,7 +12,7 @@ protocol Repository {
     
     func getFavoriteds() -> Observable<[Addon]>
     
-    func addFavoriteds(_ addon: Addon) -> RxSwift.Observable<Addon>
+    func addFavoriteds(_ addon: Addon) -> Observable<Addon>
     
     func deleteFavorited(_ addon: Addon) -> Observable<Void>
 }

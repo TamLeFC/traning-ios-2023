@@ -55,9 +55,9 @@ class AddonCell: BaseCollectionViewCell {
 extension AddonCell {
     private func configureCellUI(with addon: Addon) {
         loadImage(from: addon.thumbUrl, into: thumbImage)
-        itemNameLable.text = addon.itemName
-        authorLabel.text = addon.authorName
+        itemNameLable.text      = addon.itemName
+        authorLabel.text        = addon.authorName
         favoriteCountLabel.text = "\(addon.hotPriority)k"
-        commentCountLabel.text = "\(addon.downloadCount)k"
+        commentCountLabel.text  = "\(addon.downloadCount)k"
     }
 }
