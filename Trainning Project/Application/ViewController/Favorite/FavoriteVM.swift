@@ -36,14 +36,17 @@ class FavoriteVM: BaseVM {
     
     private func fetchAddonsSFavorite() -> Observable<[Addon]> {
         //combine data from server and data from realm
-        return Observable.combineLatest(respository.getListAddon().asObservable(), respository.getFavoriteds())
+        let listAddonObservable = respository.getListAddon().asObservable()
+        let favoritedsObservable = respository.getFavoriteds()
+        
+        return Observable.combineLatest(listAddonObservable, favoritedsObservable)
             .map { (listAddon, listFavoriteds) -> [Addon] in
                 return listAddon.filter { addon in
                     return listFavoriteds.contains { $0.itemID == addon.itemID }
                 }
             }
-            .map { [weak self] addons in
-                return self?.updateAddonsSFavoriteState(addons) ?? []
+            .map { addons in
+                return self.updateAddonsSFavoriteState(addons)
             }
     }
     

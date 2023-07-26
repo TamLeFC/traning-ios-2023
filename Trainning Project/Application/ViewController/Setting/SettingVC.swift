@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import NotificationBannerSwift
 
 class SettingVC: BaseVC<SettingVM> {
     
@@ -24,6 +23,10 @@ class SettingVC: BaseVC<SettingVM> {
         
         if #available(iOS 15.0, *) {
             tableView.sectionHeaderTopPadding = 0
+        }
+        
+        if UIDevice.current.orientation.isLandscape {
+            tableView.isScrollEnabled = true
         }
         
         tableView.dataSource = self
@@ -44,7 +47,8 @@ extension SettingVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: SettingCell.identifier, for: indexPath) as! SettingCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: SettingCell.identifier,
+                                                 for: indexPath) as! SettingCell
         let settingItem = viewModel.settingItemForIndexPath(indexPath: indexPath)
         cell.configureCell(settingItem)
         
@@ -85,10 +89,19 @@ extension SettingVC: UITableViewDelegate {
     }
 }
 
+//MARK: - Update the UI when the screen transitions
+
 extension SettingVC {
-    private func showNotificationBanner(title: String, icon: String) {
-        let leftView = UIImageView(image: icon.toUIImage)
-        let banner = NotificationBanner(title: title, leftView: leftView)
-        banner.show()
+    private func updateTableViewLayout() {
+        tableView.isScrollEnabled = UIDevice.current.orientation.isLandscape
+    }
+    
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.willTransition(to: newCollection, with: coordinator)
+        
+        coordinator.animate(alongsideTransition: { [weak self] (_) in
+            guard let self = self else { return }
+            self.updateTableViewLayout()
+        }, completion: nil)
     }
 }

@@ -11,7 +11,7 @@ import RxRelay
 
 class DetailAddonVM: BaseVM {
     
-    var favoritedTrigger = PublishRelay<Addon>()
+    var favoriteChangedTrigger = PublishRelay<Addon>()
     
     let addonS: PublishSubject<Addon> = PublishSubject()
     
@@ -33,7 +33,7 @@ class DetailAddonVM: BaseVM {
                 guard let _ = self else { return }
             }).disposed(by: bag)
         
-        favoritedTrigger
+        favoriteChangedTrigger
             .asObservable()
             .flatMapLatest { [unowned self] addon -> Observable<Void> in
                 if addon.isFavorite {
@@ -55,10 +55,10 @@ class DetailAddonVM: BaseVM {
     }
     
     func favoriteChanged(_ addon: Addon) {
-        self.addon.isFavorite = !self.addon.isFavorite
+        self.addon.isFavorite.toggle()
         
         trigger.accept(())
         
-        favoritedTrigger.accept(addon)
+        favoriteChangedTrigger.accept(addon)
     }
 }
