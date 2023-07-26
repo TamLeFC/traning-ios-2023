@@ -11,12 +11,6 @@ import RxDataSources
 class HomeVC: BaseVC<HomeVM> {
     @IBOutlet weak var collectionView: UICollectionView!
     
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        
-        collectionView.collectionViewLayout.invalidateLayout()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,9 +40,7 @@ class HomeVC: BaseVC<HomeVM> {
     }
     
     private func configureCollectionViewLayout() {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        layout.sectionInset = UIEdgeInsets(top: 16, left: 0, bottom: 16, right: 0)
+        let layout = SharedFlowLayout()
         collectionView.setCollectionViewLayout(layout, animated: true)
     }
 }
@@ -56,50 +48,27 @@ class HomeVC: BaseVC<HomeVM> {
 //MARK: - UICollectionViewLayout
 
 extension HomeVC: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
         if UIDevice.current.userInterfaceIdiom == .phone {
-            return calculateCellSizeForIphone()
+            return CollectionViewCellSizeCalculator.calculateCellSizeForIphone(in: collectionView)
         } else {
-            return calculateCellSizeForIpad()
+            return CollectionViewCellSizeCalculator.calculateCellSizeForIpad(in: collectionView)
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        24
+        return 24
     }
 }
 
-//MARK: - calculate Cell Size
+//MARK: - Update the UI when the screen transitions
 
 extension HomeVC {
-    private func calculateCellSizeForIphone() -> CGSize {
-        var width: CGFloat = 0
-        var height: CGFloat = 0
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
         
-        if UIDevice.current.orientation.isLandscape {
-            width = (collectionView.frame.width - 16) / 2
-        } else {
-            width = collectionView.frame.width
-        }
-        
-        height = (width * 332) / 327
-        
-        return CGSize(width: width, height: height)
-    }
-    
-    private func calculateCellSizeForIpad() -> CGSize {
-        var width: CGFloat = 0
-        var height: CGFloat = 0
-        
-        if UIDevice.current.orientation.isLandscape {
-            width = (UIScreen.main.bounds.width - 24 * 2)/2
-            height = width * 0.9
-            print("width lanscape: \(width)")
-        } else {
-            width = min(collectionView.frame.width, UIScreen.main.bounds.width)
-            height = width * 0.8
-        }
-        
-        return CGSize(width: width, height: height)
+        collectionView.collectionViewLayout.invalidateLayout()
     }
 }

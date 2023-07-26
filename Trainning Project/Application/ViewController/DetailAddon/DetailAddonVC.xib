@@ -42,11 +42,11 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cfu-2z-Eep">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cfu-2z-Eep">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vt5-op-VxX">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1373"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_photo_default" translatesAutoresizingMaskIntoConstraints="NO" id="mop-zU-Yij">
                                     <rect key="frame" x="0.0" y="-40" width="414" height="276"/>
@@ -199,7 +199,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <connections>
-                                                        <action selector="backButtonTouched:" destination="-1" eventType="touchUpInside" id="Slb-IH-UEo"/>
+                                                        <action selector="didTapBackButton:" destination="-1" eventType="touchUpInside" id="Ume-u4-Li0"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -241,7 +241,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="366" height="40"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <connections>
-                                                <action selector="onFavoriteChanged:" destination="-1" eventType="touchUpInside" id="1Jg-N3-a3k"/>
+                                                <action selector="onFavoriteChanged:" destination="-1" eventType="touchUpInside" id="1Yt-Ap-asL"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -265,47 +265,32 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S26-46-Ul0">
-                                    <rect key="frame" x="24" y="477" width="366" height="523"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cj3-66-bmx">
-                                            <rect key="frame" x="0.0" y="0.0" width="366" height="896"/>
-                                            <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </string>
-                                            <fontDescription key="fontDescription" name="SpaceGrotesk-Regular" family="Space Grotesk" pointSize="18"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                            <string key="userLabel">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</string>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="Cj3-66-bmx" firstAttribute="width" secondItem="bW9-bF-OZr" secondAttribute="width" id="1kb-u2-rCP"/>
-                                        <constraint firstItem="Cj3-66-bmx" firstAttribute="trailing" secondItem="ZmL-o9-2eB" secondAttribute="trailing" id="54V-9r-OlW"/>
-                                        <constraint firstItem="Cj3-66-bmx" firstAttribute="bottom" secondItem="ZmL-o9-2eB" secondAttribute="bottom" id="J1d-IY-GM2"/>
-                                        <constraint firstItem="Cj3-66-bmx" firstAttribute="leading" secondItem="ZmL-o9-2eB" secondAttribute="leading" id="NLj-fu-fhi"/>
-                                        <constraint firstItem="Cj3-66-bmx" firstAttribute="top" secondItem="ZmL-o9-2eB" secondAttribute="top" id="WPT-wR-Se4"/>
-                                    </constraints>
-                                    <viewLayoutGuide key="contentLayoutGuide" id="ZmL-o9-2eB"/>
-                                    <viewLayoutGuide key="frameLayoutGuide" id="bW9-bF-OZr"/>
-                                </scrollView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cj3-66-bmx">
+                                    <rect key="frame" x="24" y="477" width="366" height="896"/>
+                                    <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </string>
+                                    <fontDescription key="fontDescription" name="SpaceGrotesk-Regular" family="Space Grotesk" pointSize="18"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                    <string key="userLabel">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</string>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="5Im-fK-VXe" firstAttribute="leading" secondItem="Vt5-op-VxX" secondAttribute="leading" constant="24" id="196-Cf-HAU"/>
+                                <constraint firstAttribute="trailing" secondItem="Cj3-66-bmx" secondAttribute="trailing" constant="24" id="1GN-Mn-eEo"/>
+                                <constraint firstAttribute="bottom" secondItem="Cj3-66-bmx" secondAttribute="bottom" id="3J3-hP-Ml9"/>
                                 <constraint firstItem="5Im-fK-VXe" firstAttribute="top" secondItem="0Mq-pV-bKY" secondAttribute="bottom" constant="32" id="4vP-tg-MEI"/>
-                                <constraint firstAttribute="trailing" secondItem="S26-46-Ul0" secondAttribute="trailing" constant="24" id="LBd-Kf-BcU"/>
-                                <constraint firstItem="S26-46-Ul0" firstAttribute="leading" secondItem="Vt5-op-VxX" secondAttribute="leading" constant="24" id="LOS-DZ-IPH"/>
-                                <constraint firstAttribute="bottom" secondItem="S26-46-Ul0" secondAttribute="bottom" id="Ofv-dv-z3c"/>
+                                <constraint firstItem="Cj3-66-bmx" firstAttribute="leading" secondItem="Vt5-op-VxX" secondAttribute="leading" constant="24" id="BPS-or-wIg"/>
+                                <constraint firstItem="Cj3-66-bmx" firstAttribute="top" secondItem="5Im-fK-VXe" secondAttribute="bottom" constant="16" id="LYh-nH-Z3T"/>
                                 <constraint firstItem="mop-zU-Yij" firstAttribute="leading" secondItem="Vt5-op-VxX" secondAttribute="leading" id="UWU-oh-Rmu"/>
                                 <constraint firstItem="0Mq-pV-bKY" firstAttribute="top" secondItem="CJO-dV-N9A" secondAttribute="bottom" constant="32" id="XOh-zL-YNp"/>
                                 <constraint firstItem="ATH-Er-hBw" firstAttribute="top" secondItem="Vt5-op-VxX" secondAttribute="top" id="Yi4-Eu-mZ2"/>
-                                <constraint firstItem="S26-46-Ul0" firstAttribute="top" secondItem="5Im-fK-VXe" secondAttribute="bottom" constant="16" id="bP5-pz-xBq"/>
                                 <constraint firstItem="mop-zU-Yij" firstAttribute="top" secondItem="Vt5-op-VxX" secondAttribute="top" constant="-40" id="elx-mn-80H"/>
                                 <constraint firstItem="CJO-dV-N9A" firstAttribute="leading" secondItem="Vt5-op-VxX" secondAttribute="leading" constant="24" id="fq9-DD-Sbt"/>
                                 <constraint firstAttribute="trailing" secondItem="mop-zU-Yij" secondAttribute="trailing" id="jtb-ce-J6W"/>
                                 <constraint firstItem="ATH-Er-hBw" firstAttribute="leading" secondItem="Vt5-op-VxX" secondAttribute="leading" id="jy6-iL-t5A"/>
                                 <constraint firstItem="CJO-dV-N9A" firstAttribute="top" secondItem="mop-zU-Yij" secondAttribute="bottom" constant="-32" id="oGi-sj-Kf0"/>
                                 <constraint firstAttribute="trailing" secondItem="0Mq-pV-bKY" secondAttribute="trailing" constant="24" id="rZ8-MJ-8V3"/>
-                                <constraint firstAttribute="height" constant="1000" id="rcP-QU-UJa"/>
                                 <constraint firstAttribute="trailing" secondItem="ATH-Er-hBw" secondAttribute="trailing" id="vQB-qe-v3r"/>
                                 <constraint firstAttribute="trailing" secondItem="CJO-dV-N9A" secondAttribute="trailing" constant="24" id="xSb-DJ-ejv"/>
                                 <constraint firstItem="0Mq-pV-bKY" firstAttribute="leading" secondItem="Vt5-op-VxX" secondAttribute="leading" constant="24" id="yUa-gG-cdx"/>

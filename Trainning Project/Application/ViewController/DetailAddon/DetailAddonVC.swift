@@ -32,13 +32,6 @@ class DetailAddonVC: BaseVC<DetailAddonVM> {
         viewModel.fetchData()
     }
     
-    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
-        
-        if UIDevice.current.orientation.isLandscape {
-            scrollView.isScrollEnabled = true
-        }
-    }
-    
     override func initViews() {
         super.initViews()
         
@@ -70,9 +63,10 @@ class DetailAddonVC: BaseVC<DetailAddonVM> {
     }
     
     
-    @IBAction func backButtonTouched(_ sender: UIButton) {
+    @IBAction func didTapBackButton(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
+    
 }
 
 extension DetailAddonVC {

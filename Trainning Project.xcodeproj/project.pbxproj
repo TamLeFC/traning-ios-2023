@@ -66,6 +66,9 @@
 		352F73912A65224600423A08 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73902A65224600423A08 /* HomeVM.swift */; };
 		352F73932A65237000423A08 /* AppDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F73922A65237000423A08 /* AppDatasource.swift */; };
 		3564C3152A670412008CED5B /* DetailAddonVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3564C3142A670412008CED5B /* DetailAddonVM.swift */; };
+		3564C3192A6F6129008CED5B /* SharedFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3564C3182A6F6129008CED5B /* SharedFlowLayout.swift */; };
+		3564C31B2A6F6689008CED5B /* CollectionViewCellSizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3564C31A2A6F6689008CED5B /* CollectionViewCellSizeCalculator.swift */; };
+		3564C31D2A6F6A9E008CED5B /* NotificationBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3564C31C2A6F6A9E008CED5B /* NotificationBanner.swift */; };
 		35DF6D2E2A653D9E005AD456 /* DetailAddonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DF6D2C2A653D9E005AD456 /* DetailAddonVC.swift */; };
 		35DF6D2F2A653D9E005AD456 /* DetailAddonVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35DF6D2D2A653D9E005AD456 /* DetailAddonVC.xib */; };
 		35DF6D362A66254C005AD456 /* SettingVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DF6D352A66254C005AD456 /* SettingVM.swift */; };
@@ -149,6 +152,9 @@
 		352F73902A65224600423A08 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		352F73922A65237000423A08 /* AppDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatasource.swift; sourceTree = "<group>"; };
 		3564C3142A670412008CED5B /* DetailAddonVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAddonVM.swift; sourceTree = "<group>"; };
+		3564C3182A6F6129008CED5B /* SharedFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedFlowLayout.swift; sourceTree = "<group>"; };
+		3564C31A2A6F6689008CED5B /* CollectionViewCellSizeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellSizeCalculator.swift; sourceTree = "<group>"; };
+		3564C31C2A6F6A9E008CED5B /* NotificationBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBanner.swift; sourceTree = "<group>"; };
 		35DF6D2C2A653D9E005AD456 /* DetailAddonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAddonVC.swift; sourceTree = "<group>"; };
 		35DF6D2D2A653D9E005AD456 /* DetailAddonVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailAddonVC.xib; sourceTree = "<group>"; };
 		35DF6D352A66254C005AD456 /* SettingVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVM.swift; sourceTree = "<group>"; };
@@ -254,6 +260,7 @@
 		352F73072A64D9B900423A08 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				3564C3162A6F6105008CED5B /* Shared */,
 				352F73632A64E08800423A08 /* Views */,
 				352F734F2A64E08100423A08 /* Extensions */,
 				352F73462A64E04500423A08 /* Base */,
@@ -318,6 +325,7 @@
 				352F73812A64F49100423A08 /* ReachabilityManager.swift */,
 				352F738C2A651F1700423A08 /* KingFisher.swift */,
 				352F73922A65237000423A08 /* AppDatasource.swift */,
+				3564C31C2A6F6A9E008CED5B /* NotificationBanner.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -480,6 +488,15 @@
 				352F73892A64F8CA00423A08 /* AddonCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		3564C3162A6F6105008CED5B /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				3564C3182A6F6129008CED5B /* SharedFlowLayout.swift */,
+				3564C31A2A6F6689008CED5B /* CollectionViewCellSizeCalculator.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		35DF6D2B2A653D7F005AD456 /* DetailAddon */ = {
@@ -732,11 +749,13 @@
 				352F735F2A64E08100423A08 /* UITableView.swift in Sources */,
 				35DF6D452A666FE9005AD456 /* FavoriteVM.swift in Sources */,
 				352F737D2A64F3E100423A08 /* AppApi.swift in Sources */,
+				3564C3192A6F6129008CED5B /* SharedFlowLayout.swift in Sources */,
 				352F73602A64E08100423A08 /* UITextField.swift in Sources */,
 				352F735E2A64E08100423A08 /* UICollectionView.swift in Sources */,
 				352F738A2A64F8CA00423A08 /* AddonCell.swift in Sources */,
 				3564C3152A670412008CED5B /* DetailAddonVM.swift in Sources */,
 				352F733C2A64DE5D00423A08 /* HomeVC.swift in Sources */,
+				3564C31B2A6F6689008CED5B /* CollectionViewCellSizeCalculator.swift in Sources */,
 				352F73442A64DE8100423A08 /* SettingVC.swift in Sources */,
 				352F738D2A651F1700423A08 /* KingFisher.swift in Sources */,
 				352F737F2A64F41000423A08 /* Configs.swift in Sources */,
@@ -759,6 +778,7 @@
 				352F72F12A64D91700423A08 /* AppDelegate.swift in Sources */,
 				352F734B2A64E04500423A08 /* BaseTableViewCell.swift in Sources */,
 				35DF6D522A6670DD005AD456 /* RAddon.swift in Sources */,
+				3564C31D2A6F6A9E008CED5B /* NotificationBanner.swift in Sources */,
 				352F735D2A64E08100423A08 /* UIColor.swift in Sources */,
 				352F734C2A64E04500423A08 /* BaseVC.swift in Sources */,
 				35DF6D3B2A6625D8005AD456 /* SettingSection.swift in Sources */,

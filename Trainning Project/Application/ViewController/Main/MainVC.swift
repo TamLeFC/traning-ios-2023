@@ -43,6 +43,18 @@ class MainVC: UIViewController {
     }
     
     @IBAction func alertButton(_ sender: UIButton) {
+        // create the alert
+        let alert = UIAlertController(title: "Notification",
+                                      message: "This is my message.",
+                                      preferredStyle: UIAlertController.Style.alert)
+        
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "OK",
+                                      style: UIAlertAction.Style.default,
+                                      handler: nil))
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
     }
     
     private func setupPageView() {
